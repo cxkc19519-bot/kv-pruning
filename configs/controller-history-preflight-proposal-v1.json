@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "proposal_id": "controller-history-preflight-v1",
+  "created_date": "2026-10-30",
+  "execution_enabled": false,
+  "stage": "cpu_formula_and_state_preflight_only",
+  "purpose": "Validate a future independent CPU reference against estimator equations/state semantics; not a model, attack, performance or vulnerability experiment.",
+  "source_commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+  "scope": {
+    "server_project": "/home/user/jhk/project/Directional Exploration/kv-pruning",
+    "gpu_allowed": false,
+    "author_code_execution_allowed": false,
+    "model_loading_allowed": false,
+    "network_during_run_allowed": false,
+    "new_dependencies_allowed": false
+  },
+  "parameters": {
+    "num_speculative_steps": 4,
+    "max_num_reqs": 8,
+    "refit_interval": 100,
+    "initial_slope": 0.5,
+    "initial_bias": -0.2,
+    "damping_observations": 50,
+    "l2_in_newton_system": 0.001,
+    "max_log_odds": 40
+  },
+  "bounds": {
+    "max_fixture_cases": 64,
+    "max_step_calls_per_case": 256,
+    "max_cpu_wall_seconds": 60,
+    "fail_fast": true,
+    "automatic_retry": false
+  },
+  "checks": [
+    "dense_linear_system_vs_arrowhead_update",
+    "observed_prefix_and_first_rejection_mask",
+    "unobserved_position_intercept_unchanged_but_shared_slope_can_move",
+    "empty_observation_round_preserves_coefficients",
+    "refit_boundary_and_clear_statistics_preserve_fitted_coefficients",
+    "full_state_clone_restore_and_request_slot_permutation"
+  ],
+  "comparison": {
+    "cpu_numeric_dtype": "float64",
+    "atol": 1e-9,
+    "rtol": 1e-8,
+    "qualification": "CPU algebra comparison tolerance only; not GPU FP32/Triton equivalence."
+  },
+  "output_policy": {
+    "raw_results_server_only": true,
+    "record_all_failures": true,
+    "count_cpu_run_separately_from_model_outputs": true
+  },
+  "next_stage": {
+    "model_execution_enabled": false,
+    "requires": [
+      "CPU source/state preflight passes",
+      "freeze Full Attention model/draft/config/backend and serving revision",
+      "fix or control the official JIT warmup confound consistently across branches",
+      "define common clean controller checkpoint and isolate noncontroller state",
+      "freeze realistic history budget, probe corpus, stopping criteria and full experiment template"
+    ]
+  },
+  "claims_forbidden": [
+    "real LLM interference demonstrated",
+    "attack successful",
+    "novelty established",
+    "GPU equivalence verified",
+    "synthetic cost equals real latency"
+  ],
+  "runner_implemented": false
+}

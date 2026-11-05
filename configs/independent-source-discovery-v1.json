@@ -1,0 +1,8 @@
+{
+  "proposal_id":"independent-source-discovery-v1","execution_enabled":false,"runner_implemented":false,
+  "run":"results/20261030-independent-source-discovery-v1",
+  "url":"https://storage.googleapis.com/storage/v1/b/boolq/o/dev.jsonl",
+  "expected_bucket":"boolq","expected_name":"dev.jsonl",
+  "bounds":{"wall_seconds":30,"requests":1,"timeout_seconds":15,"metadata_bytes_max":65536,"archive_bytes_max":1048576,"model_outputs":0,"gpu_queries":0},
+  "scope":"Official author's linked GCS bucket/object JSON metadata only; no data body or auth, no fallback/retry. Freeze returned object generation and contentMD5 before data GET."
+}

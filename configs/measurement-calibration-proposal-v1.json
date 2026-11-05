@@ -1,0 +1,43 @@
+{
+  "status": "proposal_requires_cpu_data_and_checker_preflight",
+  "execution_enabled": false,
+  "purpose": "Measurement calibration and limited replication, not a novelty claim or AccessDenied rescue",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "dataset_repository": "google-research/google-research",
+  "dataset_revision": "e6890f85757dd84e27ca6df2dd30651dafad28e0",
+  "dataset_path": "instruction_following_eval/data/input_data.jsonl",
+  "source_data_sha256": null,
+  "frozen_case_keys": null,
+  "selection": {
+    "count": 32,
+    "order": "ascending SHA256 of UTF8('20261028:' + str(source key))",
+    "min_native_prefix_tokens": 256,
+    "max_native_prefix_tokens": 2048,
+    "eligibility": "Native user prompt unchanged, complete original instruction list and kwargs, scorer deterministic and audited; length feasibility before inference only",
+    "on_insufficient_eligible": "stop before model loading; do not pad prompts, loosen limits, or select by model outputs"
+  },
+  "frontend": {
+    "role": "user",
+    "rewrite_prompt": false,
+    "prefix": "Entire native user message including end marker, before native assistant generation header",
+    "suffix": "Native assistant generation header",
+    "scope": "Task known before post-prefill eviction; query-aware, not reusable query-blind caching"
+  },
+  "conditions": [
+    {"method": "full", "keep": 1.0},
+    {"method": "adapted_snapkv_shared_anchors", "keep": 0.75},
+    {"method": "adapted_snapkv_shared_anchors", "keep": 0.5},
+    {"method": "random_shared_anchors", "keep": 0.75},
+    {"method": "random_shared_anchors", "keep": 0.5}
+  ],
+  "budget": {"unit": "actual prefix K/V bytes", "slots_per_layer_kv_head": "floor(prefix_tokens * keep)", "sink_tokens": 4, "recent_tokens": 64, "random_seed": 20261028},
+  "decode": {"do_sample": false, "repetition_penalty": 1.0, "max_new_tokens": 1024, "dtype": "bfloat16", "attention": "sdpa"},
+  "primary_scorer": "Unmodified pinned IFEval strict instruction and prompt-level checks; no loose-score replacement or response filtering",
+  "reporting": ["all-source scores", "C-to-C", "C-to-W", "W-to-C", "W-to-W", "prompt and instruction denominators", "truncation and unsupported/error states", "actual KV bytes and retained indices"],
+  "engineering_gate": ["CPU source and scorer audit complete", "32 case IDs and source/tokenizer SHA frozen before inference", "native full/cached/custom token agreement on first three frozen cases", "100% selection identity", "scoring hooks preserve reference cache and Full output", "all shared anchors and equal-byte budgets verified", "random replay reproducible"],
+  "interpretation_gate": {"min_full_prompt_correct": 16, "max_truncated_full_responses": 3, "min_family_full_eligible_for_family_rate": 8, "meaning": "Minimum descriptive support, not a power calculation or significance guarantee; retain all outcomes when unmet and stop without replacement"},
+  "max_main_outputs": 160,
+  "on_model_failure": "Retain outputs and denominators; no extra model/prompt/budget sweep or per-constraint method selection",
+  "unresolved": ["Data and case IDs not yet frozen", "Checker dependencies/resources and kwargs defaults require CPU audit", "New user-prompt split and random selector adapter not yet implemented/verified", "This calibration is not a complete Pitfalls reproduction", "No independent security-specific effect or new algorithm established"]
+}

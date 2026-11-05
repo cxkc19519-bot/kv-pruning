@@ -1,0 +1,64 @@
+{
+  "kind": "paired_natural_history_mechanism_screen",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "engineering_evidence": "results/20261030-controller-worker-engineering-v5",
+  "runtime_config": "configs/controller-worker-engineering-v5-correction.json",
+  "runtime_config_sha256": "b18fd17b04f5ce2cd653325c2b0d2b9e366aa498b6d113478a249d1d9c001b1d",
+  "question": "Can fixed, completed request histories alter identical probe verification budgets through shared online calibration, after common warmup and without concurrent requests?",
+  "bounds": {
+    "physical_gpu": 1,
+    "max_seconds": 900,
+    "max_warmup_answers": 2,
+    "max_instrumentation_engineering_answers": 2,
+    "max_main_answers": 30,
+    "max_total_answers": 34,
+    "history_requests_per_branch": 6,
+    "max_history_new_tokens": 64,
+    "max_probe_new_tokens": 32,
+    "max_generated_tokens_including_warmup_and_engineering": 1856,
+    "max_input_tokens_each": 256
+  },
+  "histories": {
+    "A": "List the integers from 1 to 60 in ascending order, separated by commas.",
+    "B": "Write a short Python function that computes the greatest common divisor of two positive integers."
+  },
+  "probe": "List the integers from 1 to 30 in ascending order, separated by commas.",
+  "conditions": [
+    "common checkpoint -> baseline probe",
+    "common checkpoint -> six A history requests learning enabled -> probe",
+    "common checkpoint -> six B history requests learning enabled -> probe",
+    "common checkpoint -> six A history requests and probe with estimator learning frozen",
+    "common checkpoint -> six B history requests and probe with estimator learning frozen",
+    "full restore to common checkpoint after B branch -> probe"
+  ],
+  "controls": [
+    "Every branch starts from the same idle common warm checkpoint; no resetting only theta",
+    "Warm refit kernel then restore its entire pre-warmup controller state; never force phase95 or inject synthetic observations in measured branches",
+    "No simultaneous requests; frontend and worker request maps must drain before branch/probe boundaries",
+    "Same target/draft/Full Attention architecture/BF16/K4/Triton/native sampler/graph shapes and decoding across all branches",
+    "Identical greedy probe ids are a correctness guard, not a quality or safety score",
+    "All history answers use ignore_eos with fixed caps; this controlled workload does not represent natural user traffic",
+    "No prompt search, seed sweep, model/backend change or adaptive extension after observing outcomes"
+  ],
+  "record": [
+    "All prompts, raw token ids and requested/actual generated lengths",
+    "Idle checkpoint digest, learning state, pending statistics and refit phase at each boundary",
+    "Every probe step: draft capacity, selected verification budget/admitted tokens, accepted/rejected counts, slot mapping and estimator phase",
+    "Native model/worker/attention/config identities and any kernel JIT events",
+    "Whole run failures and all zero-effect, improvement and degradation cases"
+  ],
+  "pre_execution_requirements": [
+    "Implement bounded worker-side observation hooks; verify transparent wrapping and meanings of budget/acceptance fields against pinned source",
+    "From the same restored common state compare one 32-token probe with hooks off and one with hooks on: at most two instrumentation engineering answers, token ids and controller learning state must match",
+    "Freeze exact prompts/order/code/hash and record engineering outcomes before starting the main screen"
+  ],
+  "stop_or_interpretation": [
+    "First runtime, restore, correctness or trace failure stops the run",
+    "If either learning history does not naturally cross at least one refit within six requests, report insufficient update exposure and stop without extending",
+    "Changed coefficients without changed probe verification allocation are not evidence of useful availability harm",
+    "Budget changes without robust measured user cost are only a mechanism observation",
+    "Timing is diagnostic only: synchronous tracing and remaining JIT effects preclude latency-harm claims",
+    "No natural-history attack, novelty or thesis viability conclusion from this pilot alone"
+  ]
+}

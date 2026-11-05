@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "mode": "original_input_byte_and_aggregate_import_diagnostic",
+  "execution_enabled": true,
+  "run": "results/20261101-backend-diagnostic-v1",
+  "draft": "configs/legacy-backend-diagnostic-draft-v1.json",
+  "source_sha256": {
+    "scripts/backend_diagnostic.py": "d2ed0d2af3a088499570d625cf51d3194a62d186e22f4d0ab6e6096e799e52b9",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/verify_backend_diagnostic.py": "267fc1bacd5d7a121ae2c4bcd758e5778cc3492c7f7e72bb5733901ce8cfce33"
+  },
+  "input_sha256": {
+    "configs/legacy-backend-diagnostic-draft-v1.json": "b6802e248398d01dfe278b7cb44055e559d0fb96c833c3aa34dc3442bb40bbb6",
+    "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json": "c635343add69e6bf06de5941ae588a136b613bd3a9f5c359d075ed9132738cc4"
+  },
+  "runtime_pin": "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "OMP_NUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HOME": "RUN/hf",
+    "TORCHINDUCTOR_CACHE_DIR": "RUN/inductor",
+    "TVM_FFI_CACHE_DIR": "RUN/tvm",
+    "MKL_NUM_THREADS": "1",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TMPDIR": "RUN/tmp",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "bounds": {
+    "combined_import_seconds": 5,
+    "public_calls": 520,
+    "work_processes_simultaneously": 1,
+    "total_seconds": 30,
+    "stack_bytes": 524288,
+    "CPU_affinity": 2,
+    "max_bytes": 8388608,
+    "max_files": 64,
+    "llguidance_seconds": 10
+  },
+  "old_index": "results/20261101-run-index-legacy-backend.json",
+  "old_index_sha256": "06fccdfb37a2cbc5ecd0438eeda9de5286ea73bf2fbc0fba0763d2ec66b45dd8",
+  "scope": {
+    "network_calls": 0,
+    "matcher_calls": 0,
+    "model_calls": 0,
+    "schema_calls": 0,
+    "new_dependencies": 0,
+    "labeled_instances": 0,
+    "mask_calls": 0
+  },
+  "automatic_retry": false
+}

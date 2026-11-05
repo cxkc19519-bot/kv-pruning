@@ -1,0 +1,19 @@
+{
+  "proposal_id": "controller-history-preflight-correction-v2",
+  "created_date": "2026-10-30",
+  "execution_enabled": false,
+  "base_proposal": "configs/controller-history-preflight-proposal-v1.json",
+  "base_proposal_sha256": "b597611cb56f802e6ea39535f705d62896723b1947ce143860f305dc640221d7",
+  "runner": "scripts/controller_history_preflight.py",
+  "reference_revision": 2,
+  "runner_sha256": "2e7e9c2c6d4ac9cc49a717f56c244b6609aa80a8fa7fcc59cd75f63936a43c81",
+  "future_run_dir": "results/20261030-controller-history-cpu-v2",
+  "prior_run": "results/20261030-controller-history-cpu-v1",
+  "prior_status": "failed",
+  "correction": "The unobserved-position fixtures must agree with the independent dense oracle including the negative-slope-step guard. Slope movement is not mandatory for every fixture; keep the designated index-0 movement assertion and unchanged unobserved intercept checks.",
+  "unchanged": ["54 fixture identities and seeds", "six check families", "100-call refit period", "numeric parameters and tolerances", "64-fixture/256-call-per-fixture/60-second bounds", "fail-fast and no automatic retry", "CPU only; no author code execution, GPU or model"],
+  "evidence": "results/20261030-controller-history-cpu-v1/failure_diagnosis.json",
+  "diagnostic_sha256": "a69bcaef3bf0a1570687e4bcd5c43402059723a8c36abe851a3f75cff7b48956",
+  "executed": false,
+  "model_stage_enabled": false
+}

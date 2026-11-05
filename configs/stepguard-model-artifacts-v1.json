@@ -1,0 +1,91 @@
+{
+  "kind": "fixed_task_trained_guard_candidate_download",
+  "download_enabled": true,
+  "model_execution_enabled": false,
+  "repo_id": "ninty-seven/StepGuard",
+  "repo_type": "model",
+  "revision": "c7e4a2c9c34c09efbba0e66a6b802e08b4384662",
+  "gated": false,
+  "private": false,
+  "max_total_bytes": 8100000000,
+  "workers": 2,
+  "max_attempts_per_file": 2,
+  "per_attempt_wall_seconds": 900,
+  "files": [
+    {
+      "rfilename": "LICENSE",
+      "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "size": 11343
+    },
+    {
+      "rfilename": "NOTICE",
+      "blobId": "8058359897d3e36b0e3d8298ccb0456a36c29122",
+      "size": 698
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "b29b2fd44d2e4311bc660630d74e56f1ff62a22e",
+      "size": 12873
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "347eae6b61f89d96a61aa8b7138241f01f668682",
+      "size": 1619
+    },
+    {
+      "rfilename": "generation_config.json",
+      "blobId": "432531a002c181a19de338313d2375e9d7494d7e",
+      "size": 238
+    },
+    {
+      "rfilename": "model-00000-of-00002.safetensors",
+      "blobId": "4e39c0bd7a2c9fbb29f48151bdadfa11e0d16ea9",
+      "size": 5355373240,
+      "lfs": {
+        "sha256": "b0d9e0d6e54132465475858bc6ff05acde616517a4134307362244ee034afb76",
+        "size": 5355373240,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00001-of-00002.safetensors",
+      "blobId": "cfdc40604252ec5d4e7637f0a76e80db8bad15b6",
+      "size": 2689608768,
+      "lfs": {
+        "sha256": "d72d5761c6b69d847253e208cafb93353da3694328878be4c85a4345c9510c4a",
+        "size": 2689608768,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "blobId": "10a36541c08a00051742954e8679b0e36702f9bd",
+      "size": 32818
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "cd71f61a15a522601badb3dc960d800d9cb3766c",
+      "size": 11422654,
+      "lfs": {
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "size": 11422654,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "51c1be0d9192e7f6e6596de71d0f07d58fbc32ac",
+      "size": 9377
+    }
+  ],
+  "donors": {
+    "model.safetensors.index.json": "results/20261028-action-guard-source-audit-v1/upstream/model/model.safetensors.index.json",
+    "LICENSE": "results/20261028-action-guard-source-audit-v1/upstream/model/LICENSE",
+    "tokenizer_config.json": "results/20261028-action-guard-source-audit-v1/upstream/model/tokenizer_config.json",
+    "README.md": "results/20261028-action-guard-source-audit-v1/upstream/model/README.md",
+    "config.json": "results/20261028-action-guard-source-audit-v1/upstream/model/config.json",
+    "generation_config.json": "results/20261028-action-guard-source-audit-v1/upstream/model/generation_config.json",
+    "tokenizer.json": "results/20261028-action-guard-cpu-preflight-v1/candidate_tokenizer/tokenizer.json"
+  },
+  "scope": "One task-trained guard candidate for the fixed Full/NoHistory gate; selected ten loading/license assets only; no model execution, no new dependency installation or model search"
+}

@@ -1,0 +1,188 @@
+{
+  "proposal_id": "independent-evidence-frontends-preflight-v2",
+  "date": "2026-10-30",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "mode": "CPU_native_frontend_and_budget_only",
+  "run": "results/20261030-independent-evidence-frontends-preflight-v2",
+  "design": "docs/INDEPENDENT_EVIDENCE_PLAN_20261030.md",
+  "source_inventory": "docs/INDEPENDENT_EVIDENCE_SOURCES_20261030.json",
+  "inputs": {
+    "configs/independent-squad-tokenizer-proposal-v1.json": "032056b290b72d43fbdf7f178e871bda33f28d45164e8bfbc76d108ee62fa3ce",
+    "configs/mistral-7b-v03-c170-artifacts.json": "9df15f9d17e9258284cf474a6927f438a520863d424726ea5e735429b68bee58",
+    "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+    "results/20261030-independent-task-preflight-v1/manifest.json": "67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+    "results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json": "43ae26daf25fff041d1d7bb7397c443d74d34542681911484938c2ab8dd35957",
+    "results/20261030-hf-DEV-acceptance-v2/manifest.json": "412fbe241d72b668c6b2a1dd3ca1b207c2054afbe7bf3f737c2c42c8fe81bedd",
+    "results/20261030-hf-DEV-acceptance-v2/report.json": "054d54673e74b4b7c96906f3b80a5ccaf31b998a87906b4bd642c232187916f4",
+    "results/20261030-hf-DEV-acceptance-v2/independent_verification.json": "0d7db8f9cee91c1ea816d66d0d125a661283e1bedb42f8d3da3faf10427a8dc1",
+    "scripts/reliability_system_core.py": "ea87bd0d1cff69014336cd59f61b4e77d2d0e43b6f679bf340d77c6f5c8ed546",
+    "configs/reliability-independent-study-draft-v1.json": "27ee0cebe5eb6f70cd78464b6d3300b09699fe0361d33738d3a049bff89a144c",
+    "scripts/answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "results/20261030-independent-evidence-frontends-preflight-v1/manifest.json": "e85b93f7d0e43b6e5e53c36382e0a3ec2449c66f4be26ca8714d64a9c3a54208",
+    "results/20261030-independent-evidence-frontends-preflight-v1/derived_manifest.json": "70ab554e3fc50c8976c5c1fa7c061c1d0a00ba0635e591cced0cce04ca86f4e9",
+    "results/20261030-independent-evidence-frontends-preflight-v1/socket_probe_diagnosis.json": "4348b88c0b6c98ab4c9fd23ca8156e4be67d544b7b24c1bdad90c5cfd53e67ed",
+    "results/20261030-run-index-frontends-failed.json": "8b39220ceb366df99fc30ba57a384f8de69a8e346c824f78db4ee4a1b4e139d9",
+    "configs/independent-evidence-frontends-preflight-v1.json": "83136793b35bd7935a17c34949dec3330527e81968e7c7ae13be782807273e04"
+  },
+  "cases": "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl",
+  "Qwen_regression_reference": "results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json",
+  "selection": {
+    "allowed_roles": [
+      "engineering",
+      "development"
+    ],
+    "engineering": 4,
+    "development": 12,
+    "total_per_model": 16,
+    "sealed": 0,
+    "rule": "All4pre-existing engineering andall12existing DEV,in source order;never replace/filter based onlength,budget,labels ormodel outputs. Additional2engineering CPUonly does not replace previously frozen2GPU engineering cases."
+  },
+  "models": [
+    {
+      "key": "Qwen",
+      "repository": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "path": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+      "metadata_sha256": {
+        "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+        "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "config_layout": {
+        "layers": 28,
+        "attention_heads": 28,
+        "KV_heads": 4,
+        "head_dimension": 128,
+        "element_bytes": 2,
+        "bytes_per_prefix_slot_expected": 57344
+      },
+      "native_contract": "Original system/user strings,Qwen native role delimiters;must match prior14ids/header/prefix exactly. No template override."
+    },
+    {
+      "key": "Mistral",
+      "repository": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "path": "/home/user/jhk/project/Directional Exploration/kv-pruning/models/Mistral-7B-Instruct-v0.3/c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "metadata_sha256": {
+        "README.md": "3166974023134d972368b585d730fa5f70100873684f90a10a773b20e80b30ba",
+        "config.json": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99",
+        "generation_config.json": "b4669f1b8f4185324bd9b12a69e85a1ad2289bc48111ef739cfaaea3bba6b0a9",
+        "model.safetensors.index.json": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016",
+        "params.json": "8a64b8657de37af1f828eef1517dc186247938d66e7fea2c78c31d5b9071efe6",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer.json": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49",
+        "tokenizer.model": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+        "tokenizer.model.v3": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+        "tokenizer_config.json": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2"
+      },
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "config_layout": {
+        "layers": 32,
+        "attention_heads": 32,
+        "KV_heads": 8,
+        "head_dimension": 128,
+        "element_bytes": 2,
+        "bytes_per_prefix_slot_expected": 131072
+      },
+      "native_contract": "Pinned native template folds system+two-newlines+user inside BOS+[INST]...[/INST]. Derive prefix/protected span from FULL native render;system-only BOS must never be treated as the cached system. No Qwen markers/template override."
+    }
+  ],
+  "versions": {
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "sentencepiece": "0.2.1",
+    "protobuf": "6.33.0",
+    "safetensors": "0.6.2"
+  },
+  "environment": {
+    "USE_TORCH": "0",
+    "USE_TF": "0",
+    "USE_FLAX": "0",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "retentions": [
+    "1/2",
+    "3/4"
+  ],
+  "retention_provenance": "Both already declared in configs/reliability-independent-study-draft-v1.json;newstudy planning only,not a rewrite of half-budget runs.",
+  "budget": {
+    "sink": 4,
+    "recent": 64,
+    "protected_modes": [
+      "anchors_only",
+      "complete_system_union_anchors"
+    ],
+    "arithmetic": "Exact fraction,floor slots;union charges once,infeasible if required count exceeds slots,no padding or extra budget",
+    "expected_budget_evaluations": 128,
+    "values_are_descriptor_predictions_not_actual_KV_tensors": true
+  },
+  "query_boundary": {
+    "field": "question_start_user_character",
+    "alternatives_for_engineering_only": [
+      "What is the answer to this question?",
+      "Where did the described event take place?"
+    ],
+    "DEV_alternatives": 0,
+    "total_native_variants": 48,
+    "total_encodes_max": 96,
+    "checks": [
+      "Native render->fast offsets ids equals apply_chat_template(tokenize=True)",
+      "Derive question boundary from full render and stored user character boundary;any crossing token belongs entirely to suffix,never to cached prefix;record overlap and require exact ids concat",
+      "Complete system character coverage including boundary-overlap tokens,all protected indices inside prefix",
+      "All3engineering query variants have identical cached-prefix ids",
+      "Qwen original14ids/header/prefix agree with pinned reference",
+      "Mistral uses its native folded-role layout,not system-only or Qwen headers"
+    ]
+  },
+  "bounds": {
+    "wall_seconds": 120,
+    "outer_watchdog_seconds": 150,
+    "network_requests": 0,
+    "GPU_queries": 0,
+    "weight_bytes_read": 0,
+    "model_outputs": 0,
+    "model_forward_calls": 0,
+    "max_input_tokens": 2048,
+    "max_metadata_bytes": 16777216,
+    "max_archive_bytes": 33554432,
+    "max_archive_files": 32,
+    "max_encodes": 96,
+    "software_core_replay_required": false
+  },
+  "outputs_required": [
+    "Immutable proposal/runner/source/metadata/template hash snapshot",
+    "Per-model16tokenized inputs/prefix/suffix/complete system positions",
+    "All128model/case/retention/protection budget evaluations without sample filtering",
+    "For eachmodel/retention/protection:engineering feasible count outof4;DEV feasible count outof12;no new GPU evidence manufactured",
+    "Independent original/native offset and union/floor/bytes recalculation;all failures preserved"
+  ],
+  "failure": "First metadata/template/offset/query-prefix/encoding mismatch stops stage;budget infeasibility is retained as a result,not a reason to change text orsamples. No weights/GPU/network/importtorch,automatic fallback ordependency install. CPU pass cannot enable Full orcompression.",
+  "post_CPU_next": "Only after measured frontend/budget outputs,freeze condition-scoped engineering coverage and new Mistral-only Full protocol(max6engineering+12DEV answers);do not run currentQwen12again orinfersealed. Currentgenerator cannot support Mistral/3/4byconfiguration alone.",
+  "runner": "scripts/preflight_independent_evidence_frontends_v2.py",
+  "independent_validator": "scripts/verify_independent_evidence_frontends_v2.py",
+  "blocked_probe_source": {
+    "path": "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/urllib3/util/connection.py",
+    "sha256": "2633bbdb69731e5ccb5cf4e4afd65605d86c7979cc5633126f50c92d5ad74a74",
+    "urllib3_version": "2.3.0"
+  },
+  "blocked_probe_policy": {
+    "bind_operation_allowed": false,
+    "outbound_connections_allowed": false,
+    "address": [
+      "::1",
+      0
+    ],
+    "caller": "_has_ipv6",
+    "event": "socket.bind",
+    "expected_blocked_events": 1
+  },
+  "amendment": "v1completed96encodes/128budgets but finalguard classified blocked urllib3 loopback capability bind as network. v2still denies the exactbind,records1knownblockedprobe separately,allothernetworkattempts remain fatal;HFsymlink metadata whitelist tightened. No data/template/offset/budget changes. Both runs archived;96encodes perrun/192total diagnostic retries,0modelanswers."
+}

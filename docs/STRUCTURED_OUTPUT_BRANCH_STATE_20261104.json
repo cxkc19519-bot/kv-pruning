@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-04",
+  "branch": "N1_structured_output_resource_lifecycle",
+  "status": "shelved",
+  "decision": "Shelf the current candidate following discussion of its unclear research contribution.",
+  "decision_document": "docs/STRUCTURED_OUTPUT_STOP_DECISION_20261104.md",
+  "execution_enabled": false,
+  "active_next_steps": [],
+  "supersedes_next_step_in": [
+    "docs/RESOURCE_OBSERVABILITY_READINESS_20261102.json",
+    "docs/HANDOFF.md",
+    "docs/PLAN.md"
+  ],
+  "historical_draft": "configs/resource-observability-natural-draft-v1.json",
+  "historical_draft_sha256": "a1c47d2c03a6aa6204d553cec298fb0be4d416e63ba2b46e4c2ccaa9d248e843",
+  "retain_existing_artifacts": true,
+  "scientific_feasibility": "not_established_not_disproved",
+  "security_effects": "not_established",
+  "novelty": "not_established",
+  "experiments_added": 0,
+  "backend_executions_added": 0,
+  "model_answers_added": 0,
+  "total_runs_unchanged": 147,
+  "historical_main_answers_unchanged": 3038,
+  "old_H3_stop_unchanged": true,
+  "new_candidate_selected": false,
+  "resume_policy": "Do not resume from historical next-step instructions or a generic continue message; first establish that the user selects this branch again and define the unresolved research problem."
+}

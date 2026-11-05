@@ -1,0 +1,108 @@
+{
+  "proposal_id": "squad48-native-preflight-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "run": "results/20261030-squad48-native-preflight-v1",
+  "runner": "scripts/preflight_squad48_native.py",
+  "validator": "scripts/verify_squad48_native.py",
+  "mode": "CPU_Qwen_native_ids_and_halfbudget_only",
+  "inputs": {
+    "results/20261030-squad48-scope-freeze-v1/manifest.json": "20ab6ff77770c8597154d1a9259865602b4e6a16ba123ce41183d6ba3d8a2455",
+    "results/20261030-squad48-scope-freeze-v1/planned_cells.jsonl": "f256ae916c1d151e887aee22415f4be00387087088b853c9a03ac5b39a1e50aa",
+    "configs/independent-evidence-frontends-preflight-v1.json": "83136793b35bd7935a17c34949dec3330527e81968e7c7ae13be782807273e04",
+    "results/20261030-squad48-scope-freeze-v1/selected48.jsonl": "993ae6a45e4b041181e3aeed4d90afabc509d54f99ed0a20e5436492a50731af",
+    "results/20261030-squad48-scope-freeze-v1/independent_verification.json": "6afce6f9fecccd9070538fbcd0d5a91990d2d7f9290c81362d9e16427a90fe94",
+    "results/20261030-squad48-scope-freeze-v1/derived_manifest.json": "7c403c95b2d7fb6f0b1aab500af955fc7e53184e8e01602970854fed15e0486d",
+    "results/20261030-squad48-scope-freeze-v1/scope_manifest.json": "3af6c3b5758f833e7125f45ec149592bd57da35805973eae13e2e22a61a6f3d3",
+    "configs/minimum-evidence-scope-v1.json": "f97ae15d4ea9dbcc9d1110fec4a334f101ae58b46eeb268d8da5e6c8d4b5305d"
+  },
+  "selected": "results/20261030-squad48-scope-freeze-v1/selected48.jsonl",
+  "planned_cells": "results/20261030-squad48-scope-freeze-v1/planned_cells.jsonl",
+  "model": {
+    "key": "Qwen",
+    "repository": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "path": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "metadata_sha256": {
+      "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+      "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "config_layout": {
+      "layers": 28,
+      "attention_heads": 28,
+      "KV_heads": 4,
+      "head_dimension": 128,
+      "element_bytes": 2,
+      "bytes_per_prefix_slot_expected": 57344
+    },
+    "native_contract": "Original system/user strings,Qwen native role delimiters;must match prior14ids/header/prefix exactly. No template override."
+  },
+  "versions": {
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "sentencepiece": "0.2.1",
+    "protobuf": "6.33.0",
+    "safetensors": "0.6.2"
+  },
+  "environment": {
+    "USE_TORCH": "0",
+    "USE_TF": "0",
+    "USE_FLAX": "0",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "expected": {
+    "new_model_answers": 0,
+    "cases": 48,
+    "encodes": 96,
+    "native_variants": 48,
+    "planned_cells": 144
+  },
+  "query_contract": "Onlyoriginalquestions;derivequeryblindprefixfromfullnativerenderandstoredquestion_start_user_character.Crossingtokenwholeinsuffix;systemheadercovered;noquestioninsideprefix. Do notaltersealedquestionsoraddalternativesasdebugmaterial.",
+  "budget": {
+    "recent": 64,
+    "sink": 4,
+    "checks": "Fullrequestedslots=n,compressed=floor(n/2);bothcompressedconditionssamepredictedprefixbytes. Infeasibleanchorunionretainednotfilteredorpadded;headerarchivedwithoutmakingprotectedcondition.",
+    "protected_system_generation": false,
+    "actual_tensor_verified": false,
+    "retention": "1/2"
+  },
+  "blocked_probe_source": {
+    "path": "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/urllib3/util/connection.py",
+    "sha256": "2633bbdb69731e5ccb5cf4e4afd65605d86c7979cc5633126f50c92d5ad74a74",
+    "urllib3_version": "2.3.0"
+  },
+  "blocked_probe_policy": {
+    "bind_operation_allowed": false,
+    "outbound_connections_allowed": false,
+    "address": [
+      "::1",
+      0
+    ],
+    "caller": "_has_ipv6",
+    "event": "socket.bind",
+    "expected_blocked_events": 1
+  },
+  "bounds": {
+    "max_archive_files": 32,
+    "outer_watchdog_seconds": 120,
+    "max_encodes": 96,
+    "GPU_queries": 0,
+    "model_forward_calls": 0,
+    "max_archive_bytes": 33554432,
+    "wall_seconds": 90,
+    "max_input_tokens": 2048,
+    "weight_bytes_read": 0,
+    "model_answers": 0,
+    "network_requests": 0
+  },
+  "failure": "Firstsource/template/offset/hash/inputboundmismatchstops,originalsretained. Budgetinfeasibilityrecordedwithoutpadding/resampling;noautomaticretryorGPUphase.",
+  "post_CPU": "Verifyall48IDs/role/provenance,144plannedbudgetstates;thenstatisticalmoduleacceptanceandnewGPUprotocol. NoautomaticFullengineeringevidenceresumeorFullsupportpass."
+}

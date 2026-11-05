@@ -1,0 +1,27 @@
+{
+  "proposal_id":"reliability-independent-study-draft-v1",
+  "date":"2026-10-30",
+  "execution_enabled":false,
+  "runner_implemented":false,
+  "status":"design_and_primary_metadata_review_only",
+  "design":"docs/RELIABILITY_SYSTEM_DESIGN_20261030.md",
+  "empirical_plan":"docs/RELIABILITY_EMPIRICAL_PLAN_20261030.md",
+  "old_failed_QA_gate_unchanged":true,
+  "old_sealed16_reuse_allowed":false,
+  "new_sources":[
+    {"task":"span_qa_json","repository":"rajpurkar/SQuAD-explorer","commit":"e0c66cfec263165fb3c15cb76a22175e371b71d7","path":"dataset/train-v1.1.json","git_blob_sha1":"77f1d9a7daee11f7bc293832020f7709f63410ad","bytes":30288272,"sha256":null,"data_body_downloaded":false,"source_review":"Official tree metadata only","license":"CC BY-SA4.0"},
+    {"task":"bool_qa_json","repository":"google-research-datasets/boolean-questions","commit":"90af34107399cc7a446b373dc4ee35b8001da7c2","readme_url":"https://github.com/google-research-datasets/boolean-questions/blob/90af34107399cc7a446b373dc4ee35b8001da7c2/README.md","author_data_link":"https://storage.cloud.google.com/boolq/dev.jsonl","object_version":null,"bytes":null,"sha256":null,"data_body_downloaded":false,"source_review":"Full fixed author README read through GitHub connector; data object identity/access pending","license":"CC BY-SA3.0","scorer_implemented":false}
+  ],
+  "prospective_groups_per_task":{"engineering":4,"development":12,"sealed_descriptive_evaluation":48},
+  "global_overlap_exclusions":"All historical SQuAD dev48 article groups, all previously used task materials and exact-normalized title/context connected components across new sources; no old sealed inference",
+  "selection":"Algorithm and seed must be fixed in actual preparation proposal before model outputs; one hash-ranked original question per component, no model-based filtering or longest-paragraph rule",
+  "models":[
+    {"id":"Qwen/Qwen2.5-7B-Instruct","revision":"a09a35458c702b33eeacc393d103063234e8bc28","prior_KV_engineering":true,"new_task_support":null},
+    {"id":"mistralai/Mistral-7B-Instruct-v0.3","revision":"c170c708c41dac9275d15a8fff4eca08d52bab71","official_config_read":true,"config_full_attention_candidate":true,"prior_new_KV_adapter_engineering":false,"new_task_support":null}
+  ],
+  "first_DEV_intended":{"task":"bool_qa_json","model":"Qwen/Qwen2.5-7B-Instruct","n":12,"Full_engineering_answers_max":6,"Full_answers_max":12,"compact_engineering_answers_max":16,"compact_main_answers_max":48,"main_total_max":60,"engineering_total_max":22,"max_new_tokens":128,"GPU_wall_seconds_max":900,"retention":"1/2","Full_support":{"min_task":6,"min_constraint":9,"max_errors":0,"max_truncated":1},"implemented_or_run":false},
+  "formal_descriptive_matrix_ceiling":{"tasks":2,"models":2,"evaluation_groups_each":48,"retentions":["1/2","3/4"],"random_seeds":[20261030,20261031,20261032],"Full_shared_per_case":1,"compressed_conditions_per_budget":8,"max_main_answers":3264,"statistical_power_claim":false,"automatically_enabled":false},
+  "stop_policy":"Source/scorer/frontend/cache identity errors stop relevant stage; observed task/format degradation or truncation is preserved as an outcome, not a post-hoc reason to discard data; no prompt/gold/sample repair or old-gate rewrite",
+  "before_execution_required":["Freeze publicly accessible BoolQ object identity and integrity metadata, all raw source SHA values on server", "New BoolQ gold-blind content/scoring fixtures", "Global article/context overlap audit and deterministic source split", "Per-model native frontend and actual KV engineering", "Separate immutable runtime proposal with code/model/template/decode/device/storage/wall caps"],
+  "this_turn":{"new_data_body_downloads":0,"new_model_answers":0,"system_CPU_acceptance_runs":1,"historical_records_used_for_acceptance":290,"independent_scientific_confirmation":false}
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30",
+  "registration_id": "group-statistics-execution-v1",
+  "execution_enabled": true,
+  "mode": "CPU_software_fixtures_only_no_model_results",
+  "proposal": "configs/group-statistics-acceptance-v1.json",
+  "proposal_sha256": "b1e9d0420b530a745f84a4a72435bdf25238cb7b7916d2177279cb8bf0cc3126",
+  "original_proposal_false_flags_unchanged": true,
+  "source_sha256": {
+    "scripts/verify_group_statistics.py": "9f1743905f9878cfd8045f8fba484f524d74d8dfdd6a4d86efec8854a104bd42",
+    "scripts/accept_group_statistics.py": "905b5b844da485cae53583956ef3c6401a16bb506218b8ffe4b44fa11c87c12a",
+    "scripts/reliability_group_statistics.py": "1a87e8ee243a1159ca055ae317ac5acd9940722d4312bd06d597fe62f5f59169",
+    "docs/GROUP_STATISTICS_CPU_PROTOCOL_20261030.md": "ce6faafdd00e6c3ca9bf6716dac989b2347c9fb6a5ac3168274ce37cc2b8d49a"
+  },
+  "model_inference_enabled": false,
+  "tokenizer_enabled": false,
+  "GPU_enabled": false,
+  "network_enabled": false,
+  "bounds": {
+    "runner_seconds": 60,
+    "outer_total_seconds": 90,
+    "term_grace_seconds": 10,
+    "max_archive_files": 32,
+    "max_archive_bytes": 16777216
+  },
+  "user_authorization": "Existing experimental session; latest request to implement and validate next step.",
+  "next_GPU_execution_enabled": false
+}

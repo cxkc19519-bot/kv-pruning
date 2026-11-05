@@ -1,0 +1,76 @@
+{
+  "proposal_id": "answer-format-compression-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "phase": "compression",
+  "run": "results/20261030-answer-format-compression-v1",
+  "wall_seconds": 900,
+  "decision_contract": "configs/answer-format-direction-decision-v1.json",
+  "decision_contract_sha256": "3baf6b9808a75ab5305ae7b0b4aff0637cd9dc2f81cc4c49ed825b1407909edc",
+  "tokenizer_proposal": "configs/answer-format-tokenizer-proposal-v1.json",
+  "tokenizer_proposal_sha256": "3a1fb2c1b760b5bb66602dc9d12e4590c4e4e88a021b0ac69d343cc28193cc70",
+  "tokenized": "results/20261030-answer-format-tokenizer-v1/tokenized_cases.json",
+  "tokenized_sha256": "4b1fadab93f7b04fed176918a4453757307181a405ec50fc6daf71c1af65f3aa",
+  "tokenizer_manifest": "results/20261030-answer-format-tokenizer-v1/manifest.json",
+  "tokenizer_manifest_sha256": "782c006937456a42ea5b2017aa5df2d319f0314e896df62a339ca8fea68300b3",
+  "cases": "results/20261030-answer-format-task-preflight-v1/selected_cases.jsonl",
+  "cases_sha256": "ccf4866f3381f797d9dda458f65c7dd0a8a204ddcd83d946766173fc1a7f0c42",
+  "gpu_uuid": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa",
+  "gpu_idle_memory_mib_max": 128,
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2"
+  },
+  "weights": {
+    "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+    "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+    "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+    "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+  },
+  "sources": {
+    "answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "trec_context_gate.py": "12cffbddf37d00e686d51ccd9fce4be59616a4218e34ed136db71329b18dc616",
+    "trec_pruning_run.py": "7b9393babbcf28293d51fdd43c7a80ed41810d614001811b6c458c55d3c84412",
+    "trec_pruning_utils.py": "92594811de726c585087fe1356a81cfcbe3a19a1fd6bb68a7e8781a334c53918",
+    "pilot.py": "476b3cbf8a9e16cdbb958286ba931a45d9b089f1bba4fb0a29f3a7ee9ebcdc1f"
+  },
+  "decode": {
+    "max_new_tokens": 96,
+    "do_sample": false,
+    "num_beams": 1,
+    "repetition_penalty": 1.0,
+    "eos_token_id": [
+      151643,
+      151645
+    ],
+    "pad_token_id": 151643,
+    "bos_token_id": 151643,
+    "use_cache": true
+  },
+  "model_defaults": "Replace model.generation_config with the frozen fresh GenerationConfig so all native and custom paths use identical explicit defaults",
+  "full_gate": {
+    "n": 16,
+    "errors_max": 0,
+    "truncated_max": 1,
+    "candidates_min": 15,
+    "em_min": 8,
+    "format_min": 12,
+    "joint_min": 8
+  },
+  "main_answers_max": 64,
+  "engineering_answers_max": 16,
+  "max_archive_bytes": 134217728,
+  "max_archive_files": 256,
+  "failure": "First engineering mismatch or runtime failure stops; Full counts below fixed gate stops compression, no prompt/sample/decode search",
+  "future": "Compute all scheduled paired task/format transitions and coverage; apply frozen direction decision contract. No sealed-holdout or extra budget/prompt/model runs if DEV gate fails.",
+  "full_manifest": "results/20261030-answer-format-full-v1/manifest.json",
+  "full_manifest_sha256": "340d5d8cbc653ad2414d0eb5851c22eb3558bdab3406ba7f652ed2e473b95de0",
+  "methods": [
+    "adapted_snapkv",
+    "uniform_random",
+    "adapted_snapkv_system_pinned",
+    "uniform_random_system_pinned"
+  ]
+}

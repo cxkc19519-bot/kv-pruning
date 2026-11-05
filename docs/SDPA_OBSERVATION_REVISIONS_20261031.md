@@ -1,0 +1,10 @@
+# 现场记录器兼容性修订
+
+2026-10-31。[实际观测协议](SDPA_OBSERVATION_PROTOCOL_20261031.md)的模型/输入/后端/数值门槛/同路径精确控制与资源上限均保持。每次新版本独立source/config/run，旧source与失败工件不覆盖，不从这些工程组推导H3或主实验效果。
+
+- v1首个profile在marker覆盖断言失败；保存位于断言之后，未保留该profile细节，是我方取证顺序缺陷。
+- v2将trace/事件/SDPA记录先保存再作相同断言，实际28个SDPA调用对应28 CPU user_annotation及28 GPU gpu_user_annotation。按前缀计数把同名CPU/GPU注记重复计为56，属于解析器合同错误而非模型多算层。
+- v3增加纯标准库sdpa_profiler_adapter，依据真实FunctionEvent.device_type只对CPU父链作scope关联；GPU同名annotation保留在原trace，明确计入ignored_non_CPU_marker_annotations。原SDPAObserver类保持CPU已验源码不变。五CPU前置检查涵盖同名CPU/GPU消歧、孤立GPU不归属、未知device拒绝、循环拒绝和原class透传。现场首profile的CPU marker/kernel覆盖已成立，但因同一Kineto trace被early/normal流程导出两次，触发Trace is already saved。
+- v4只导出一次并让正常核验引用该已保存原文；没有重新解释数值门槛、改模型、换数据、切内核或扩大工作量。兼容性修正的五CPU检查每次在模型加载前执行，真实观察仍须全部同路径负对照/独立validator通过。
+
+单次导出和device-type过滤是运行时接口修复，不是KV压缩算法或数值修复。原跨路径工程failed状态不因任何观测run完成而变true；12DEV、Full12支持及H3候选排序均不在本阶段。

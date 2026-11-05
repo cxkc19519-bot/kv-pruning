@@ -1,0 +1,53 @@
+{
+  "proposal_id": "squad48-error-taxonomy-v1",
+  "date": "2026-10-30",
+  "execution_enabled": true,
+  "runner_implemented": true,
+  "mode": "CPU_exploratory_existing_outputs_only",
+  "run": "results/20261030-squad48-error-taxonomy-v1",
+  "parent_run": "results/20261030-squad48-gpu-study-v1",
+  "protocol": "docs/SQUAD48_ERROR_TAXONOMY_PROTOCOL_20261030.md",
+  "source_sha256": {
+    "scripts/analyze_squad48_failures.py": "14ade2969e033ee6a37d0265ecc3f43dc44f420bb060426813c2de12cad35b65",
+    "scripts/verify_squad48_failures.py": "f31077c5b5e4018882b7b0b5ecc692b9cc5c32a24c7ea4f16c3225bb9893ae27",
+    "scripts/reliability_group_statistics.py": "1a87e8ee243a1159ca055ae317ac5acd9940722d4312bd06d597fe62f5f59169",
+    "docs/SQUAD48_ERROR_TAXONOMY_PROTOCOL_20261030.md": "b4cb751445abb58750857027ff8f33026034d60f0be5a291f4bfe4d634ff2b83",
+    "scripts/verify_hf_DEV_acceptance.py": "0bf578b3e342d3c2554c5134c6774559a876d06327e319fe15fad5e96cf69143"
+  },
+  "inputs": {
+    "results/20261030-squad48-gpu-study-v1/manifest.json": "00eeb8eaa6e01317a160e88236d0c98aa27318f3019e086e1e69eced728644ee",
+    "results/20261030-squad48-gpu-study-v1/derived_manifest.json": "9efec84846e8fcb7cffc8ccdb14b96595a731c25fddcd7dc92f27f9c3bf9a95c",
+    "results/20261030-squad48-gpu-study-v1/summary.json": "ecd17d5ee9cdc09b20a8f7b99776f7cb2d9fa45b60fcac1e4b6a4b1a94d27faf",
+    "results/20261030-squad48-gpu-study-v1/scored_main.jsonl": "8b1ae1e4bd841e78ebdf59806ec0dbe4eba359444f94cd3b2d65dc4b261299dd",
+    "results/20261030-squad48-gpu-study-v1/normalized_outcomes.jsonl": "6025162b60e16568f30c4991c151a4fe78fbd634ec96f69a9cabbce16e0566d4",
+    "results/20261030-squad48-gpu-study-v1/statistics_plan.json": "4cf05a9d0bdd2d4a1ca80671fe6c8163018abb831ff1feec76decb2c4daffa57",
+    "results/20261030-squad48-gpu-study-v1/group_statistics.json": "c724d5bebf7613f89251b3b519da3451028ee0245fdc16d06878da2608a3c96c",
+    "results/20261030-squad48-gpu-study-v1/scalar_report.json": "214db4f521784993fa93a98c8aadd3ac0d571782c551232001fc38b8343844ad",
+    "results/20261030-squad48-gpu-study-v1/independent_verification.json": "628d90150827c57f9b1ddb673ff7746f11a3596dc13145d9627900d1ae46c573",
+    "results/20261030-squad48-scope-freeze-v1/selected48.jsonl": "993ae6a45e4b041181e3aeed4d90afabc509d54f99ed0a20e5436492a50731af"
+  },
+  "normalized": "results/20261030-squad48-gpu-study-v1/normalized_outcomes.jsonl",
+  "scored": "results/20261030-squad48-gpu-study-v1/scored_main.jsonl",
+  "statistics_plan": "results/20261030-squad48-gpu-study-v1/statistics_plan.json",
+  "selected": "results/20261030-squad48-scope-freeze-v1/selected48.jsonl",
+  "classification_is_posthoc_exploratory": true,
+  "software_cases": 9,
+  "scoring_changed": false,
+  "primary_estimands_or_CI_changed": false,
+  "new_model_answers": 0,
+  "tokenizer_encodes": 0,
+  "weight_bytes_read": 0,
+  "GPU_queries": 0,
+  "network_requests": 0,
+  "bounds": {
+    "wall_seconds": 60,
+    "outer_total_seconds": 90,
+    "term_grace_seconds": 10,
+    "max_archive_files": 32,
+    "max_archive_bytes": 16777216,
+    "examples_per_condition_category": 2,
+    "max_examples": 54
+  },
+  "example_selection": "Lexicographic first2 IDs within each condition/category;server-only illustrations,not new samples or tuning targets",
+  "automatic_GPU_phase": false
+}

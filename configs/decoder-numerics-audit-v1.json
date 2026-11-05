@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-31",
+  "registration_id": "decoder-numerics-audit-v1",
+  "execution_enabled": true,
+  "mode": "CPU_archived_numerical_source_review",
+  "root": "/home/user/jhk/project/Directional Exploration/kv-pruning",
+  "run": "results/20261031-decoder-numerics-audit-v1",
+  "parent_run": "results/20261031-decoder-kv-engineering-v2",
+  "source_sha256": {
+    "scripts/audit_decoder_numerics.py": "a847b8b9527616c5a3183d1d6b9f4dc6c47a376798277a9667e67876aa270dba",
+    "scripts/verify_decoder_numerics.py": "7033ce35ab5ad9f6789f9814a4f29357f5b223edfae8559dc7e0c05b1ddc64f9",
+    "scripts/run_decoder_numerics.py": "70f28009c274db57481b84e37df2f8c40c13b02bd5a8f31f7f234109369c3529",
+    "docs/DECODER_NUMERICS_CPU_PROTOCOL_20261031.md": "e1edb2388830ed798d4695a00627099e46b39adad26881e11bc64a4f428e0d12"
+  },
+  "input_sha256": {
+    "results/20261031-decoder-kv-engineering-v2/vectors.json": "3cd98ab9aa3b35605cd07ec4f0ff39027f6109778211e83ed6db4c01d51fd9a1",
+    "results/20261031-decoder-kv-engineering-v2/comparisons.json": "9f2c141a125fe5afe2b8968fd8410e3f1fa2dbee3974150a3db717ab9dcd1b1b",
+    "results/20261031-decoder-kv-engineering-v2/forward_trace.jsonl": "bf1bd8892db770efd9ffa73248f62de2c5ef770ab619f1318ce3661a1e59dbe2",
+    "results/20261031-decoder-kv-engineering-v2/gather_plans.json": "4c69d39d4130db1727f86616340c13ce56936e28731d7716c262b737fa01d553",
+    "results/20261031-decoder-kv-engineering-v2/engineering_inputs.json": "950e65b82b9f97011b62b755bd2357bfe40189dd9aa41b3be98b1c7fe01c4dfa",
+    "results/20261031-decoder-kv-engineering-v2/actual_runtime.json": "5044dd1c041f99776ea0caf95a679fad5634e1e8e4c368f44580d1698f51bf0e",
+    "results/20261031-decoder-kv-engineering-v2/manifest.json": "07c356f3313648513d2a9d9dbd3f1f684f6717c46faba8ea67051e4565c32936",
+    "results/20261031-decoder-kv-engineering-v2/derived_manifest.json": "6ee5a8182b7a3fd4b1371b14070f3f23cc0d1705289ce6b5660fb8c9e0474a8c",
+    "results/20261031-decoder-kv-engineering-v2/postmortem_verification.json": "bb8d9ddbd1ba44b6f807a65f410af8f181da5f73bf9c5be284ef83f7c4b3f622",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.whole.f32": "8a8e2806ef309170701572fd962cf28dfbfffeecc866042079efe054c8c62ea1",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.full_batch.f32": "25f06c33bc4136e3223df786019c6df3915f48c2a88c075e783133fbfec6a127",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.split_full_batch.f32": "e3d2c69b76541960e2aa47c025e7ca9e19038ce3d893873a5f93f5518a4c522c",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.recency_batch.f32": "f187a814c1b59363b9f31fd1b21f4f3e92988acb860dafecce9aacd62e051dab",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.recency_tokenwise.f32": "90bd9c207533e7b1fcacf131921fe916f51e24c6bce91b68d1c36cf3399a4c27",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.uniform_random_batch.f32": "ea71caa7c92835b12993244c7b63423b641cbd6497a551e89bd1d831d33f1934",
+    "results/20261031-decoder-kv-engineering-v2/decoder_engineering_00.uniform_random_tokenwise.f32": "552e2dfcc77f17a66ac7399276dd9e3bb3f7897c16e687d914bd9c02d83f72b4"
+  },
+  "runtime_sources": {
+    "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/transformers/masking_utils.py": "7a963feed8173b8265298dd24350c166222ce6b4719442fce48ab414d0478a6a",
+    "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/transformers/integrations/sdpa_attention.py": "dc5abe49a98dec3b9026739dfbf2e9a8f3e5272b2916b3c2d404727ac931a013",
+    "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/transformers/models/qwen2/modeling_qwen2.py": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb",
+    "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/transformers/cache_utils.py": "f4e11caf14c75bdefa5e3003b93ef0e8b97fb6103375705ad944b0b344d7da8a"
+  },
+  "official_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.5.1/docs/source/notes/numerical_accuracy.rst",
+      "file": "official_numerical_accuracy.rst"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.5.1/torch/nn/functional.py",
+      "file": "official_sdpa_functional.py"
+    }
+  ],
+  "model_inference_enabled": false,
+  "tokenizer_enabled": false,
+  "GPU_enabled": false,
+  "network_enabled": false,
+  "next_GPU_execution_enabled": false,
+  "parent_documentation_HTTP_requests": 2,
+  "child_network_requests_allowed": 0,
+  "bounds": {
+    "worker_seconds": 90,
+    "verifier_seconds": 60,
+    "outer_seconds": 180,
+    "term_grace_seconds": 5,
+    "max_archive_files": 40,
+    "max_archive_bytes": 8388608
+  },
+  "previous_engineering_status": "failed_unchanged",
+  "new_thresholds_selected": false,
+  "actual_CUDA_kernel_observation": false,
+  "source_logic_assumptions": {
+    "CUDA_non_XPU_non_NPU": true,
+    "not_tracing": true,
+    "all_ones_padding": true,
+    "dynamic_full_attention_cache": true
+  },
+  "H3_candidate_rankings_computed": false,
+  "user_authorization": "Existing experimental session; latest user instruction to begin offline numerical/source review. No new model or GPU calls."
+}

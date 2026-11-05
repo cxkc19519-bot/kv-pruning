@@ -1,0 +1,47 @@
+{
+  "kind": "public_training_overlap_inputs",
+  "download_enabled": true,
+  "model_execution_enabled": false,
+  "repo_id": "ninty-seven/stepguard_data",
+  "repo_type": "dataset",
+  "revision": "aadeae009800d8fbcd145575f1d1a6b37abb0950",
+  "gated": false,
+  "private": false,
+  "max_total_bytes": 48000000,
+  "workers": 2,
+  "max_attempts_per_file": 2,
+  "per_attempt_wall_seconds": 120,
+  "files": [
+    {
+      "rfilename": "LICENSE",
+      "blobId": "eeea66c7a78a1be6ebb7e9a6da7e52d9a8051bb6",
+      "size": 11352
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "b4957228786679d1a5ae48ceba2181bddfef9d56",
+      "size": 7342
+    },
+    {
+      "rfilename": "rl4k/agentguard_rl4k_grpo.jsonl",
+      "blobId": "de183df51e9b4b2753aca8c4bf5a72e3f1e5c569",
+      "size": 26801767,
+      "lfs": {
+        "sha256": "2235f076a8e294a3c71a2d4458819af173722c6a67ce35c0398fb59e911742af",
+        "size": 26801767,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "sft3k/agentguard_sft3k_sharegpt.jsonl",
+      "blobId": "f65af2ee9c2034c59e50649a00e911a0e994d591",
+      "size": 20540808,
+      "lfs": {
+        "sha256": "6429dc6f958e2b1fe242f2528dc6087c62e60e903263cf57dd88bc949752c90d",
+        "size": 20540808,
+        "pointerSize": 133
+      }
+    }
+  ],
+  "scope": "Public training text for exact overlap checks only; no training or model execution"
+}

@@ -1,0 +1,1439 @@
+{
+  "date": "2026-10-30",
+  "status": "OriginalSQuAD48source/groupCPUfreezecomplete;native48frontend/budget/statisticsandGPUprotocoldue.0newmodeloutputs.",
+  "plan": "docs/INDEPENDENT_EVIDENCE_PLAN_20261030.md",
+  "acceptance_matrix": "docs/SYSTEM_ACCEPTANCE_MATRIX_20261030.json",
+  "sources": "docs/INDEPENDENT_EVIDENCE_SOURCES_20261030.json",
+  "proposal": "configs/independent-evidence-frontends-preflight-v1.json",
+  "artifact_sha256": {
+    "docs/INDEPENDENT_EVIDENCE_PLAN_20261030.md": "e4b520aa5e594002535c5e7ce1fb444c0d411ab6fed7ef4663e4e85f9dd38ad1",
+    "configs/independent-evidence-frontends-preflight-v1.json": "83136793b35bd7935a17c34949dec3330527e81968e7c7ae13be782807273e04",
+    "docs/INDEPENDENT_EVIDENCE_SOURCES_20261030.json": "36b885bca439353869043a2e4e701a177bcbf48edf115b35179644042b07eb08",
+    "docs/SYSTEM_ACCEPTANCE_MATRIX_20261030.json": "eafbcb4c95925a312ac95f642cdd9b63905fb61ac36660f495bdc62f671e4c32"
+  },
+  "actual_this_turn": {
+    "new_experiments": 0,
+    "new_model_answers": 0,
+    "new_engineering_answers": 0,
+    "model_loads": 0,
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0,
+    "GPU_queries": 0,
+    "public_source_HTTP_requests_server": 48,
+    "web_search_and_read": true,
+    "new_dependencies": false
+  },
+  "system_chain": {
+    "passed": true,
+    "evidence": "docs/HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+    "scope": "Existing12DEV andQwen only;not independent corroboration"
+  },
+  "next_CPU": "Closest-work audit complete;now require a falsifiable unmet need and measured incremental value before any new protocol.",
+  "BoolQ": {
+    "original_source403_failures_preserved": true,
+    "HF_distribution_metadata_reviewed": true,
+    "HF_missing_title": true,
+    "HF_body_downloaded": false,
+    "HF_row_integrity_verified": false,
+    "adopted_as_new_source": false,
+    "cross_task_article_split_final": false,
+    "decision": "Remain paused;future explicit source/grouping amendment required"
+  },
+  "priority": "Implementandexecute pinnedQwen48nativefrontend/half-budget CPUpreflight,96encodes/144plannedcells,0weights/GPU/network. Keepinfeasibleanchorswithoutpadding;noquestion/promptediting. ThenvalidatestatisticalmoduleandfreezeactualGPUstage;notdirect144cellinference.",
+  "pending_independent_empirics": [
+    "Native current-task Mistral frontend,then actual Full/task support/compact engineering",
+    "Full protected-budget/engineering coverage bymodel/retention;no forced feasible samples",
+    "Independent48group evidence and cross-task source/group policy",
+    "Production-style peak/buffer/timing and group-level uncertainty"
+  ],
+  "cumulative": {
+    "runs": 120,
+    "main_model_outputs": 3038,
+    "index": "results/20261030-run-index-squad48-taxonomy.json",
+    "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c"
+  },
+  "old_QA_gate": false,
+  "old_sealed16_inferred": false,
+  "new_sealed48_inferred": true,
+  "independent_scientific_confirmation": false,
+  "publication_novelty_established": false,
+  "old4_own_PIDs_exited": true,
+  "active_gpu_queue": false,
+  "frontends_preflight": {
+    "date": "2026-10-30",
+    "record": "docs/runs/20261030-independent-frontends-preflight.md",
+    "protocol": "docs/INDEPENDENT_FRONTENDS_EXECUTION_PROTOCOL_20261030.md",
+    "amendment": "docs/INDEPENDENT_FRONTENDS_AMENDMENT_20261030.md",
+    "proposals": {
+      "v1": {
+        "path": "configs/independent-evidence-frontends-preflight-v1.json",
+        "sha256": "83136793b35bd7935a17c34949dec3330527e81968e7c7ae13be782807273e04",
+        "original_flags_unchanged": true
+      },
+      "v2": {
+        "path": "configs/independent-evidence-frontends-preflight-v2.json",
+        "sha256": "df3243f33b3ea96bc5a7c8b2808439a7c32bb5e3a678083c34620d2d5824839d",
+        "original_flags_unchanged": true
+      }
+    },
+    "source_sha256": {
+      "scripts/preflight_independent_evidence_frontends.py": "f262d8dd78e85226ffa33032ace7f8c7802b9f4bf0c65e7b39d73795365598b9",
+      "scripts/verify_independent_evidence_frontends.py": "ff17689d1e386385eeb0b61586f121c9a6e69b99c441d11457fb96a42c5ee241",
+      "scripts/preflight_independent_evidence_frontends_v2.py": "2a356d6d8a37580b8ad66bb5c7f54e52b12592cb23cfd3b44b2670a52f95fcb3",
+      "scripts/verify_independent_evidence_frontends_v2.py": "ef9cd3607e8b16ffbd4ef7de5fc71ba3666ad381b5b40e3dc430943c69ad95c3"
+    },
+    "failed_v1": {
+      "run": "results/20261030-independent-evidence-frontends-preflight-v1",
+      "files": 19,
+      "bytes": 2437556,
+      "worker_pid": 987652,
+      "launcher_pid": 987649,
+      "elapsed_seconds": 3.973698516841978,
+      "sha256": {
+        "manifest.json": "e85b93f7d0e43b6e5e53c36382e0a3ec2449c66f4be26ca8714d64a9c3a54208",
+        "summary.json": "d86cbc8da9f0ef75af5088bb8ca50007b822889d58ab852b98ad4d27249cfa94",
+        "CPU_guard_observations_at_stop.json": "f0e720cc85f94f769481673bc3739583a67a7c534ec30d2a6deb567aa9076780",
+        "socket_probe_diagnosis.json": "4348b88c0b6c98ab4c9fd23ca8156e4be67d544b7b24c1bdad90c5cfd53e67ed",
+        "closure.json": "306d069d4c4983ced6f640a378cd106def1d639918646c47e85db6d636709310",
+        "derived_manifest.json": "70ab554e3fc50c8976c5c1fa7c061c1d0a00ba0635e591cced0cce04ca86f4e9"
+      },
+      "index": "results/20261030-run-index-frontends-failed.json",
+      "index_sha256": "8b39220ceb366df99fc30ba57a384f8de69a8e346c824f78db4ee4a1b4e139d9",
+      "dependency_probe": {
+        "path": "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/urllib3/util/connection.py",
+        "sha256": "2633bbdb69731e5ccb5cf4e4afd65605d86c7979cc5633126f50c92d5ad74a74",
+        "urllib3_version": "2.3.0"
+      },
+      "status": "failed",
+      "cause": "CPU_boundary_guard after1blocked urllib3 IPv6 loopback capability bind",
+      "encodes": 96,
+      "native_variants": 48,
+      "model_case_rows": 32,
+      "budget_evaluations": 128,
+      "model_outputs": 0,
+      "actual_outbound_requests": 0,
+      "protected_output_or_budget_changed": false
+    },
+    "run": "results/20261030-independent-evidence-frontends-preflight-v2",
+    "status": "complete",
+    "worker_pid": 990438,
+    "launcher_pid": 990435,
+    "elapsed_seconds": 3.736170833930373,
+    "launcher_elapsed_seconds": 3.924029271118343,
+    "started_utc": "2026-10-30T21:06:59.553514+08:00",
+    "finished_utc": "2026-10-30T21:07:03.477731+08:00",
+    "original_manifest_entries": 18,
+    "files": 22,
+    "bytes": 2449492,
+    "sha256": {
+      "manifest.json": "bf93207d3cc6e110d625e6e4eb56e6caacf2bd55e6399628da2d470726d2571c",
+      "summary.json": "cde07b1340d9a0ae8c44cbe56e9c509be144013d2ae78ced825ac715434eb4c5",
+      "execution_snapshot.json": "9c091824286434a356c6f6e9fe33e6cc6b069b8993e0eb6c4a004f65297a167e",
+      "tokenized_cases.json": "75d33d34bc6979c3e9aa63120096748234d322a1196fc7f81845f8957a45d8c9",
+      "native_variants.json": "42de914fa9e0932d08a83669ceacebcc176979d2c9e0f933ffd89d89b92074ef",
+      "budget_evaluations.json": "97074e150f5efc27cfe8c948a99e19eea20cef0685079fdebfac04ca27786daa",
+      "budget_coverage.json": "7e226785b5f74b53533e4fb30f8009d5f5bed3656ac6c270c16208ce9da7a4b0",
+      "CPU_guard_observations.json": "382e182a3ead7c311977fddf2a3150601ca27f29ba37ca65f81a3e0f0b47c7fe",
+      "blocked_socket_probes.json": "b73d05356cbb47360f9c6b0c16a5c8f8c574b572b037259f563a97c04f738abd",
+      "independent_verification.json": "bd66f2bbcefbb9d20ae896451f1967b424b0bae88680de633cb4ff4094615d1c",
+      "closure.json": "181537ed29b495961e3d8f4a4f12735da12602c7c8acc95e6544aeb990bf7856",
+      "derived_manifest.json": "23c50b2171753d934bb572b7db88151c899c680ead83d7946982c0a471cc305d"
+    },
+    "external_artifacts": {
+      "20261030-independent-evidence-frontends-preflight-v1.launch.json": "4698ec0cfc56155697edd66e448205e37423e53da61f39998b491678d8ca0299",
+      "20261030-independent-evidence-frontends-preflight-v1.console.log": "715650aad7310a85653e95dd2d751a087ab1ab99452e68f36fb337c9b5c83447",
+      "20261030-independent-evidence-frontends-preflight-v1.launcher.py": "ce549f3ad14181cb492eac48aeb148e724c75dff5cd8a2dc013b6cd0699997f2",
+      "20261030-independent-evidence-frontends-preflight-v2.launch.json": "696e6737b6b5ecced1d896490ddc59aae9ab78edf5b55eb059d8e7218ab3307d",
+      "20261030-independent-evidence-frontends-preflight-v2.console.log": "7588ae85bed8e683dbcffd861f980cd9f5d469a8011e59e7a3ff0bcd92ed574b",
+      "20261030-independent-evidence-frontends-preflight-v2.launcher.py": "812202d652f564d37f6fb53a5ad6414901e810b2cdb490c4b6685fa75b5defa8"
+    },
+    "index": "results/20261030-run-index-independent-frontends.json",
+    "index_sha256": "491e4cbbd5986ffc8aa56197852047b650efc63d74475c04e5d7e06d158828a1",
+    "cumulative_runs": 114,
+    "cumulative_main_outputs": 2888,
+    "completed_native_encodes_this_run": 96,
+    "total_native_encodes_both_runs": 192,
+    "unique_full_native_variants": 48,
+    "model_case_rows": 32,
+    "budget_evaluations_this_run": 128,
+    "ranges": {
+      "Qwen": {
+        "prefix_tokens": [
+          146,
+          312
+        ],
+        "suffix_tokens": [
+          12,
+          27
+        ],
+        "header_tokens": [
+          56
+        ],
+        "engineering_cases": [
+          {
+            "case_id": "56f991b19b226e1400dd15b8",
+            "prefix_tokens": 146,
+            "header_tokens": 56
+          },
+          {
+            "case_id": "57280cfc3acd2414000df323",
+            "prefix_tokens": 227,
+            "header_tokens": 56
+          },
+          {
+            "case_id": "570db6fb16d0071400510d2c",
+            "prefix_tokens": 279,
+            "header_tokens": 56
+          },
+          {
+            "case_id": "56f82667a6d7ea1400e17421",
+            "prefix_tokens": 186,
+            "header_tokens": 56
+          }
+        ]
+      },
+      "Mistral": {
+        "prefix_tokens": [
+          154,
+          359
+        ],
+        "suffix_tokens": [
+          9,
+          24
+        ],
+        "header_tokens": [
+          59
+        ],
+        "engineering_cases": [
+          {
+            "case_id": "56f991b19b226e1400dd15b8",
+            "prefix_tokens": 154,
+            "header_tokens": 59
+          },
+          {
+            "case_id": "57280cfc3acd2414000df323",
+            "prefix_tokens": 250,
+            "header_tokens": 59
+          },
+          {
+            "case_id": "570db6fb16d0071400510d2c",
+            "prefix_tokens": 306,
+            "header_tokens": 59
+          },
+          {
+            "case_id": "56f82667a6d7ea1400e17421",
+            "prefix_tokens": 195,
+            "header_tokens": 59
+          }
+        ]
+      }
+    },
+    "coverage": [
+      {
+        "model": "Qwen",
+        "retention": "1/2",
+        "protection_mode": "anchors_only",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 4,
+          "infeasible": 0
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 12,
+          "infeasible": 0
+        }
+      },
+      {
+        "model": "Qwen",
+        "retention": "1/2",
+        "protection_mode": "complete_system_union_anchors",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 1,
+          "infeasible": 3
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 2,
+          "infeasible": 10
+        }
+      },
+      {
+        "model": "Qwen",
+        "retention": "3/4",
+        "protection_mode": "anchors_only",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 4,
+          "infeasible": 0
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 12,
+          "infeasible": 0
+        }
+      },
+      {
+        "model": "Qwen",
+        "retention": "3/4",
+        "protection_mode": "complete_system_union_anchors",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 3,
+          "infeasible": 1
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 12,
+          "infeasible": 0
+        }
+      },
+      {
+        "model": "Mistral",
+        "retention": "1/2",
+        "protection_mode": "anchors_only",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 4,
+          "infeasible": 0
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 12,
+          "infeasible": 0
+        }
+      },
+      {
+        "model": "Mistral",
+        "retention": "1/2",
+        "protection_mode": "complete_system_union_anchors",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 2,
+          "infeasible": 2
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 3,
+          "infeasible": 9
+        }
+      },
+      {
+        "model": "Mistral",
+        "retention": "3/4",
+        "protection_mode": "anchors_only",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 4,
+          "infeasible": 0
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 12,
+          "infeasible": 0
+        }
+      },
+      {
+        "model": "Mistral",
+        "retention": "3/4",
+        "protection_mode": "complete_system_union_anchors",
+        "engineering": {
+          "scheduled": 4,
+          "feasible": 3,
+          "infeasible": 1
+        },
+        "development": {
+          "scheduled": 12,
+          "feasible": 12,
+          "infeasible": 0
+        }
+      }
+    ],
+    "predicted_bytes_per_prefix_slot": {
+      "Qwen": 57344,
+      "Mistral": 131072
+    },
+    "Qwen_original14_exact": true,
+    "complete_system_coverage_checked": true,
+    "all_engineering_query_prefixes_equal": true,
+    "native_variants_rows_and_budgets_byte_equal_v1_v2": true,
+    "model_metadata_files": 16,
+    "model_metadata_unique_bytes": 14798934,
+    "pinned_v2_inputs": 16,
+    "guard": {
+      "model_metadata_open_events": 28,
+      "forbidden_read_attempts": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0,
+      "blocked_loopback_capability_probes": 1,
+      "torch_loaded": false,
+      "model_forward_calls": 0,
+      "network_requests": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0
+    },
+    "zero_offset_control_mappings_observed": 0,
+    "query_crossing_tokens_observed": 0,
+    "independent_verifier_extra_encodes": 0,
+    "model_or_tensor_correctness_verified": false,
+    "task_support_verified": false,
+    "protected_engineering_verified": false,
+    "current_HF_backend_supports_Mistral_or_three_quarters": false,
+    "separate_scope_note": "3/4budget mathfeasible DEV is not proof of protected engineering. Originalfirst2engineering include1infeasible protected case at3/4forbothmodels;do not overwrite original engineering evidence with remaining pool cases.",
+    "new_main_answers": 0,
+    "new_engineering_answers": 0,
+    "sealed_encodes": 0,
+    "weight_bytes_read": 0,
+    "model_forward_calls": 0,
+    "GPU_queries": 0,
+    "network_requests": 0,
+    "dependency_changes": false,
+    "old_QA_gate": false,
+    "independent_scientific_confirmation": false,
+    "all4_own_PIDs_exited": true,
+    "active_gpu_queue": false,
+    "next": "Freeze new Mistral-only Full-only protocol(max6engineering+12DEV answers),using originalfirst2engineering andall12DEV. Implement32-layer actualKV/native whole/native split/custom split and task support check;0compact/protected/sealed. CurrentCPU pass does not automatically launch GPU. Protected condition-specific engineering coverage needs separate registration."
+  },
+  "Mistral_current_QA_Full": {
+    "date": "2026-10-30",
+    "protocol": "docs/MISTRAL_SQUAD_FULL_PROTOCOL_20261030.md",
+    "record": "docs/runs/20261030-mistral-squad-full.md",
+    "proposal": "configs/mistral-squad-full-v1.json",
+    "proposal_sha256": "217d320431dd9a21441d27b37d773ab2e2a303de0dfbe981c1e28bb9c849f688",
+    "source_sha256": {
+      "scripts/run_mistral_squad_full.py": "cdec42ae81cb7f6d8aa5cd9771c37a1d524a21069392badc728110422677700e",
+      "scripts/verify_mistral_squad_full.py": "77cf7cd24302f895103d8ca47f080786801ece21558159ab8eedb213e4dfd235"
+    },
+    "run": "results/20261030-mistral-squad-full-v1",
+    "status": "complete",
+    "worker_pid": 999238,
+    "launcher_pid": 999235,
+    "elapsed_seconds": 86.0493797683157,
+    "launcher_elapsed_seconds": 86.74232544703409,
+    "started_utc": "2026-10-30T21:24:03.286581+08:00",
+    "finished_utc": "2026-10-30T21:25:30.029089+08:00",
+    "main_answers": 12,
+    "engineering_answers": 6,
+    "generated_tokens": 239,
+    "engineering_gate": true,
+    "Full_support": false,
+    "original_manifest_entries": 21,
+    "files": 26,
+    "bytes": 166502,
+    "sha256": {
+      "manifest.json": "c1a377ba7f9ad7f9f40ef6f2f17622fee3c23ab5eda0fc59f1dfd094f509af21",
+      "summary.json": "f53c13909ae0266f010ab0351664f5fce615979a0c7864229bbb29ef4a6a62b5",
+      "actual_runtime.json": "5ac79b7866654f491e94fad6e9d124243c436b6201375f7af1ec7b63df2e201c",
+      "execution_snapshot.json": "3a7beea93dc774e2c33812d82548387b8eea7ff1ae98d6f2f0a9abaf746c26db",
+      "model_file_verification.json": "633b6173ab7385ac78e70003734d2957eb9484e54b652f0595482fab5cdb0df4",
+      "input_bindings.json": "2475a7294fcd6100d6a7880d9113a4b13728a4e0fc53919a9cdd94082e846eae",
+      "raw_generations.jsonl": "81c4febf5b6f62f67ab208001a50d84e40e2187d5de7513586b1e91fc2d3be37",
+      "engineering.jsonl": "a458675c174f00287a21cde59d684946278188e71d12c6a8f6585a20678caad3",
+      "generations.jsonl": "00a9adfed40bc25e33989c67d96379cad2406b41b48eeaf51091410feb5aaf4d",
+      "engineering_checks.json": "3ae1c2d40dd13edf323c13d44cc96b38528994b3c840e856edf21eb7f1fef98a",
+      "Full_support.json": "cc6ef38a2f7c0619a33a55b365dbbd539bc8565e22f7c1f18b97116ed59cccdd",
+      "normalized_records.jsonl": "2aa494a5105fbf655f9ad21dcc9ffa341e6b6217474a0ba2440cc0c55a4f4bba",
+      "report.json": "cdf3c3f28162ec6a0b83e3967348063a85fb2f1c7e06a419267a7b8b748c20fb",
+      "independent_verification.json": "e3f9620f3c2e2cea80ad08e3ac052fbad1bd60085ecaa11db9f291e0c28c26c1",
+      "format_failure_categories.json": "a5b5621de6ac27d599de0dfc944a3985236783ea97186581a9c7dd752408c664",
+      "closure.json": "b0712a0a277140c58f3596340dbb44e6d46f7d8d38e8cc06e2459beb4f0847da",
+      "derived_manifest.json": "a89887e69f52281245ed9e22b473982032c4a4e73be0539a5fadb33ce0c69d96"
+    },
+    "external_artifacts": {
+      "20261030-mistral-squad-full-v1.launch.json": "87d4e543696db1baaf341af504afa55e4c82a18d6b3e0b0cb8276b05a70e2ca0",
+      "20261030-mistral-squad-full-v1.console.log": "ba13ea796876dd723bbaf7cea62edad4e4788dc9327e6820fc27ea82710188a0",
+      "20261030-mistral-squad-full-v1.launcher.py": "7c10ffe32611c587df2ac75f96d07719a92a1b93a67b0470e088c4b341189a0d"
+    },
+    "index": "results/20261030-run-index-mistral-squad-full.json",
+    "index_sha256": "d2673f944eddab9c4a43568fe327705e0f63bb0786234d0eed6544d2f94d2c0a",
+    "cumulative_runs": 115,
+    "cumulative_main_outputs": 2900,
+    "GPU_after": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa, 15, 0",
+    "runtime_digest": "9f045ed0e5680200da3841a3bd8eede8633eaf5d3d610ad29ce9f9769608af64",
+    "independent": {
+      "status": "passed",
+      "checked_utc": "2026-10-30T21:25:54.722943+08:00",
+      "verifier_sha256": "77cf7cd24302f895103d8ca47f080786801ece21558159ab8eedb213e4dfd235",
+      "independent_scorer_source_sha256": "0bf578b3e342d3c2554c5134c6774559a876d06327e319fe15fad5e96cf69143",
+      "engineering_answers": 6,
+      "DEV_answers": 12,
+      "generated_tokens": 239,
+      "three_paths_equal_for_both_engineering_cases": true,
+      "trace_steps_independently_recomputed": 193,
+      "independent_text_scores": 18,
+      "model_metadata_files": 10,
+      "weight_shards_rehashed": 3,
+      "Full_support": false,
+      "task_correct": 7,
+      "format_correct": 8,
+      "joint_delivered": 6,
+      "truncated": 0,
+      "strict_task_evaluated": 12,
+      "strict_format_evaluated": 12,
+      "pinned_inputs_unchanged": 12,
+      "GPU_after": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa, 15, 0",
+      "own_worker_and_launcher_exited": true,
+      "compact_or_sealed_outputs": 0,
+      "independent_scientific_confirmation": false
+    },
+    "categories": {
+      "scope": "Post-run categories only,no text rescoring ornew inference",
+      "format_failures": 4,
+      "failure_reasons": {
+        "json_string": 4
+      },
+      "format_failures_task_correct": 1,
+      "generation_errors": 0,
+      "truncation": 0,
+      "all_candidates_available": true,
+      "outputs_or_gate_changed": false
+    },
+    "scope": "Full-only oncurrentfixed2engineering+12DEV;not compression/protection ornewindependentcontexts",
+    "runtime_layout": {
+      "layers": 32,
+      "attention_heads": 32,
+      "KV_heads": 8,
+      "head_dimension": 128,
+      "dtype": "bfloat16",
+      "backend": "sdpa",
+      "sliding_window": null,
+      "actual_bytes_per_prefix_slot": 131072
+    },
+    "task_support": {
+      "passed": false,
+      "task_correct": 7,
+      "task_evaluated": 12,
+      "format_correct": 8,
+      "format_evaluated": 12,
+      "joint_delivered": 6,
+      "scheduled": 12,
+      "truncated": 0,
+      "errors": 0,
+      "thresholds": {
+        "task_min": 6,
+        "format_min": 9,
+        "truncated_max": 1,
+        "errors_max": 0
+      },
+      "failure_reason": "format8belowpredeclared9",
+      "negative_support_result_not_execution_failure": true
+    },
+    "model_weights_and_metadata_before_loading_verified": true,
+    "weight_shards_independently_rehashed": 3,
+    "new_protected_or_compact_outputs": 0,
+    "sealed_outputs": 0,
+    "independent_scientific_confirmation": false,
+    "performance_benchmarked": false,
+    "dependencies_or_environment_changed": false,
+    "network_requests": 0,
+    "old_QA_gate": false,
+    "all_own_PIDs_exited": true,
+    "active_gpu_queue": false,
+    "next": "Stop Mistral currentQA compression/protection/sealed queue afterfixedFull support failure. Offline consolidate model/task support and budget coverage boundaries, then choose a minimal independent empirical scope. Do not prompt/model/sample search orrewrite oldgates;no enabledGPUqueue."
+  },
+  "minimum_evidence_scope": {
+    "date": "2026-10-30",
+    "status": "SQuAD-onlyoriginal48source/groupsfreezecomplete;nextnativeCPUpreflightunimplemented,noinference",
+    "scope": "docs/MINIMUM_EVIDENCE_SCOPE_20261030.md",
+    "decision": "configs/minimum-evidence-scope-v1.json",
+    "CPUproposal": "configs/squad48-scope-freeze-v1.json",
+    "artifact_sha256": {
+      "docs/MINIMUM_EVIDENCE_SCOPE_20261030.md": "9918fbc34c854c5df745624461436114e174cf2c3504caf9d4c44fa8d144097d",
+      "configs/minimum-evidence-scope-v1.json": "f97ae15d4ea9dbcc9d1110fec4a334f101ae58b46eeb268d8da5e6c8d4b5305d",
+      "configs/squad48-scope-freeze-v1.json": "b1b975718152a4747ed25527f892a04224253d3b4ee0a7c5088ef9bd1420304f"
+    },
+    "decision_summary": {
+      "retain_direction": true,
+      "degree_or_publication_contribution_established": false,
+      "primary_next_scope": "FixedQwen/SQuAD-only pre-existing48reservedarticle groups;3conditions,144mainceiling",
+      "model_search_allowed": false,
+      "Mistral_compact_queue": false,
+      "BoolQ_source_paused": true,
+      "protected_and_three_quarters_in_primaryscope": false,
+      "engineering_ceiling_reserved": 14,
+      "actual_GPU_registration": false,
+      "existing_gates_unchanged": true,
+      "new_source_selection": false,
+      "original_provisional_cross_task_split_not_falsely_completed": true
+    },
+    "current_evidence": {
+      "QwenFull": {
+        "task": "9/12",
+        "format": "11/12",
+        "joint": "8/12",
+        "support": true
+      },
+      "MistralFull": {
+        "task": "7/12",
+        "format": "8/12",
+        "joint": "6/12",
+        "engineering": true,
+        "support": false,
+        "reason": "format<fixed9"
+      },
+      "protected_DEV_budget_half": {
+        "Qwen": "2/12",
+        "Mistral": "3/12"
+      },
+      "three_quarters_DEV_math": {
+        "Qwen": "12/12",
+        "Mistral": "12/12",
+        "actual_protected_engineering": false
+      },
+      "independent48_inferred": false
+    },
+    "CPU_next": {
+      "execution_enabled": false,
+      "runner_implemented": true,
+      "exact_existing_train_and_parent_split_paths_located": true,
+      "source_schema_checked": true,
+      "expected_reserved48": true,
+      "expected_total_distinct64": true,
+      "planned_cells": 144,
+      "source_group_audit_executed_this_turn": true,
+      "new_raw_downloads": 0,
+      "new_tokenizer_encodes": 0,
+      "sourcegroup_freeze_produces_no_model_or_engineering_pass": true
+    },
+    "analysis_draft": {
+      "Full_support_48": {
+        "task_min": 24,
+        "format_min": 36,
+        "max_errors": 0,
+        "max_truncated": 4
+      },
+      "group_bootstrap_implemented": false,
+      "pointwise_intervals_not_risk_certification": true,
+      "existing_sample_size_is_groups_not_outputs": true
+    },
+    "evidence_pins": {
+      "results/20261030-independent-task-preflight-v1/manifest.json": "67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+      "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+      "results/20261030-hf-DEV-acceptance-v2/report.json": "054d54673e74b4b7c96906f3b80a5ccaf31b998a87906b4bd642c232187916f4",
+      "results/20261030-hf-backend-engineering-v1/engineering_evidence.json": "7ca977f2f221f752d26dbcf2b1984046e07197a1a5d1ba4c7dba0418f8bc3a27",
+      "results/20261030-independent-evidence-frontends-preflight-v2/budget_coverage.json": "7e226785b5f74b53533e4fb30f8009d5f5bed3656ac6c270c16208ce9da7a4b0",
+      "results/20261030-mistral-squad-full-v1/Full_support.json": "cc6ef38a2f7c0619a33a55b365dbbd539bc8565e22f7c1f18b97116ed59cccdd",
+      "results/20261030-run-index-mistral-squad-full.json": "d2673f944eddab9c4a43568fe327705e0f63bb0786234d0eed6544d2f94d2c0a"
+    },
+    "additional_parent_manifest_pins": {
+      "results/20261030-independent-task-preflight-v1/squad_train.source": "3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955",
+      "results/20261030-independent-task-preflight-v1/split_manifest.json": "37e1e620d2c9240b85574c1b51f91cb93b833a1a3b035045e9dc9b1a5d61078c",
+      "results/20261030-independent-task-preflight-v1/source_identity.json": "da78ba541c955befdb6874100527b03ac59cc2ddc6cffc93d20bc3310caa8599",
+      "results/20261030-independent-task-preflight-v1/summary.json": "141c30d0a06c568a3eb5a55f9244dc502f5e98fc50e8f6d40740ad65c5fa66ef",
+      "results/20261030-independent-task-preflight-v1/proposal_snapshot.json": "80bb909446587d1aeaa32ee06092ea1fd75b55ee9c1dc449ad03c845371a01dc",
+      "results/20261030-independent-task-preflight-v1/source_preflight_independent_task.py": "83311cb7f2429c069123c8ac079b3be12f0bbc201f8bc691e92aa1f6f685fd79",
+      "results/20261030-independent-task-preflight-v1/source_answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990"
+    },
+    "literature_review": {
+      "depth": "Officialabstractsrechecked,noauthorimplementationreplication",
+      "sources": [
+        "https://aclanthology.org/2026.acl-long.1926/",
+        "https://arxiv.org/abs/2608.09412v1",
+        "https://arxiv.org/abs/2609.27981v1"
+      ],
+      "first_method_or_benchmark_claim": false
+    },
+    "actual_this_turn": {
+      "new_runs": 0,
+      "new_main_outputs": 0,
+      "new_engineering_outputs": 0,
+      "model_loads": 0,
+      "tokenizer_encodes": 0,
+      "GPU_queries": 0,
+      "weight_bytes_read": 0,
+      "dependency_changes": false,
+      "server_actions": "Readonlylatestmanifests/source-parentmetadata/rolecounts/ownoldPIDabsence;documentationanddisabledplanssynced",
+      "existing_sourcefile_hashing_forpins_allowed": true
+    },
+    "cumulative": {
+      "runs": 116,
+      "main_model_outputs": 2900,
+      "index": "results/20261030-run-index-squad48-source-freeze.json",
+      "index_sha256": "5134913f864aec8b81502a0984eceb8e56fcbd1b5fd48142005a8a07b6f4b92e"
+    },
+    "next": "Implementandexecute pinnedQwen48nativefrontend/half-budget CPUpreflight,96encodes/144plannedcells,0weights/GPU/network. Keepinfeasibleanchorswithoutpadding;noquestion/promptediting. ThenvalidatestatisticalmoduleandfreezeactualGPUstage;notdirect144cellinference.",
+    "active_gpu_queue": false,
+    "old_QA_gate": false,
+    "Mistral_support": false,
+    "own_old_PIDs_exited": true,
+    "independent_scientific_confirmation": false,
+    "SQuAD48_source_freeze": {
+      "date": "2026-10-30",
+      "protocol": "docs/SQUAD48_SOURCE_FREEZE_PROTOCOL_20261030.md",
+      "record": "docs/runs/20261030-squad48-source-freeze.md",
+      "proposal": "configs/squad48-scope-freeze-v1.json",
+      "proposal_sha256": "b1b975718152a4747ed25527f892a04224253d3b4ee0a7c5088ef9bd1420304f",
+      "original_proposal_flags_unchanged": true,
+      "source_sha256": {
+        "scripts/freeze_squad48_scope.py": "73609092b067335aa9835db73154780f2db2ff1234120947a49755d8dcddc55a",
+        "scripts/verify_squad48_scope.py": "4aa481d1c69d3a8560dca0baff255d1006625539088b9f520c9bc040aa29efe3"
+      },
+      "run": "results/20261030-squad48-scope-freeze-v1",
+      "status": "complete",
+      "worker_pid": 1022354,
+      "launcher_pid": 1022351,
+      "elapsed_seconds": 1.7699168170802295,
+      "launcher_elapsed_seconds": 1.8698835638351738,
+      "started_utc": "2026-10-30T22:09:30.659515+08:00",
+      "finished_utc": "2026-10-30T22:09:32.529578+08:00",
+      "original_manifest_entries": 15,
+      "files": 19,
+      "bytes": 448605,
+      "sha256": {
+        "manifest.json": "20ab6ff77770c8597154d1a9259865602b4e6a16ba123ce41183d6ba3d8a2455",
+        "summary.json": "87f887e93eb1c351348c48a3f748a33a2880011c4b72b8b8e22a08ccb92cdf63",
+        "input_manifest.json": "1874ebca0acf8bac40397736e18be5a75b53446570db3ac770c45ea3ec80e475",
+        "selected48.jsonl": "993ae6a45e4b041181e3aeed4d90afabc509d54f99ed0a20e5436492a50731af",
+        "planned_cells.jsonl": "f256ae916c1d151e887aee22415f4be00387087088b853c9a03ac5b39a1e50aa",
+        "component_revalidation.json": "7a4e35d3b0ca38e27e11f4a32f82bd01e5e4174f95289c8398d1890409e25e1d",
+        "source_case_checks.json": "23f2cf359a029fe06c54ff6f43674018ea6a87e6aae78fb36f6e61ba763952f9",
+        "scope_manifest.json": "3af6c3b5758f833e7125f45ec149592bd57da35805973eae13e2e22a61a6f3d3",
+        "CPU_guard_observations.json": "22de7212fb35770c3a51a529395d44c03b5d33836b7508e89fa3fdc6400afc9b",
+        "independent_verification.json": "6afce6f9fecccd9070538fbcd0d5a91990d2d7f9290c81362d9e16427a90fe94",
+        "closure.json": "d8b758be2632f7a6483970bc480a5aa6288fbc8b652b3a8d0b2e15cdd17faf78",
+        "derived_manifest.json": "7c403c95b2d7fb6f0b1aab500af955fc7e53184e8e01602970854fed15e0486d"
+      },
+      "external_artifacts": {
+        "20261030-squad48-scope-freeze-v1.launch.json": "6fad08c7cba5edb0e7ea9e07aa3a06d0ee774b0727671b4b4deef4160e3d8b69",
+        "20261030-squad48-scope-freeze-v1.console.log": "191737d90a4a5266da9f3de33cb54d985383cc956eb1b115bb73191477b4cbbe",
+        "20261030-squad48-scope-freeze-v1.launcher.py": "23ce519d72d15de160c820736b970b1dbae990a74401f2e07e716a2a70ff39e8"
+      },
+      "index": "results/20261030-run-index-squad48-source-freeze.json",
+      "index_sha256": "5134913f864aec8b81502a0984eceb8e56fcbd1b5fd48142005a8a07b6f4b92e",
+      "cumulative_runs": 116,
+      "cumulative_main_outputs": 2900,
+      "input_bytes": 35489314,
+      "raw_source_bytes": 35142551,
+      "guard": {
+        "forbidden_library_imports": 0,
+        "forbidden_model_file_opens": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "source_integrity": {
+        "train_articles": 442,
+        "train_questions": 87599,
+        "gold_spans_revalidated": 87599,
+        "source_articles_BFS_components": 442,
+        "original_case_selection_count": 64,
+        "original_prompt_gold_and_role_exact": true,
+        "reserved48_ids_order_and_groups_exact": true,
+        "current_engineering_and_DEV_groups_disjoint": true,
+        "entire_historical48_articles_title_context_excluded": true,
+        "semantic_near_duplicate_or_pretraining_clean_guarantee": false,
+        "cross_task_BoolQ_audit_complete": false
+      },
+      "planned_cells": 144,
+      "planned_conditions": [
+        "full",
+        "adapted_snapkv",
+        "uniform_random"
+      ],
+      "actual_cells_executed": 0,
+      "all_budget_states": "not_checked",
+      "all_engineering_evidence": "not_registered_for_new_cohort",
+      "all_metrics": null,
+      "independent_verification": {
+        "passed": true,
+        "method": "IndependentadjacencygraphBFSandseparatequestion-selectionrebuild;noimportofrunnerorprojectscorer",
+        "input_files_rehashed": 16,
+        "no_extra_encodes": true
+      },
+      "actual_this_turn": {
+        "new_runs": 1,
+        "new_main_answers": 0,
+        "new_engineering_answers": 0,
+        "model_forward_calls": 0,
+        "tokenizer_encodes": 0,
+        "GPU_queries": 0,
+        "weight_bytes_read": 0,
+        "network_requests": 0,
+        "new_downloads": 0,
+        "dependency_changes": false
+      },
+      "next_CPU_proposal": {
+        "path": "configs/squad48-native-preflight-v1.json",
+        "sha256": "15dfe0e7294b5b8fbb137dedd4952907447058e5481de7940631cd7190551913",
+        "execution_enabled": false,
+        "runner_implemented": false,
+        "expected_cases": 48,
+        "max_encodes": 96,
+        "expected_plan_cells": 144,
+        "noGPUweightsnetwork": true
+      },
+      "old_QA_gate": false,
+      "Mistral_Full_support": false,
+      "independent_scientific_confirmation": false,
+      "model_inference_enabled": false,
+      "all_own_PIDs_exited": true,
+      "active_gpu_queue": false,
+      "next": "Implementandexecute pinnedQwen48nativefrontend/half-budget CPUpreflight,96encodes/144plannedcells,0weights/GPU/network. Keepinfeasibleanchorswithoutpadding;noquestion/promptediting. ThenvalidatestatisticalmoduleandfreezeactualGPUstage;notdirect144cellinference."
+    }
+  },
+  "SQuAD48_source_freeze": {
+    "date": "2026-10-30",
+    "protocol": "docs/SQUAD48_SOURCE_FREEZE_PROTOCOL_20261030.md",
+    "record": "docs/runs/20261030-squad48-source-freeze.md",
+    "proposal": "configs/squad48-scope-freeze-v1.json",
+    "proposal_sha256": "b1b975718152a4747ed25527f892a04224253d3b4ee0a7c5088ef9bd1420304f",
+    "original_proposal_flags_unchanged": true,
+    "source_sha256": {
+      "scripts/freeze_squad48_scope.py": "73609092b067335aa9835db73154780f2db2ff1234120947a49755d8dcddc55a",
+      "scripts/verify_squad48_scope.py": "4aa481d1c69d3a8560dca0baff255d1006625539088b9f520c9bc040aa29efe3"
+    },
+    "run": "results/20261030-squad48-scope-freeze-v1",
+    "status": "complete",
+    "worker_pid": 1022354,
+    "launcher_pid": 1022351,
+    "elapsed_seconds": 1.7699168170802295,
+    "launcher_elapsed_seconds": 1.8698835638351738,
+    "started_utc": "2026-10-30T22:09:30.659515+08:00",
+    "finished_utc": "2026-10-30T22:09:32.529578+08:00",
+    "original_manifest_entries": 15,
+    "files": 19,
+    "bytes": 448605,
+    "sha256": {
+      "manifest.json": "20ab6ff77770c8597154d1a9259865602b4e6a16ba123ce41183d6ba3d8a2455",
+      "summary.json": "87f887e93eb1c351348c48a3f748a33a2880011c4b72b8b8e22a08ccb92cdf63",
+      "input_manifest.json": "1874ebca0acf8bac40397736e18be5a75b53446570db3ac770c45ea3ec80e475",
+      "selected48.jsonl": "993ae6a45e4b041181e3aeed4d90afabc509d54f99ed0a20e5436492a50731af",
+      "planned_cells.jsonl": "f256ae916c1d151e887aee22415f4be00387087088b853c9a03ac5b39a1e50aa",
+      "component_revalidation.json": "7a4e35d3b0ca38e27e11f4a32f82bd01e5e4174f95289c8398d1890409e25e1d",
+      "source_case_checks.json": "23f2cf359a029fe06c54ff6f43674018ea6a87e6aae78fb36f6e61ba763952f9",
+      "scope_manifest.json": "3af6c3b5758f833e7125f45ec149592bd57da35805973eae13e2e22a61a6f3d3",
+      "CPU_guard_observations.json": "22de7212fb35770c3a51a529395d44c03b5d33836b7508e89fa3fdc6400afc9b",
+      "independent_verification.json": "6afce6f9fecccd9070538fbcd0d5a91990d2d7f9290c81362d9e16427a90fe94",
+      "closure.json": "d8b758be2632f7a6483970bc480a5aa6288fbc8b652b3a8d0b2e15cdd17faf78",
+      "derived_manifest.json": "7c403c95b2d7fb6f0b1aab500af955fc7e53184e8e01602970854fed15e0486d"
+    },
+    "external_artifacts": {
+      "20261030-squad48-scope-freeze-v1.launch.json": "6fad08c7cba5edb0e7ea9e07aa3a06d0ee774b0727671b4b4deef4160e3d8b69",
+      "20261030-squad48-scope-freeze-v1.console.log": "191737d90a4a5266da9f3de33cb54d985383cc956eb1b115bb73191477b4cbbe",
+      "20261030-squad48-scope-freeze-v1.launcher.py": "23ce519d72d15de160c820736b970b1dbae990a74401f2e07e716a2a70ff39e8"
+    },
+    "index": "results/20261030-run-index-squad48-source-freeze.json",
+    "index_sha256": "5134913f864aec8b81502a0984eceb8e56fcbd1b5fd48142005a8a07b6f4b92e",
+    "cumulative_runs": 116,
+    "cumulative_main_outputs": 2900,
+    "input_bytes": 35489314,
+    "raw_source_bytes": 35142551,
+    "guard": {
+      "forbidden_library_imports": 0,
+      "forbidden_model_file_opens": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "source_integrity": {
+      "train_articles": 442,
+      "train_questions": 87599,
+      "gold_spans_revalidated": 87599,
+      "source_articles_BFS_components": 442,
+      "original_case_selection_count": 64,
+      "original_prompt_gold_and_role_exact": true,
+      "reserved48_ids_order_and_groups_exact": true,
+      "current_engineering_and_DEV_groups_disjoint": true,
+      "entire_historical48_articles_title_context_excluded": true,
+      "semantic_near_duplicate_or_pretraining_clean_guarantee": false,
+      "cross_task_BoolQ_audit_complete": false
+    },
+    "planned_cells": 144,
+    "planned_conditions": [
+      "full",
+      "adapted_snapkv",
+      "uniform_random"
+    ],
+    "actual_cells_executed": 0,
+    "all_budget_states": "not_checked",
+    "all_engineering_evidence": "not_registered_for_new_cohort",
+    "all_metrics": null,
+    "independent_verification": {
+      "passed": true,
+      "method": "IndependentadjacencygraphBFSandseparatequestion-selectionrebuild;noimportofrunnerorprojectscorer",
+      "input_files_rehashed": 16,
+      "no_extra_encodes": true
+    },
+    "actual_this_turn": {
+      "new_runs": 1,
+      "new_main_answers": 0,
+      "new_engineering_answers": 0,
+      "model_forward_calls": 0,
+      "tokenizer_encodes": 0,
+      "GPU_queries": 0,
+      "weight_bytes_read": 0,
+      "network_requests": 0,
+      "new_downloads": 0,
+      "dependency_changes": false
+    },
+    "next_CPU_proposal": {
+      "path": "configs/squad48-native-preflight-v1.json",
+      "sha256": "15dfe0e7294b5b8fbb137dedd4952907447058e5481de7940631cd7190551913",
+      "execution_enabled": false,
+      "runner_implemented": false,
+      "expected_cases": 48,
+      "max_encodes": 96,
+      "expected_plan_cells": 144,
+      "noGPUweightsnetwork": true
+    },
+    "old_QA_gate": false,
+    "Mistral_Full_support": false,
+    "independent_scientific_confirmation": false,
+    "model_inference_enabled": false,
+    "all_own_PIDs_exited": true,
+    "active_gpu_queue": false,
+    "next": "Implementandexecute pinnedQwen48nativefrontend/half-budget CPUpreflight,96encodes/144plannedcells,0weights/GPU/network. Keepinfeasibleanchorswithoutpadding;noquestion/promptediting. ThenvalidatestatisticalmoduleandfreezeactualGPUstage;notdirect144cellinference."
+  },
+  "SQuAD48_native_CPU_followup": {
+    "readiness": "docs/SQUAD48_NATIVE_READINESS_20261030.json",
+    "record": "docs/runs/20261030-squad48-native-preflight.md",
+    "status": "CPU preflight and independent verification complete; no inference",
+    "run": "results/20261030-squad48-native-preflight-v1",
+    "native_inputs": 48,
+    "tokenizer_encodes": 96,
+    "planned_cells": 144,
+    "math_feasible_cells": 138,
+    "budget_infeasible_cells": 6,
+    "all_original_groups_retained": true,
+    "all_execution_states": "not_run",
+    "model_answers": 0,
+    "actual_KV_verified": false,
+    "Full_support": "unverified",
+    "engineering": "unregistered for current48 cohort",
+    "next_statistics_proposal": "configs/group-statistics-acceptance-v1.json",
+    "statistics_implemented": false,
+    "statistics_executed": false,
+    "next": "Implement and independently verify group-level statistics with 18 CPU software fixtures. Do not estimate effects from planned/unrun cells. Then freeze a separate GPU role/runtime/engineering/Full-support protocol; no GPU queue.",
+    "cumulative_runs": 117,
+    "cumulative_main_outputs": 2900,
+    "index": "results/20261030-run-index-squad48-native.json",
+    "index_sha256": "724817ec9be87353cd75afde2b5c9121ca5c2276a833c1ab5eb9bdab842ad38b"
+  },
+  "group_statistics_CPU_followup": {
+    "readiness": "docs/GROUP_STATISTICS_READINESS_20261030.json",
+    "record": "docs/runs/20261030-group-statistics-acceptance.md",
+    "status": "18 fixed CPU software cases passed; independent audit passed",
+    "run": "results/20261030-group-statistics-acceptance-v1",
+    "software_cases": 18,
+    "rejecting_mutations": 13,
+    "complete_synthetic_reports_recomputed": 11,
+    "statistics_module_implemented": true,
+    "runtime_output_adapter_implemented": false,
+    "current48_model_effect_estimates": 0,
+    "current48_all_cells_not_run": true,
+    "actual_this_turn": {
+      "new_CPU_runs": 1,
+      "new_model_answers": 0,
+      "new_engineering_answers": 0,
+      "model_loads": 0,
+      "tokenizer_encodes": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "network_requests": 0,
+      "new_dependencies": false,
+      "server_actions": "Registered CPU software acceptance and independent readback; no model outputs, weights, GPU, tokenizer or network"
+    },
+    "source_sha256": {
+      "scripts/verify_group_statistics.py": "9f1743905f9878cfd8045f8fba484f524d74d8dfdd6a4d86efec8854a104bd42",
+      "scripts/accept_group_statistics.py": "905b5b844da485cae53583956ef3c6401a16bb506218b8ffe4b44fa11c87c12a",
+      "scripts/reliability_group_statistics.py": "1a87e8ee243a1159ca055ae317ac5acd9940722d4312bd06d597fe62f5f59169",
+      "docs/GROUP_STATISTICS_CPU_PROTOCOL_20261030.md": "ce6faafdd00e6c3ca9bf6716dac989b2347c9fb6a5ac3168274ce37cc2b8d49a"
+    },
+    "index": "results/20261030-run-index-group-statistics.json",
+    "index_sha256": "1e9b651d5ab16721943512d4730cb07be84b65230bff892897a76ff534b0b586",
+    "cumulative_runs": 118,
+    "cumulative_main_outputs": 2900,
+    "next": "Implement and freeze the Qwen/SQuAD48 GPU role/runtime/engineering-evidence protocol plus explicit runtime-output adapter and correctness checks. Revalidate original2 engineering cases (Full3 paths and compressed2 paths: ceiling14), run48 Full first, stop if preset Full support fails; only then at most90 feasible compressed main answers. Keep all48 groups/144 report cells including6 budget blocks. No protected/3/4/BoolQ/Mistral compression or old16 inference. Current turn has no GPU execution."
+  },
+  "SQuAD48_GPU_followup": {
+    "readiness": "docs/SQUAD48_GPU_READINESS_20261030.json",
+    "record": "docs/runs/20261030-squad48-gpu-study.md",
+    "conclusion": "docs/SQUAD48_EVIDENCE_CONCLUSION_20261030.md",
+    "status": "Fixed Qwen/SQuAD48 GPU study and independent audit complete",
+    "run": "results/20261030-squad48-gpu-study-v1",
+    "current_runtime_output_adapter_implemented": true,
+    "current_GPU_role_integration_implemented": true,
+    "software_cases": 16,
+    "main_outputs": 138,
+    "engineering_outputs": 14,
+    "generated_tokens": 4664,
+    "all_original_groups_retained": true,
+    "planned_groups": 48,
+    "planned_cells": 144,
+    "budget_infeasible_cells": 6,
+    "Qwen48_Full_support": true,
+    "Full_counts": {
+      "candidates": 48,
+      "errors": 0,
+      "format": 44,
+      "generated": 48,
+      "joint": 31,
+      "scheduled": 48,
+      "task": 34,
+      "truncated": 0
+    },
+    "conditions": {
+      "adapted_snapkv": {
+        "budget_infeasible": 3,
+        "execution_counts": {
+          "infeasible_budget": 3,
+          "ok": 45
+        },
+        "joint_rate": 0,
+        "observed_joint_successes": 0,
+        "raw_task_count": 45,
+        "raw_task_sum": 3,
+        "scheduled": 48,
+        "strict_task_count": 42,
+        "strict_task_sum": 3,
+        "task_NA": 0,
+        "truncated": 3
+      },
+      "full": {
+        "budget_infeasible": 0,
+        "execution_counts": {
+          "ok": 48
+        },
+        "joint_rate": 0.6458333333333334,
+        "observed_joint_successes": 31,
+        "raw_task_count": 48,
+        "raw_task_sum": 34,
+        "scheduled": 48,
+        "strict_task_count": 48,
+        "strict_task_sum": 34,
+        "task_NA": 0,
+        "truncated": 0
+      },
+      "uniform_random": {
+        "budget_infeasible": 3,
+        "execution_counts": {
+          "infeasible_budget": 3,
+          "ok": 45
+        },
+        "joint_rate": 0,
+        "observed_joint_successes": 0,
+        "raw_task_count": 42,
+        "raw_task_sum": 9,
+        "scheduled": 48,
+        "strict_task_count": 41,
+        "strict_task_sum": 9,
+        "task_NA": 3,
+        "truncated": 1
+      }
+    },
+    "comparisons": {
+      "adapted_snapkv": {
+        "all_Full_correct_damage_bounds": [
+          0.8235294117647058,
+          0.9117647058823529
+        ],
+        "available_Full_correct": 34,
+        "coverage_bounds_are_not_CI": true,
+        "eligible_Full_correct_pairs": 31,
+        "groups": 48,
+        "joint_delta": -0.6458333333333334,
+        "joint_delta_ci95": [
+          -0.7708333333333334,
+          -0.5
+        ],
+        "strict_conditional_damage": 0.9032258064516129,
+        "strict_task_pairs": 42,
+        "transitions": {
+          "C2C": 3,
+          "C2W": 28,
+          "W2C": 0,
+          "W2W": 11
+        },
+        "unassessed_Full_correct": 3,
+        "unavailable_task_pairs": 6
+      },
+      "uniform_random": {
+        "all_Full_correct_damage_bounds": [
+          0.5882352941176471,
+          0.7352941176470589
+        ],
+        "available_Full_correct": 34,
+        "coverage_bounds_are_not_CI": true,
+        "eligible_Full_correct_pairs": 29,
+        "groups": 48,
+        "joint_delta": -0.6458333333333334,
+        "joint_delta_ci95": [
+          -0.7708333333333334,
+          -0.5
+        ],
+        "strict_conditional_damage": 0.6896551724137931,
+        "strict_task_pairs": 41,
+        "transitions": {
+          "C2C": 9,
+          "C2W": 20,
+          "W2C": 0,
+          "W2W": 12
+        },
+        "unassessed_Full_correct": 5,
+        "unavailable_task_pairs": 7
+      }
+    },
+    "scoped_heldout48_empirical_evidence_complete": true,
+    "broader_cross_task_second_model_confirmation": false,
+    "population_safety_claim": false,
+    "actual_this_turn": {
+      "new_runs": 1,
+      "new_GPU_study_runs": 1,
+      "new_main_outputs": 138,
+      "new_engineering_outputs": 14,
+      "generated_tokens": 4664,
+      "input_retokenization_encodes": 50,
+      "weights_verified": 4,
+      "metadata_verified": 6,
+      "models_downloaded": false,
+      "data_downloaded": false,
+      "new_dependencies": false
+    },
+    "index": "results/20261030-run-index-squad48-study.json",
+    "index_sha256": "d1c405bde0f1c8b9da7c7059bdccf3be66631cbc843e98791c08295d2744aaea",
+    "cumulative_runs": 119,
+    "cumulative_main_outputs": 3038,
+    "all_own_PIDs_exited": true,
+    "active_gpu_queue": false,
+    "next": "Consolidate the scoped systems/empirical thesis evidence and classify existing138 outputs without new model generation. Explain joint-floor/task-format differences, truncation/N/A/budget coverage and source independence limits. Do not auto-run protection/3/4/BoolQ/Mistral/old16 or retune the frozen study."
+  },
+  "SQuAD48_error_taxonomy_followup": {
+    "readiness": "docs/SQUAD48_ERROR_READINESS_20261030.json",
+    "analysis": "docs/SQUAD48_ERROR_ANALYSIS_20261030.md",
+    "record": "docs/runs/20261030-squad48-error-taxonomy.md",
+    "thesis_evidence_map": "docs/THESIS_EVIDENCE_MAP_20261030.md",
+    "status": "CPU exploratory taxonomy and independent verification complete",
+    "run": "results/20261030-squad48-error-taxonomy-v1",
+    "classified_cells": 144,
+    "existing_groups": 48,
+    "existing_answers": 138,
+    "new_model_answers": 0,
+    "software_cases": 9,
+    "server_only_examples": 26,
+    "exploratory_after_original_results": true,
+    "original_GPU194_files_unchanged": true,
+    "original_scoring_and_CI_unchanged": true,
+    "conditions": {
+      "adapted_snapkv": {
+        "categories": {
+          "budget_infeasible": 3,
+          "execution_error": 0,
+          "format_only": 0,
+          "joint_success": 0,
+          "neither": 39,
+          "not_run": 0,
+          "task_only": 3,
+          "task_unavailable": 0,
+          "truncated": 3
+        },
+        "completed": 42,
+        "completed_format_failures": {
+          "unstructured_plain_text": 42
+        },
+        "completed_task_overlap": {
+          "EM_match": 3,
+          "non_EM_positive_token_overlap": 35,
+          "non_EM_zero_token_overlap": 4
+        },
+        "generated": 45,
+        "planned": 48,
+        "raw_score_reasons": {
+          "whole_plain_text": 45
+        }
+      },
+      "full": {
+        "categories": {
+          "budget_infeasible": 0,
+          "execution_error": 0,
+          "format_only": 13,
+          "joint_success": 31,
+          "neither": 1,
+          "not_run": 0,
+          "task_only": 3,
+          "task_unavailable": 0,
+          "truncated": 0
+        },
+        "completed": 48,
+        "completed_format_failures": {
+          "unstructured_plain_text": 4
+        },
+        "completed_task_overlap": {
+          "EM_match": 34,
+          "non_EM_positive_token_overlap": 9,
+          "non_EM_zero_token_overlap": 5
+        },
+        "generated": 48,
+        "planned": 48,
+        "raw_score_reasons": {
+          "object_answer": 44,
+          "whole_plain_text": 4
+        }
+      },
+      "uniform_random": {
+        "categories": {
+          "budget_infeasible": 3,
+          "execution_error": 0,
+          "format_only": 5,
+          "joint_success": 0,
+          "neither": 27,
+          "not_run": 0,
+          "task_only": 9,
+          "task_unavailable": 3,
+          "truncated": 1
+        },
+        "completed": 44,
+        "completed_format_failures": {
+          "JSON_string_wrong_root": 3,
+          "malformed_structured_output": 2,
+          "object_extra_keys_or_empty_answer": 1,
+          "object_without_string_answer": 1,
+          "unstructured_plain_text": 32
+        },
+        "completed_task_overlap": {
+          "EM_match": 9,
+          "non_EM_positive_token_overlap": 20,
+          "non_EM_zero_token_overlap": 12,
+          "unavailable": 3
+        },
+        "generated": 45,
+        "planned": 48,
+        "raw_score_reasons": {
+          "json_string": 3,
+          "no_string_answer": 1,
+          "object_answer": 6,
+          "structured_parse_failure": 2,
+          "whole_plain_text": 33
+        }
+      }
+    },
+    "paired": {
+      "adapted_snapkv": {
+        "Full_joint_followup": {
+          "budget_infeasible": 2,
+          "execution_error": 0,
+          "format_only": 0,
+          "joint_success": 0,
+          "neither": 25,
+          "not_run": 0,
+          "task_only": 3,
+          "task_unavailable": 0,
+          "truncated": 1
+        },
+        "Full_joint_groups": 31,
+        "descriptive_subgroup_not_new_confirmatory_test": true,
+        "flow_matrix": [
+          {
+            "count": 1,
+            "full_category": "format_only",
+            "method_category": "budget_infeasible"
+          },
+          {
+            "count": 10,
+            "full_category": "format_only",
+            "method_category": "neither"
+          },
+          {
+            "count": 2,
+            "full_category": "format_only",
+            "method_category": "truncated"
+          },
+          {
+            "count": 2,
+            "full_category": "joint_success",
+            "method_category": "budget_infeasible"
+          },
+          {
+            "count": 25,
+            "full_category": "joint_success",
+            "method_category": "neither"
+          },
+          {
+            "count": 3,
+            "full_category": "joint_success",
+            "method_category": "task_only"
+          },
+          {
+            "count": 1,
+            "full_category": "joint_success",
+            "method_category": "truncated"
+          },
+          {
+            "count": 1,
+            "full_category": "neither",
+            "method_category": "neither"
+          },
+          {
+            "count": 3,
+            "full_category": "task_only",
+            "method_category": "neither"
+          }
+        ],
+        "groups": 48
+      },
+      "uniform_random": {
+        "Full_joint_followup": {
+          "budget_infeasible": 2,
+          "execution_error": 0,
+          "format_only": 2,
+          "joint_success": 0,
+          "neither": 17,
+          "not_run": 0,
+          "task_only": 7,
+          "task_unavailable": 2,
+          "truncated": 1
+        },
+        "Full_joint_groups": 31,
+        "descriptive_subgroup_not_new_confirmatory_test": true,
+        "flow_matrix": [
+          {
+            "count": 1,
+            "full_category": "format_only",
+            "method_category": "budget_infeasible"
+          },
+          {
+            "count": 3,
+            "full_category": "format_only",
+            "method_category": "format_only"
+          },
+          {
+            "count": 8,
+            "full_category": "format_only",
+            "method_category": "neither"
+          },
+          {
+            "count": 1,
+            "full_category": "format_only",
+            "method_category": "task_unavailable"
+          },
+          {
+            "count": 2,
+            "full_category": "joint_success",
+            "method_category": "budget_infeasible"
+          },
+          {
+            "count": 2,
+            "full_category": "joint_success",
+            "method_category": "format_only"
+          },
+          {
+            "count": 17,
+            "full_category": "joint_success",
+            "method_category": "neither"
+          },
+          {
+            "count": 7,
+            "full_category": "joint_success",
+            "method_category": "task_only"
+          },
+          {
+            "count": 2,
+            "full_category": "joint_success",
+            "method_category": "task_unavailable"
+          },
+          {
+            "count": 1,
+            "full_category": "joint_success",
+            "method_category": "truncated"
+          },
+          {
+            "count": 1,
+            "full_category": "neither",
+            "method_category": "neither"
+          },
+          {
+            "count": 1,
+            "full_category": "task_only",
+            "method_category": "neither"
+          },
+          {
+            "count": 2,
+            "full_category": "task_only",
+            "method_category": "task_only"
+          }
+        ],
+        "groups": 48
+      }
+    },
+    "actual_this_turn": {
+      "new_CPU_runs": 1,
+      "new_model_answers": 0,
+      "new_engineering_answers": 0,
+      "model_loads": 0,
+      "tokenizer_encodes": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "network_requests": 0,
+      "new_dependencies": false
+    },
+    "index": "results/20261030-run-index-squad48-taxonomy.json",
+    "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+    "cumulative_runs": 120,
+    "cumulative_main_outputs": 3038,
+    "all_own_PIDs_exited": true,
+    "active_gpu_queue": false,
+    "next": "Audit closest-work differences against the now-concrete system requirements and evidence-to-chapter map; verify primary sources before claiming distinct research contribution. No further GPU/model generation or posthoc prompt/sample/budget changes."
+  },
+  "closest_work_contribution_review": {
+    "date": "2026-10-31",
+    "audit": "docs/CONTRIBUTION_AUDIT_20261030.md",
+    "decision": "docs/CONTRIBUTION_SCOPE_DECISION_20261030.md",
+    "record": "docs/reviews/20261030-contribution-audit.md",
+    "readiness": "docs/CONTRIBUTION_AUDIT_READINESS_20261030.json",
+    "artifact_class": "readonly_literature_source_review_not_experiment",
+    "archive_path": "literature/20261030-closest-work-audit-v1",
+    "archive_manifest_sha256": "74239ef0f39ff4273c93ddfc5fef265bf54a29c9dc3431c333b2fec35b1981f9",
+    "source_files": 39,
+    "repository_files": 33,
+    "paper_or_official_pages": 6,
+    "author_Python_AST_files": 24,
+    "author_code_executed": false,
+    "unique_research_contribution_established": false,
+    "scoped_system_and48_evidence_retained": true,
+    "current_generic_claims_overlap_prior_work": true,
+    "degree_acceptance_determined": false,
+    "actual_this_turn": {
+      "new_experiments": 0,
+      "new_model_answers": 0,
+      "new_engineering_answers": 0,
+      "model_loads": 0,
+      "tokenizer_encodes": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "public_source_HTTP_requests_server": 48,
+      "web_search_and_read": true,
+      "new_dependencies": false
+    },
+    "cumulative_runs": 120,
+    "cumulative_main_outputs": 3038,
+    "index": "results/20261030-run-index-squad48-taxonomy.json",
+    "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+    "active_gpu_queue": false,
+    "next": "Redefine a concrete falsifiable research problem against the reviewed prior art;do not expand known-degradation experiments or claim generic logging/pairing/format separation as unique. Preserve prototype and48-group evidence as the research base."
+  },
+  "decoder_objective_candidate_followup": {
+    "date": "2026-10-31",
+    "question_document": "docs/RESEARCH_QUESTION_REDEFINITION_20261031.md",
+    "screen_draft": "docs/DECODER_OBJECTIVE_SCREEN_DRAFT_20261031.md",
+    "readiness": "docs/DECODER_OBJECTIVE_READINESS_20261031.json",
+    "disabled_config": "configs/decoder-objective-screen-draft-v1.json",
+    "H1": "reject_broad_format_repair",
+    "H2": "reject_broad_parser_aware_PASK_overlap",
+    "H3": "screening_hypothesis_only",
+    "synthetic_math_counterexample_verified": true,
+    "real_KV_misranking_observed": false,
+    "publication_novelty_established": false,
+    "degree_approval_established": false,
+    "P1_started": false,
+    "CPU_correctness_entry_implemented": false,
+    "runner_implemented": false,
+    "execution_enabled": false,
+    "new_model_forward_or_answer": 0,
+    "new_experimental_runs": 0,
+    "archive_path": "literature/20261031-decoder-aware-candidate-v1",
+    "archive_files": 10,
+    "archive_bytes": 2266407,
+    "archive_manifest_sha256": "ea36b38a02db149812649eace16c321e92786a7da17fb4eaa00f086e717f2963",
+    "active_gpu_queue": false,
+    "next": "Implement and independently audit finite-grammar/stable-KL/equal-budget-mask CPU correctness first;then freeze a separate bounded12-new-development-group query-known same-prefix logit diagnostic. No original48 retuning or automatic GPU queue."
+  },
+  "next": "Implement and independently audit finite-grammar/stable-KL/equal-budget-mask CPU correctness first;then freeze a separate bounded12-new-development-group query-known same-prefix logit diagnostic. No original48 retuning or automatic GPU queue."
+}

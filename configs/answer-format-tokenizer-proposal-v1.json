@@ -1,0 +1,29 @@
+{
+  "proposal_id": "answer-format-tokenizer-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "run": "results/20261030-answer-format-tokenizer-v1",
+  "cases": "results/20261030-answer-format-task-preflight-v1/selected_cases.jsonl",
+  "cases_sha256": "ccf4866f3381f797d9dda458f65c7dd0a8a204ddcd83d946766173fc1a7f0c42",
+  "parent_manifest": "results/20261030-answer-format-task-preflight-v1/manifest.json",
+  "parent_manifest_sha256": "0d97b98f06ed305d83043dc6833818952d6971ed59fc3b18ecba48923430872e",
+  "model": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "files": {
+    "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+  },
+  "template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "versions": {"transformers":"4.57.1","tokenizers":"0.22.1"},
+  "roles": ["engineering","development"],
+  "cases_expected": 18,
+  "alternative_engineering_questions": ["Which entity is named in the passage?","What date is stated in the passage?"],
+  "budget": {"fraction":0.5,"rounding":"floor","sink":4,"recent":64,"protect":"entire native system message including native boundary-overlap tokens","protection_pays_same_budget":true},
+  "bounds": {"wall_seconds":90,"max_tokenizer_encodes":44,"max_input_tokens":2048,"max_archive_bytes":33554432,"max_archive_files":32,"model_outputs":0,"weight_loads":0,"network_requests":0,"gpu_queries":0},
+  "failure": "First failure stops, retain partial rows and error; no prompt/label/split/budget adjustment or automatic retry",
+  "future": "Pass permits freezing Full-only protocol, not automatic scientific success; user now explicitly authorizes automatic staged continuation until feasibility decision"
+}

@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-31",
+  "registration_id": "decoder-native-preflight-v1",
+  "execution_enabled": true,
+  "mode": "CPU_native_tokenizer_no_model",
+  "run": "results/20261031-decoder-native-preflight-v1",
+  "source_sha256": {
+    "scripts/decoder_native_inputs.py": "d5757646ab05d9d298a326f296694e60913891eb2326e6e4ec46ce3d33cb748c",
+    "scripts/preflight_decoder_native.py": "9b4d627de668e0f987a26caa9fc730fae82cbf20dde884536d9775a291bfa6af",
+    "scripts/verify_decoder_native.py": "6e309bf16f6996bfbbe3ed3cae7529811f26bfa43d6f676622be3430af366f53",
+    "scripts/run_decoder_native.py": "56b36ab0917b99734375a3571612742b5852dcaed797a7bafc9373ea74dfefed",
+    "scripts/decoder_objective.py": "bc06c978f75e72248317736ea2d28f36e94e7e5f67b82e0bca047d35a1bd4bb8",
+    "docs/DECODER_NATIVE_CPU_PROTOCOL_20261031.md": "d778ffbebace0cd16d397d772963e25fc811df931535741cf8e3bc9e2aa878da"
+  },
+  "input_sha256": {
+    "configs/decoder-objective-screen-draft-v1.json": "f2bb7e6f479e5c5627212142538d885326454745f3ba4b1f9959681033a0cae2",
+    "configs/decoder-objective-cpu-execution-v1.json": "847651a5bae3ef4228ededc7782b59f6b16f8712d4bfe08c7a74e7c0e4f6c1fb"
+  },
+  "model": {
+    "key": "Qwen",
+    "repository": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "path": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "metadata_sha256": {
+      "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+      "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "config_layout": {
+      "layers": 28,
+      "attention_heads": 28,
+      "KV_heads": 4,
+      "head_dimension": 128,
+      "element_bytes": 2,
+      "bytes_per_prefix_slot_expected": 57344
+    },
+    "native_contract": "New frozen2 engineering+12 development native Qwen inputs. No transfer of original14 engineering IDs or evidence."
+  },
+  "versions": {
+    "tokenizers": "0.22.1",
+    "jinja2": "3.1.4"
+  },
+  "tokenizer_enabled": true,
+  "model_inference_enabled": false,
+  "GPU_enabled": false,
+  "network_enabled": false,
+  "next_GPU_execution_enabled": false,
+  "bounds": {
+    "child_seconds": 60,
+    "outer_seconds": 150,
+    "term_grace_seconds": 5,
+    "max_archive_files": 40,
+    "max_archive_bytes": 8388608,
+    "max_input_tokens": 2048
+  },
+  "expected": {
+    "cases": 14,
+    "engineering_groups": 2,
+    "development_groups": 12,
+    "tokenizer_encodes": 34,
+    "semantic_labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "base_vocab": 151643,
+    "added_tokens": 22,
+    "non_tokenizer_model_rows": 399
+  },
+  "user_authorization": "Current experimental session, latest user instruction to start next native-tokenizer CPU preflight.",
+  "source_kind": "frozen_synthetic_controlled_retrieval_not_public_benchmark",
+  "gold_used_to_select_grammar": false,
+  "old48_or16_read": false,
+  "actual_GPU_cache_validated": false,
+  "original_draft_false_flags_unchanged": true
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "candidate_A_prelaunch_mathematical_audit",
+  "created_date": "2026-10-28",
+  "timezone": "Asia/Singapore",
+  "user_requested_time_window_hours": 5,
+  "start_utc": "2026-10-28T09:07:39Z",
+  "deadline_utc": "2026-10-28T14:07:39Z",
+  "purpose": "Determine whether grouped prefix risk and safety/utility budget selection escape direct composition of existing LTT/Pareto/KV approaches before any new model experiment.",
+  "execution_enabled": false,
+  "model_outputs_authorized_by_this_config": 0,
+  "previously_suggested_dev_output_ceiling": 256,
+  "independent_sampling_unit": "prefix_world_with_fixed_query_bundle",
+  "limits": {"cpu_only": true, "standard_library_only": true, "max_runtime_seconds": 120},
+  "statistical_example": {"epsilon": 0.05, "delta": 0.05, "risks": 4},
+  "exact_enumeration": {"sample_sizes": [4, 8, 12], "probability_denominator": 4, "risk_targets": [0.1, 0.25, 0.5], "test_levels": [0.05, 0.1, 0.25]},
+  "sources": [
+    {"name": "Learn then Test", "version": "2110.01052v5", "url": "https://arxiv.org/html/2110.01052v5", "relevant_section": "2.4 Proposition 6; max p-value for simultaneous risks"},
+    {"name": "Pareto Testing", "version": "2210.07913v1", "url": "https://arxiv.org/html/2210.07913v1", "relevant_section": "Sections 4-5 and Appendix A.1; constrain multiple risks and optimize cost"},
+    {"name": "Risk-Controlled KV-Cache Eviction", "version": "2609.27981v1", "url": "https://arxiv.org/html/2609.27981v1", "relevant_section": "Sections 3.2-3.3, 6-7; general policies, aggregate risk, correlated sampling limitations"},
+    {"name": "CompilerKV", "version": "2602.08686v1", "url": "https://arxiv.org/html/2602.08686v1", "relevant_section": "Section 4.4; prompt-dependent risk gating from entropy and local perplexity"},
+    {"name": "KVzip", "version": "2505.23416v2", "url": "https://arxiv.org/abs/2505.23416v2", "relevant_section": "Query-agnostic compression and reuse"},
+    {"name": "Compression-Aware Abstention", "version": "2608.29934v1", "url": "https://arxiv.org/html/2608.29934v1", "relevant_section": "Behavioral response to removed evidence; actual compressed-cache evaluation"}
+  ],
+  "stop_rule": "If the advertised contributions reduce to known multi-risk testing, bundling independent clusters, and pre-specified adaptive policy selection, mark methodological novelty gate false and do not execute the 256-output DEV merely to rediscover degradation.",
+  "scope_note": "Mathematical toy examples are not LLM measurements, safety certificates, or claims that every possible extension has been solved."
+}

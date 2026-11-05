@@ -1,0 +1,42 @@
+{
+  "kind": "profile_measurement_engineering_only",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "base_runtime": "configs/controller-worker-engineering-v5-correction.json",
+  "base_runtime_sha256": "b18fd17b04f5ce2cd653325c2b0d2b9e366aa498b6d113478a249d1d9c001b1d",
+  "purpose": "Validate profile shape coverage and raw timings under the source-derived engine default capture schedule; no history harm test",
+  "main_execution_enabled": false,
+  "bounds": {"physical_gpu":1,"max_seconds":600,"max_answers":2,"max_new_tokens_each":32,"max_generated_tokens":64,"max_profile_blocks":2,"max_startup_timing_samples":130},
+  "preserve": ["Qwen3-8B/0.6B pinned files and tokenizers", "Full Attention/BF16/TP1/K4/Triton", "max_model_len512/max_num_seqs2/max_num_batched_tokens512", "native sampler and named worker RPC", "no prefix cache/async scheduling", "greedy seed42/ignore_eos", "requested profile context8192, report actual clamp"],
+  "configuration": {
+    "performance_mode":"balanced",
+    "compilation_config":{"mode":0,"cudagraph_mode":"FULL_DECODE_ONLY"},
+    "omit_explicit_capture_sizes_and_max_size":true,
+    "expected_resolved_candidates":[1,2,4,5,8,10,16],
+    "expected_captured_decode_token_counts":[1,2,4,5,8,10],
+    "expected_profile_points_per_block":13,
+    "expected_repeats_per_point":5,
+    "expected_measured_draft_request_counts":[1,2]
+  },
+  "answers": [
+    {"kind":"engineering_warmup","prompt":"List the integers from 1 to 30 in ascending order, separated by commas.","max_new_tokens":32},
+    {"kind":"engineering_replay","prompt":"List the integers from 1 to 30 in ascending order, separated by commas.","max_new_tokens":32}
+  ],
+  "required_instrumentation": [
+    "Install transparent profile collection observer before engine initialization; preserve native calls and return values",
+    "Archive raw StepTimingSample rows with num_reqs/num_target_tokens/full_cudagraph, repeat order and memory-profile versus final-capture stage",
+    "Archive requested/clipped context and actual batch descriptors; keep native median curves and final tables",
+    "Check medians and graph-padding reconstruction independently; verify N1 has native samples instead of inheriting N2",
+    "Record JIT diagnostics and warmup order; do not silently discard slow repeats",
+    "Keep snapshots small and on server; no callable/pickle RPC fallback",
+    "Native StepTimingCollector completes samples in _dummy_run only; do not claim opening collect around real generate measures complete request stages"
+  ],
+  "gates": [
+    "Validate resolved graph schedule against the fixed-source prediction before model load; stop on drift",
+    "Require raw final-profile N1 and N2 sample support, finite timings and exact table reconstruction",
+    "Both short outputs must retain baseline token ids; missing controller/backend/context/correctness evidence stops",
+    "If cost differences are within measurement dispersion or allocation remains saturated, report that result; no tuning to create a crossover",
+    "No latency-harm conclusion: profile events omit real target sampling, estimator update and confidence-publication stages",
+    "No history/batch experiment until a separate gate establishes a fixed public normal workload with decision-sensitive coverage and matched cost measurements"
+  ]
+}

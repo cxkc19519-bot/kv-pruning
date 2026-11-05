@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-31",
+  "stage": "read_only_new_problem_triage_complete",
+  "report": "docs/NEW_PROBLEM_TRIAGE_20261031.md",
+  "kv_pruning_mainline": "paused",
+  "h3": "stopped_after_no_development_gain",
+  "new_mainline_selected": false,
+  "candidate_N1": {
+    "topic": "structured_output_cancellation_resource_reclamation_and_interference",
+    "decision": "retain_for_bounded_feasibility_only",
+    "need_supported_by_public_sources": true,
+    "novelty_established": false,
+    "local_resource_effect_observed": false,
+    "strong_baselines": ["vllm_PR45172", "vllm_PR52119_revised_worker_pool", "llguidance_native_limits_and_cooperative_cancellation", "GRID_construction_budgets", "XGrammar2_dynamic_mask_work"],
+    "next": "freeze_CPU_feasibility_protocol_and_check_backend_compatibility_before_any_trial",
+    "runner_implemented": false,
+    "protocol_frozen": false,
+    "experiment_queued": false
+  },
+  "other_candidates": {
+    "N2_disaggregated_cancellation": "deprioritize_direct_prior_and_infrastructure_cost",
+    "N3_hot_reload_cache_coherence": "broad_claim_directly_covered",
+    "N4_batch_determinism": "broad_claim_directly_covered"
+  },
+  "source_pins": {
+    "vllm": "2b009fc6d1493a9a1ad19f4d0c7230b7e6b7e63a",
+    "xgrammar": "ca1acf28bf35b9ba9092800b69aebc7d4ce1f7a7",
+    "llguidance": "3d698ee07b3a67b0aef50fb6058612e8fd30aca2",
+    "grid": "088be8182e1a326523586af0c4f639afbb5fb6bc"
+  },
+  "server_archive": "literature/20261031-new-problem-triage-v1",
+  "archive_files": 31,
+  "archive_bytes": 564110,
+  "archive_manifest_sha256": "1fc87993b48fb89b7b6538841a81062db73dc166959d508bea65e690780d966f",
+  "raw_fetch_failures_preserved": 9,
+  "successful_snapshot_rows_hash_verified": 24,
+  "new_experiment_runs": 0,
+  "new_model_outputs": 0,
+  "author_code_executed": false,
+  "dependencies_changed": false,
+  "current_background_tasks": [],
+  "historical_runs": 132,
+  "historical_main_answers": 3038,
+  "historical_index": "results/20261031-run-index-decoder-h3-screen.json",
+  "historical_index_sha256": "b0c4d8fda03a662a5a30ccde9af934846bf45d7f73e2c06df546a2db9339f475",
+  "github_push": "not_configured_not_performed",
+  "thesis_or_publication_guaranteed": false
+}

@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-30",
+  "reference_commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+  "source_scope": "Targeted source and primary literature reading; no author code executed",
+  "installed_source_pins": [
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/adaptive_verification.py",
+      "git_blob_sha1": "5f91af59e5924bfb89b0c6cc0b6eb62e02010d06",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/adaptive_verification.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/v1/worker/gpu/model_runner.py",
+      "git_blob_sha1": "57cef586f81fd48337bf43a437c392127ecc1a6b",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/model_runner.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/v1/worker/gpu/input_batch.py",
+      "git_blob_sha1": "bd55a43f64123ff55e10eee912ac9029f4cd251b",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/input_batch.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/v1/worker/gpu/async_utils.py",
+      "git_blob_sha1": "0d6481585e21b11d4cb6ad61a105de0648f94e7f",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/async_utils.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/v1/worker/gpu/cudagraph_utils.py",
+      "git_blob_sha1": "73be62319a64bfd8e0986811fdfce1a0e3914123",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/cudagraph_utils.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/v1/worker/gpu_worker.py",
+      "git_blob_sha1": "04feb5da025a6072f100eaba485baefe74247aaa",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu_worker.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/config/vllm.py",
+      "git_blob_sha1": "f27c8418ab4df614a32affb9b34a30ac6f734604",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/config/vllm.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/config/compilation.py",
+      "git_blob_sha1": "7a16e3d6a046aa7c59f3007983cc3fe291612944",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/config/compilation.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/standalone_ar/speculator.py",
+      "git_blob_sha1": "bd404ef38fd958263f3e29f53a2aa641003f170b",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/standalone_ar/speculator.py",
+      "installed_match": true
+    },
+    {
+      "path": "vllm/envs.py",
+      "git_blob_sha1": "a2b46030772f3845009fd837b5b55f6df1d11641",
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/envs.py",
+      "installed_match": true
+    }
+  ],
+  "primary_documents": [
+    {
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/features/speculative_decoding/adaptive_verification.md",
+      "blob": "d560b5af3e4faf8ff4cf7c64b9e9a429d13a7923",
+      "depth": "Feature documentation read",
+      "limit": "No measurement replication"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm-project.github.io/blob/main/_posts/2026-10-14-adaptive-verification-online-estimator.md",
+      "blob": "3a3a72db0f727f9a2a057768e716cd982fbebbee",
+      "depth": "Article text and estimator/calibration/evaluation sections read",
+      "limit": "Different models/workloads; no tail coverage established for our pair"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.24993v3",
+      "version": "v3, revised 2026-10-25",
+      "depth": "Section6.1 and AppendixF entropy metric/setup",
+      "limit": "Raw target T1/top64 entropy lower bound, not per-position draft max-q"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.02888v2",
+      "version": "v2",
+      "depth": "Sections4.1-4.2 setup and confidence features",
+      "limit": "Different Llama pair/HF greedy flow; aggregate features do not establish ordered qmax vectors"
+    },
+    {
+      "url": "https://github.com/Amorfati123/SpecKV/blob/main/README.md",
+      "blob": "442f3b17b3a28b375a3dac26b658c82281b1cd3d",
+      "depth": "README read",
+      "limit": "No results replicated"
+    },
+    {
+      "url": "https://github.com/Amorfati123/SpecKV/blob/main/notebooks/Phase3_Adaptive_Controller.ipynb",
+      "blob": "1fcc567e5f2246a1a2b82abb1b2c853c9c6fef6b",
+      "depth": "Notebook source and output presence inspected; no execution",
+      "limit": "Reads CSV, uses per-step mean/min confidence; inspected outputs empty; CSV not downloaded"
+    },
+    {
+      "url": "https://huggingface.co/datasets/nvidia/SPEED-Bench",
+      "depth": "Dataset card schema/categories/throughput lengths and placeholder warnings",
+      "limit": "No dataset download/preparation; no our-pair qmax; throughput inputs exceed current512 limit"
+    }
+  ],
+  "audit": {
+    "run": "results/20261030-controller-cost-profile-audit-v1",
+    "kind": "stdlib_only_no_gpu_query",
+    "all_ten_blobs_match": true,
+    "main_answers": 0,
+    "engineering_answers": 0,
+    "raw_timing_recoverable": false,
+    "cost_accuracy_validated": false,
+    "default_schedule_runtime_verified": false,
+    "normal_decision_sensitive_coverage_established": false
+  }
+}

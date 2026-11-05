@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "execution_enabled": true,
+  "mode": "legacy_backend_CPU_finite_semantic_engineering",
+  "run": "results/20261101-legacy-backend-cpu-v1",
+  "source_sha256": {
+    "scripts/legacy_backend_cpu.py": "765d5a31ee53069f81ab70864df3ba3d076cff5e37005b892800299ab94e2cb7",
+    "scripts/verify_legacy_backend_cpu.py": "b560b7c826c6851b51b01bdecbec53deeb929696dab890b9ec4975d9b0b2069e",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209"
+  },
+  "input_sha256": {
+    "configs/structured-resource-cpu-feasibility-v1.json": "351fb27b5d49179dcf933de866e61fc37f12ecd9016f3d0e7f23157a6e008e60",
+    "literature/20261031-structured-resource-preflight-v1/public_schema_selection.json": "41a774b5ae2bc5f43cc0b7ec754ea786491307c562b616b9f36374cb7856d085",
+    "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json": "c635343add69e6bf06de5941ae588a136b613bd3a9f5c359d075ed9132738cc4"
+  },
+  "selection": "literature/20261031-structured-resource-preflight-v1/public_schema_selection.json",
+  "runtime_pin": "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "OMP_NUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HOME": "RUN/hf",
+    "TORCHINDUCTOR_CACHE_DIR": "RUN/inductor",
+    "TVM_FFI_CACHE_DIR": "RUN/tvm",
+    "MKL_NUM_THREADS": "1",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TMPDIR": "RUN/tmp",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "bounds": {
+    "total_wall_seconds": 180,
+    "max_matcher_constructions": 90,
+    "archive_files": 64,
+    "max_mask_calls": 2430,
+    "backend_wall_seconds": 80,
+    "per_call_seconds": 5,
+    "max_schema_specs": 16,
+    "archive_bytes": 8388608
+  },
+  "semantics": {
+    "XGrammar_cache": false,
+    "eos_id": 256,
+    "LLGuidance_slices": [],
+    "strict_mode": false,
+    "schema_rewriting": false,
+    "vocabulary_size": 257,
+    "allow_semantic_errors_to_be_reported": true
+  },
+  "GIL": {
+    "controls": [
+      "python_busy_25ms_switchinterval_100ms",
+      "sleep_25ms"
+    ],
+    "heartbeat_interval_ms": 1,
+    "no_heartbeat_is_inconclusive": true,
+    "native_call_span_is_not_exact_native_entry": true
+  },
+  "scope": {
+    "network": false,
+    "GPU": false,
+    "model_tokenizers": false,
+    "new_dependencies": false,
+    "latest_strong_baseline_claim": false,
+    "models": false,
+    "new_services": false
+  },
+  "old_run_index": "results/20261101-run-index-structured-observer.json",
+  "old_run_index_sha256": "03ed7996ab948ee45d9ec29f27c34a966ecba6d4fbf222e5d77f5e070e5246be",
+  "automatic_retry": false
+}

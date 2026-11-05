@@ -1,0 +1,89 @@
+{
+  "proposal_id": "squad48-scope-freeze-v1",
+  "date": "2026-10-30",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "run": "results/20261030-squad48-scope-freeze-v1",
+  "runner": "scripts/freeze_squad48_scope.py",
+  "independent_verifier": "scripts/verify_squad48_scope.py",
+  "mode": "CPUexisting_source_identity_group_and_plan_only",
+  "scope_amendment": "SQuAD-only independentarticle-group scope replacesplannedcross-taskrequirement for thisnewsubstudy only;oldBoolQsplitnotmarkedcomplete,nooldprotocolorfalsegaterewrite.",
+  "inputs": {
+    "results/20261030-independent-task-preflight-v1/manifest.json": "67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+    "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+    "results/20261030-hf-DEV-acceptance-v2/report.json": "054d54673e74b4b7c96906f3b80a5ccaf31b998a87906b4bd642c232187916f4",
+    "results/20261030-hf-backend-engineering-v1/engineering_evidence.json": "7ca977f2f221f752d26dbcf2b1984046e07197a1a5d1ba4c7dba0418f8bc3a27",
+    "results/20261030-independent-evidence-frontends-preflight-v2/budget_coverage.json": "7e226785b5f74b53533e4fb30f8009d5f5bed3656ac6c270c16208ce9da7a4b0",
+    "results/20261030-mistral-squad-full-v1/Full_support.json": "cc6ef38a2f7c0619a33a55b365dbbd539bc8565e22f7c1f18b97116ed59cccdd",
+    "results/20261030-run-index-mistral-squad-full.json": "d2673f944eddab9c4a43568fe327705e0f63bb0786234d0eed6544d2f94d2c0a",
+    "results/20261030-independent-task-preflight-v1/squad_train.source": "3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955",
+    "results/20261030-independent-task-preflight-v1/split_manifest.json": "37e1e620d2c9240b85574c1b51f91cb93b833a1a3b035045e9dc9b1a5d61078c",
+    "results/20261030-independent-task-preflight-v1/source_identity.json": "da78ba541c955befdb6874100527b03ac59cc2ddc6cffc93d20bc3310caa8599",
+    "results/20261030-independent-task-preflight-v1/summary.json": "141c30d0a06c568a3eb5a55f9244dc502f5e98fc50e8f6d40740ad65c5fa66ef",
+    "results/20261030-independent-task-preflight-v1/proposal_snapshot.json": "80bb909446587d1aeaa32ee06092ea1fd75b55ee9c1dc449ad03c845371a01dc",
+    "results/20261030-independent-task-preflight-v1/source_preflight_independent_task.py": "83311cb7f2429c069123c8ac079b3be12f0bbc201f8bc691e92aa1f6f685fd79",
+    "results/20261030-independent-task-preflight-v1/source_answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "configs/minimum-evidence-scope-v1.json": "f97ae15d4ea9dbcc9d1110fec4a334f101ae58b46eeb268d8da5e6c8d4b5305d"
+  },
+  "decision_contract": "configs/minimum-evidence-scope-v1.json",
+  "selection": {
+    "source": "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl",
+    "role": "sealed_descriptive_evaluation",
+    "expected": 48,
+    "order": "originalsourceorder",
+    "replacement_allowed": false,
+    "other_current_roles": {
+      "engineering": 4,
+      "development": 12
+    },
+    "require_all64_group_ids_unique": true,
+    "no_length_filter": true,
+    "no_modeloutput_filter": true
+  },
+  "historical_source": {
+    "path": "results/20261030-answer-format-task-preflight-v1/downloads/00.source",
+    "sha256": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9",
+    "scope": "AllhistoricalSQuADdevarticlesincludingoldsealed16,source-onlynormalization;nooldsealedinference"
+  },
+  "group_checks": [
+    "Matchoriginalparentmanifestandprovisionalselectionsourcehash",
+    "Exactly48alreadyreservedquestionIDsanddistinctgroups,all4engineering12DEVdisjoint",
+    "AgainstentirehistoricalSQuADdevtitles/paragraphnormalizationsreconstructoverlapexclusions",
+    "Useexistingarticle-componentmembershipfromparentartifact,verifyeachselectedquestion/context/goldspanagainstoriginaltrainbeforeconfirminggroupIDs",
+    "NoBoolQarticleindependenceclaim;BoolQexcludedfromcurrenttaskscope"
+  ],
+  "body_audit_dependency": "All paths andparentselectedcomponentsschema located;recomputeall442components inboundedCPUrun,verifyexact48selectedIDs/sourcecoordinates/labels/spansandparentmembership.No newdownload.",
+  "output_requirements": [
+    "Source/contract/codeidentitysnapshot",
+    "Exact48sourceIDs/groupIDs/roleandunmodifiedprompt/goldreferences",
+    "All144scheduledcase-conditioncells(fullonce+halfSnap+halfrandom)markedplannedonly",
+    "Explicitphaseunverifiedandnot_run,nobudgetfeasibilityguesswithouttokenizer",
+    "IndependentCounter/overlap/144identityreadback,originalinputsunchanged"
+  ],
+  "resource_bounds": {
+    "wall_seconds": 90,
+    "outer_watchdog_seconds": 120,
+    "network_requests": 0,
+    "weight_bytes_read": 0,
+    "model_answers": 0,
+    "model_forward_calls": 0,
+    "tokenizer_encodes": 0,
+    "GPU_queries": 0,
+    "max_archive_bytes": 16777216,
+    "max_archive_files": 32,
+    "max_source_bytes": 41943040
+  },
+  "plan_semantics": "SourceCPUfreezecreatesnoengineeringorFullpassanddoesnotopenmodelinference. 144main/14engineeringfutureceilingsrequireanothersource/runtime/GPUprotocolafterfrontendready.",
+  "failure": "AnyID/group/prompt/gold/overlap/provenancemismatchstopsandpreservesfailure;nofilter/replace/repair/retrytoforce48groups.",
+  "actual_source_paths_and_proof_schema_pinned": true,
+  "actual_CPU_runner_implemented": false,
+  "actual_CPU_executed": false,
+  "newGPUqueue": false,
+  "train_source": {
+    "path": "results/20261030-independent-task-preflight-v1/squad_train.source",
+    "sha256": "3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955",
+    "bytes": 30288272
+  },
+  "parent_split": "results/20261030-independent-task-preflight-v1/split_manifest.json",
+  "component_recomputation": "Readverifiedexistingtrain+entirehistoricaldev,independentlyrebuildallarticlecomponentsusingexactnormalizedtitle/contextedges;compareall64selectedcomponentIDs/article_indiceswithparentselected_components. Nochangeinselection."
+}

@@ -1,0 +1,146 @@
+{
+  "audit_date": "2026-10-29",
+  "kind": "read_only_source_audit_not_experiment",
+  "repository": "vllm-project/vllm",
+  "release": "v0.32.0",
+  "published_at": "2026-10-18T06:50:48Z",
+  "commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+  "tree_truncated": false,
+  "execution": false,
+  "author_files_saved_locally": false,
+  "reading_scope": "Targeted symbol search and selected line ranges; fetched content does not imply full-file semantic review. Markdown feature docs read in full. No imports, tests or benchmarks executed.",
+  "files": [
+    {
+      "path": "vllm/config/speculative.py",
+      "git_blob_sha1": "b916d7da2bed09362fbfd3593efb4d8f97abee3a",
+      "lines": 2005,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/config/speculative.py"
+    },
+    {
+      "path": "vllm/v1/core/sched/scheduler.py",
+      "git_blob_sha1": "cec96d2a49235fdade2768c427f1cff7868c6026",
+      "lines": 3437,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/core/sched/scheduler.py"
+    },
+    {
+      "path": "vllm/v1/request.py",
+      "git_blob_sha1": "4b1b9ecc2eede6347d839ef52683f3d40a306af5",
+      "lines": 413,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/request.py"
+    },
+    {
+      "path": "vllm/v1/spec_decode/metrics.py",
+      "git_blob_sha1": "826dfbd16a4813f08e1c96adb654fe20d752a417",
+      "lines": 282,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/spec_decode/metrics.py"
+    },
+    {
+      "path": "vllm/v1/outputs.py",
+      "git_blob_sha1": "22169b1fda93861db267ea73be64637a3f5bc17e",
+      "lines": 406,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/outputs.py"
+    },
+    {
+      "path": "vllm/sampling_params.py",
+      "git_blob_sha1": "8331a1707b7db57bc8a70c59de4cc190ae222aca",
+      "lines": 1513,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/sampling_params.py"
+    },
+    {
+      "path": "docs/features/speculative_decoding/dynamic_speculative_decoding.md",
+      "git_blob_sha1": "682eaafd29d86e180ebeee7d840d57f1e1ad6f09",
+      "lines": 77,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/features/speculative_decoding/dynamic_speculative_decoding.md"
+    },
+    {
+      "path": "docs/features/speculative_decoding/acceptance_metrics.md",
+      "git_blob_sha1": "9e31f920edcf93bf0032956371b580adf9b0ebbc",
+      "lines": 101,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/features/speculative_decoding/acceptance_metrics.md"
+    },
+    {
+      "path": "docs/features/speculative_decoding/adaptive_verification.md",
+      "git_blob_sha1": "d560b5af3e4faf8ff4cf7c64b9e9a429d13a7923",
+      "lines": 67,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/features/speculative_decoding/adaptive_verification.md"
+    },
+    {
+      "path": "docs/features/speculative_decoding/draft_model.md",
+      "git_blob_sha1": "880ea1df5989e0968f52b22fd5e3c8f4d7973b3f",
+      "lines": 113,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/features/speculative_decoding/draft_model.md"
+    },
+    {
+      "path": "vllm/v1/metrics/stats.py",
+      "git_blob_sha1": "87277f6545f01cb75c65426306111086f5feefaa",
+      "lines": 701,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/metrics/stats.py"
+    },
+    {
+      "path": "vllm/v1/core/sched/output.py",
+      "git_blob_sha1": "9ad0d4e65865cfb4b4299cece2d1ccc2ea54c52a",
+      "lines": 340,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/core/sched/output.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu_model_runner.py",
+      "git_blob_sha1": "e19c1b84f457cb4a621945ab8040c5310eb42185",
+      "lines": 7256,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu_model_runner.py"
+    },
+    {
+      "path": "vllm/v1/core/sched/async_scheduler.py",
+      "git_blob_sha1": "290204d58c39cdec4c3cc1e58fe0697378aa5e98",
+      "lines": 79,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/core/sched/async_scheduler.py"
+    },
+    {
+      "path": "vllm/entrypoints/openai/chat_completion/protocol.py",
+      "git_blob_sha1": "79dd9605e66906ce36c6692ee8b4ab936ec5e905",
+      "lines": 1233,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/entrypoints/openai/chat_completion/protocol.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/speculator.py",
+      "git_blob_sha1": "d86a0b0351f05073ebecf59af06e68cdcb1ad96c",
+      "lines": 602,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/speculator.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/acceptance_estimator.py",
+      "git_blob_sha1": "f7a4a2f2c1e3221407d12c70cc067cc8cc045bd1",
+      "lines": 503,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/acceptance_estimator.py"
+    },
+    {
+      "path": "vllm/config/observability.py",
+      "git_blob_sha1": "28a9313603f3a1c714b0d1a005cfa75ae6f7c6f5",
+      "lines": 223,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/config/observability.py"
+    },
+    {
+      "path": "docs/features/per_request_metrics.md",
+      "git_blob_sha1": "da1685f92925b1d3e1c80dfb722ac0b1d5b45611",
+      "lines": 149,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/features/per_request_metrics.md"
+    },
+    {
+      "path": "vllm/config/scheduler.py",
+      "git_blob_sha1": "1dbe4b72eb7ce43deaf7cb1e9e93176b8219f028",
+      "lines": 360,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/config/scheduler.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/adaptive_verification.py",
+      "git_blob_sha1": "5f91af59e5924bfb89b0c6cc0b6eb62e02010d06",
+      "lines": 510,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/adaptive_verification.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/model_runner.py",
+      "git_blob_sha1": "57cef586f81fd48337bf43a437c392127ecc1a6b",
+      "lines": 2448,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/model_runner.py"
+    }
+  ]
+}

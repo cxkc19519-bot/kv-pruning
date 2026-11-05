@@ -1,0 +1,15 @@
+{
+  "execution_enabled": false,
+  "kind": "trace_parser_correction_only",
+  "base_proposal_sha256": "d5dac66847f89c1d7974d7def42a95c5d6b8c824a07137101a5a7101016e72ec",
+  "prior_run": "results/20261030-controller-natural-history-v1",
+  "prior_manifest_sha256": "131ca4e6677aebee8cf84f77bbf11504ccdf1c098ca5dcb88ced078e61e49145",
+  "prior_trace_sha256": "982aad995e51e0229ca1889b08209f072c10f48b496d515c0ed19912a776a35f",
+  "cause": "Native MRV2 full prefill has no draft_tokens, so it skips get_num_tokens and reallocate_drafts but still calls observe_verification",
+  "correction": "Require one zero-admission prefill verification then complete budget/allocation/verification decode triples; verify phase/refit transitions for all verification events",
+  "posthoc_old_trace": {"events":22,"verification_steps":8,"decode_steps":7,"admitted":28,"accepted":25},
+  "unchanged": ["Observer wrappers", "Prompts and order", "Target/draft/precision/backend", "All output/token/time limits", "Transparency gate token and learning-state equality", "Natural refit exposure gate", "No latency-harm claims"],
+  "v1_remains_failed": true,
+  "main_outputs_in_v1": 0,
+  "pre_observation_note": "The archived v1 common cost table is flat over the single-request decode choices1..5; this limits allocation sensitivity. Keep the frozen pilot unchanged and report saturation/zero effects rather than search for a different profile."
+}

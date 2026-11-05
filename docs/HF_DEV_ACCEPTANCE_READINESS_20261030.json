@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-30",
+  "protocol": "docs/HF_DEV_ACCEPTANCE_PROTOCOL_20261030.md",
+  "amendment": "docs/HF_DEV_ACCEPTANCE_AMENDMENT_20261030.md",
+  "record": "docs/runs/20261030-hf-DEV-acceptance.md",
+  "proposals": {
+    "v1": {
+      "path": "configs/hf-DEV-acceptance-v1.json",
+      "sha256": "88c9ff405578ad3c60133ebcecf34586dde52529423ae9dd61b521793d85dc66"
+    },
+    "v2": {
+      "path": "configs/hf-DEV-acceptance-v2.json",
+      "sha256": "bc4388052fea6e115a04e04c405199a61ca3ef7f0c55437e548aa041fadfaf04"
+    }
+  },
+  "source_sha256": {
+    "scripts/reliability_engineering_resume.py": "8feb4a3cfb2cf364a2018a9205aacedf858104797710ed7384adaf7ec7151139",
+    "scripts/run_hf_DEV_acceptance.py": "678ac43197b6d026f116095f049d612d289b32ee36fda3b2911e049480a853dd",
+    "scripts/run_hf_DEV_acceptance_v2.py": "62f61b157be8fa2bcdbea79e41f2e10a83064d3e54abaad085ad4213cb3f8991",
+    "scripts/verify_hf_DEV_acceptance.py": "0bf578b3e342d3c2554c5134c6774559a876d06327e319fe15fad5e96cf69143"
+  },
+  "failed_v1": {
+    "run": "results/20261030-hf-DEV-acceptance-v1",
+    "files": 33,
+    "bytes": 407076,
+    "sha256": {
+      "manifest.json": "e3bfa15e19c4e09b0f2924210da297d03047de368485b4c11de9a39ba4fc100b",
+      "summary.json": "ac129f9cfb42494ba03486f3815a618a31e11e1a64215ab5087b2d15884ba52f",
+      "resume_software_acceptance.json": "2cfcbe048d1f40c217b57dd57940601cb484c861cb5fae74d092809de3a81932",
+      "resume_provenance.json": "9da42ea14547924e412102680ff167bc1989ae10a248a7045110b16367f6aeaa",
+      "config_serialization_diagnosis.json": "5d2a4e38158f82de61e59e7f246634c307f0fea07d885a1bf578299e70618c1d",
+      "config_keytype_evidence.json": "6116dd1510b56fc457d1ff080e5c12da7138e9cdf0183e6cbffea252cf05a657",
+      "closure.json": "6ef77bef1dc9a2aa4e06f6738bb04e3429844e0e95273319a86a34d17f569656",
+      "derived_manifest.json": "b4a4803713ea7a6964267fafd96d2730b3c97f4e6093c6b00f9682f41845b8a4"
+    },
+    "index": "results/20261030-run-index-hf-DEV-failed.json",
+    "index_sha256": "1e11878bcdc0ea72413cb58d64b89058dfdde2055c006ea27784956a3a5e5976",
+    "worker_pid": 948163,
+    "launcher_pid": 948160,
+    "elapsed_seconds": 20.910878255963326,
+    "status": "failed",
+    "main_outputs": 0,
+    "generated_tokens": 0,
+    "model_loaded": true,
+    "resume_software_cases_passed": 8,
+    "failure": "actual_model_config_changed",
+    "cause": "Entire config contents equal afterJSON roundtrip;Python id2label int keys differ fromJSON str keys",
+    "superseded_by": "results/20261030-hf-DEV-acceptance-v2"
+  },
+  "run": "results/20261030-hf-DEV-acceptance-v2",
+  "status": "complete",
+  "worker_pid": 950105,
+  "launcher_pid": 950102,
+  "elapsed_seconds": 43.6153570683673,
+  "launcher_elapsed_seconds": 44.314806611742824,
+  "started_utc": "2026-10-30T11:46:57.383591+00:00",
+  "finished_utc": "2026-10-30T11:47:41.698576+00:00",
+  "main_answers": 36,
+  "engineering_answers": 0,
+  "generated_tokens": 1115,
+  "original_manifest_entries": 77,
+  "files": 82,
+  "bytes": 1928933,
+  "sha256": {
+    "manifest.json": "412fbe241d72b668c6b2a1dd3ca1b207c2054afbe7bf3f737c2c42c8fe81bedd",
+    "summary.json": "f1173e60d48fb3d39d64bffa3677298745e1894b117e4068a0225767e843166a",
+    "actual_runtime.json": "6ca456e0cf5b89ef660434c6c71f18cb87e40a8c30b1a2a396d9ea1b49e0a851",
+    "execution_scope.json": "c3e8d8a37cfb8e2b1d4287f32898ba2264a63a2226c4a78bedaf9804acf65826",
+    "resume_provenance.json": "9da42ea14547924e412102680ff167bc1989ae10a248a7045110b16367f6aeaa",
+    "restored_engineering_evidence.json": "7ca977f2f221f752d26dbcf2b1984046e07197a1a5d1ba4c7dba0418f8bc3a27",
+    "config_JSON_comparison.json": "9e444ad16d3b38c50e898053ae44d665f7f7d4796ec8b50942d24d49a0de024d",
+    "raw_generations.jsonl": "ace314be4f7207b5f34313133ccc0106381b514ae360e7cdd6b1db6aef057018",
+    "scored_generations.jsonl": "5da88a2999e037ba234d1416700bdd5ad65b7d938006c385d489639e0cc4b589",
+    "admission_plan.json": "98afa8adc74f96c35aa2fddf045f48a457e14168586f2807114a417749d85afa",
+    "normalized_records.jsonl": "d5581cf50e29f63b63df884407dfe139e2ecf9a84ec771e5920e5d322972439d",
+    "report.json": "054d54673e74b4b7c96906f3b80a5ccaf31b998a87906b4bd642c232187916f4",
+    "independent_verification.json": "0d7db8f9cee91c1ea816d66d0d125a661283e1bedb42f8d3da3faf10427a8dc1",
+    "closure.json": "4df2986a0f0ce97607a029cd08f4fd7a1643cac5a7cfeeb6c1992ad63c7e526d",
+    "derived_manifest.json": "29b260b833b48204cfe417c6c21d0f81e540d5eff45324122143405f618a050d"
+  },
+  "external_artifacts": {
+    "20261030-hf-DEV-acceptance-v1.launch.json": "4185a6b51a104dd4c26ec153d19d27a70387b6083f537284c680d3f8ea0d3585",
+    "20261030-hf-DEV-acceptance-v1.console.log": "3c0e2a15a150d300235b62e2ac6872f5627e18b18d5595f03b066a2d55dad144",
+    "20261030-hf-DEV-acceptance-v1.launcher.py": "c225d23d00326150686b2b52a4b5b4f08132ffb369978168c7533d91042fa799",
+    "20261030-hf-DEV-acceptance-v2.launch.json": "3976c30b5f9ce98a828a6fc65fb88732f52021b1a7d12dc5d544e8812e893e08",
+    "20261030-hf-DEV-acceptance-v2.console.log": "4b07827b6b2a96f03e72f3d69226ca9b6caa2d3398feefc879dccf1466c902ee",
+    "20261030-hf-DEV-acceptance-v2.launcher.py": "5e91871d618f57e79c03928fb6ee08067045ab4df09f545886e89e07c3343322"
+  },
+  "index": "results/20261030-run-index-hf-DEV-acceptance.json",
+  "index_sha256": "743ee5444d9e41414d017dae54c978f73e63f6ce246adb9948112a685ada8de1",
+  "cumulative_runs": 112,
+  "cumulative_main_outputs": 2888,
+  "GPU_after": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa, 15, 0",
+  "generator_runtime_digest": "e2ee00abf023b825c655280da7b57a488857726dc7340fb3215909db697cd3d1",
+  "execution_protocol_digest": "b1304610386055f3fb93d542a46b818cfc6abb8c1b5b21895a435396cc0fa68f",
+  "v1_original_manifest_entries": 28,
+  "generator_sources_changed": false,
+  "execution_control_and_scoring_sources_separately_hashed": true,
+  "checkpoint_restore": {
+    "scope": "Same pinned generator runtime only",
+    "observations": 14,
+    "new_engineering_calls": 0,
+    "software_cases": 8,
+    "negative_cases_reject_before_model_loading": true,
+    "check_original_and_derived_manifest": true,
+    "arbitrary_evidence_injection_allowed": false
+  },
+  "admission": {
+    "eligible_for_configured_run": 36,
+    "blocked_budget": 20,
+    "blocked_engineering_unverified": 4
+  },
+  "condition_results": {
+    "full": {
+      "generated": 12,
+      "budget_blocked": 0,
+      "not_run": 0,
+      "truncated": 0,
+      "task_pass": 9,
+      "task_evaluated": 12,
+      "format_pass": 11,
+      "format_evaluated": 12,
+      "joint_delivered": 8
+    },
+    "adapted_snapkv": {
+      "generated": 12,
+      "budget_blocked": 0,
+      "not_run": 0,
+      "truncated": 1,
+      "task_pass": 0,
+      "task_evaluated": 11,
+      "format_pass": 0,
+      "format_evaluated": 11,
+      "joint_delivered": 0
+    },
+    "uniform_random": {
+      "generated": 12,
+      "budget_blocked": 0,
+      "not_run": 0,
+      "truncated": 0,
+      "task_pass": 3,
+      "task_evaluated": 11,
+      "format_pass": 2,
+      "format_evaluated": 12,
+      "joint_delivered": 0
+    },
+    "adapted_snapkv_system_pinned": {
+      "generated": 0,
+      "budget_blocked": 10,
+      "not_run": 2,
+      "truncated": 0,
+      "task_pass": 0,
+      "task_evaluated": 0,
+      "format_pass": 0,
+      "format_evaluated": 0,
+      "joint_delivered": 0
+    },
+    "uniform_random_system_pinned": {
+      "generated": 0,
+      "budget_blocked": 10,
+      "not_run": 2,
+      "truncated": 0,
+      "task_pass": 0,
+      "task_evaluated": 0,
+      "format_pass": 0,
+      "format_evaluated": 0,
+      "joint_delivered": 0
+    }
+  },
+  "independent_verification": {
+    "pinned_inputs_unchanged": 48,
+    "text_scores": 36,
+    "trace_steps": 1115,
+    "unique_layer_head_maps": 2688,
+    "Snap_rankings": 1344,
+    "all60_cells_metrics_denominators_F1_transitions_bounds_recomputed": true,
+    "all36_new_old_ids_text_metrics_equal": true
+  },
+  "system_end_to_end_acceptance_passed": true,
+  "protected_conditions_engineering_verified": false,
+  "protected_DEV_generated": 0,
+  "sealed_model_calls": 0,
+  "independent_scientific_confirmation": false,
+  "new_independent_groups": 0,
+  "task_support": {
+    "full_EM": "9/12",
+    "full_format": "11/12",
+    "full_joint": "8/12",
+    "Snap_EM": "0/11",
+    "Snap_format": "0/11",
+    "Snap_truncated": 1,
+    "random_EM": "3/11",
+    "random_format": "2/12",
+    "random_task_NA": 1
+  },
+  "environment_changed": false,
+  "network_requests": 0,
+  "old_QA_gate": false,
+  "all4_own_PIDs_exited": true,
+  "active_gpu_queue": false,
+  "next": "Stop repeating current12DEV regression. Offline consolidate system acceptance and freeze an independent empirical evidence plan addressing task/source coverage,Full support,budget feasibility and second-model validation. New GPU/holdout/newbudget requires a distinct bounded protocol;no active queue."
+}

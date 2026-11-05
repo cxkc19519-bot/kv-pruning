@@ -1,0 +1,137 @@
+{
+  "decision_id": "minimum-evidence-scope-v1",
+  "date": "2026-10-30",
+  "status": "offline_scope_decision_only",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "title": "Full Attention KV压缩输出约束评测系统与受限实证",
+  "scope_decision": "Retain system/empirical route as provisional thesis work;shrink next empirical scope to fixedQwen/SQuADtrain independent48article groups. No claim of thesis completion,newalgorithm orcrossmodel compression.",
+  "why": {
+    "system": "CurrentQwen scoped integration accepted includingdual scoring,admission,full plannedcoverage andfailure archives",
+    "Mistral": "CurrentFull threepaths verified butformat8/12<9fixedsupportgate;stopcompact/protected/sealed",
+    "BoolQ": "Originaltwo403failures andHFalternative missingtitle unresolved;notneededfornewSQuAD-onlyscope",
+    "three_quarters": "CPUDEVmathfeasible doesnotestablish protectedengineering;do not addunimplementedbudgettoforcepositiveresults"
+  },
+  "evidence_pins": {
+    "results/20261030-independent-task-preflight-v1/manifest.json": "67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+    "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+    "results/20261030-hf-DEV-acceptance-v2/report.json": "054d54673e74b4b7c96906f3b80a5ccaf31b998a87906b4bd642c232187916f4",
+    "results/20261030-hf-backend-engineering-v1/engineering_evidence.json": "7ca977f2f221f752d26dbcf2b1984046e07197a1a5d1ba4c7dba0418f8bc3a27",
+    "results/20261030-independent-evidence-frontends-preflight-v2/budget_coverage.json": "7e226785b5f74b53533e4fb30f8009d5f5bed3656ac6c270c16208ce9da7a4b0",
+    "results/20261030-mistral-squad-full-v1/Full_support.json": "cc6ef38a2f7c0619a33a55b365dbbd539bc8565e22f7c1f18b97116ed59cccdd",
+    "results/20261030-run-index-mistral-squad-full.json": "d2673f944eddab9c4a43568fe327705e0f63bb0786234d0eed6544d2f94d2c0a"
+  },
+  "retained_model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "prior_generator_runtime": "e2ee00abf023b825c655280da7b57a488857726dc7340fb3215909db697cd3d1",
+    "current_model_effect_support": "Developmentonly;independentcohortnotinferred"
+  },
+  "task": "SQuADv1.1train originalspanQA+frozen singlekeyJSON string constraint",
+  "candidate_cohort": {
+    "role": "sealed_descriptive_evaluation",
+    "groups": 48,
+    "questions_per_group": 1,
+    "selection": "Exactlyexisting48reservedbeforecurrentmodeloutputs,no newseed/lengthsorting/replacement orFull-basedselection",
+    "previous_partition": {
+      "engineering": 4,
+      "development": 12,
+      "reserved": 48
+    },
+    "source_selection_sha256": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+    "newselection": false,
+    "groupindependence_scope": "Sourcearticle/contextcomponents relativehistoricalSQuAD andcurrentDEV;notpretrainingcleanorsemanticindependenceguarantee"
+  },
+  "candidate_conditions": [
+    {
+      "id": "full",
+      "retention": "1",
+      "shared_control_once": true
+    },
+    {
+      "id": "adapted_snapkv",
+      "retention": "1/2",
+      "protect_system": false
+    },
+    {
+      "id": "uniform_random",
+      "retention": "1/2",
+      "protect_system": false,
+      "selector_seed": 20261028
+    }
+  ],
+  "candidate_model_answers_ceiling": {
+    "main": 144,
+    "engineering": 14,
+    "total": 158,
+    "explanation": "Ceilingonly,notregisteredGPUqueue. New48requiresitsowninput/runtime/evidenceandstageprotocol;mayrequireengineeringrevalidation. Neverautoinjectold14evidenceorcountengineeringrepeatsasnewscientificsamples."
+  },
+  "Full_support_draft": {
+    "task_min": 24,
+    "format_min": 36,
+    "errors_max": 0,
+    "truncated_max": 4,
+    "scheduled": 48,
+    "provenance": "4xfrozen12DEV descriptive-supportthresholds;draftbefore48outputs,notpowerguarantee",
+    "failure": "Reportall48Fullandstopcompressedphase;do notreplaceinputs/retune/increasesequentialsamplecount"
+  },
+  "budget_policy": "Exactfloorhalfslot/sink4recent64;everyplannedcellretained.Ifanchorsdonotfit,recordinfeasible_budget,notpaddingorlargerbudget. Fullnotforcedtoequalitywithcompressedbudget.",
+  "retained_metrics": [
+    "taskEM/F1",
+    "singlekeyJSONformat",
+    "completion",
+    "jointdelivery/all48",
+    "C2C/C2W/W2C/W2Wpermetric",
+    "eligible/unknownFull-correctdenominators",
+    "damagecoverageboundsnotCI",
+    "modelerrors/truncation/N/A/budgetinfeasibility/evidenceblocks",
+    "actualprefix/finalKVbytes;peakandlatencyunknown"
+  ],
+  "primary_estimands": [
+    "PerconditionjointdeliverydifferenceversusFull,denominatorall48plannedgroups",
+    "Taskandformatpairedchangeswithcomparablepaircoverage,retainingallFullwrongandmissingcells"
+  ],
+  "statistics_draft": {
+    "unit": "originalarticle/contextgroup",
+    "n": 48,
+    "replicatedmethod_outputs_not_independent_samples": true,
+    "group_bootstrap": {
+      "enabled": false,
+      "planned_resamples": 10000,
+      "seed": 20261030,
+      "method": "pairedpercentile,95%pointwiseforpredeclaredjointdeliverydifferences,all48groupsresamplejointly",
+      "implementation_status": "notimplementedorvalidated"
+    },
+    "group_uncertainty_failure": "NoautomaticCIforstrictconditionaldamagewithunknownoutputs;rawpairedcountsandcoverageboundsmandatory.",
+    "no_risk_certification": true,
+    "no_significance_based_stopping": true,
+    "no_population_claim_for_all_transformers": true
+  },
+  "excluded": [
+    "Mistralcompact/protection/sealed",
+    "BoolQdatasetacquisitionwithoutsourceamendment",
+    "3/4newbackend/protectedGPU",
+    "retuningprompt/schema/outputlength",
+    "posthocfeasible-subsetmethodranking",
+    "oldQAsealed16",
+    "controller/guard/Aqueue",
+    "performanceclaimswithoutmeasurements"
+  ],
+  "RQ_protection_status": "Deferredbeyondminimumprimaryscope;existingoldQA16protectiontradeoffisdevelopmentcase,currenttrainprotectionbudget/evidenceboundaryretained. Minimumdoesnotanswergeneralprotectionbenefitquestion.",
+  "next_step": "CPU-onlysource/group/eligibilityfreezeonexact48IDs;verifyinputhashandhistorical/currentgroupseparationandwriteall144plannedcellswithouttokenizer/weights/GPU/newdownloads. ThenfreezeactualnativefrontendandGPUstageprotocol;notdirectinference.",
+  "new_runs_this_turn": 0,
+  "new_model_answers": 0,
+  "GPU_queries_this_turn": 0,
+  "cumulative": {
+    "runs": 115,
+    "main_outputs": 2900,
+    "index": "results/20261030-run-index-mistral-squad-full.json",
+    "index_sha256": "d2673f944eddab9c4a43568fe327705e0f63bb0786234d0eed6544d2f94d2c0a"
+  },
+  "quality_stop": "IfonlysystemintegrationplusrepeatedsmallDEVremainsandindependentgroupevidencecannotbecompleted,do notclaimcompletedthesiscontribution;reviewreducedscopewithadvisor.",
+  "old_gates_rewritten": false,
+  "Mistral_Full_support": false,
+  "old_QA_gate": false,
+  "new48inferred": false,
+  "active_GPU_queue": false
+}

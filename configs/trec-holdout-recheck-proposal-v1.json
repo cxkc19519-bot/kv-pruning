@@ -1,0 +1,152 @@
+{
+  "status": "cpu_frozen_pending_bounded_ten_case_runner",
+  "execution_enabled": false,
+  "purpose": "Single held-out-question recheck of classification versus exact-label-format retention; not an independent dataset, safety benchmark or novel method",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "dataset_id": "zai-org/LongBench",
+  "dataset_revision": "5e628be450b7e67fb7ae6e201bd6d8f7056f7672",
+  "trec_data_sha256": "20a88e14f7442f58a39082cdd7396f1093ea8162da0a4ea7ead7d6757514c8f4",
+  "parent_pruning_proposal_sha256": "289bb122e62788cff3406df9ba42a792172b2f10959144be187271e52634093f",
+  "development_cases_sha256": "e709d4bd298cd61a272f42835a180c7ac032b450b0aa1c40892814c7f6c8caf7",
+  "cases_path": "results/20261028-trec-holdout-cpu-v2/cases.jsonl",
+  "cases_sha256": "e2b6c2ed0d9d771c46e933364de0d21ca98d86995b357be6f6130c26ea0c6a6a",
+  "frozen_source_keys": [
+    "8e5060883a3a65416b865d26d3ba447eb93738218403f554",
+    "9a89e12f4c64eda441932465fd598c303398ef4db379d244",
+    "b03fe43e3f84615e5d4cbb554960ac46cbec8360c126575b",
+    "af885f2dd88c3d1ef0278e145a56e0142e8dffa98da1725e",
+    "9607aa495ee45b517cab4b7663b50e2b5d2e6c3b103a7e83",
+    "258eac8ce0c51298894895f7e29dafecfbf9f3064de5fa3c",
+    "53314ceb95fb9a488c88d21402e09c826d927f9c7402d0cf",
+    "f9666d6736c07d6af8c7599e04e37f230b63e032bc2b3cc8",
+    "c484b36f511ec3f88c462e36a451394a0f7674ca1146e617",
+    "246234b8bd50080971f652b2b0e5735f3762aa514eb2e032"
+  ],
+  "n_cases": 10,
+  "header_metadata_path": "results/20261028-trec-holdout-cpu-v2/header_budget_metadata.json",
+  "header_metadata_sha256": "a387085750b23d84186892e561bff5e8b7fb596502e8e6e261691e9e07682239",
+  "label_review_path": "configs/trec-holdout-label-review-v1.json",
+  "label_review_sha256": "6c285a88eb4f40e268874a3cbaa702d029bf100a545e826648796d9a59f59e74",
+  "review_flagged_keys": [
+    "53314ceb95fb9a488c88d21402e09c826d927f9c7402d0cf",
+    "f9666d6736c07d6af8c7599e04e37f230b63e032bc2b3cc8"
+  ],
+  "source_selection": "All10 remaining from the original42 eligible after original32 development IDs, original hash order. No extra length band, seed change, padding, rewriting, relabeling, exclusions after review or replacement by model results",
+  "frontend": "Same exact shared50-label header plus unchanged original demonstrations in system, original query in user; no NoDemo condition and no truncation",
+  "shared_system_header": "Classify the question. Return exactly one label from the following list and no other text.\nLabels:\nFood\nDate\nOrder, rank\nSpeed\nDisease and medicine\nWord with a special property\nAbbreviation\nLanguage\nLetter like a-z\nOther entity\nAnimal\nExpression abbreviated\nPrice\nTechniques and method\nMusical instrument\nMountain\nCurrency name\nEvent\nProduct\nState\nIndividual\nOrgan of body\nReason\nManner of an action\nCity\nReligion\nInvention, book and other creative piece\nDistance, linear measure\nTemperature\nPostcode or other code\nSize, area and volume\nSport\nCountry\nOther location\nLasting time of somethin\nEquivalent term\nDescription of something\nWeight\nVehicle\nColor\nOther number\nDefinition of something\nElement and substance\nDescription of a person\nSymbols and sign\nNumber of something\nPlant\nPercent, fraction\nGroup or organization of person\nTitle of a person\n\nExamples:\n",
+  "query_blind": true,
+  "tokenizer_sha256": {
+    "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+  },
+  "conditions": [
+    {
+      "method": "full",
+      "keep": 1.0,
+      "pin_shared_header": false
+    },
+    {
+      "method": "adapted_snapkv_shared_anchors",
+      "keep": 0.5,
+      "pin_shared_header": false
+    },
+    {
+      "method": "uniform_random_shared_anchors",
+      "keep": 0.5,
+      "pin_shared_header": false
+    },
+    {
+      "method": "adapted_snapkv_shared_anchors_header_pinned",
+      "keep": 0.5,
+      "pin_shared_header": true
+    },
+    {
+      "method": "uniform_random_shared_anchors_header_pinned",
+      "keep": 0.5,
+      "pin_shared_header": true
+    }
+  ],
+  "budget": {
+    "unit": "actual prefix K/V bytes",
+    "slots_each_layer_kv_head": "floor(original_prefix_tokens / 2)",
+    "common_sink_tokens": 4,
+    "common_recent_tokens": 64,
+    "header_protection": "All native token positions overlapping the exact shared system-header character span, including any boundary-crossing token; excludes demonstrations except boundary overlap. Compute per case before inference, record indices/count/byte cost, and charge within the same fixed total budget",
+    "infeasible_policy": "Stop the entire preparation before model inference; do not truncate the protected header, increase budgets, or drop cases"
+  },
+  "adapted_snapkv": {
+    "observation_window": 64,
+    "pool_kernel": 5,
+    "gqa_reduction": "mean over query heads sharing a KV head",
+    "label": "Existing independent Qwen2 adaptation, not original fair SnapKV or a new algorithm"
+  },
+  "random": {
+    "seed": 20261028,
+    "policy": "Deterministic per source-key/layer/KV-head random scores on original positions; same score stream for pinned/unpinned variants, with common anchors and required header charged before filling remaining slots; no gold or model outcome access"
+  },
+  "decode": {
+    "do_sample": false,
+    "repetition_penalty": 1.0,
+    "max_new_tokens": 64,
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "eos_token_ids": [
+      151643,
+      151645
+    ],
+    "pad_token_id": 151643
+  },
+  "source_hashes": {
+    "pilot": "476b3cbf8a9e16cdbb958286ba931a45d9b089f1bba4fb0a29f3a7ee9ebcdc1f",
+    "selector": "92594811de726c585087fe1356a81cfcbe3a19a1fd6bb68a7e8781a334c53918",
+    "development_runner": "7b9393babbcf28293d51fdd43c7a80ed41810d614001811b6c458c55d3c84412"
+  },
+  "stages": [
+    "First3 new cases: Full native/nohook/hook/100%-gather checks, at most12 extra outputs; no compressed outputs yet",
+    "Generate all10 new Full main outputs, freeze baseline IDs and scores",
+    "If Full gate passes, first3 new cases compressed native/custom reference checks for two representative methods, at most12 further extra outputs",
+    "If engineering passes, generate all original10 cases for all4 compressed conditions, including Full-wrong cases; no adaptive method selection"
+  ],
+  "full_support_gate": {
+    "required_full_outputs": 10,
+    "min_whole_response_exact_correct": 5,
+    "required_label_format_correct": 10,
+    "max_truncated": 0,
+    "max_errors": 0,
+    "on_failure": "Stop before any compressed reference/main outputs; preserve all10 Full and mark other40 not_run_full_support_gate. Do not alter prompts/models/budgets/IDs",
+    "meaning": "Descriptive minimum support and clean format baseline only, not a statistical power calculation; same50% exact-support fraction as development gate, not an AccessDenied exception"
+  },
+  "max_main_outputs": 50,
+  "max_extra_correctness_outputs": 24,
+  "primary_endpoint": "For all10 fixed queries, count Full-format-valid to compressed-format-invalid outputs separately for each method; complete raw-response label inventory membership",
+  "secondary_endpoints": [
+    "original-gold exact and official compatibility",
+    "Full-to-compressed exact C2C/C2W/W2C/W2W with all10 and actual Full-correct denominator",
+    "pin-versus-unpinned format and exact transitions for each method",
+    "truncation/errors/N/A",
+    "all-case results plus descriptive flagged-case listing; never drop flagged cases"
+  ],
+  "scorer": "Same prior whole response.strip() label-format and exact-gold scoring. Remove only terminal EOS token; do not first-line-filter primary scores or hide other special tokens. Official firstline compatibility remains secondary",
+  "reporting_constraints": "No method winner or significance claim from n10, no stable family ranking, no combination with development as an independently confirmed sample. Zero format failures or improvements are valid outcomes; do not run more seeds/budgets to induce failures",
+  "overlap": "Unused test questions on same source/length subset, not independent training examples or a power-guaranteed confirmation set",
+  "development_demo_overlap_fraction_range": [
+    0.5188679245283019,
+    0.6643356643356644
+  ],
+  "engineering_gates": [
+    "all sources/cases/header/tokenizer SHA match and new IDs never in previous experimental main outputs",
+    "all10 native IDs, source question/context/gold bytes and fixed budget assertions pass",
+    "first3 Full native/nohook/hook and every-policy100% gather agree",
+    "Full gate frozen before compressed reference outputs",
+    "first3 compressed physical-cache/original-RoPE trajectories and HF reference/custom IDs agree",
+    "all4 methods every case/layer/head exact equal bytes, anchors/header charged, actual score/maps saved; snapshot enabled only after checks"
+  ],
+  "on_runner_failure": "Preserve bounded partial outputs and manifests, mark remaining cells not_run_engineering_gate; do not silently fallback or retry model outcomes",
+  "after_single_recheck": "Stop this calibration round and synthesize development+holdout separately. Do not automatically expand cases, methods, budgets or models",
+  "runner_warning": "Existing development runner is hardcoded to32 and baseline19. Requires a new bounded10-case stage-aware adapter; do not merely disable its cohort/budget assertions",
+  "old_gates": "No changes to stopped native IFEval or failed AccessDenied gates"
+}

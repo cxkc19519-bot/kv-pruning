@@ -1,0 +1,35 @@
+{
+  "date":"2026-10-30",
+  "scope":"New SQuADtrain12 DEV and system budget applicability, not cross-task or scientific confirmation",
+  "run_record":"docs/runs/20261030-independent-development.md",
+  "source_access":{"BoolQ_official_GCS_metadata":"HTTP403","BoolQ_official_public_HEAD":"HTTP403","source_failures_preserved":2,"BoolQ_data_body_downloaded":false,"mirror_used":false,"authentication_changed":false},
+  "new_scorer":{"module":"scripts/boolq_task.py","sha256":"bbe0a45ac095a2897b0a199e36cc43b5e2aaaca18c5c7b4babf7b59bf1dd362e","software_cases_passed":20,"BoolQ_source_or_model_validated":false},
+  "source_data":{"id":"SQuAD v1.1 train","commit":"e0c66cfec263165fb3c15cb76a22175e371b71d7","git_blob":"77f1d9a7daee11f7bc293832020f7709f63410ad","bytes":30288272,"sha256":"3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955","articles":442,"paragraphs":18896,"questions":87599,"answer_spans":87599,"all_answer_slices_exact":true,"source_body_local":false},
+  "split":{"algorithm":"article components,hash-ranked original question per group;not longest paragraph","groups":442,"selected":64,"engineering":4,"development":12,"sealed":48,"engineering_used_for_inference":2,"historical_dev48_title_or_paragraph_overlap":0,"old_sealed16_reused":false,"new_sealed48_inference":false,"cross_task_split_final":false,"selected_sha256":"20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1","prior_to_new_model_outputs":true},
+  "amendment":{"path":"configs/independent-squad-development-amendment-v1.json","sha256":"e19913a62ec016d5e6478f6c2336dcfbe0fe61c7e1469f8425f4b857a44c51ee","reason":"Advance already-planned SQuAD source as DEV while official BoolQ source is blocked;no output-dependent sample/prompt/budget change","old_prepare_run_flags_unchanged":true},
+  "frontend":{"cases":14,"encodes":36,"native_boundary_passed":true,"system_tokens":56,"required_system_and_anchors":120,"prefix_range":[146,312],"budget_range":[73,156],"infeasible_cases":12,"engineering_infeasible":2,"development_infeasible":10},
+  "model":{"id":"Qwen/Qwen2.5-7B-Instruct","revision":"a09a35458c702b33eeacc393d103063234e8bc28","runtime_Full_layers":28,"KV_heads":4,"head_dimension":128,"dtype":"bfloat16","backend":"sdpa","KV_bytes_per_token":57344,"max_new_tokens":128,"new_model_downloads":0,"dependencies_changed":false},
+  "results":{
+    "full":{"executed":12,"task_correct":9,"task_evaluated":12,"format_pass":11,"format_evaluated":12,"joint_delivery":8,"truncated":0,"support_gate":true},
+    "adapted_snapkv":{"executed":12,"infeasible":0,"task_correct":0,"task_evaluated":11,"format_pass":0,"format_evaluated":11,"joint_delivery":0,"truncated":1},
+    "uniform_random":{"executed":12,"infeasible":0,"task_correct":3,"task_evaluated":11,"format_pass":2,"format_evaluated":12,"joint_delivery":0,"truncated":0,"task_NA":1},
+    "adapted_snapkv_system_pinned":{"executed":2,"infeasible":10,"task_correct":0,"task_evaluated":2,"format_pass":2,"format_evaluated":2,"joint_delivery":0,"engineering_paths_verified":false},
+    "uniform_random_system_pinned":{"executed":2,"infeasible":10,"task_correct":1,"task_evaluated":2,"format_pass":2,"format_evaluated":2,"joint_delivery":1,"engineering_paths_verified":false}
+  },
+  "engineering":{"Full_answers":6,"Full_three_paths_exact":true,"compact_answers":8,"compact_unpinned_native_custom_exact":true,"compact_infeasible_cells":4,"compact_protected_native_custom_paths_verified":false,"general_runner_engineering_gate_true_scope":"All generated applicable engineering cells only;does not verify infeasible protected conditions"},
+  "independent_verification":{"source_graph_DFS_and87599_spans_rechecked":true,"map_head_vectors":3584,"score_archives_matching_Full":14,"generated_main_KV_bytes_and_traces":40,"infeasible_main_cells_verified":20,"all_plan_cells_and_metric_bounds_recomputed":60},
+  "runs":[
+    {"path":"results/20261030-independent-source-discovery-v1","status":"failed","pid":912453,"manifest_sha256":"32b72bfb08e5a17538e7e7aeeafc512769d594d872a5888ad0ff8dd47871caec"},
+    {"path":"results/20261030-independent-source-public-head-v2","status":"failed","pid":912871,"manifest_sha256":"82671e00b80e4272742d30c07317ad78216632a35d37c5b39a83d5e75963645a"},
+    {"path":"results/20261030-independent-task-preflight-v1","status":"complete","pid":913805,"manifest_sha256":"67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945"},
+    {"path":"results/20261030-independent-squad-tokenizer-v1","status":"complete","pid":914828,"manifest_sha256":"3adb1917dc4cd0f673fbaa93b81c72872f56ef7396ee987e1353ec489a22d832"},
+    {"path":"results/20261030-independent-squad-full-v1","status":"complete","pid":915363,"manifest_sha256":"769c196352e418b946e3927c4be5042cbfaf3ff426332d5b178b580537a07177"},
+    {"path":"results/20261030-independent-squad-compression-v1","status":"complete","pid":916500,"manifest_sha256":"68d3d0750bc0cb00553510a34168b572d50d61416922af5543e235a6c3d7a1e1"},
+    {"path":"results/20261030-independent-development-analysis-v1","status":"complete","pid":917466,"manifest_sha256":"ab10c85a63fa540bba4a3ec24454386b5d9376d83586d0d304857ca28dd034c1"}
+  ],
+  "analysis_artifacts":{"report_sha256":"d6852baf3f0a6f7720d65ffcd0c9cd0813bd53d8988f278e195112bbd63db2f8","independent_verification_sha256":"191f736564348c51706edb5e1018e485b786a1451b2455d02a1d0818f04ed656","closure_sha256":"c8c3e97b09a7fa41849c67d8f1fe03d987c494e113fdb21cf79c9b0e33189677","derived_manifest_sha256":"0bba1cac90f0f76ec00f9a117785c6a00952ffc2a1e1b0c33380d711cdd00984"},
+  "new_outputs":{"main":40,"engineering":14,"main_tokens":1162,"engineering_tokens":605,"planned_main_cells":60,"infeasible_main_cells":20},
+  "cumulative":{"runs":107,"main_outputs":2852,"index":"results/20261030-run-index-independent-development.json","index_sha256":"a1e120d953c73f159af4a1c07b678c8b599ba0406365a31d9e215d8d65db9969"},
+  "all_owned_pids_exited":true,"GPU1_final_memory_MiB":18,"GPU1_final_utilization_percent":0,"other_tasks_manipulated":false,"active_queue":false,
+  "next":"Integrate condition-specific budget admission and engineering evidence scope into generic execution interface;preserve known infeasible cases as acceptance material. BoolQ source paused until separately audited official release;no new sealed/model/budget matrix by default."
+}

@@ -1,0 +1,69 @@
+{
+  "draft_id": "decoder-objective-screen-draft-v1",
+  "date": "2026-10-31",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "CPU_correctness_entry_implemented": false,
+  "GPU_runner_implemented": false,
+  "scope": "H3_same_prefix_local_mask_KV_objective_mismatch_screening_only",
+  "question": "Do vocabulary/TopK KL objectives misrank equal-budget real KV masks under a fixed local legal-token mask?",
+  "P0": {
+    "synthetic_probability_counterexample_checked": true,
+    "real_KV_evidence": false,
+    "source_archive": "literature/20261031-decoder-aware-candidate-v1",
+    "illustration_sha256": "18701884a970a64c5adcf96371f31f64091c318d4fba48a583625082e9cd3825"
+  },
+  "P1": {
+    "executed": false,
+    "proposed_new_development_groups": 12,
+    "cohort_selected": false,
+    "reuse_original48_for_tuning": false,
+    "candidate_compact_masks_per_group": 8,
+    "candidate_families": {
+      "adapted_snapkv": 1,
+      "recency": 1,
+      "uniform_random_fixed_seeds": 6
+    },
+    "Full_reference_per_group": 1,
+    "maximum_same_prefix_logit_vectors": 108,
+    "independent_units": 12,
+    "engineering_resource_ceiling_draft": 14,
+    "model": "Existing pinned Qwen2.5-7B-Instruct Full Attention only",
+    "objectives": [
+      "full_vocabulary_KL",
+      "generic_Full_top128_KL",
+      "generic_Full_top256_KL",
+      "local_grammar_allowed_support_KL"
+    ],
+    "semantic_branch_requires_at_least2_legal_tokens": true,
+    "negative_controls": [
+      "full_vocabulary_allowed",
+      "singleton_allowed"
+    ],
+    "gold_used_for_selection": false,
+    "query_known_oracle_diagnostic": true,
+    "deployable_selector_claim": false,
+    "old_Full_suffix_KV_reuse_forbidden": true
+  },
+  "development_gate_draft": {
+    "Full_task_min_of12": 10,
+    "rank_mismatch_groups_min": 3,
+    "legal_argmax_fidelity_difference_groups_min": 2,
+    "statistical_confirmation": false,
+    "stop_on_failure_without_retuning": true
+  },
+  "needs_before_execution": [
+    "CPU grammar/KL/mask correctness module and independent audit",
+    "new fixed dataset/native input/budget/source pins",
+    "current-runtime engineering and shared-prefix protocol",
+    "exact random seeds,forward/token/byte/time caps",
+    "registered bounded execution config"
+  ],
+  "novelty_established": false,
+  "new_algorithm_implemented": false,
+  "new_experimental_runs_this_turn": 0,
+  "new_model_answers_this_turn": 0,
+  "old_QA_gate_rewritten": false,
+  "Mistral_queue_restarted": false,
+  "automatic_GPU_queue": false
+}

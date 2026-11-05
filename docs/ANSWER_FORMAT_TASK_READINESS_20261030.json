@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-30",
+  "current_state": "Native tokenizer,Full and four equal-byte compressed DEV conditions completed; full support passed, frozen all-comparable DEV gate false due one random truncation; automatic GPU queue ended at feasibility decision",
+  "contract": "docs/ANSWER_FORMAT_TASK_CONTRACT_20261030.md",
+  "contract_sha256": "3af39d6b756f514173214e33aba744d988edefb602946fd650f548f8f6dcedac",
+  "proposal": "configs/answer-format-task-preflight-proposal-v1.json",
+  "proposal_sha256": "a106a9eae2f0b67f4d6e16e33447c8097adc53e735ac8ee50e449ee0191ad14e",
+  "historical_proposal_flags_unchanged": true,
+  "runner_implemented": true,
+  "cpu_executed": true,
+  "run": "results/20261030-answer-format-task-preflight-v1",
+  "run_record": "docs/runs/20261030-answer-format-task-preflight.md",
+  "status": "complete",
+  "elapsed_seconds": 61.28822786314413,
+  "pid": 823622,
+  "own_pid_exited": true,
+  "software_score_fixtures_passed": 24,
+  "software_data_fixtures_passed": 6,
+  "sources": {
+    "dataset_commit": "e0c66cfec263165fb3c15cb76a22175e371b71d7",
+    "dataset_git_blob": "e9a3f913ad1468ebe105b891334ca7b0bc0e2510",
+    "dataset_sha256": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9",
+    "dataset_bytes": 4854279,
+    "requests": 4,
+    "total_source_payload_bytes": 4871766,
+    "source_identity_checks_passed": true,
+    "author_code_executed": false,
+    "original_codalab_bytes_verified": false
+  },
+  "source_data_audit": {
+    "articles": 48,
+    "paragraphs": 2067,
+    "questions": 10570,
+    "answer_spans": 34726,
+    "all_source_slices_exact": true,
+    "all_question_ids_unique": true,
+    "labels_repaired": false
+  },
+  "project_split": {
+    "algorithm": "article_components_v1",
+    "article_components": 48,
+    "selected_cases": 34,
+    "engineering": 2,
+    "development": 16,
+    "sealed_holdout": 16,
+    "cross_role_component_id_normalized_context_overlaps": 0,
+    "selection": "One longest original paragraph per component, one hash-ranked question; all original gold answers kept",
+    "context_words": {
+      "engineering": {
+        "min": 169,
+        "max": 198
+      },
+      "development": {
+        "min": 181,
+        "max": 629
+      },
+      "sealed_holdout": {
+        "min": 164,
+        "max": 508
+      }
+    },
+    "holdout_inference_run": false,
+    "official_hidden_test": false,
+    "semantic_near_duplicate_audit_complete": false,
+    "pretraining_independence_proven": false,
+    "long_context_validated": false
+  },
+  "implementation": {
+    "scripts/answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "scripts/preflight_answer_format_task.py": "e5e3d1a20ced605213f08e8dca04ef4785db6ded59d7a3439e9383211dd802d1",
+    "new_task_report_adapter_implemented": true,
+    "existing_trec_report_unchanged": true
+  },
+  "artifacts": {
+    "execution_snapshot.json": "6d7ca0146818b88ce987f8a18ca226738fdf7854a09961fc7bfa7034b7b37322",
+    "summary.json": "15dffd361159931a139cf61331bb2ff16ca0e0dc669689b2375f9664b9e106db",
+    "selected_cases.jsonl": "ccf4866f3381f797d9dda458f65c7dd0a8a204ddcd83d946766173fc1a7f0c42",
+    "split_manifest.json": "8de27bdaa7e1dfe2a18f11b07149734f738256e05313498e01d777373005159e",
+    "score_fixtures.json": "f75e9481229346dfff6922a5f7ee824f7a140d17bd4bc86a8d8ceefb75e6540f",
+    "data_fixtures.json": "3479841ec37da2133e6fd99120bcf21ac5d6d3ac98f8deae9119cf74d67dd682",
+    "manifest.json": "0d97b98f06ed305d83043dc6833818952d6971ed59fc3b18ecba48923430872e",
+    "independent_verification.json": "a6ab30cddddef1be0b8f21385ff9dca4e0ae394098eeaba18ee9a98877fbd9f5",
+    "closure.json": "035d551fedf184003903e0936b99de86a2e25a6cf10ab31add72dbc8f85e6c62",
+    "derived_manifest.json": "b4d9306cdf6a616e088d8ac4e2111d96979abfd1ec49395d7bfc072cf673fa8a"
+  },
+  "independent_review": "No task-module import; pairwise normalized-title/context graph+BFS, canonical ranks, raw selections/labels/prompts/character bounds and original manifest hashes matched",
+  "gates": {
+    "data_integrity": "pass",
+    "scorer_software": "24/24",
+    "split_software": "6/6",
+    "tokenizer_native_boundary": "pass18 cases/44 encodes",
+    "complete_system_token_span": 56,
+    "half_budget_feasibility": "pass18, protected+anchors120 slots, half budgets142-426",
+    "full_generation_paths": "pass2 engineering cases times3 paths",
+    "full_task_support": true,
+    "compression": "engineering pass16 answers,64 DEV outputs returned,one truncated",
+    "second_model": null,
+    "DEV_signal_gate": false
+  },
+  "this_turn": {
+    "new_cpu_runs": 2,
+    "main_model_outputs": 80,
+    "engineering_model_outputs": 22,
+    "model_loaded": true,
+    "tokenizer_loaded": true,
+    "gpu_queried": true,
+    "dependencies_changed": false,
+    "raw_data_or_results_saved_locally": false,
+    "new_gpu_runs": 2
+  },
+  "cumulative": {
+    "runs": 99,
+    "main_model_outputs": 2812,
+    "index": "results/20261030-run-index-answer-format-direction.json",
+    "index_sha256": "11d49a0bb4c4e5c5b9bdb7d8cfef4d6a1c7d7d9bf8f6f230461675d9118ade8e",
+    "statistically_independent_sample_count": null
+  },
+  "next": "Automatic feasibility task complete. Preserve system/empirical thesis route as discussion recommendation, do not make current16-case adaptation a standalone new-method thesis. Next thesis/system acceptance design; independent task/model confirmation needs a new protocol, no automatic GPU rerun.",
+  "direction_stages": {
+    "decision_contract": "configs/answer-format-direction-decision-v1.json",
+    "decision_contract_sha256": "3baf6b9808a75ab5305ae7b0b4aff0637cd9dc2f81cc4c49ed825b1407909edc",
+    "feasibility_report": "docs/ANSWER_FORMAT_FEASIBILITY_20261030.md",
+    "run_record": "docs/runs/20261030-answer-format-direction.md",
+    "runs": [
+      "results/20261030-answer-format-tokenizer-v1",
+      "results/20261030-answer-format-full-v1",
+      "results/20261030-answer-format-compression-v1",
+      "results/20261030-answer-format-analysis-v1"
+    ],
+    "run_manifests": [
+      "782c006937456a42ea5b2017aa5df2d319f0314e896df62a339ca8fea68300b3",
+      "340d5d8cbc653ad2414d0eb5851c22eb3558bdab3406ba7f652ed2e473b95de0",
+      "b34a83d4a93bbd64f55390c1c5f0b812c35436f285050665263ea112deab5f23",
+      "6c7d5549b3bdafbdb66a5c4b50a0dc4571aa9308069171da2beb8751a429aed0"
+    ],
+    "source_sha256": {
+      "scripts/preflight_answer_format_tokenizer.py": "bdbbf8a382b9828b4296e0c9423ef0fe610d089d17cd1aa9122447d83b8a80ff",
+      "scripts/run_answer_format_model.py": "a86d3be232bc2a0028b2ea45a2a55a6b0186b23560107f7bb0c3501d01108b67",
+      "scripts/analyze_answer_format_direction.py": "373f2927d7b8c102d0b9b752de6619ea78de44f697ffd4ffff1e7f8b59ae32ec"
+    },
+    "report_sha256": "e1d2422497d1110b6f3969528997c9d416ba3adbf741b658dec8273f211404f5",
+    "independent_verification_sha256": "5aab9e2b60e222decacdd1f9fb93dccb4a086c1780bd54c95e96197b94057974",
+    "closure_sha256": "b9d056c7fde456981047f2e6ed6f8cf6e33b0bc404cbc3520ca19cfe24d2604a",
+    "derived_manifest_sha256": "c4c8d1cdfd2a9057acfb6a7065bcf3c9b1c040d7e8304b9d9fa1bcffb12037bf",
+    "Full_EM": 12,
+    "Full_format": 16,
+    "compressed_EM": [
+      4,
+      8,
+      5,
+      5
+    ],
+    "compressed_format": [
+      3,
+      8,
+      15,
+      16
+    ],
+    "truncated": 1,
+    "task_unassessed": 1,
+    "automatic_confirmation_gate": false,
+    "sealed_confirmation_run": false,
+    "system_empirical_route_recommended": true,
+    "single_task_standalone_thesis_recommended": false,
+    "new_algorithm_or_safety_novelty_established": false,
+    "recommendation_is_research_judgment_not_degree_approval": true,
+    "all_new_pids_exited": true,
+    "gpu1_final_mib": 18,
+    "gpu1_final_utilization": 0,
+    "active_gpu_queue": false
+  }
+}

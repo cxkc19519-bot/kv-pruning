@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-31",
+  "registration_id": "common-batch-engineering-v1",
+  "mode": "GPU_common_batch_operational_engineering",
+  "execution_enabled": true,
+  "run": "results/20261031-common-batch-engineering-v1",
+  "root": "/home/user/jhk/project/Directional Exploration/kv-pruning",
+  "model": {
+    "path": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "metadata_sha256": {
+      "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+      "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+    }
+  },
+  "model_path": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "model_metadata_files": {
+    "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+  },
+  "weights": {
+    "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+    "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+    "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+    "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "numpy": "2.1.2",
+    "urllib3": "2.3.0"
+  },
+  "gpu_uuid": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa",
+  "torch_seed": 20261030,
+  "blocked_probe_source": {
+    "path": "/home/user/jhk/anaconda/envs/deep_learning/lib/python3.11/site-packages/urllib3/util/connection.py",
+    "sha256": "2633bbdb69731e5ccb5cf4e4afd65605d86c7979cc5633126f50c92d5ad74a74",
+    "urllib3_version": "2.3.0"
+  },
+  "source_sha256": {
+    "scripts/common_batch_backend.py": "c36bc144e1987f637368a900c3dcebecdf85c76111ef314300fc9edd0b1bf12b",
+    "scripts/engineer_common_batch.py": "64d13616f76acb82a9b2675868d71f2d8135ce3bbf07cd7be7d94a099498d53a",
+    "scripts/verify_common_batch.py": "9a90776a715d4f15f25178c412e907e3f211d9fd84a94cf45e3b8eb18cd6d9b8",
+    "scripts/run_common_batch.py": "954bba9288710489adf98a2193e2c9589c184e59f5079b5676ca75e863a9630d",
+    "scripts/decoder_kv_backend.py": "7ffdeeb3302c12fd285f5d440f85c577c1f689a03e90e9dce2f520dd6bb84636",
+    "scripts/decoder_objective.py": "bc06c978f75e72248317736ea2d28f36e94e7e5f67b82e0bca047d35a1bd4bb8",
+    "scripts/pilot.py": "476b3cbf8a9e16cdbb958286ba931a45d9b089f1bba4fb0a29f3a7ee9ebcdc1f",
+    "scripts/sdpa_observer.py": "adeaf190471c8c22423359df35f4c7c77270366dd7c34fe46ccaf5a3d2a2ce00",
+    "scripts/sdpa_profiler_adapter.py": "f1dbc5d0e0a0c65aa61f0413db6ef111fe026dd1e174062cd59f5614d7218af4",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/observe_sdpa_gpu_v4.py": "fe53e75ecb3ae9ad10b0dc165ca25f71878b7518980fa241cfa0fee69752fc0d",
+    "docs/COMMON_BATCH_CONTRACT_20261031.md": "86e823ba897e915169899010ab8827b32625e3e89ffc76b7e8d9306207094827"
+  },
+  "input_sha256": {
+    "results/20261031-decoder-native-preflight-v1/native_inputs.json": "7a42861fc0954638f7bdc6bab49d70952d994eaea90551d894f2e4cb96731120",
+    "results/20261031-decoder-native-preflight-v1/selected_cases.json": "b5de283f7a843bdae2f33e7279d183b4b3ef3fd1b681a8aad275d1fd9b95a5f6",
+    "results/20261031-decoder-native-preflight-v1/grammar_contract.json": "20ccc39e48edc16b1eaf0d07977a64fe318f69c49f37d71e549e742a64894e25",
+    "results/20261031-decoder-native-preflight-v1/independent_verification.json": "850c0e82dd9ece1e3fcc95380d259d53e5079c961b2af70a9c8a4d0b11b89a39",
+    "results/20261031-sdpa-observer-cpu-v1/manifest.json": "478fb7005060bac8d738ab1c0f11c1aeccd9c00dd1cb0a77233f924be1a5ad89"
+  },
+  "native_inputs": "results/20261031-decoder-native-preflight-v1/native_inputs.json",
+  "selected_cases": "results/20261031-decoder-native-preflight-v1/selected_cases.json",
+  "grammar_contract": "results/20261031-decoder-native-preflight-v1/grammar_contract.json",
+  "engineering_case_ids": [
+    "decoder_engineering_00",
+    "decoder_engineering_01"
+  ],
+  "random_seeds": [
+    2026103101,
+    2026103102,
+    2026103103,
+    2026103104,
+    2026103105,
+    2026103106
+  ],
+  "numeric": {
+    "max_abs_logit": 0.25,
+    "global_KL": 0.001,
+    "allowed_KL": 0.001,
+    "all_argmax_ties_equal": true
+  },
+  "compute_bounds": {
+    "forward_calls": 40,
+    "input_tokens": 2356,
+    "archived_vectors": 36
+  },
+  "bounds": {
+    "worker_seconds": 600,
+    "verifier_seconds": 180,
+    "outer_seconds": 850,
+    "term_grace_seconds": 5,
+    "max_archive_files": 128,
+    "max_archive_bytes": 536870912
+  },
+  "tokenizer_enabled": true,
+  "model_inference_enabled": true,
+  "GPU_enabled": true,
+  "network_enabled": false,
+  "next_GPU_execution_enabled": false,
+  "development_model_calls_enabled": false,
+  "automatic_retry_enabled": false,
+  "original_draft_flags_unchanged": true,
+  "user_authorization": "Explicit ongoing experimental session; current user instruction to begin next real-KV engineering step.",
+  "revision_reason": "New explicitly scoped operational common-batch contract, not old whole/split equivalence. Bitwise repetition of Full+8 candidates in two opposite orders; old numerical failures unchanged.",
+  "previous_numeric_engineering_accepted": false,
+  "expected_SDPA_records": 1008,
+  "same_path_controls": 18
+}

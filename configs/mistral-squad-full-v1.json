@@ -1,0 +1,88 @@
+{
+  "proposal_id": "mistral-squad-full-v1",
+  "execution_enabled": true,
+  "scope": "Mistral_Full_only",
+  "run": "results/20261030-mistral-squad-full-v1",
+  "wall_seconds": 600,
+  "outer_watchdog_seconds": 660,
+  "kill_grace_seconds": 20,
+  "engineering_answers_max": 6,
+  "main_answers_max": 12,
+  "generated_tokens_max": 2304,
+  "archive_files_max": 64,
+  "archive_bytes_max": 67108864,
+  "inputs": {
+    "results/20261030-independent-evidence-frontends-preflight-v2/manifest.json": "bf93207d3cc6e110d625e6e4eb56e6caacf2bd55e6399628da2d470726d2571c",
+    "results/20261030-independent-evidence-frontends-preflight-v2/derived_manifest.json": "23c50b2171753d934bb572b7db88151c899c680ead83d7946982c0a471cc305d",
+    "results/20261030-independent-evidence-frontends-preflight-v2/tokenized_cases.json": "75d33d34bc6979c3e9aa63120096748234d322a1196fc7f81845f8957a45d8c9",
+    "results/20261030-independent-evidence-frontends-preflight-v2/independent_verification.json": "bd66f2bbcefbb9d20ae896451f1967b424b0bae88680de633cb4ff4094615d1c",
+    "results/20261030-independent-evidence-frontends-preflight-v2/metadata_checks.json": "bb58cbfa681a657a0eac6a6239d3d1a59b41b3345a3761c01b80d28658f2d6f6",
+    "results/20261030-run-index-independent-frontends.json": "491e4cbbd5986ffc8aa56197852047b650efc63d74475c04e5d7e06d158828a1",
+    "configs/mistral-7b-v03-c170-artifacts.json": "9df15f9d17e9258284cf474a6927f438a520863d424726ea5e735429b68bee58",
+    "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+    "scripts/answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "scripts/reliability_system_core.py": "ea87bd0d1cff69014336cd59f61b4e77d2d0e43b6f679bf340d77c6f5c8ed546",
+    "scripts/reliability_system_adapters.py": "ecaeebf677778743cc6e8f9c8a3019a866cb00abb247c6369a8eabae109370b9",
+    "scripts/verify_hf_DEV_acceptance.py": "0bf578b3e342d3c2554c5134c6774559a876d06327e319fe15fad5e96cf69143"
+  },
+  "sources": {
+    "scripts/answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "scripts/reliability_system_adapters.py": "ecaeebf677778743cc6e8f9c8a3019a866cb00abb247c6369a8eabae109370b9",
+    "scripts/run_mistral_squad_full.py": "cdec42ae81cb7f6d8aa5cd9771c37a1d524a21069392badc728110422677700e",
+    "scripts/reliability_system_core.py": "ea87bd0d1cff69014336cd59f61b4e77d2d0e43b6f679bf340d77c6f5c8ed546"
+  },
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2",
+    "sentencepiece": "0.2.1",
+    "protobuf": "6.33.0"
+  },
+  "official_spec": "configs/mistral-7b-v03-c170-artifacts.json",
+  "model_path": "/home/user/jhk/project/Directional Exploration/kv-pruning/models/Mistral-7B-Instruct-v0.3/c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "model_revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "model_metadata_sha256": {
+    "README.md": "3166974023134d972368b585d730fa5f70100873684f90a10a773b20e80b30ba",
+    "config.json": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99",
+    "generation_config.json": "b4669f1b8f4185324bd9b12a69e85a1ad2289bc48111ef739cfaaea3bba6b0a9",
+    "model.safetensors.index.json": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016",
+    "params.json": "8a64b8657de37af1f828eef1517dc186247938d66e7fea2c78c31d5b9071efe6",
+    "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+    "tokenizer.json": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49",
+    "tokenizer.model": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+    "tokenizer.model.v3": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+    "tokenizer_config.json": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2"
+  },
+  "tokenized": "results/20261030-independent-evidence-frontends-preflight-v2/tokenized_cases.json",
+  "cases": "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl",
+  "engineering_case_ids": [
+    "56f991b19b226e1400dd15b8",
+    "57280cfc3acd2414000df323"
+  ],
+  "gpu_uuid": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa",
+  "torch_seed": 20261030,
+  "decode": {
+    "bos_token_id": 1,
+    "repetition_penalty": 1.0,
+    "do_sample": false,
+    "eos_token_id": 2,
+    "num_beams": 1,
+    "pad_token_id": 2,
+    "max_new_tokens": 128,
+    "use_cache": true
+  },
+  "Full_support": {
+    "format_min": 9,
+    "errors_max": 0,
+    "task_min": 6,
+    "truncated_max": 1
+  },
+  "failure": "First source/weight/runtime/input/cache/three-path failure stops;partialraw retained,no retry. Fullquality belowthreshold completes negative support report andstops future compression;no prompt/sample/decode search.",
+  "compact_enabled": false,
+  "protected_enabled": false,
+  "sealed_inference": false,
+  "network_requests": 0,
+  "dependency_changes": false,
+  "scientific_scope": "Same12DEV second-modelFull support only,not independent contexts orcompression effect."
+}

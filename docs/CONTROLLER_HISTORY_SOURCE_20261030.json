@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-30",
+  "kind": "read_only_source_lifecycle_audit",
+  "repository": "vllm-project/vllm",
+  "release": "v0.32.0",
+  "commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+  "author_code_executed": false,
+  "files": [
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/acceptance_estimator.py",
+      "git_blob_sha1": "f7a4a2f2c1e3221407d12c70cc067cc8cc045bd1",
+      "lines": 503,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/acceptance_estimator.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/speculator.py",
+      "git_blob_sha1": "d86a0b0351f05073ebecf59af06e68cdcb1ad96c",
+      "lines": 602,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/speculator.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/spec_decode/adaptive_verification.py",
+      "git_blob_sha1": "5f91af59e5924bfb89b0c6cc0b6eb62e02010d06",
+      "lines": 510,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/spec_decode/adaptive_verification.py"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/model_runner.py",
+      "git_blob_sha1": "57cef586f81fd48337bf43a437c392127ecc1a6b",
+      "lines": 2448,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/worker/gpu/model_runner.py"
+    },
+    {
+      "path": "tests/v1/spec_decode/test_acceptance_estimator.py",
+      "git_blob_sha1": "a1f3da09402f1cf0d009bd537a90e271450132a4",
+      "lines": 295,
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/tests/v1/spec_decode/test_acceptance_estimator.py"
+    }
+  ],
+  "upstream_check": {
+    "history": [
+      {
+        "sha": "458334f00f7cbff7c8a1feae449656aa7343c476",
+        "date": "2026-10-28T01:15:00Z",
+        "title": "[MRV2][Spec Decode] Close DFlash/DSpark and adaptive-verification JIT warmup gaps (#63819)"
+      },
+      {
+        "sha": "3d5f4d4cd5d86788151664597bcebea666c34700",
+        "date": "2026-09-28T20:46:25Z",
+        "title": "[Perf][Spec Decode] Avoid triton recompiles in the acceptance estimator (#57107)"
+      },
+      {
+        "sha": "3bb0a03f35269185b6358753e64932bb946cc531",
+        "date": "2026-09-14T22:58:48Z",
+        "title": "[Model Runner V2] Acceptance estimation for adaptive verification (#52228)"
+      }
+    ],
+    "latest_file": {
+      "commit": "458334f00f7cbff7c8a1feae449656aa7343c476",
+      "path": "vllm/v1/worker/gpu/spec_decode/acceptance_estimator.py",
+      "git_blob_sha1": "c210e23a1787c4d76ff0611534156a3614be1397",
+      "scope": "Reviewed acceptance-estimator and corresponding test patches for warmup/JIT changes; not a full review of the commit or current main."
+    }
+  },
+  "reading_scope": "Estimator implementation read; related construction/update/remove/budget calls and selected upstream tests reviewed. Fetching does not imply all files semantically audited. No author tests executed."
+}

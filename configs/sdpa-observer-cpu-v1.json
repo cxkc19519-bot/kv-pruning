@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-31",
+  "registration_id": "sdpa-observer-cpu-v1",
+  "execution_enabled": true,
+  "mode": "CPU_observer_identity_and_archive_fault_acceptance",
+  "run": "results/20261031-sdpa-observer-cpu-v1",
+  "source_sha256": {
+    "scripts/sdpa_observer.py": "adeaf190471c8c22423359df35f4c7c77270366dd7c34fe46ccaf5a3d2a2ce00",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/accept_sdpa_observer.py": "5936a4280e20412ee759c698b6c01221da1bb3a386bb379e371140b0c7f7ab35",
+    "scripts/verify_sdpa_observer.py": "da9545677621f8b665a2a0793b7b2f92661646d6ee895abb82c2aecf86b254cb",
+    "scripts/run_sdpa_observer_cpu.py": "dc67c3d528fb8ebf98c55340c1c01bdc0024f5888e3fc5883f645938b01fbe5a",
+    "docs/SDPA_OBSERVER_CPU_PROTOCOL_20261031.md": "6871234cb2d59902b4be6b5da980fd643916997a4dbc18c0e1d0e755646e3fbb"
+  },
+  "input_sha256": {
+    "configs/decoder-numerics-audit-v1.json": "c207dbd8fb0ca2f1e7dfcef9b647e7bfba6c8628905143ae8a419493a11c2095"
+  },
+  "model_inference_enabled": false,
+  "tokenizer_enabled": false,
+  "GPU_enabled": false,
+  "network_enabled": false,
+  "next_GPU_execution_enabled": false,
+  "bounds": {
+    "child_seconds": 60,
+    "outer_seconds": 150,
+    "term_grace_seconds": 5,
+    "max_archive_files": 64,
+    "max_archive_bytes": 4194304
+  },
+  "cases": {
+    "observer": 18,
+    "archive_faults": 6,
+    "total": 24
+  },
+  "synthetic_profiler_only": true,
+  "real_GPU_or_Torch_SDPA_observation": false,
+  "prior_failed_archives_rewritten": false,
+  "user_authorization": "Existing experimental session; latest user request for transparent observer CPU implementation and validation before a disabled bounded engineering observation draft."
+}

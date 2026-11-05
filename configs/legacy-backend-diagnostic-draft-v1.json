@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "proposal_id": "legacy-backend-source-guided-diagnostic-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "status": "diagnostic_contract_frozen_not_registered_for_execution",
+  "purpose": "Capture the missing byte differences and import checkpoints without changing the failed input, total import deadline or installed backends.",
+  "runtime_pin": "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json",
+  "runtime_pin_sha256": "c635343add69e6bf06de5941ae588a136b613bd3a9f5c359d075ed9132738cc4",
+  "original_failed_run": "results/20261101-legacy-backend-cpu-v1",
+  "original_manifest_sha256": "6f64c194478b98eb39126ba00f79649b0c1ebb1e18b17011b6315c60d42c41b1",
+  "input_unchanged": {
+    "vocabulary_size": 257,
+    "ordinary_token_ids": [0, 255],
+    "ordinary_bytes": "id i maps to bytes([i])",
+    "eos_token_id": 256,
+    "eos_token_bytes_hex": "3c7c656f737c3e",
+    "special_token_ids": [256],
+    "backend_slices": [],
+    "schema_or_label_changes": false
+  },
+  "llguidance_diagnostic": {
+    "version": "1.7.6",
+    "public_imports": 1,
+    "tokenizer_constructions": 1,
+    "decode_single_ids_including_eos": [0, 256],
+    "decode_full_ids": [0, 255],
+    "is_special_token_ids": [0, 256],
+    "tokenize_byte_probes_hex": ["74657374", "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f"],
+    "max_public_calls_including_import": 520,
+    "source_prediction_only_not_observed": {
+      "token_255_is_special": true,
+      "token_255_decoded_hex": "",
+      "full_sequence_decoded_length": 255,
+      "full_sequence_missing_original_byte_hex": "ff"
+    },
+    "record": ["each_id_input_bytes_hex", "each_id_actual_decoded_hex", "each_id_special_flag", "full_input_and_decoded_hex", "first_difference", "encoder_probes", "exceptions"],
+    "do_not_correct_or_hide_the_difference": true
+  },
+  "xgrammar_import_diagnostic": {
+    "version": "0.2.8",
+    "combined_original_phase_deadline_seconds": 5,
+    "phase_start": "before import torch",
+    "phase_end": "after import xgrammar",
+    "checkpoints": ["torch_import_begin", "torch_import_end", "torch_thread_settings_begin", "torch_thread_settings_end", "xgrammar_import_begin", "xgrammar_import_end"],
+    "deadline_reset_at_checkpoint_allowed": false,
+    "stack_capture": "stdlib faulthandler periodic snapshots to a run-local file",
+    "stack_interval_seconds": 1,
+    "stack_archive_cap_bytes": 524288,
+    "importtime_option": false,
+    "optional_TVM_Torch_DLPack_JIT_disabled": true,
+    "audit_guard_path_checks_preserved": true,
+    "no_dataloader_model_or_tokenizer_files": true
+  },
+  "bounds": {
+    "total_wall_seconds": 30,
+    "llguidance_total_seconds": 10,
+    "per_public_call_seconds": 5,
+    "work_processes_simultaneously": 1,
+    "cpu_affinity_count": 2,
+    "schema_compilations": 0,
+    "matcher_constructions": 0,
+    "mask_calls": 0,
+    "labeled_instances": 0,
+    "model_calls": 0,
+    "network_requests": 0,
+    "new_dependencies": 0,
+    "max_archive_files": 64,
+    "max_archive_bytes": 8388608
+  },
+  "admission": {
+    "requires_new_implemented_runner_validator_and_execution_registration": true,
+    "verify_runtime_source_and_input_hashes_before_execution": true,
+    "independently_verify_byte_evidence_and_original_aggregate_deadline": true,
+    "timeout_is_censored_not_success": true,
+    "source_prediction_may_be_refuted_by_evidence": true,
+    "finite_semantic_gate_can_be_passed_by_this_diagnostic": false,
+    "automatic_retry": false,
+    "old_run_or_native_files_can_be_modified": false
+  }
+}

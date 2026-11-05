@@ -1,0 +1,1095 @@
+{
+  "date": "2026-10-31",
+  "question_document": "docs/RESEARCH_QUESTION_REDEFINITION_20261031.md",
+  "screen_draft": "docs/DECODER_OBJECTIVE_SCREEN_DRAFT_20261031.md",
+  "disabled_config": "configs/decoder-objective-screen-draft-v1.json",
+  "archive_path": "literature/20261031-decoder-aware-candidate-v1",
+  "archive_files": 10,
+  "archive_bytes": 2266407,
+  "archive_manifest_sha256": "ea36b38a02db149812649eace16c321e92786a7da17fb4eaa00f086e717f2963",
+  "illustration_sha256": "18701884a970a64c5adcf96371f31f64091c318d4fba48a583625082e9cd3825",
+  "source_manifest_sha256": "df2e83ee6d2511e461abc2a2fca1bd4f286a6f18e4cbdbef1097960f4199dfcb",
+  "closure_sha256": "9315acf88008deaf9057195c8729971b3397b55e94225076b6d3c272f3e9873f",
+  "source_files": [
+    {
+      "path": "pask-v2.html",
+      "url": "https://arxiv.org/html/2608.28276v2",
+      "bytes": 901987,
+      "sha256": "070edbf52b88441b02d3eb9f2d3da6696bd828710a920b7ee4dbdf4c0837e261"
+    },
+    {
+      "path": "behavior-preserving-v1.pdf",
+      "url": "https://arxiv.org/pdf/2610.06479v1",
+      "bytes": 767631,
+      "sha256": "f0999788b8df0d90269901b57503bdbc529c2aeff2a80e907f8682d3bbc2d475"
+    },
+    {
+      "path": "grammar-aligned-v4.html",
+      "url": "https://arxiv.org/html/2405.21047v4",
+      "bytes": 453930,
+      "sha256": "27e027db3a1d110546fd014765edc9a7b9f080deb3c7c8abf28e675b508df2ef"
+    },
+    {
+      "path": "constrained-semantic-gap-v1.html",
+      "url": "https://arxiv.org/html/2609.23742v1",
+      "bytes": 96193,
+      "sha256": "b57de6135c5f3575960a8799f04ed80cefe3b758e43e899d0ec6401ddbbad0ee"
+    },
+    {
+      "path": "xgrammar2-abs.html",
+      "url": "https://arxiv.org/abs/2601.04426v1",
+      "bytes": 41457,
+      "sha256": "635987f4df9331b61af9ee62133a4e4b3e323c4fcd7f2d794683de40f7413a6f"
+    }
+  ],
+  "candidate_statuses": {
+    "H1_format_enforcement_as_main_innovation": "reject_broad_claim",
+    "H2_parser_aware_KV_as_main_innovation": "reject_broad_claim_PASK_exists",
+    "H3_local_mask_objective_mismatch": "screening_candidate_only_not_empirically_confirmed"
+  },
+  "P0_status": "Synthetic arithmetic counterexample and controls verified;not real KV evidence",
+  "toy": {
+    "artifact_class": "synthetic_probability_counterexample_not_LLM_or_KV_evidence",
+    "vocabulary": [
+      "legal_A",
+      "legal_B",
+      "illegal_X"
+    ],
+    "allowed_indices": [
+      0,
+      1
+    ],
+    "candidates": {
+      "Q1": {
+        "P": [
+          0.09,
+          0.01,
+          0.9
+        ],
+        "Q": [
+          0.01,
+          0.09,
+          0.9
+        ],
+        "local_allowed_P": [
+          0.9,
+          0.1
+        ],
+        "local_allowed_Q": [
+          0.1,
+          0.9
+        ],
+        "unmasked_KL": 0.17577796618689756,
+        "local_masked_KL": 1.7577796618689758,
+        "masked_argmax_agrees": false,
+        "chain_rule_terms": {
+          "legal_mass_Bernoulli_KL": 0,
+          "legal_conditional_term": 0.17577796618689756,
+          "illegal_conditional_term": 0
+        }
+      },
+      "Q2": {
+        "P": [
+          0.09,
+          0.01,
+          0.9
+        ],
+        "Q": [
+          0.45,
+          0.05,
+          0.5
+        ],
+        "local_allowed_P": [
+          0.9,
+          0.1
+        ],
+        "local_allowed_Q": [
+          0.9,
+          0.1
+        ],
+        "unmasked_KL": 0.3680642071684971,
+        "local_masked_KL": 0,
+        "masked_argmax_agrees": true,
+        "chain_rule_terms": {
+          "legal_mass_Bernoulli_KL": 0.3680642071684971,
+          "legal_conditional_term": 0,
+          "illegal_conditional_term": 0
+        }
+      }
+    },
+    "singleton_allowed_masked_KL": 0,
+    "full_vocabulary_mask_equals_unmasked": true,
+    "model_forwards": 0,
+    "empirical_KV_rank_reversal_proven": false,
+    "new_algorithm_proven": false,
+    "future_sequence_distribution_claim": false,
+    "explanation": "Local token-mask renormalization,not exact sequence conditioning on an entire grammar. Q1/Q2 are invented distributions,not real KV masks or measured model logits."
+  },
+  "real_KV_signal_observed": false,
+  "novelty_established": false,
+  "P1_started": false,
+  "model_or_scorer_changes": false,
+  "actual_this_turn": {
+    "new_experiments": 0,
+    "new_model_answers": 0,
+    "new_engineering_answers": 0,
+    "model_forwards": 0,
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0,
+    "GPU_queries": 0,
+    "primary_source_HTTP_requests_server": 5,
+    "new_dependencies": false,
+    "author_code_executed": false
+  },
+  "cumulative_runs": 120,
+  "cumulative_main_outputs": 3038,
+  "index": "results/20261030-run-index-squad48-taxonomy.json",
+  "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+  "old_QA_gate": false,
+  "Mistral_Full_support": false,
+  "active_gpu_queue": false,
+  "decoder_objective_CPU_followup": {
+    "date": "2026-10-31",
+    "status": "passed_scoped_CPU_software_correctness",
+    "protocol": "docs/DECODER_OBJECTIVE_CPU_PROTOCOL_20261031.md",
+    "record": "docs/runs/20261031-decoder-objective-cpu.md",
+    "registration": "configs/decoder-objective-cpu-execution-v1.json",
+    "registration_sha256": "847651a5bae3ef4228ededc7782b59f6b16f8712d4bfe08c7a74e7c0e4f6c1fb",
+    "run": "results/20261031-decoder-objective-cpu-v1",
+    "archive": {
+      "files": 21,
+      "bytes": 239223,
+      "manifest_sha256": "f9a304f6e36e7cf5dd2dd41e634da71b44f84c3b5369f323cdcbec89fa80ad8a",
+      "all_hashes_independently_readback": true
+    },
+    "acceptance": {
+      "executed": true,
+      "passed": true,
+      "cases": 18,
+      "invalid_variants_rejected": 23,
+      "high_precision_candidate_vectors": 7,
+      "finite_grammar_edges_recomputed": 40,
+      "real_tokenizer_adapter_validated": false,
+      "physical_GPU_cache_validated": false,
+      "real_KV_misranking_observed": false
+    },
+    "runtime": {
+      "python": "3.11.13",
+      "launcher_pid": 1389085,
+      "worker_pid": 1389088,
+      "verifier_pid": 1389089,
+      "launcher_seconds": 0.9854191350750625,
+      "worker_seconds": 0.13362423982471228,
+      "verifier_seconds": 0.7023798422887921,
+      "all_own_PIDs_exited": true,
+      "worker_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      }
+    },
+    "actual_this_turn": {
+      "new_experimental_runs": 1,
+      "new_model_answers": 0,
+      "tokenizer_encodes": 0,
+      "model_loads": 0,
+      "GPU_queries": 0,
+      "dependencies_installed": 0,
+      "local_fixture_execution": false
+    },
+    "prior_connection_blockage": {
+      "SSH_attempts": 5,
+      "reached_authentication": false,
+      "new_runs": 0,
+      "resolved_on_user_notice": true
+    },
+    "cumulative": {
+      "runs": 121,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-objective-cpu.json",
+      "index_sha256": "3c7cdede19646be575a20adfc3d1e73f14b3e043e9066b9c26ecec4b4e02a2a1",
+      "old_index_unchanged": true
+    },
+    "synchronization": {
+      "code_config_docs_synced": true,
+      "raw_outputs_server_only": true,
+      "initial_17_file_freeze_synced": true
+    },
+    "publication_novelty_established": false,
+    "degree_approval_established": false,
+    "P1_started": false,
+    "GPU_runner_implemented": false,
+    "next_GPU_execution_enabled": false,
+    "old_QA_gate_rewritten": false,
+    "original_draft_false_flags_unchanged": true,
+    "next": "Freeze a CPU-only native Qwen tokenizer-byte adapter/schema and12-new-development-group source/input protocol;verify native paths/boundaries/budgets before a separate real same-prefix KV engineering and bounded GPU registration. Do not rerun completed software fixtures or start the disabled108-vector draft."
+  },
+  "decoder_native_CPU_followup": {
+    "date": "2026-10-31",
+    "status": "passed_scoped_native_tokenizer_and_synthetic_input_CPU_preflight",
+    "protocol": "docs/DECODER_NATIVE_CPU_PROTOCOL_20261031.md",
+    "record": "docs/runs/20261031-decoder-native-preflight.md",
+    "registration": "configs/decoder-native-preflight-v1.json",
+    "registration_sha256": "d7d2edcd9aca343c919393bd05c2d1720a0b58a80dc6d523972cc19cb834cc01",
+    "run": "results/20261031-decoder-native-preflight-v1",
+    "archive": {
+      "files": 28,
+      "bytes": 342048,
+      "manifest_sha256": "798a680978ff5dd2689aabadc4563476b312668bcc3c9875323a0e7328dbaef4",
+      "all_worker_and_final_hashes_recomputed": true
+    },
+    "inputs": {
+      "source": "frozen_synthetic_controlled_retrieval_not_public_benchmark",
+      "engineering_groups": 2,
+      "development_groups": 12,
+      "development_design": "3 target positions x4 labels, one group per cell",
+      "case_snapshot_sha256": "b5de283f7a843bdae2f33e7279d183b4b3ef3fd1b681a8aad275d1fd9b95a5f6",
+      "native_inputs_sha256": "7a42861fc0954638f7bdc6bab49d70952d994eaea90551d894f2e4cb96731120",
+      "grammar_contract_sha256": "20ccc39e48edc16b1eaf0d07977a64fe318f69c49f37d71e549e742a64894e25",
+      "old48_or16_reused": false,
+      "semantic_independence_claim": false
+    },
+    "tokenizer": {
+      "repository": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "backend": "tokenizers0.22.1 direct fixed BPE, Jinja2 3.1.4 original template branch",
+      "normalizer": "NFC",
+      "encodes": 34,
+      "base_tokens": 151643,
+      "added_tokens": 22,
+      "non_tokenizer_model_rows": 399,
+      "raw_byte_table_digest": "07ffafaf61cd7852b3adc6b2bf4861c2489ba6499b41db4676de2c91711095c3",
+      "complete_grammar_edges": 49,
+      "local_branch_token_ids": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "local_branch_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "independent_verifier_BPE_encodes": 0,
+      "independent_verifier_method": "Full-vocabulary byte graph enumeration and native byte reconstruction; no tokenizer/template/project imports",
+      "HF_runtime_generator_compatibility_validated": false
+    },
+    "budget": {
+      "prefix_tokens": 373,
+      "query_wrapper_suffix_tokens": 24,
+      "half_prefix_slots": 186,
+      "sink_slots": 4,
+      "recent_slots": 64,
+      "anchor_union_slots": 68,
+      "free_slots": 118,
+      "predicted_bytes_per_slot": 57344,
+      "predicted_full_prefix_bytes": 21389312,
+      "predicted_half_prefix_bytes": 10665984,
+      "feasible_inputs": 14,
+      "physical_GPU_bytes_validated": false
+    },
+    "runtime": {
+      "launcher_pid": 1392624,
+      "worker_pid": 1392627,
+      "verifier_pid": 1392628,
+      "launcher_seconds": 4.396327749826014,
+      "worker_seconds": 0.9157336479984224,
+      "verifier_seconds": 3.262950007803738,
+      "all_own_PIDs_exited": true,
+      "worker_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      }
+    },
+    "actual_this_turn": {
+      "new_CPU_runs": 1,
+      "new_model_answers": 0,
+      "tokenizer_encodes": 34,
+      "model_loads": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "network_requests_inside_run": 0,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 122,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-native.json",
+      "index_sha256": "34c0b9532254bd20530ff66a7427a399670301dc4fbf5e4cdc5165be7988f484",
+      "previous_index_unchanged": true
+    },
+    "real_KV_signal_observed": false,
+    "Full_task_support_measured": false,
+    "P1_model_stage_started": false,
+    "GPU_runner_implemented": false,
+    "publication_novelty_established": false,
+    "old_QA_gate_rewritten": false,
+    "original_GPU_draft_false_flags_unchanged": true,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Implement and freeze a separate same-prefix real-KV engineering protocol using the two new engineering groups;verify reference immutability, full/split recomputation, physical gather and identical query+wrapper suffix under actual model runtime. After engineering passes, measure Full support on frozen12 development groups; only then run the bounded8-candidate KL diagnostic with predetermined seeds/forward/token/time limits. Keep all failures and all groups; no automatic launch from the old draft."
+  },
+  "decoder_KV_engineering_followup": {
+    "date": "2026-10-31",
+    "status": "failed_numeric_engineering_gate_development_blocked",
+    "protocol": "docs/DECODER_KV_ENGINEERING_PROTOCOL_20261031.md",
+    "revision_addendum": "docs/DECODER_KV_ENGINEERING_V2_ADDENDUM_20261031.md",
+    "record": "docs/runs/20261031-decoder-kv-engineering.md",
+    "registrations": {
+      "configs/decoder-kv-engineering-v1.json": "a1b06dc8e82e2e98aa4af2c5027b9a81201d0004712dd6bf244fffda498d2455",
+      "configs/decoder-kv-engineering-v2.json": "2fa46618b4b7d123ac30a8aab3e2317ece939539affb8d5bd6e1bbbfe5b6e10c"
+    },
+    "runs": [
+      {
+        "run": "20261031-decoder-kv-engineering-v1",
+        "status": "failed",
+        "files": 23,
+        "bytes": 360431,
+        "original_manifest_sha256": "c363fd08a19ab19f721dc737307efad57f919edbb28a5c3d2aabdbac044cd168",
+        "derived_manifest_sha256": "0ea8fdb8f23631ebd17eabdef5617e49cee7a2abbf94083cd2e54b874c799ad5",
+        "postmortem_sha256": "3a2da2a81b7a6a84b205ea1e05037a92a6ea2b94be2e76af2f2cb64535d753fc",
+        "forward_calls": 0,
+        "logit_vectors": 0,
+        "tokenizer_encodes": 0,
+        "all_own_PIDs_exited": [
+          1398280,
+          1398285
+        ],
+        "worker_seconds": 21.70857077371329,
+        "launcher_seconds": 22.371169227175415
+      },
+      {
+        "run": "20261031-decoder-kv-engineering-v2",
+        "status": "failed",
+        "files": 42,
+        "bytes": 47463000,
+        "original_manifest_sha256": "07c356f3313648513d2a9d9dbd3f1f684f6717c46faba8ea67051e4565c32936",
+        "derived_manifest_sha256": "6ee5a8182b7a3fd4b1371b14070f3f23cc0d1705289ce6b5660fb8c9e0474a8c",
+        "postmortem_sha256": "bb8d9ddbd1ba44b6f807a65f410af8f181da5f73bf9c5be284ef83f7c4b3f622",
+        "forward_calls": 56,
+        "logit_vectors": 7,
+        "tokenizer_encodes": 4,
+        "all_own_PIDs_exited": [
+          1399341,
+          1399346
+        ],
+        "worker_seconds": 23.75782550126314,
+        "launcher_seconds": 24.478084798902273
+      }
+    ],
+    "actual_runtime": {
+      "model": "Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "Full_layers": 28,
+      "KV_heads": 4,
+      "head_dimension": 128,
+      "dtype": "BF16",
+      "attention": "sdpa",
+      "actual_prefix_bytes": 21389312,
+      "actual_half_prefix_bytes": 10665984,
+      "gpu_uuid": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa",
+      "gpu_after_memory_mib": 18,
+      "gpu_after_utilization": 0
+    },
+    "gate": {
+      "passed": false,
+      "frozen_numeric_limits": {
+        "max_abs_logit": 0.25,
+        "global_KL": 0.001,
+        "allowed_KL": 0.001,
+        "global_and_allowed_argmax_sets_equal": true
+      },
+      "first_engineering_case": "decoder_engineering_00",
+      "comparisons": [
+        {
+          "case_id": "decoder_engineering_00",
+          "name": "whole_vs_full_batch",
+          "passed": false,
+          "metrics": {
+            "max_abs": 0.5625,
+            "global_KL": 7.081408938129297E-13,
+            "allowed_KL": 7.025937428298873E-13,
+            "global_argmax_equal": true,
+            "allowed_argmax_equal": true
+          }
+        },
+        {
+          "case_id": "decoder_engineering_00",
+          "name": "whole_vs_split_full_batch",
+          "passed": false,
+          "metrics": {
+            "max_abs": 0.4375,
+            "global_KL": 1.2534507658734674E-12,
+            "allowed_KL": 1.2304990023800013E-12,
+            "global_argmax_equal": true,
+            "allowed_argmax_equal": true
+          }
+        },
+        {
+          "case_id": "decoder_engineering_00",
+          "name": "recency_batch_vs_tokenwise",
+          "passed": false,
+          "metrics": {
+            "max_abs": 0.5,
+            "global_KL": 0.002501321308959948,
+            "allowed_KL": 2.6259970118805052E-05,
+            "global_argmax_equal": true,
+            "allowed_argmax_equal": true
+          }
+        },
+        {
+          "case_id": "decoder_engineering_00",
+          "name": "uniform_random_batch_vs_tokenwise",
+          "passed": false,
+          "metrics": {
+            "max_abs": 0.5,
+            "global_KL": 2.7427212203036954E-11,
+            "allowed_KL": 2.4293625699114028E-11,
+            "global_argmax_equal": true,
+            "allowed_argmax_equal": true
+          }
+        }
+      ],
+      "first_case_gather_and_reference_bytes_independently_verified": true,
+      "cache_tensors_rehashed": 168,
+      "complete_registered_validator_ran": false,
+      "posthoc_failure_auditor": "scripts/audit_decoder_kv_failure.py",
+      "posthoc_auditor_sha256": "7c1cd9960ca443a60f97b313ba07a3674793bf73c0bdde1a86ca3061f34d5d1f",
+      "posthoc_independent_failure_confirmation": true,
+      "second_engineering_case_model_calls": 0,
+      "development_model_calls": 0
+    },
+    "actual_this_turn": {
+      "new_registered_runs": 2,
+      "failed_runs": 2,
+      "forward_calls": 56,
+      "teacher_forced_input_tokens": 1287,
+      "archived_engineering_logit_vectors": 7,
+      "tokenizer_encodes": 4,
+      "new_complete_model_answers": 0,
+      "generated_tokens": 0,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 124,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-kv-engineering.json",
+      "index_sha256": "4dc414b39a37d2092f803f10e032dbf081798735deb32eca9ed60cd52ceedba9",
+      "previous_index_preserved": true
+    },
+    "Full_development_support_measured": false,
+    "H3_misranking_tested": false,
+    "publication_novelty_established": false,
+    "numeric_thresholds_relaxed": false,
+    "third_GPU_attempt_enabled": false,
+    "active_gpu_queue": false,
+    "old_QA_gate_rewritten": false,
+    "original_GPU_screen_draft_flags_unchanged": true,
+    "next": "Stop GPU/development execution. Use only archived engineering data and pinned source for an offline numerical-equivalence review: distinguish inactive-logit max errors from recency path probability differences, audit causal-mask/position and BF16 computation assumptions, and define a justified comparison contract before any separately registered engineering attempt. Do not relax thresholds to pass or infer H3 from engineering outputs."
+  },
+  "decoder_numerics_CPU_followup": {
+    "date": "2026-10-31",
+    "status": "analysis_independently_verified_overall_run_failed_file_count_cap",
+    "conclusion": "docs/DECODER_NUMERICS_REVIEW_20261031.md",
+    "record": "docs/runs/20261031-decoder-numerics-audit.md",
+    "protocol": "docs/DECODER_NUMERICS_CPU_PROTOCOL_20261031.md",
+    "registration": "configs/decoder-numerics-audit-v1.json",
+    "registration_sha256": "c207dbd8fb0ca2f1e7dfcef9b647e7bfba6c8628905143ae8a419493a11c2095",
+    "run": "20261031-decoder-numerics-audit-v1",
+    "archive": {
+      "files": 46,
+      "bytes": 4846935,
+      "original_manifest_sha256": "a0dec76b627291963f2f0880d2698f37cfcefcbc995255322f849f46b2c4057e",
+      "derived_manifest_sha256": "75f431abb9ae396879950d7438f917a4d7743de4a529c54bafb36d73f1135876",
+      "original_files": 44,
+      "registered_max_files": 40,
+      "count_limit_changed": false,
+      "analysis_rerun": false
+    },
+    "overall_acceptance": false,
+    "scoped_analysis_verified": true,
+    "outer_exit_code": 1,
+    "original_launcher_summary_before_cap": "complete",
+    "source_branch_replay": {
+      "replayed_calls": 56,
+      "mask_none": 51,
+      "explicit_mask": 5,
+      "enable_gqa": 51,
+      "explicit_KV_repeat": 5,
+      "is_causal_true": 3,
+      "mathematical_causal_rows_checked": 1287,
+      "visible_history_sets_equal_under_recorded_contract": true,
+      "exact_CUDA_kernel_observed": false,
+      "XPU_or_NPU_assumed_absent": true,
+      "trace_not_tensor_capture": true
+    },
+    "probability_pairs": [
+      {
+        "name": "whole_full",
+        "global_TV": 3.644713880467417E-12,
+        "allowed_TV": 3.6048450732980108E-12,
+        "global_KL": 7.081408938129882E-13,
+        "allowed_KL": 7.025937428298874E-13,
+        "global_max_probability_error": 3.5984548674150574E-12,
+        "argmax_stable_both": true
+      },
+      {
+        "name": "whole_split",
+        "global_TV": 4.809090861718465E-12,
+        "allowed_TV": 4.689518584790693E-12,
+        "global_KL": 1.2527846320587206E-12,
+        "allowed_KL": 1.2302769577750809E-12,
+        "global_max_probability_error": 4.809042053466328E-12,
+        "argmax_stable_both": true
+      },
+      {
+        "name": "recency_paths",
+        "global_TV": 0.01672999354521872,
+        "allowed_TV": 0.00042566746199600836,
+        "global_KL": 0.0025013213089348633,
+        "allowed_KL": 2.625997011880507E-05,
+        "global_max_probability_error": 0.011697342736851718,
+        "argmax_stable_both": true
+      },
+      {
+        "name": "random_paths",
+        "global_TV": 1.4633027297289024E-10,
+        "allowed_TV": 1.0596767924380343E-10,
+        "global_KL": 2.7438536477869855E-11,
+        "allowed_KL": 2.429340365450924E-11,
+        "global_max_probability_error": 1.4632850486862026E-10,
+        "argmax_stable_both": true
+      }
+    ],
+    "source_inference_not_runtime_kernel_observation": true,
+    "error_attribution_proven": false,
+    "official_sources": [
+      {
+        "bytes": 10779,
+        "file": "official_numerical_accuracy.rst",
+        "sha256": "f6f52db25be50ce3d6959f8d2b5f1eb7623b5069cee1a26b5a8bb115b33144f7",
+        "status": 200,
+        "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.5.1/docs/source/notes/numerical_accuracy.rst"
+      },
+      {
+        "bytes": 235999,
+        "file": "official_sdpa_functional.py",
+        "sha256": "e91cd1c772ef9302727169f89bf8375befd3fc64a8d445df6084958708a95d53",
+        "status": 200,
+        "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.5.1/torch/nn/functional.py"
+      }
+    ],
+    "runtime": {
+      "launcher": {
+        "children": [
+          {
+            "exit_code": 0,
+            "pid": 1405845,
+            "stage": "worker"
+          },
+          {
+            "exit_code": 0,
+            "pid": 1405867,
+            "stage": "verifier"
+          }
+        ],
+        "elapsed_seconds": 6.33564959326759,
+        "engineering_outputs": 0,
+        "main_outputs": 0,
+        "new_CPU_runs": 1,
+        "pairs": 4,
+        "pid": 1405785,
+        "real_KV_signal_observed": false,
+        "real_model_logits": 0,
+        "status": "complete"
+      },
+      "worker": {
+        "GPU_queries": 0,
+        "elapsed_seconds": 1.6925068027339876,
+        "model_answers": 0,
+        "network_requests": 0,
+        "pid": 1405845,
+        "stage": "worker",
+        "status": "complete",
+        "tokenizer_encodes": 0,
+        "weight_bytes_read": 0
+      },
+      "verifier": {
+        "GPU_queries": 0,
+        "elapsed_seconds": 1.4983046939596534,
+        "model_answers": 0,
+        "network_requests": 0,
+        "pid": 1405867,
+        "stage": "verifier",
+        "status": "complete",
+        "tokenizer_encodes": 0,
+        "weight_bytes_read": 0
+      },
+      "own_PIDs_exited": [
+        1405785,
+        1405845,
+        1405867
+      ],
+      "worker_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      }
+    },
+    "actual_this_turn": {
+      "new_CPU_runs": 1,
+      "new_failed_archive_cap_runs": 1,
+      "new_model_calls": 0,
+      "new_tokenizer_encodes": 0,
+      "new_weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "parent_documentation_HTTP_requests": 2,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 125,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-numerics.json",
+      "index_sha256": "43ddc7a0d02449c89b1333ef166d7ad394aec3b2ed925eb53288ea666e9181c2",
+      "prior_index_preserved": true
+    },
+    "parent_engineering_gate_passed": false,
+    "old_numeric_thresholds_relaxed": false,
+    "H3_candidate_rankings_computed": false,
+    "Full12_support_tested": false,
+    "third_GPU_enabled": false,
+    "active_gpu_queue": false,
+    "publication_novelty_established": false,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Implement transparent SDPA argument/kernel instrumentation and CPU stub pass-through/restoration checks, fix future archive-cap accounting before marking success, then freeze a separate bounded2-engineering-group observation-only protocol. No GPU action from this review, no backend/threshold sweep or12DEV launch. Distinguish source-inferred branches from actual kernel observations before selecting a justified numerical reference contract."
+  },
+  "SDPA_observer_CPU_followup": {
+    "date": "2026-10-31",
+    "status": "passed_scoped_CPU_stub_observer_and_recursive_archive_fault_acceptance",
+    "protocol": "docs/SDPA_OBSERVER_CPU_PROTOCOL_20261031.md",
+    "record": "docs/runs/20261031-sdpa-observer-cpu.md",
+    "registration": "configs/sdpa-observer-cpu-v1.json",
+    "registration_sha256": "3f0149f91926bffa63e91a819c7a6a2071f8f32398fc5698d9dfdc83341fef53",
+    "run": "results/20261031-sdpa-observer-cpu-v1",
+    "archive": {
+      "files": 41,
+      "bytes": 100853,
+      "manifest_sha256": "478fb7005060bac8d738ab1c0f11c1aeccd9c00dd1cb0a77233f924be1a5ad89",
+      "all_recursive_hashes_rechecked": true,
+      "archive_caps_checked_before_success": true
+    },
+    "acceptance": {
+      "observer_cases": 18,
+      "archive_fault_cases": 6,
+      "total": 24,
+      "independent_readback_passed": true,
+      "archive_fixture_files_verified": 19,
+      "object_identity_scope": "Worker runtime assertions;independent serialized contracts not cross-process pointer proof",
+      "real_Torch_SDPA_tested": false,
+      "real_CUDA_profiler_validated": false,
+      "profiler_test_data": "synthetic explicit parent graphs only"
+    },
+    "runtime": {
+      "launcher_pid": 1412958,
+      "worker_pid": 1412961,
+      "verifier_pid": 1412963,
+      "launcher_seconds": 0.28479174384847283,
+      "worker_seconds": 0.06121246377006173,
+      "verifier_seconds": 0.017568388022482395,
+      "all_own_PIDs_exited": true,
+      "worker_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      }
+    },
+    "modules": {
+      "scripts/sdpa_observer.py": "adeaf190471c8c22423359df35f4c7c77270366dd7c34fe46ccaf5a3d2a2ce00",
+      "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209"
+    },
+    "observation_draft": "docs/SDPA_OBSERVATION_DRAFT_20261031.md",
+    "disabled_observation_config": "configs/sdpa-observation-draft-v1.json",
+    "GPU_observation_runner_implemented": false,
+    "observation_GPU_started": false,
+    "new_numeric_thresholds_selected": false,
+    "parent_numeric_engineering_passed": false,
+    "prior_archive_cap_failure_rewritten": false,
+    "actual_this_turn": {
+      "new_CPU_runs": 1,
+      "new_model_calls": 0,
+      "tokenizer_encodes": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "network_requests": 0,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 126,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-sdpa-observer.json",
+      "index_sha256": "3da7a45b79502f1c73d944f7db057689f0ccaa81b281880ac33ac395e7547e68",
+      "prior_index_preserved": true
+    },
+    "H3_tested": false,
+    "Full12_support_tested": false,
+    "publication_novelty_established": false,
+    "active_gpu_queue": false,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Implement/freeze the separate2-group observation-only GPU integration and independent verifier, including exact same-path plain-vs-observed controls and actual profiler lineage coverage;execute only under a new bounded registration. No backend/precision/threshold changes, no12DEV or H3 claims from CPU tests."
+  },
+  "live_SDPA_observation_followup": {
+    "date": "2026-10-31",
+    "status": "live_observation_verified_original_numeric_gate_not_accepted",
+    "protocol": "docs/SDPA_OBSERVATION_PROTOCOL_20261031.md",
+    "revisions": "docs/SDPA_OBSERVATION_REVISIONS_20261031.md",
+    "record": "docs/runs/20261031-sdpa-observation.md",
+    "completed_registration": "configs/sdpa-observation-v4.json",
+    "registration_sha256": "427a4c3b3080ce1e41a094788986236da59634adb4e6032d64bfdc5c0b0b9d36",
+    "run": "20261031-sdpa-observation-v4",
+    "archive": {
+      "files": 81,
+      "bytes": 256317526,
+      "manifest_sha256": "13d41950e6b8a7ad5b975901ea1251982d39e621713fbd6b6b99960660ccf7ab",
+      "all_hashes_rechecked": true,
+      "archive_caps_checked_before_success": true
+    },
+    "prior_observation_failures": [
+      {
+        "run": "20261031-sdpa-observation-v1",
+        "status": "failed",
+        "worker_error": "AssertionError:",
+        "files": 35,
+        "bytes": 43778695,
+        "manifest_sha256": "f152f1fd5a6e64ba239ba22f0c187af6d60c105224ec95bb8274486caf6bf215",
+        "forward_calls": 3,
+        "tokenizer_encodes": 4,
+        "archived_logit_vectors": 1,
+        "pids_exited": [
+          1417853,
+          1417858
+        ]
+      },
+      {
+        "run": "20261031-sdpa-observation-v2",
+        "status": "failed",
+        "worker_error": "AssertionError:profile_marker_count_mismatch",
+        "files": 38,
+        "bytes": 45708271,
+        "manifest_sha256": "e751213dd3188a9dace68d03c119f429cebd38cc8f6307642751242ddbcbf84e",
+        "forward_calls": 3,
+        "tokenizer_encodes": 4,
+        "archived_logit_vectors": 1,
+        "pids_exited": [
+          1419068,
+          1419073
+        ]
+      },
+      {
+        "run": "20261031-sdpa-observation-v3",
+        "status": "failed",
+        "worker_error": "RuntimeError:Trace is already saved.",
+        "files": 41,
+        "bytes": 45712076,
+        "manifest_sha256": "b84af9b5cef997c8512ca37a1b5ca292608db20ea113ebd07388a90f83d35105",
+        "forward_calls": 3,
+        "tokenizer_encodes": 4,
+        "archived_logit_vectors": 1,
+        "pids_exited": [
+          1421092,
+          1421097
+        ]
+      }
+    ],
+    "verified": {
+      "profiles": 10,
+      "actual_SDPA_calls": 2856,
+      "efficient_explicit_mask_calls": 168,
+      "flash_no_mask_GQA_calls": 2688,
+      "batch_KV_heads": 28,
+      "tokenwise_KV_heads": 4,
+      "all_is_causal_false": true,
+      "same_path_bitwise_controls": 4,
+      "reference_unchanged": true,
+      "physical_cache_tensors_rehashed": 336,
+      "CPU_GPU_marker_disambiguation_cases": 5,
+      "actual_kernel_lineage_recomputed": true,
+      "mask_tensor_values_captured": false,
+      "all_numeric_drift_causally_attributed": false
+    },
+    "runtime": {
+      "launcher_pid": 1422337,
+      "worker_pid": 1422342,
+      "verifier_pid": 1423750,
+      "worker_seconds": 134.32995368819684,
+      "verifier_seconds": 29.05463595315814,
+      "launcher_seconds": 167.3057005791925,
+      "worker_guard": {
+        "blocked_loopback_capability_probes": 1,
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "GPU_after_memory_mib": 18,
+      "GPU_after_utilization": 0,
+      "all_own_PIDs_exited": true
+    },
+    "actual_entire_turn": {
+      "new_CPU_runs": 1,
+      "new_GPU_attempts": 4,
+      "failed_GPU_attempts": 3,
+      "complete_GPU_observation_runs": 1,
+      "new_complete_model_answers": 0,
+      "generated_tokens": 0,
+      "archived_GPU_logit_vectors": 17,
+      "actual_GPU_forward_calls": 117,
+      "teacher_forced_input_tokens": 2345,
+      "tokenizer_encodes": 16,
+      "development_model_calls": 0,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 130,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-sdpa-observation.json",
+      "index_sha256": "52861c0fe62e480c38e1772ccb7477dbecbdfa5257b6d4522a4525f633694e69",
+      "prior_indices_preserved": true
+    },
+    "old_numeric_engineering_accepted": false,
+    "old_numeric_thresholds_changed": false,
+    "Full12_support_tested": false,
+    "H3_candidate_rankings_computed": false,
+    "Snap_prefix_selector_in_new_entry_validated": false,
+    "publication_novelty_established": false,
+    "active_gpu_queue": false,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Freeze a common operational execution contract for Full/all equal-budget candidates using the same batch suffix path;separate this scoped target from whole-vs-split numerical equivalence. Define justified correctness and score-repeatability checks before any12DEV invocation;do not relax old0.25/0.001 gate or claim kernel switching is the sole cause. Snap prefix selector and Full12 support still require explicit registered validation."
+  },
+  "H3_development_screen_followup": {
+    "date": "2026-10-31",
+    "status": "completed_negative_development_screen_current_H3_stopped",
+    "protocol": "docs/DECODER_H3_SCREEN_PROTOCOL_20261031.md",
+    "record": "docs/runs/20261031-decoder-h3-screen.md",
+    "decision_document": "docs/H3_SCREEN_DECISION_20261031.md",
+    "registration": "configs/decoder-h3-screen-v1.json",
+    "registration_sha256": "287f9260806a3f8ee6883fa66d050a0b98c70658ebde58fcb75a8978f12b0961",
+    "run": "20261031-decoder-h3-screen-v1",
+    "archive": {
+      "files": 166,
+      "bytes": 68159219,
+      "original_manifest_sha256": "256b9fd679a6c758d7981807fe29ac6efbf24f51ec3a58e13020f2ef46b1b8fb",
+      "derived_manifest_sha256": "fbfa685dbadca670c2c5c2e1273714bdea02689400586b5fef5f425811be2735",
+      "all_hashes_rechecked": true
+    },
+    "Full_support": {
+      "correct": 12,
+      "total": 12,
+      "threshold": 10,
+      "passed": true,
+      "scope": "finite_enum_branch_argmax_not_free_JSON_generation"
+    },
+    "result": {
+      "ranking_mismatch_groups": 11,
+      "any_real_KV_candidate_rank_inversion_observed": true,
+      "KL_values_independently_recomputed": 384,
+      "all_objective_selected_gold_and_Full_fidelity": {
+        "global": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 8,
+            "random_2026103102": 1,
+            "random_2026103104": 3
+          }
+        },
+        "top128": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 8,
+            "random_2026103103": 1,
+            "random_2026103104": 3
+          }
+        },
+        "top256": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 8,
+            "random_2026103102": 1,
+            "random_2026103104": 3
+          }
+        },
+        "legal": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 7,
+            "recency": 3,
+            "random_2026103102": 1,
+            "random_2026103105": 1
+          }
+        }
+      },
+      "per_fixed_candidate": {
+        "adapted_snapkv": {
+          "Full_argmax_fidelity": 10,
+          "gold_correct": 10
+        },
+        "recency": {
+          "Full_argmax_fidelity": 8,
+          "gold_correct": 8
+        },
+        "random_2026103101": {
+          "Full_argmax_fidelity": 6,
+          "gold_correct": 6
+        },
+        "random_2026103102": {
+          "Full_argmax_fidelity": 9,
+          "gold_correct": 9
+        },
+        "random_2026103103": {
+          "Full_argmax_fidelity": 9,
+          "gold_correct": 9
+        },
+        "random_2026103104": {
+          "Full_argmax_fidelity": 9,
+          "gold_correct": 9
+        },
+        "random_2026103105": {
+          "Full_argmax_fidelity": 6,
+          "gold_correct": 6
+        },
+        "random_2026103106": {
+          "Full_argmax_fidelity": 7,
+          "gold_correct": 7
+        }
+      },
+      "legal_vs_global": {
+        "legal_win": 0,
+        "legal_loss": 0,
+        "tie": 12,
+        "ambiguous_tie": 0
+      },
+      "legal_vs_top128": {
+        "legal_win": 0,
+        "legal_loss": 0,
+        "tie": 12,
+        "ambiguous_tie": 0
+      },
+      "legal_vs_top256": {
+        "legal_win": 0,
+        "legal_loss": 0,
+        "tie": 12,
+        "ambiguous_tie": 0
+      },
+      "development_go": false,
+      "practical_improvement_established": false,
+      "statistical_confirmation": false,
+      "novelty_established": false,
+      "stop_current_H3_candidate_no_expansion": true
+    },
+    "readiness_or_old_flags": {
+      "operational_common_batch_contract_passed": true,
+      "original_cross_path_numeric_gate_still_failed": true,
+      "old_QA_or_Mistral_gates_rewritten": false,
+      "original_GPU_draft_false_flags_unchanged": true
+    },
+    "launcher_semantic_clarification": "Initial inherited real_KV_signal_observed=false was never updated. semantic_closure.json explicitly records real ranking inversions observed=true;development benefit/go=false. Original manifest/launcher preserved.",
+    "runtime": {
+      "launcher_pid": 1450109,
+      "worker_pid": 1450114,
+      "verifier_pid": 1451208,
+      "worker_seconds": 91.56590577727184,
+      "verifier_seconds": 22.93466492788866,
+      "launcher_seconds": 115.53829295001924,
+      "all_own_PIDs_exited": true,
+      "worker_guard": {
+        "blocked_loopback_capability_probes": 1,
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "blocked_loopback_capability_probes": 0,
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "gpu_after_memory_mib": 18,
+      "gpu_after_utilization": 0
+    },
+    "actual_screen_stage": {
+      "new_GPU_runs": 1,
+      "forward_calls": 132,
+      "teacher_forced_input_tokens": 11544,
+      "archived_logit_vectors": 108,
+      "development_groups": 12,
+      "tokenizer_encodes": 24,
+      "new_complete_generated_answers": 0
+    },
+    "combined_engineering_and_screen": {
+      "new_GPU_runs": 2,
+      "forward_calls": 172,
+      "input_tokens": 13900,
+      "archived_logit_vectors": 144,
+      "tokenizer_encodes": 28,
+      "generated_tokens": 0,
+      "new_complete_answers": 0
+    },
+    "cumulative": {
+      "runs": 132,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-h3-screen.json",
+      "index_sha256": "b0c4d8fda03a662a5a30ccde9af934846bf45d7f73e2c06df546a2db9339f475",
+      "all_prior_indices_preserved": true
+    },
+    "publication_novelty_established": false,
+    "active_gpu_queue": false,
+    "automatic_expansion_enabled": false,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Close current H3 as a negative development decision;do not expand groups,seeds,models,budget or harder prompts to rescue it. Retain software,operational contract and scoped empirical evidence. Any new research candidate must state a different unmet need and strong-neighbor gap before separately authorized implementation;no current GPU queue."
+  },
+  "next": "Close current H3 as a negative development decision;do not expand groups,seeds,models,budget or harder prompts to rescue it. Retain software,operational contract and scoped empirical evidence. Any new research candidate must state a different unmet need and strong-neighbor gap before separately authorized implementation;no current GPU queue."
+}

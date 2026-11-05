@@ -1,0 +1,19 @@
+{
+  "proposal_id": "answer-format-direction-decision-v1",
+  "date": "2026-10-30",
+  "registered_before_new_model_outputs": true,
+  "user_authorization": "User explicitly requests automatic next stages until an evidence-based direction feasibility conclusion",
+  "scope": "Current Qwen2.5-7B reading+JSON adaptation at half-prefix KV; system/empirical masters route, no new algorithm or safety novelty claim",
+  "stages": ["CPU native-template and half-budget feasibility", "Full-only engineering6+development16", "If Full gate passes, compression engineering16+development64", "Only if DEV signal gate passes, separately freeze one sealed16 confirmation; otherwise stop this adaptation"],
+  "full_gate": {"n":16,"execution_errors_max":0,"truncated_max":1,"nontruncated_candidates_min":15,"nontruncated_task_em_min":8,"nontruncated_format_min":12,"nontruncated_joint_min":8,"all_two_case_three_generation_paths_exact":true},
+  "compression": {"cases":16,"methods":["adapted_snapkv","uniform_random","adapted_snapkv_system_pinned","uniform_random_system_pinned"],"prefix_fraction":0.5,"sink":4,"recent":64,"random_seed":20261028,"score_window":64,"score_kernel":5,"query_aware":false,"max_main_answers":64,"max_engineering_answers":16,"max_new_tokens":96,"required_equal_actual_KV_bytes":true,"native_custom_compact_paths_exact_on_two_engineering_cases":true},
+  "dev_signal_gate": {"complete_untruncated_comparable_pairs_required":true,"min_format_C2W_in_at_least_one_unpinned_method":2,"min_same_method_format_failures_recovered_by_paid_system_protection":1,"max_task_EM_net_drop_protected_vs_same_unpinned":2,"meaning":"Descriptive feasibility triage only; no statistical significance or tuned threshold claim"},
+  "conclusions": {
+    "engineering_or_Full_support_fail": "Current adaptation not ready for interpretable compression evidence; stop and report exact failure rather than claim pruning effect",
+    "dev_signal_gate_fail": "Do not recommend current reading+JSON/half-budget adaptation as thesis main research problem; preserve platform and negative evidence, do not expand budget/prompt/model matrix to hunt positive results",
+    "dev_signal_gate_pass": "Worth one separately frozen independent-article confirmation; still not publication/degree adequacy or safety conclusion",
+    "confirmation": "Requires stable direction and observed format damage/protection tradeoff in independent article groups; sample size remains descriptive, no claim all KV compression is settled"
+  },
+  "stop_after_decision": true,
+  "forbidden": ["Access sealed outputs for tuning", "Change DEV thresholds after model outputs", "Reuse Full-success-only subset as confirmation", "Expand old TREC/guard/A/controller queues", "Claim all ordinary Transformer KV compression research impossible from a small negative subset"]
+}

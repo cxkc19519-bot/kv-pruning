@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-31",
+  "status": "initial_freeze_synchronized_before_successful_CPU_run",
+  "remote_root": "/home/user/jhk/project/Directional Exploration/kv-pruning",
+  "procedure": "Read applicable remote AGENTS first. Preflight every destination: old_sha256 or already new_sha256; null old digest means destination must be absent or already equal. Reject all other content before any writes. Validate payload hashes and JSON; atomic temporary write+fsync+replace without deletion. Verify all local/remote hashes before executing. This manifest is metadata, not a GPU authorization.",
+  "files": [
+    {
+      "path": "docs/WORKLOG.md",
+      "old_sha256": "83a263447216f034f6be7c481136303277a94246d402e9962a973d2f273a0196",
+      "new_sha256": "61e7bf0ac88effc272dba9144233d71dbc090309eefda0de7ca2b14adf1113d0"
+    },
+    {
+      "path": "README.md",
+      "old_sha256": "4e809e09b6a93892f5659733888c06bf377a8e14714e87f26893a528dc61fe95",
+      "new_sha256": "58f48f6b6017068d0fc5393e9d4895f3fd86a16baf5333056366c954db58b06f"
+    },
+    {
+      "path": "docs/DECODER_OBJECTIVE_READINESS_20261031.json",
+      "old_sha256": "32584e54108271d7aa2dde0ffc6df9a7e8172c08281f8acdc41d2e2e177fb9e0",
+      "new_sha256": "a37af3a9d6968b268f03348c2be6883ef0e2bab3f9add19c4bea3ea4a71ca814"
+    },
+    {
+      "path": "docs/HANDOFF.md",
+      "old_sha256": "d54a9cbdf7681f8769f387369f2b1b9b2f242fc7cfbedc3d06570b274ac67c09",
+      "new_sha256": "bb3aca27c0314bc1b7b1bb5972ef8f60afa44681eb333be5afd32d36c859c99b"
+    },
+    {
+      "path": "docs/STATUS.md",
+      "old_sha256": "925f104740f16cef9afc916497154908dac6803d312f86fd385b29643a7ca5e8",
+      "new_sha256": "d2338e3d54f3efdcc90b484329a66aae0e8fb90e4c39a00ed980b1dd1920aa9c"
+    },
+    {
+      "path": "docs/RELIABILITY_IMPLEMENTATION_INVENTORY_20261030.json",
+      "old_sha256": "eab4df77f61d56d17990e6fb63506c1dfea8510bb82df793b0260f827f548c99",
+      "new_sha256": "a210916b67389438a85153ce4ac15ea079e606798c6563f97491f41950668506"
+    },
+    {
+      "path": "docs/PLAN.md",
+      "old_sha256": "3d8690bccd2ea824d51b518a6f9f789f5330016e124402f5e59648ae5cbb58a7",
+      "new_sha256": "61b61156f7a94e0463e5baca74bb9547e5f4a7753633c8550609a500d00de18c"
+    },
+    {
+      "path": "docs/RELIABILITY_SYSTEM_READINESS_20261030.json",
+      "old_sha256": "2db514f01eed6cf872a04eefaf08ae4f939944db6b3bf43748cf1b2f82e0d0a5",
+      "new_sha256": "241bc528eb584dd78a8a53419b9a28e0903718f9be505b962a20936283559e57"
+    },
+    {
+      "path": "scripts/decoder_objective.py",
+      "old_sha256": null,
+      "new_sha256": "bc06c978f75e72248317736ea2d28f36e94e7e5f67b82e0bca047d35a1bd4bb8"
+    },
+    {
+      "path": "scripts/accept_decoder_objective.py",
+      "old_sha256": null,
+      "new_sha256": "f2569aa7570b886c6c920f8165c218f4a8659c9cdbeb38ee6336ce9ba9ca2de7"
+    },
+    {
+      "path": "scripts/verify_decoder_objective.py",
+      "old_sha256": null,
+      "new_sha256": "feed2f9372d4848649d98406db7b7d745bff7b6672705a824e11dd942892c96f"
+    },
+    {
+      "path": "scripts/run_decoder_objective_cpu.py",
+      "old_sha256": null,
+      "new_sha256": "6b898b1902d65442e6e6ab66d52b772e8c4a093599b686d0484760c3c4dee485"
+    },
+    {
+      "path": "docs/DECODER_OBJECTIVE_CPU_PROTOCOL_20261031.md",
+      "old_sha256": null,
+      "new_sha256": "42a672068083acaf6cb21d83996ff1969b5f268baa2be78f707d09dceb952b8f"
+    },
+    {
+      "path": "configs/decoder-objective-cpu-execution-v1.json",
+      "old_sha256": null,
+      "new_sha256": "847651a5bae3ef4228ededc7782b59f6b16f8712d4bfe08c7a74e7c0e4f6c1fb"
+    },
+    {
+      "path": "docs/DECODER_OBJECTIVE_CPU_READINESS_20261031.json",
+      "old_sha256": null,
+      "new_sha256": "e74a8f8a208b5284695f189c56d774480f2802fb2146c64a442ceacd7559ba31"
+    },
+    {
+      "path": "docs/runs/20261031-decoder-objective-cpu.md",
+      "old_sha256": null,
+      "new_sha256": "6bcd1b6d184e38dfbab699453824180fe25fb4bf098e5090685744972c211591"
+    }
+  ],
+  "digest_scope": "Historical pre-execution freeze. Progress/readiness/record documents have subsequent completed-run revisions; use their current digests, not this old snapshot, for later synchronization."
+}

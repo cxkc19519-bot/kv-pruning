@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "mode": "software",
+  "execution_enabled": true,
+  "run": "results/20261101-import-boundary-software-v1",
+  "source_sha256": {
+    "scripts/import_boundary.py": "93f7c7d8357cfc55c46d39457b5680c23934b6770d3b5cfe924e4e28283f8ca4",
+    "scripts/guarded_import_runner.py": "753abbc3e6309696359316f6e1862a364e53dee4c3876484f553326f7a58b700",
+    "scripts/accept_import_boundary.py": "4d07f9b9c91f4b2cf493e7a7ececf0e18b665ea43a0b565c996b3dac39ca8bc8",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/verify_import_boundary.py": "197519700852ddfd997050cd4c5af11c39aa9b47b776859ee8e6350565de675e"
+  },
+  "input_sha256": {
+    "literature/20261101-loader-boundary-source-v1/pins.json": "90d0d0c3a268eb2e4c0ee9c5c34d4d1febc30593fe005ac4e100cd83c52744f3",
+    "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json": "c635343add69e6bf06de5941ae588a136b613bd3a9f5c359d075ed9132738cc4"
+  },
+  "boundary_pins": "literature/20261101-loader-boundary-source-v1/pins.json",
+  "runtime_pin": "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "OMP_NUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HOME": "RUN/hf",
+    "TORCHINDUCTOR_CACHE_DIR": "RUN/inductor",
+    "TVM_FFI_CACHE_DIR": "RUN/tvm",
+    "MKL_NUM_THREADS": "1",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TMPDIR": "RUN/tmp",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "bounds": {
+    "query_cleanup_seconds": 1,
+    "max_bytes": 8388608,
+    "worker_seconds": 12,
+    "max_files": 64,
+    "query_count": 4,
+    "total_seconds": 30,
+    "query_stderr_bytes": 65536,
+    "query_stdout_bytes": 262144,
+    "query_seconds": 1
+  },
+  "software_cases": 20,
+  "actual_loader_queries": 1,
+  "backend_imports": 0,
+  "raw_bypass_fixture": "/bin/true blocked before spawn",
+  "automatic_retry": false,
+  "native_execution_enabled": false,
+  "prior_index": "results/20261101-run-index-backend-diagnostic.json",
+  "prior_index_sha256": "b0c41c246d50ad046273d6e1d34a66559771d1e8e76d7065715b1ca7364f9bb1"
+}

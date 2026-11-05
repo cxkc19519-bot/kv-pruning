@@ -1,0 +1,18 @@
+{
+  "id":"independent-development-analysis-v1","execution_enabled":false,"runner_implemented":false,
+  "run":"results/20261030-independent-development-analysis-v1",
+  "full":"results/20261030-independent-squad-full-v1","compression":"results/20261030-independent-squad-compression-v1",
+  "cases":"results/20261030-independent-task-preflight-v1/selected_provisional.jsonl",
+  "tokenized":"results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json",
+  "inputs":{
+    "results/20261030-independent-squad-full-v1/manifest.json":"769c196352e418b946e3927c4be5042cbfaf3ff426332d5b178b580537a07177",
+    "results/20261030-independent-squad-compression-v1/manifest.json":"68d3d0750bc0cb00553510a34168b572d50d61416922af5543e235a6c3d7a1e1",
+    "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl":"20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+    "results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json":"43ae26daf25fff041d1d7bb7397c443d74d34542681911484938c2ab8dd35957",
+    "configs/independent-squad-development-amendment-v1.json":"e19913a62ec016d5e6478f6c2336dcfbe0fe61c7e1469f8425f4b857a44c51ee",
+    "scripts/reliability_system_core.py":"ea87bd0d1cff69014336cd59f61b4e77d2d0e43b6f679bf340d77c6f5c8ed546",
+    "scripts/reliability_system_adapters.py":"ecaeebf677778743cc6e8f9c8a3019a866cb00abb247c6369a8eabae109370b9"
+  },
+  "bounds":{"outer_seconds":60,"archive_bytes":16777216,"archive_files":32,"model_outputs":0,"gpu_queries":0},
+  "scope":"Prospectively frozen new-source development only. All60 planned cells remain,20 infeasible protected cells are not failures of semantic answering and not removed. Protected engineering cells were infeasible; do not claim those native/custom paths verified."
+}

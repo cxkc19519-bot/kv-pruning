@@ -1,0 +1,18 @@
+{
+  "proposal_id":"answer-format-analysis-v1","execution_enabled":false,"runner_implemented":false,
+  "run":"results/20261030-answer-format-analysis-v1",
+  "full":"results/20261030-answer-format-full-v1","compression":"results/20261030-answer-format-compression-v1",
+  "decision_contract":"configs/answer-format-direction-decision-v1.json",
+  "cases":"results/20261030-answer-format-task-preflight-v1/selected_cases.jsonl",
+  "inputs":{
+    "results/20261030-answer-format-full-v1/manifest.json":"340d5d8cbc653ad2414d0eb5851c22eb3558bdab3406ba7f652ed2e473b95de0",
+    "results/20261030-answer-format-compression-v1/manifest.json":"b34a83d4a93bbd64f55390c1c5f0b812c35436f285050665263ea112deab5f23",
+    "configs/answer-format-direction-decision-v1.json":"3baf6b9808a75ab5305ae7b0b4aff0637cd9dc2f81cc4c49ed825b1407909edc",
+    "results/20261030-answer-format-task-preflight-v1/selected_cases.jsonl":"ccf4866f3381f797d9dda458f65c7dd0a8a204ddcd83d946766173fc1a7f0c42",
+    "scripts/answer_format_task.py":"58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990"
+  },
+  "software_fixtures":["paired_net_zero","unassessed_not_success","zero_denominator","truncation","missing_cell","duplicate_hard_rejection"],
+  "limits":{"outer_wall_seconds":60,"archive_bytes":33554432,"archive_files":32,"model_outputs":0,"gpu_queries":0},
+  "interpretation":"Apply previously frozen DEV signal gate, no new threshold or model selection. All80 scheduled cells, per-metric N/A/coverage and damage bounds retained. Bounds are not confidence intervals.",
+  "analysis_input_pins_frozen_after_generation":"Manifest identities can only be known after completed generation; scientific gate was frozen before Full outputs. No model rerun or output-based threshold change."
+}

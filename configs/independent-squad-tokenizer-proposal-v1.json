@@ -1,0 +1,57 @@
+{
+  "proposal_id": "independent-squad-tokenizer-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "run": "results/20261030-independent-squad-tokenizer-v1",
+  "cases": "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl",
+  "cases_sha256": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+  "parent_manifest": "results/20261030-independent-task-preflight-v1/manifest.json",
+  "parent_manifest_sha256": "67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+  "model": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "files": {
+    "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+  },
+  "template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "versions": {
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1"
+  },
+  "roles": [
+    "engineering",
+    "development"
+  ],
+  "cases_expected": 14,
+  "alternative_engineering_questions": [
+    "Which entity is named in the passage?",
+    "What date is stated in the passage?"
+  ],
+  "budget": {
+    "fraction": 0.5,
+    "rounding": "floor",
+    "sink": 4,
+    "recent": 64,
+    "protect": "entire native system message including native boundary-overlap tokens",
+    "protection_pays_same_budget": true
+  },
+  "bounds": {
+    "wall_seconds": 90,
+    "max_tokenizer_encodes": 36,
+    "max_input_tokens": 2048,
+    "max_archive_bytes": 33554432,
+    "max_archive_files": 32,
+    "model_outputs": 0,
+    "weight_loads": 0,
+    "network_requests": 0,
+    "gpu_queries": 0
+  },
+  "failure": "First failure stops, retain partial rows and error; no prompt/label/split/budget adjustment or automatic retry",
+  "future": "Only new12DEV and first2engineering under separate amendment; infeasible budget is an outcome, not permission to pad or expand budgets.",
+  "amendment": "configs/independent-squad-development-amendment-v1.json",
+  "amendment_sha256": "e19913a62ec016d5e6478f6c2336dcfbe0fe61c7e1469f8425f4b857a44c51ee"
+}

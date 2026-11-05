@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-30",
+  "timezone": "Asia/Singapore",
+  "kind": "read_only_source_contract_and_novelty_gate",
+  "engine": {
+    "version": "0.32.0",
+    "commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+    "latest_stable_release_checked_url": "https://github.com/vllm-project/vllm/releases",
+    "installed_source_pins": [
+      {
+        "path": "v1/engine/async_llm.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/engine/async_llm.py",
+        "blob": "f2142af2b3fbb9adb5eab548bc16f371fab11f43",
+        "installed_match": true
+      },
+      {
+        "path": "v1/engine/output_processor.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/engine/output_processor.py",
+        "blob": "eb499f6cc78ba89b14fa862e4cb5801f0837323f",
+        "installed_match": true
+      },
+      {
+        "path": "v1/engine/core.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/engine/core.py",
+        "blob": "35cc8cc1860cb3a164086f7ed44dea46785e8f30",
+        "installed_match": true
+      },
+      {
+        "path": "v1/core/sched/scheduler.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/core/sched/scheduler.py",
+        "blob": "cec96d2a49235fdade2768c427f1cff7868c6026",
+        "installed_match": true
+      },
+      {
+        "path": "v1/metrics/stats.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/metrics/stats.py",
+        "blob": "87277f6545f01cb75c65426306111086f5feefaa",
+        "installed_match": true
+      },
+      {
+        "path": "v1/metrics/loggers.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/metrics/loggers.py",
+        "blob": "65acc49ac0e03bd3fe5fdc8bd4e2b8f929f3d094",
+        "installed_match": true
+      },
+      {
+        "path": "v1/engine/core_client.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/engine/core_client.py",
+        "blob": "dccc8cba5368718b4cb5a0842680ee7b2c973198",
+        "installed_match": true
+      },
+      {
+        "path": "v1/engine/admission_control.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/v1/engine/admission_control.py",
+        "blob": "b72d50f3465dd196245307a3a620e7b8f1aee7e7",
+        "installed_match": true
+      },
+      {
+        "path": "entrypoints/openai/chat_completion/api_router.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/entrypoints/openai/chat_completion/api_router.py",
+        "blob": "aecf5bba448340cde72a369e571159937a664009",
+        "installed_match": true
+      },
+      {
+        "path": "entrypoints/generate/base/protocol.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/entrypoints/generate/base/protocol.py",
+        "blob": "a0122cadf5b2f5f9caf9f8deaaa19bbbf64f6bbf",
+        "installed_match": true
+      },
+      {
+        "path": "entrypoints/serve/utils/api_utils.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/entrypoints/serve/utils/api_utils.py",
+        "blob": "6b82a2afa07098a01bb5df9820df0700dcc55861",
+        "installed_match": true
+      },
+      {
+        "path": "entrypoints/openai/chat_completion/serving.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/entrypoints/openai/chat_completion/serving.py",
+        "blob": "b291ec6e8aae7cb92cc10dca01b518fe29d9e01e",
+        "installed_match": true
+      },
+      {
+        "path": "entrypoints/serve/middleware/authenticate.py",
+        "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/vllm/entrypoints/serve/middleware/authenticate.py",
+        "blob": "0a0c1daeec4da773b6d36be2673450959aa9b73c",
+        "installed_match": true
+      }
+    ],
+    "scope": "Targeted HTTP chat/AsyncLLM/default EngineCore.step/scheduler/metrics/auth/admission path. Not a complete gRPC/Responses/DP/disaggregated or all async-scheduling audit."
+  },
+  "documents": [
+    {
+      "url": "https://github.com/vllm-project/vllm/blob/5df63a7203cdb9328d824a27b682e77c7b9928be/docs/design/metrics.md",
+      "git_blob_sha1": "5d9fa42c11c33ed98bcd0d65736a953210d544b6",
+      "depth": "Metrics purpose/overview and counter semantics",
+      "limit": "Observability is not a tenant GPU billing contract"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/55634",
+      "state": "open",
+      "created_at": "2026-09-07T03:08:35Z",
+      "updated_at": "2026-09-08T12:33:42Z",
+      "depth": "Issue body and displayed three-comment discussion",
+      "limit": "Author runtime reports on older releases not reproduced here"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/pull/55940",
+      "state": "open",
+      "merged": false,
+      "head_sha": "805d873486f5724f026bbf0fd15fac16fad532e2",
+      "base_sha": "083060d046a84c685fdb4b8932d95869de060543",
+      "depth": "PR description, targeted stats/abort diff and review discussion; not full patch verification",
+      "limit": "Open/unmerged at lookup. No patch applied or author tests run"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.01160v1",
+      "submitted": "2026-10-01",
+      "depth": "Abstract, sections3-6,7.1 and AppendixA.3 quota retention",
+      "limit": "Retire vLLM0.13.0 research implementation; not checked as merged into0.32.0. No reproduced measurements or verified author implementation."
+    },
+    {
+      "url": "https://arxiv.org/html/2605.11202v1",
+      "submitted": "2026-05-11",
+      "depth": "Abstract, trace/oracle design, section4.2, AppendixA.1-A.2",
+      "limit": "GRIEF lifecycle/performance nearby; no fuzzer or payload execution"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-8wr5-jm2h-8r4f",
+      "published": "2026-07-02",
+      "advisory_affected": "<=0.17.1",
+      "advisory_patched": ">=0.24.0",
+      "depth": "Affected/patched version fields and summary; no PoC execution",
+      "limit": "Specific known recovered-token crash, not proof of cancellation accounting bypass"
+    },
+    {
+      "url": "https://github.com/Sorami-Consulting-AU/llm-tokens-after-cancel/blob/main/README.md",
+      "git_blob_sha1": "c49b6f969bb3698784747141dbcd13e748693a2d",
+      "depth": "README methods/behaviors/version table/layout/limitations and evidence availability",
+      "limit": "Repository reports scheduler accepted tokens and logical terminals, explicitly not GPU time or a bill. No evidence JSON/raw journals fetched or author code run."
+    },
+    {
+      "url": "https://sorami.com.au/research/llm-tokens-after-cancel/",
+      "access": "web open failed internal inaccessible; used author repository README",
+      "depth": "Not read",
+      "limit": "No claim to have read canonical report"
+    },
+    {
+      "url": "https://docs.litellm.ai/docs/proxy/users",
+      "depth": "Budget/rate-limit scope, key/team/user TPM/RPM and parallel-limit documentation",
+      "limit": "Not a contract for GPU work consumed inside vLLM"
+    },
+    {
+      "url": "https://github.com/BerriAI/litellm/blob/main/litellm/proxy/hooks/parallel_request_limiter_v3.py",
+      "git_blob_sha1": "14b08a09116fc95e7f5a0aa5736bb937a1a1dcd5",
+      "depth": "Targeted reserve/reconcile/partial-usage/failure/disconnect slot cleanup and cancellation-shield sections; not whole gateway audit",
+      "line_ranges": [
+        [
+          1175,
+          1190
+        ],
+        [
+          2760,
+          2840
+        ],
+        [
+          4245,
+          4289
+        ],
+        [
+          5452,
+          5500
+        ],
+        [
+          5598,
+          5660
+        ],
+        [
+          5733,
+          5752
+        ],
+        [
+          5810,
+          5890
+        ]
+      ],
+      "limit": "Main-branch file blob pinned, not a tested release or proof every deployment enables this limiter. Monetary spend hooks/provider adapters/callback invocation paths not fully audited."
+    }
+  ],
+  "decision": {
+    "cancellation_metric_gap": "Static evidence, already reported issue55634/PR55940",
+    "quota_bypass": "not established; missing concrete deployment contract and enforcement chain",
+    "broad_cancel_latency_or_simple_abort_metrics_as_new_method": "no_go",
+    "new_experiment_ready": false,
+    "next_gpu_queue": false
+  },
+  "execution": {
+    "new_model_answers": 0,
+    "new_engineering_answers": 0,
+    "new_experiment_runs": 0,
+    "existing_runs": 92,
+    "existing_main_outputs": 2732,
+    "author_code_executed": false,
+    "model_loaded": false,
+    "gpu_queried": false,
+    "old_own_pid_exit_read": true,
+    "environment_changed": false,
+    "github_writes": false
+  },
+  "tool_limits": [
+    "Server rg unavailable; used pathlib source enumeration, no installation",
+    "Canonical Sorami report inaccessible; author README only",
+    "Initial GitHub PR argument schema rejection corrected; web PR fetch timed out; connector PR read succeeded"
+  ]
+}

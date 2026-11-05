@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-30",
+  "scope": "Actual system acceptance evidence;statuses do not certify thesis novelty or all model/task settings.",
+  "latest_record": "docs/runs/20261030-squad48-error-taxonomy.md",
+  "requirements": [
+    {
+      "id": "A01",
+      "requirement": "Immutable source/input/protocol identities and failed run retention",
+      "status": "passed_scoped",
+      "evidence": [
+        "HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+        "SQUAD48_SOURCE_FREEZE_READINESS_20261030.json",
+        "SQUAD48_NATIVE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "Includes preserved v1 config-serialization failure;not all external sources acquired."
+    },
+    {
+      "id": "A02",
+      "requirement": "Native frontend and query-blind prefix/system protection",
+      "status": "passed_scoped_CPU_frontends",
+      "evidence": [
+        "INDEPENDENT_FRONTENDS_READINESS_20261030.json",
+        "SQUAD48_NATIVE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "Bothnative32model-case rows/48variants passedCPUcoverage/query boundary checks;Qwenold14exact. Doesnot validate Mistral actualcache orcurrenttask generation. Original 48 reserved Qwen native inputs / 96 encodes independently verified on CPU; all IDs and question boundaries preserved; no current-cohort model inference."
+    },
+    {
+      "id": "A03",
+      "requirement": "Actual Full Attention layout and equal-byte KV gather/positions",
+      "status": "partial",
+      "evidence": [
+        "HF_BACKEND_ENGINEERING_READINESS_20261030.json",
+        "MISTRAL_SQUAD_FULL_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "Qwen3feasible conditions andMistral currentQA Full32layers actualtensor/clone/paths verified. Mistralcompact/protected/3/4notverified;Fulltask support false(format8<9). Original48 currentstudy verifies actual28Full/GQA4/BF16/SDPA/gather/reference/positions and6freshFull+8freshcompact engineering answers."
+    },
+    {
+      "id": "A04",
+      "requirement": "Exact budget charging with infeasible states",
+      "status": "passed_scoped",
+      "evidence": [
+        "HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+        "INDEPENDENT_FRONTENDS_READINESS_20261030.json",
+        "SQUAD48_NATIVE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "CPU1/2and3/4mathcoverage independently checked forbothmodels;3/4actualbackend remains unvalidated. Newprotected engineering cannot be inferred fromDEVbudget feasibility. Current48: anchors sink4/recent64 need68 slots. Full48 feasible; each half-budget compressed condition45 feasible/3 infeasible. All48 groups/144 planned cells retained; 6 budget blocks, no generated answers."
+    },
+    {
+      "id": "A05",
+      "requirement": "Condition-scoped admission and audited checkpoint resume",
+      "status": "passed_scoped",
+      "evidence": [
+        "CONDITION_ADMISSION_READINESS_20261030.json",
+        "HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "Same-generator only;8resume software cases and36actual dispatches/24blocks;new generator requires fresh engineering. Separate reserved48 dispatcher with16 synthetic integration fixtures and138 actual gated main calls;current-run engineering only,no old evidence injection and no legacy role change."
+    },
+    {
+      "id": "A06",
+      "requirement": "Task score,format and N/A extraction semantics",
+      "status": "passed_scoped",
+      "evidence": [
+        "ANSWER_FORMAT_TASK_READINESS_20261030.json",
+        "HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "SQuADscorer and36texts independently checked. BoolQ20software fixtures passed separately;body and model task support absent."
+    },
+    {
+      "id": "A07",
+      "requirement": "Complete planned-cell report,strict pairs,damage bounds and independent recalculation",
+      "status": "passed_scoped",
+      "evidence": [
+        "HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "60cells verified;bounds are coverage limits,not statistical confidence intervals. All144 current48 cells retained:138 generated/6 budget-infeasible;task,F1,format,joint and differing truncation/N/A coverage independently checked."
+    },
+    {
+      "id": "A08",
+      "requirement": "Actual prefix/final KV bytes",
+      "status": "passed_scoped",
+      "evidence": [
+        "HF_DEV_ACCEPTANCE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "Qwen known tensor layout;native whole unobserved cache is null;does not establish process savings."
+    },
+    {
+      "id": "A09",
+      "requirement": "Peak,reserved,extra buffers and synchronized phase timing",
+      "status": "not_measured",
+      "evidence": [],
+      "limit": "Audit mode retains full reference. No production-memory or latency claim."
+    },
+    {
+      "id": "A10",
+      "requirement": "Independent context-group empirical corroboration and second-model generalization",
+      "status": "partial_scoped48_complete",
+      "evidence": [
+        "MISTRAL_SQUAD_FULL_READINESS_20261030.json",
+        "SQUAD48_SOURCE_FREEZE_READINESS_20261030.json",
+        "SQUAD48_NATIVE_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "Original48 reserved SQuAD article groups inferred once under narrowed Qwen/SQuAD-only scope:138main/14freshengineering independently verified;Full34task44format31joint,compressedjoint0/48 each. Broader cross-task/second-model compression remains incomplete;Mistral current Full support failed. Exact source-group separation doesnot prove semantic/pretraining independence."
+    },
+    {
+      "id": "A11",
+      "requirement": "Statistical uncertainty with group-level dependence",
+      "status": "passed_scoped_software_and48_statistics",
+      "evidence": [
+        "GROUP_STATISTICS_READINESS_20261030.json",
+        "SQUAD48_GPU_READINESS_20261030.json"
+      ],
+      "limit": "18 software cases/13 invalid-input mutations passed;actual original48 all-group paired10000 shared bootstrap/seed20261030/type7 independently recomputed. Both joint deltas-31/48,95%pointwiseCI[-37/48,-24/48]. SameFull/allzero methodjoint vectors explain identical CIs;not independent replications,risk certification or simultaneous guarantee."
+    },
+    {
+      "id": "A12",
+      "requirement": "Exhaustive failure taxonomy with explicit posthoc provenance and deterministic illustrations",
+      "status": "passed_scoped_exploratory_analysis",
+      "evidence": [
+        "SQUAD48_ERROR_READINESS_20261030.json"
+      ],
+      "added_after_original_study": true,
+      "limit": "9 synthetic boundary cases/138 original texts/144 complete cells/all48 flow matrices/31Full-joint followups/26 server-only lexicographic illustrations independently verified. No changed scorer,primary effect orCI;no new samples or semantic/security mechanism annotation."
+    }
+  ],
+  "passed_status_scope": "passed_scoped means only the listed implementations/cohorts and their stated evidence,not universal correctness",
+  "system_end_to_end_chain_accepted": true,
+  "independent_scientific_confirmation": false,
+  "publication_novelty_established": false,
+  "degree_approval_established": false,
+  "closest_work_contribution_review": {
+    "date": "2026-10-31",
+    "audit": "docs/CONTRIBUTION_AUDIT_20261030.md",
+    "decision": "docs/CONTRIBUTION_SCOPE_DECISION_20261030.md",
+    "record": "docs/reviews/20261030-contribution-audit.md",
+    "readiness": "docs/CONTRIBUTION_AUDIT_READINESS_20261030.json",
+    "artifact_class": "readonly_literature_source_review_not_experiment",
+    "archive_path": "literature/20261030-closest-work-audit-v1",
+    "archive_manifest_sha256": "74239ef0f39ff4273c93ddfc5fef265bf54a29c9dc3431c333b2fec35b1981f9",
+    "source_files": 39,
+    "repository_files": 33,
+    "paper_or_official_pages": 6,
+    "author_Python_AST_files": 24,
+    "author_code_executed": false,
+    "unique_research_contribution_established": false,
+    "scoped_system_and48_evidence_retained": true,
+    "current_generic_claims_overlap_prior_work": true,
+    "degree_acceptance_determined": false,
+    "actual_this_turn": {
+      "new_experiments": 0,
+      "new_model_answers": 0,
+      "new_engineering_answers": 0,
+      "model_loads": 0,
+      "tokenizer_encodes": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "public_source_HTTP_requests_server": 48,
+      "web_search_and_read": true,
+      "new_dependencies": false
+    },
+    "cumulative_runs": 120,
+    "cumulative_main_outputs": 3038,
+    "index": "results/20261030-run-index-squad48-taxonomy.json",
+    "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+    "active_gpu_queue": false,
+    "next": "Redefine a concrete falsifiable research problem against the reviewed prior art;do not expand known-degradation experiments or claim generic logging/pairing/format separation as unique. Preserve prototype and48-group evidence as the research base."
+  },
+  "decoder_objective_candidate_followup": {
+    "date": "2026-10-31",
+    "question_document": "docs/RESEARCH_QUESTION_REDEFINITION_20261031.md",
+    "screen_draft": "docs/DECODER_OBJECTIVE_SCREEN_DRAFT_20261031.md",
+    "readiness": "docs/DECODER_OBJECTIVE_READINESS_20261031.json",
+    "disabled_config": "configs/decoder-objective-screen-draft-v1.json",
+    "H1": "reject_broad_format_repair",
+    "H2": "reject_broad_parser_aware_PASK_overlap",
+    "H3": "screening_hypothesis_only",
+    "synthetic_math_counterexample_verified": true,
+    "real_KV_misranking_observed": false,
+    "publication_novelty_established": false,
+    "degree_approval_established": false,
+    "P1_started": false,
+    "CPU_correctness_entry_implemented": false,
+    "runner_implemented": false,
+    "execution_enabled": false,
+    "new_model_forward_or_answer": 0,
+    "new_experimental_runs": 0,
+    "archive_path": "literature/20261031-decoder-aware-candidate-v1",
+    "archive_files": 10,
+    "archive_bytes": 2266407,
+    "archive_manifest_sha256": "ea36b38a02db149812649eace16c321e92786a7da17fb4eaa00f086e717f2963",
+    "active_gpu_queue": false,
+    "next": "Implement and independently audit finite-grammar/stable-KL/equal-budget-mask CPU correctness first;then freeze a separate bounded12-new-development-group query-known same-prefix logit diagnostic. No original48 retuning or automatic GPU queue."
+  }
+}

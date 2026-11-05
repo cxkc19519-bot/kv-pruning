@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-30",
+  "kind": "offline_primary_source_review_not_experiment",
+  "dataset_body_read": false,
+  "author_code_executed": false,
+  "new_experiment_runs": 0,
+  "sources": [
+    {
+      "id": "official_page",
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/",
+      "reading": "Task/version description, license declaration, hidden test statement; no leaderboard results reproduced",
+      "use": "v1.1 answerable span QA, adapted project task; CC BY-SA 4.0 data declaration"
+    },
+    {
+      "id": "paper",
+      "url": "https://arxiv.org/abs/1606.05250v3",
+      "version": "v3, 2016-10-11",
+      "reading": "Abstract and version metadata only; not full paper or experiments"
+    },
+    {
+      "id": "dataset_metadata",
+      "repository": "rajpurkar/SQuAD-explorer",
+      "branch_observed": "gh-pages",
+      "commit": "e0c66cfec263165fb3c15cb76a22175e371b71d7",
+      "tree": "b48d50d3324dcf097192b75b83c94d9243fc7544",
+      "api": "https://api.github.com/repos/rajpurkar/SQuAD-explorer/git/trees/b48d50d3324dcf097192b75b83c94d9243fc7544?recursive=1",
+      "path": "dataset/dev-v1.1.json",
+      "git_blob_sha1": "e9a3f913ad1468ebe105b891334ca7b0bc0e2510",
+      "size_bytes": 4854279,
+      "sha256": null,
+      "sha256_reason": "Dataset body not fetched; compute only after verified server download",
+      "article_count": null,
+      "question_count": null,
+      "length_distribution": null,
+      "reading": "GitHub commit/tree metadata only, not dataset validation"
+    },
+    {
+      "id": "python_score_reference",
+      "repository": "allenai/bi-att-flow",
+      "commit": "49004549e9a88b78c359b31481afa7792dbb3f4a",
+      "path": "squad/evaluate-v1.1.py",
+      "url": "https://github.com/allenai/bi-att-flow/blob/49004549e9a88b78c359b31481afa7792dbb3f4a/squad/evaluate-v1.1.py",
+      "git_blob_sha1": "0137fbca04cf93b3dbb5744832d25723420a4861",
+      "sha256": "f5a673dbbd173e29e9ea38f1b2091d883583b77b3a4c17144b223fb0f2f9bd09",
+      "size_bytes": 3419,
+      "reading": "Full source read statically using GitHub blob API; no import/exec",
+      "scope": "BiDAF authors' repository copy labeled official; original CodaLab bytes not verified",
+      "semantics": "lower, ASCII punctuation removal, articles removal, whitespace split/join; multiset token F1; max over gold aliases; zero common tokens returns F1 zero",
+      "adaptation": "New gold-blind JSON/plain extraction and metric N/A/coverage, not unmodified official dataset evaluate() aggregation"
+    },
+    {
+      "id": "python_repository_license",
+      "url": "https://github.com/allenai/bi-att-flow/blob/49004549e9a88b78c359b31481afa7792dbb3f4a/LICENSE",
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size_bytes": 11358,
+      "observed": "Repository-level Apache License 2.0, separate from dataset license; no per-file provenance equivalence claimed",
+      "reading": "License source fetched/read; author scorer not vendored into local project"
+    },
+    {
+      "id": "author_website_js",
+      "url": "https://github.com/rajpurkar/SQuAD-explorer/blob/e0c66cfec263165fb3c15cb76a22175e371b71d7/javascripts/evaluate.js",
+      "git_blob_sha1": "a40e0c7e5508e0e10409e2cd33dc3bc117f97179",
+      "sha256": "2fe9d8da13d3d12aba05cf0360e0ac7177f8c86ea1de263377fde5eb104d71ce",
+      "size_bytes": 2710,
+      "reading": "Full source read statically through GitHub blob API, not executed",
+      "limitation": "Empty-gold special case and whitespace/token splitting differ from Python reference; do not mix score definitions"
+    },
+    {
+      "id": "dataset_license",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "reading": "License deed only, no legal-code audit",
+      "implementation_use": "Keep attribution, source/version/license and adaptation notice in future data card; no derived data distributed this turn"
+    },
+    {
+      "id": "json_spec",
+      "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
+      "reading": "Sections 2,4,6,7-8 relevant syntax/whitespace/Unicode",
+      "implementation_use": "One whole JSON text, standard whitespace, nonfinite constants forbidden; unique keys and nonempty answer schema are additional project requirements, not RFC MUST"
+    }
+  ],
+  "source_access_failures": [
+    {"url": "https://raw.githubusercontent.com/rajpurkar/SQuAD-explorer/master/evaluate-v1.1.py", "result": "web HTTP404"},
+    {"url": "https://raw.githubusercontent.com/rajpurkar/SQuAD-explorer/gh-pages/evaluate-v1.1.py", "result": "web HTTP404"},
+    {"url": "https://raw.githubusercontent.com/rajpurkar/SQuAD-explorer/master/dataset/evaluate-v1.1.py", "result": "web HTTP404"},
+    {"url": "https://raw.githubusercontent.com/rajpurkar/SQuAD-explorer/gh-pages/dataset/evaluate-v1.1.py", "result": "web HTTP404"},
+    {"url": "https://worksheets.codalab.org/rest/bundles/0xbcd57bee090b421c982906709c8c27e1/contents/blob/", "result": "web HTTP400 timeout; original bytes unavailable, no equivalence claim"}
+  ],
+  "other_web_limitations": "One guessed explorer URL and dataset directory were inaccessible; corrected official v1.1 explorer link opened. Fixed JS raw URL had cache miss and commit API was unavailable through web; read-only GitHub REST via PowerShell returned metadata and source blobs. No dataset-body or model fallback download.",
+  "next": "Implement and audit disabled CPU preflight; fetch pinned sources only on server, preserve every actual run/failure; no new model queue"
+}

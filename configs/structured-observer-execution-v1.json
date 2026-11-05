@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "mode": "stdlib_lifecycle_observer_engineering",
+  "execution_enabled": true,
+  "run": "results/20261101-structured-observer-cpu-v1",
+  "source_sha256": {
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/run_structured_observer.py": "0a8dbb0eb11661ca2545ed1438c87abe190de2c33de8b257a5631704ef19099b",
+    "scripts/verify_structured_observer.py": "0178c0ffa0a5cb73ca9570cec11b474e126267091be963e374e8693e18314f7c"
+  },
+  "input_sha256": {
+    "configs/structured-resource-cpu-feasibility-v1.json": "351fb27b5d49179dcf933de866e61fc37f12ecd9016f3d0e7f23157a6e008e60"
+  },
+  "case_ids": [
+    "queued_cancel",
+    "running_future_not_cancelled",
+    "caller_deadline_work_continues",
+    "cooperative_stop",
+    "process_kill_reap",
+    "worker_exception",
+    "worker_exit_without_end_marker",
+    "completion_wins_cancel_race",
+    "duplicate_cancel",
+    "normal_probe_reuses_same_slot",
+    "cleanup_timeout_is_failure",
+    "shared_work_has_other_waiter"
+  ],
+  "bounds": {
+    "max_work_processes": 2,
+    "max_files": 64,
+    "outer_seconds": 120,
+    "cases": 12,
+    "max_bytes": 8388608,
+    "max_explicit_fixture_allocation_bytes": 1048576,
+    "max_cpu_affinity_count": 2,
+    "case_seconds": 3
+  },
+  "scope": {
+    "dependencies_changed": false,
+    "author_backend_execution": false,
+    "GPU": false,
+    "network": false,
+    "models": false,
+    "new_service": false,
+    "tokenizers": false
+  },
+  "old_run_index": "results/20261031-run-index-decoder-h3-screen.json",
+  "old_run_index_sha256": "b0c4d8fda03a662a5a30ccde9af934846bf45d7f73e2c06df546a2db9339f475",
+  "automatic_retry": false,
+  "claim": "synthetic observer engineering only; no real resource isolation or novelty conclusion"
+}

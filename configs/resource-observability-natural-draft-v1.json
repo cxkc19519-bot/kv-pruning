@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "id": "resource-observability-natural-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "requires_new_execution_registration": true,
+  "purpose": "Engineering calibration of clocks, raw-request queue boundaries and same-slot normal first-mask probes; no cancellation or resource-harm claim.",
+  "inputs": {
+    "family": "literature/20261102-typed-object-family-v1/selection.json",
+    "family_sha256": "e69dcf899a4d18494c36484e421cc05a2b05e43fe344b3b6848e56b31d193b94",
+    "widths": [
+      1,
+      2,
+      4
+    ],
+    "domain": "configs/utf8-scalar-domain-v1.json",
+    "domain_sha256": "a2e8333fb05ec998c190d3ef31c67a3f41084e775ce20ec8314ae8b4b86c0707",
+    "correctness_proof": "results/20261102-typed-object-semantic-v1/independent_verification.json",
+    "correctness_proof_sha256": "2f83f2d256e00682da156861f921115a96da817c9bea2322205102786dfe4278"
+  },
+  "sequence": {
+    "backends": [
+      "xgrammar",
+      "llguidance"
+    ],
+    "same_executor_entire_run": true,
+    "max_workers": 1,
+    "empty_clock_control_jobs": 1,
+    "for_each_width": [
+      "B0 width1 alone and complete",
+      "submit A widthN",
+      "wait for A started notification without holding A",
+      "submit B width1, even if A already finished",
+      "collect both original futures"
+    ],
+    "native_jobs": 18,
+    "total_jobs": 19,
+    "repetitions_per_condition": 1,
+    "synthetic_delay_in_native_work": false,
+    "forced_overlap": false,
+    "cancellation_requests": 0
+  },
+  "operation_scope": {
+    "job": "raw schema JSON validation -> conversion/compile -> fresh matcher -> first mask for token123 -> return primitive result, release request-local objects -> work_end",
+    "xgrammar_cache_enabled": false,
+    "xgrammar_max_threads": 1,
+    "llguidance_schema_and_matcher_inside_job": true,
+    "full_generation": false,
+    "same_slot_recovery_after_cancellation_tested": false
+  },
+  "measurements": {
+    "clocks": [
+      "monotonic_ns",
+      "process_time_ns",
+      "thread_time_ns"
+    ],
+    "points": [
+      "submitted",
+      "work_started",
+      "body_returned_with_native_locals_released",
+      "work_finished",
+      "caller_received",
+      "probe_completed"
+    ],
+    "identity": [
+      "PID",
+      "PID_starttime",
+      "native_TID",
+      "pool_id",
+      "slot_id",
+      "request_id"
+    ],
+    "b_overlap": "observed only when B_submitted < A_work_finished; otherwise unobserved, no retry",
+    "cpu_attribution": "thread CPU excludes helper threads; process CPU includes controller/helper overhead; do not call either pure algorithm cost",
+    "zero_delta": "report resolution-limited, not zero work",
+    "rss": "current RSS before baseline/after completed pair; allocator retention and high-water RSS do not prove leaks or OS reclaim",
+    "external_sampler": "10ms for ownership/liveness/cleanup, not per-call CPU accounting"
+  },
+  "bounds": {
+    "startup_and_adapter_seconds": 30,
+    "per_job_from_submit_seconds": 5,
+    "worker_seconds": 135,
+    "total_seconds": 150,
+    "max_cpu_affinity": 2,
+    "max_payload_bytes": 16384,
+    "max_pending_native_jobs": 2,
+    "max_simultaneous_native_jobs": 1,
+    "max_schema_constructions": 18,
+    "max_matcher_constructions": 18,
+    "max_mask_calls": 18,
+    "archive_files": 64,
+    "archive_bytes": 16777216,
+    "automatic_retry": false
+  },
+  "stop_rules": [
+    "identity/pool/slot changed",
+    "schema/matcher/first-mask error or root token not admitted",
+    "CPU/wall clock regression",
+    "job or global budget exceeded",
+    "cleanup failure",
+    "unexpected process/file/network access"
+  ],
+  "unobserved_overlap_policy": "Keep unobserved; no width escalation, repeats, sleeps or artificial work to force a signal.",
+  "strong_baselines": {
+    "scientific_comparison_ready": false,
+    "llguidance_native_cancel": "present in fixed Rust/C source; current Python runtime is1.7.6 and latest reviewed stub exposes no cancel methods",
+    "xgrammar_dynamic": "present in fixed current compiler source, absent in installed0.2.8 constructor",
+    "toolchain": "cargo/rustc not on reviewed PATH",
+    "hard_cgroup_controls": false,
+    "action": "Natural engineering calibration may be separately registered; scientific gap requires separately runnable strong controls. Do not upgrade the vLLM-pinned environment in place."
+  },
+  "source_review_manifest_sha256": "635371e581a964d66205548f773f694b9369b7d7834b92c30f6226d475043dd4",
+  "independent_review_manifest_sha256": "c0a5fc42c5287ca56d180ed0f5bb5f839b88ad26e8993b1d4fceb97bf5bab1cc",
+  "scientific_feasibility_decision_allowed": false,
+  "native_queue": []
+}

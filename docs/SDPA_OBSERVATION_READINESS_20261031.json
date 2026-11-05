@@ -1,0 +1,321 @@
+{
+  "date": "2026-10-31",
+  "status": "live_observation_verified_original_numeric_gate_not_accepted",
+  "protocol": "docs/SDPA_OBSERVATION_PROTOCOL_20261031.md",
+  "revisions": "docs/SDPA_OBSERVATION_REVISIONS_20261031.md",
+  "record": "docs/runs/20261031-sdpa-observation.md",
+  "completed_registration": "configs/sdpa-observation-v4.json",
+  "registration_sha256": "427a4c3b3080ce1e41a094788986236da59634adb4e6032d64bfdc5c0b0b9d36",
+  "run": "20261031-sdpa-observation-v4",
+  "archive": {
+    "files": 81,
+    "bytes": 256317526,
+    "manifest_sha256": "13d41950e6b8a7ad5b975901ea1251982d39e621713fbd6b6b99960660ccf7ab",
+    "all_hashes_rechecked": true,
+    "archive_caps_checked_before_success": true
+  },
+  "prior_observation_failures": [
+    {
+      "run": "20261031-sdpa-observation-v1",
+      "status": "failed",
+      "worker_error": "AssertionError:",
+      "files": 35,
+      "bytes": 43778695,
+      "manifest_sha256": "f152f1fd5a6e64ba239ba22f0c187af6d60c105224ec95bb8274486caf6bf215",
+      "forward_calls": 3,
+      "tokenizer_encodes": 4,
+      "archived_logit_vectors": 1,
+      "pids_exited": [
+        1417853,
+        1417858
+      ]
+    },
+    {
+      "run": "20261031-sdpa-observation-v2",
+      "status": "failed",
+      "worker_error": "AssertionError:profile_marker_count_mismatch",
+      "files": 38,
+      "bytes": 45708271,
+      "manifest_sha256": "e751213dd3188a9dace68d03c119f429cebd38cc8f6307642751242ddbcbf84e",
+      "forward_calls": 3,
+      "tokenizer_encodes": 4,
+      "archived_logit_vectors": 1,
+      "pids_exited": [
+        1419068,
+        1419073
+      ]
+    },
+    {
+      "run": "20261031-sdpa-observation-v3",
+      "status": "failed",
+      "worker_error": "RuntimeError:Trace is already saved.",
+      "files": 41,
+      "bytes": 45712076,
+      "manifest_sha256": "b84af9b5cef997c8512ca37a1b5ca292608db20ea113ebd07388a90f83d35105",
+      "forward_calls": 3,
+      "tokenizer_encodes": 4,
+      "archived_logit_vectors": 1,
+      "pids_exited": [
+        1421092,
+        1421097
+      ]
+    }
+  ],
+  "verified": {
+    "profiles": 10,
+    "actual_SDPA_calls": 2856,
+    "efficient_explicit_mask_calls": 168,
+    "flash_no_mask_GQA_calls": 2688,
+    "batch_KV_heads": 28,
+    "tokenwise_KV_heads": 4,
+    "all_is_causal_false": true,
+    "same_path_bitwise_controls": 4,
+    "reference_unchanged": true,
+    "physical_cache_tensors_rehashed": 336,
+    "CPU_GPU_marker_disambiguation_cases": 5,
+    "actual_kernel_lineage_recomputed": true,
+    "mask_tensor_values_captured": false,
+    "all_numeric_drift_causally_attributed": false
+  },
+  "runtime": {
+    "launcher_pid": 1422337,
+    "worker_pid": 1422342,
+    "verifier_pid": 1423750,
+    "worker_seconds": 134.32995368819684,
+    "verifier_seconds": 29.05463595315814,
+    "launcher_seconds": 167.3057005791925,
+    "worker_guard": {
+      "blocked_loopback_capability_probes": 1,
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "GPU_after_memory_mib": 18,
+    "GPU_after_utilization": 0,
+    "all_own_PIDs_exited": true
+  },
+  "actual_entire_turn": {
+    "new_CPU_runs": 1,
+    "new_GPU_attempts": 4,
+    "failed_GPU_attempts": 3,
+    "complete_GPU_observation_runs": 1,
+    "new_complete_model_answers": 0,
+    "generated_tokens": 0,
+    "archived_GPU_logit_vectors": 17,
+    "actual_GPU_forward_calls": 117,
+    "teacher_forced_input_tokens": 2345,
+    "tokenizer_encodes": 16,
+    "development_model_calls": 0,
+    "dependencies_installed": 0
+  },
+  "cumulative": {
+    "runs": 130,
+    "main_outputs": 3038,
+    "index": "results/20261031-run-index-sdpa-observation.json",
+    "index_sha256": "52861c0fe62e480c38e1772ccb7477dbecbdfa5257b6d4522a4525f633694e69",
+    "prior_indices_preserved": true
+  },
+  "old_numeric_engineering_accepted": false,
+  "old_numeric_thresholds_changed": false,
+  "Full12_support_tested": false,
+  "H3_candidate_rankings_computed": false,
+  "Snap_prefix_selector_in_new_entry_validated": false,
+  "publication_novelty_established": false,
+  "active_gpu_queue": false,
+  "code_config_docs_synced": true,
+  "raw_results_server_only": true,
+  "H3_development_screen_followup": {
+    "date": "2026-10-31",
+    "status": "completed_negative_development_screen_current_H3_stopped",
+    "protocol": "docs/DECODER_H3_SCREEN_PROTOCOL_20261031.md",
+    "record": "docs/runs/20261031-decoder-h3-screen.md",
+    "decision_document": "docs/H3_SCREEN_DECISION_20261031.md",
+    "registration": "configs/decoder-h3-screen-v1.json",
+    "registration_sha256": "287f9260806a3f8ee6883fa66d050a0b98c70658ebde58fcb75a8978f12b0961",
+    "run": "20261031-decoder-h3-screen-v1",
+    "archive": {
+      "files": 166,
+      "bytes": 68159219,
+      "original_manifest_sha256": "256b9fd679a6c758d7981807fe29ac6efbf24f51ec3a58e13020f2ef46b1b8fb",
+      "derived_manifest_sha256": "fbfa685dbadca670c2c5c2e1273714bdea02689400586b5fef5f425811be2735",
+      "all_hashes_rechecked": true
+    },
+    "Full_support": {
+      "correct": 12,
+      "total": 12,
+      "threshold": 10,
+      "passed": true,
+      "scope": "finite_enum_branch_argmax_not_free_JSON_generation"
+    },
+    "result": {
+      "ranking_mismatch_groups": 11,
+      "any_real_KV_candidate_rank_inversion_observed": true,
+      "KL_values_independently_recomputed": 384,
+      "all_objective_selected_gold_and_Full_fidelity": {
+        "global": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 8,
+            "random_2026103102": 1,
+            "random_2026103104": 3
+          }
+        },
+        "top128": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 8,
+            "random_2026103103": 1,
+            "random_2026103104": 3
+          }
+        },
+        "top256": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 8,
+            "random_2026103102": 1,
+            "random_2026103104": 3
+          }
+        },
+        "legal": {
+          "Full_argmax_fidelity": 12,
+          "gold_correct": 12,
+          "near_tied_groups": 1,
+          "selected_names": {
+            "adapted_snapkv": 7,
+            "recency": 3,
+            "random_2026103102": 1,
+            "random_2026103105": 1
+          }
+        }
+      },
+      "per_fixed_candidate": {
+        "adapted_snapkv": {
+          "Full_argmax_fidelity": 10,
+          "gold_correct": 10
+        },
+        "recency": {
+          "Full_argmax_fidelity": 8,
+          "gold_correct": 8
+        },
+        "random_2026103101": {
+          "Full_argmax_fidelity": 6,
+          "gold_correct": 6
+        },
+        "random_2026103102": {
+          "Full_argmax_fidelity": 9,
+          "gold_correct": 9
+        },
+        "random_2026103103": {
+          "Full_argmax_fidelity": 9,
+          "gold_correct": 9
+        },
+        "random_2026103104": {
+          "Full_argmax_fidelity": 9,
+          "gold_correct": 9
+        },
+        "random_2026103105": {
+          "Full_argmax_fidelity": 6,
+          "gold_correct": 6
+        },
+        "random_2026103106": {
+          "Full_argmax_fidelity": 7,
+          "gold_correct": 7
+        }
+      },
+      "legal_vs_global": {
+        "legal_win": 0,
+        "legal_loss": 0,
+        "tie": 12,
+        "ambiguous_tie": 0
+      },
+      "legal_vs_top128": {
+        "legal_win": 0,
+        "legal_loss": 0,
+        "tie": 12,
+        "ambiguous_tie": 0
+      },
+      "legal_vs_top256": {
+        "legal_win": 0,
+        "legal_loss": 0,
+        "tie": 12,
+        "ambiguous_tie": 0
+      },
+      "development_go": false,
+      "practical_improvement_established": false,
+      "statistical_confirmation": false,
+      "novelty_established": false,
+      "stop_current_H3_candidate_no_expansion": true
+    },
+    "readiness_or_old_flags": {
+      "operational_common_batch_contract_passed": true,
+      "original_cross_path_numeric_gate_still_failed": true,
+      "old_QA_or_Mistral_gates_rewritten": false,
+      "original_GPU_draft_false_flags_unchanged": true
+    },
+    "launcher_semantic_clarification": "Initial inherited real_KV_signal_observed=false was never updated. semantic_closure.json explicitly records real ranking inversions observed=true;development benefit/go=false. Original manifest/launcher preserved.",
+    "runtime": {
+      "launcher_pid": 1450109,
+      "worker_pid": 1450114,
+      "verifier_pid": 1451208,
+      "worker_seconds": 91.56590577727184,
+      "verifier_seconds": 22.93466492788866,
+      "launcher_seconds": 115.53829295001924,
+      "all_own_PIDs_exited": true,
+      "worker_guard": {
+        "blocked_loopback_capability_probes": 1,
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "blocked_loopback_capability_probes": 0,
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "gpu_after_memory_mib": 18,
+      "gpu_after_utilization": 0
+    },
+    "actual_screen_stage": {
+      "new_GPU_runs": 1,
+      "forward_calls": 132,
+      "teacher_forced_input_tokens": 11544,
+      "archived_logit_vectors": 108,
+      "development_groups": 12,
+      "tokenizer_encodes": 24,
+      "new_complete_generated_answers": 0
+    },
+    "combined_engineering_and_screen": {
+      "new_GPU_runs": 2,
+      "forward_calls": 172,
+      "input_tokens": 13900,
+      "archived_logit_vectors": 144,
+      "tokenizer_encodes": 28,
+      "generated_tokens": 0,
+      "new_complete_answers": 0
+    },
+    "cumulative": {
+      "runs": 132,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-h3-screen.json",
+      "index_sha256": "b0c4d8fda03a662a5a30ccde9af934846bf45d7f73e2c06df546a2db9339f475",
+      "all_prior_indices_preserved": true
+    },
+    "publication_novelty_established": false,
+    "active_gpu_queue": false,
+    "automatic_expansion_enabled": false,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Close current H3 as a negative development decision;do not expand groups,seeds,models,budget or harder prompts to rescue it. Retain software,operational contract and scoped empirical evidence. Any new research candidate must state a different unmet need and strong-neighbor gap before separately authorized implementation;no current GPU queue."
+  },
+  "next": "Close current H3 as a negative development decision;do not expand groups,seeds,models,budget or harder prompts to rescue it. Retain software,operational contract and scoped empirical evidence. Any new research candidate must state a different unmet need and strong-neighbor gap before separately authorized implementation;no current GPU queue."
+}

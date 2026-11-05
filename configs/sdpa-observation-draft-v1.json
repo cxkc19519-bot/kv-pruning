@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-31",
+  "proposal_id": "sdpa-observation-draft-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "GPU_integration_validated": false,
+  "purpose": "Observe actual eager SDPA arguments/profiler lineage only;no numeric-gate promotion or12DEV",
+  "base_engineering_registration": "configs/decoder-kv-engineering-v2.json",
+  "base_engineering_registration_sha256": "2fa46618b4b7d123ac30a8aab3e2317ece939539affb8d5bd6e1bbbfe5b6e10c",
+  "observer_CPU_run": "results/20261031-sdpa-observer-cpu-v1",
+  "observer_CPU_manifest_sha256": "478fb7005060bac8d738ab1c0f11c1aeccd9c00dd1cb0a77233f924be1a5ad89",
+  "tested_module_sha256": {
+    "scripts/sdpa_observer.py": "adeaf190471c8c22423359df35f4c7c77270366dd7c34fe46ccaf5a3d2a2ce00",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209"
+  },
+  "engineering_case_ids": [
+    "decoder_engineering_00",
+    "decoder_engineering_01"
+  ],
+  "role": "observation_only_engineering",
+  "development_model_calls_enabled": false,
+  "paths_per_group": [
+    "full_batch_plain",
+    "full_batch_observed",
+    "recency_batch_plain",
+    "recency_batch_observed",
+    "recency_tokenwise_observed",
+    "uniform_random_batch_observed",
+    "uniform_random_tokenwise_observed"
+  ],
+  "same_path_transparency_controls_per_group": 2,
+  "transparency_control_requirement": "exact float32 logit tensor equality;unchanged reference hash and original callable restored",
+  "prototype_numeric_tolerances_changed": false,
+  "old_numeric_engineering_accepted": false,
+  "backend_or_precision_switch_allowed": false,
+  "profiler_required": true,
+  "profiler_marker_factory": "torch.profiler.record_function",
+  "profiler_event_source": "profile.events() explicit cpu_parent lineage and attached kernels",
+  "profiler_hardware_support_validated": false,
+  "mask_observation_scope": "actual argument None/shape/stride/dtype/device;mask tensor values not captured by this module",
+  "maximums": {
+    "engineering_groups": 2,
+    "forward_calls": 108,
+    "teacher_forced_input_tokens": 1082,
+    "archived_logit_vectors": 14,
+    "observed_SDPA_calls": 2856,
+    "observer_record_cap": 4096,
+    "generated_tokens": 0,
+    "worker_seconds": 600,
+    "verifier_seconds": 180,
+    "outer_seconds": 850,
+    "archive_files": 128,
+    "archive_bytes": 268435456
+  },
+  "needs_before_execution": [
+    "New GPU worker/validator/dispatcher input-role/runtime pins and exact registration SHA",
+    "Actual observer+profiler integration including original-callable restoration",
+    "Current registeredGPU idle check and4 weights/7metadata/package versions verified",
+    "Explicit observation completeness/failure rules and recursive checked archive closure",
+    "No fallback to changed backend/profiler-disabled success if unsupported"
+  ],
+  "automatic_GPU_queue": false,
+  "H3_candidate_rankings_computed": false,
+  "Full12_support_tested": false
+}

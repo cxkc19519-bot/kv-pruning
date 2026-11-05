@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-31",
+  "status": "passed_scoped_common_batch_operational_contract",
+  "protocol": "docs/COMMON_BATCH_CONTRACT_20261031.md",
+  "record": "docs/runs/20261031-common-batch-engineering.md",
+  "registration": "configs/common-batch-engineering-v1.json",
+  "registration_sha256": "3f148a80732b72af9357ffe091cf06cbddb057095312ada5ce7dba4219fbf620",
+  "run": "20261031-common-batch-engineering-v1",
+  "archive": {
+    "files": 107,
+    "bytes": 260708228,
+    "manifest_sha256": "54c45209ab4dab7278b161d6c68743246cbef1286daf417cd8983561f45375f2"
+  },
+  "verified": {
+    "operational_contract_verified": true,
+    "cases": 2,
+    "candidates": 8,
+    "bitwise_repeated_states": 18,
+    "KL_values_recomputed": 72,
+    "actual_mask_geometries": 2,
+    "cache_tensors_rehashed": 1008,
+    "actual_efficient_SDPA_calls": 1008,
+    "forward_calls": 40,
+    "input_tokens": 2356,
+    "old_cross_path_gate_passed": false,
+    "Full12_support_tested": false,
+    "H3_candidate_rankings_computed": false
+  },
+  "runtime": {
+    "launcher_pid": 1431874,
+    "worker_pid": 1431879,
+    "verifier_pid": 1433053,
+    "worker_seconds": 113.69280546577647,
+    "verifier_seconds": 32.22656498802826,
+    "launcher_seconds": 150.83323920099065,
+    "all_own_PIDs_exited": true,
+    "worker_guard": {
+      "blocked_loopback_capability_probes": 1,
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "verifier_guard": {
+      "blocked_loopback_capability_probes": 0,
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    }
+  },
+  "actual_this_stage": {
+    "new_GPU_runs": 1,
+    "forward_calls": 40,
+    "teacher_forced_input_tokens": 2356,
+    "archived_logit_vectors": 36,
+    "tokenizer_encodes": 4,
+    "new_complete_model_answers": 0
+  },
+  "cumulative_at_stage_close": {
+    "runs": 131,
+    "main_outputs": 3038,
+    "index": "results/20261031-run-index-common-batch.json",
+    "index_sha256": "92bb68ed1cda7e91012f927a23f6c1b8811e296241a72c74ae2c3fb6f0ab304a"
+  },
+  "old_cross_path_gate_passed": false,
+  "new_approximation_tolerance_used": false,
+  "scope": "fixed_prefix_prefill_then_explicit_batch_suffix_not_native_whole_equivalence",
+  "Snap_adaptation": "prefixWindow64/kernel5 all28x4 score mean;common original indices acrosslayers/heads;not original authorSnapKV",
+  "Full12_support_at_stage_close": false,
+  "H3_at_stage_close": false,
+  "next": "Fixed12 Full-first development screen under separate frozen registration;this contract does not revise old cross-path failures."
+}

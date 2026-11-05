@@ -1,0 +1,76 @@
+{
+  "proposal_id": "independent-squad-compression-v1",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "phase": "compression",
+  "run": "results/20261030-independent-squad-compression-v1",
+  "wall_seconds": 900,
+  "decision_contract": "configs/independent-squad-development-amendment-v1.json",
+  "decision_contract_sha256": "e19913a62ec016d5e6478f6c2336dcfbe0fe61c7e1469f8425f4b857a44c51ee",
+  "tokenizer_proposal": "configs/independent-squad-tokenizer-proposal-v1.json",
+  "tokenizer_proposal_sha256": "032056b290b72d43fbdf7f178e871bda33f28d45164e8bfbc76d108ee62fa3ce",
+  "tokenized": "results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json",
+  "tokenized_sha256": "43ae26daf25fff041d1d7bb7397c443d74d34542681911484938c2ab8dd35957",
+  "tokenizer_manifest": "results/20261030-independent-squad-tokenizer-v1/manifest.json",
+  "tokenizer_manifest_sha256": "3adb1917dc4cd0f673fbaa93b81c72872f56ef7396ee987e1353ec489a22d832",
+  "cases": "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl",
+  "cases_sha256": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+  "gpu_uuid": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa",
+  "gpu_idle_memory_mib_max": 128,
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.1",
+    "safetensors": "0.6.2"
+  },
+  "weights": {
+    "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+    "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+    "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+    "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+  },
+  "sources": {
+    "answer_format_task.py": "58783b7bbe0a5a3fc50bdb4a6809c426b6308ba1e2e633e18f36f7ff8c499990",
+    "trec_context_gate.py": "12cffbddf37d00e686d51ccd9fce4be59616a4218e34ed136db71329b18dc616",
+    "trec_pruning_run.py": "7b9393babbcf28293d51fdd43c7a80ed41810d614001811b6c458c55d3c84412",
+    "trec_pruning_utils.py": "92594811de726c585087fe1356a81cfcbe3a19a1fd6bb68a7e8781a334c53918",
+    "pilot.py": "476b3cbf8a9e16cdbb958286ba931a45d9b089f1bba4fb0a29f3a7ee9ebcdc1f"
+  },
+  "decode": {
+    "max_new_tokens": 128,
+    "do_sample": false,
+    "num_beams": 1,
+    "repetition_penalty": 1.0,
+    "eos_token_id": [
+      151643,
+      151645
+    ],
+    "pad_token_id": 151643,
+    "bos_token_id": 151643,
+    "use_cache": true
+  },
+  "model_defaults": "Replace model.generation_config with the frozen fresh GenerationConfig so all native and custom paths use identical explicit defaults",
+  "full_gate": {
+    "n": 12,
+    "errors_max": 0,
+    "truncated_max": 1,
+    "candidates_min": 11,
+    "em_min": 6,
+    "format_min": 9,
+    "joint_min": 6
+  },
+  "main_answers_max": 48,
+  "engineering_answers_max": 16,
+  "max_archive_bytes": 134217728,
+  "max_archive_files": 256,
+  "failure": "First engineering mismatch or runtime failure stops; Full counts below fixed gate stops compression, no prompt/sample/decode search",
+  "future": "Development only;mathematically infeasible protected cells remain unavailable,no budget/prompt/sample changes,no sealed inference",
+  "full_manifest": "results/20261030-independent-squad-full-v1/manifest.json",
+  "full_manifest_sha256": "769c196352e418b946e3927c4be5042cbfaf3ff426332d5b178b580537a07177",
+  "methods": [
+    "adapted_snapkv",
+    "uniform_random",
+    "adapted_snapkv_system_pinned",
+    "uniform_random_system_pinned"
+  ]
+}

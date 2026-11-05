@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-30",
+  "review_scope": "Primary public pages/static repository metadata plus read-only server hashes;no dataset/model/tokenizer execution,weight reads or new experiment run.",
+  "read_only_server_inventory": {
+    "latest_run": "results/20261030-hf-DEV-acceptance-v2",
+    "index_sha256": "743ee5444d9e41414d017dae54c978f73e63f6ce246adb9948112a685ada8de1",
+    "old_own_PIDs_exited": true,
+    "cumulative_runs": 112,
+    "cumulative_main_outputs": 2888,
+    "Qwen": {
+      "path": "/home/user/jhk/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+      "metadata": {
+        "config.json": {
+          "bytes": 663,
+          "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+          "expected_sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+        },
+        "generation_config.json": {
+          "bytes": 243,
+          "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+          "expected_sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f"
+        },
+        "tokenizer.json": {
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+          "expected_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        "tokenizer_config.json": {
+          "bytes": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+          "expected_sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "expected_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        },
+        "merges.txt": {
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "expected_sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        }
+      },
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+    },
+    "Mistral": {
+      "path": "/home/user/jhk/project/Directional Exploration/kv-pruning/models/Mistral-7B-Instruct-v0.3/c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "metadata": {
+        "README.md": {
+          "bytes": 7893,
+          "sha256": "3166974023134d972368b585d730fa5f70100873684f90a10a773b20e80b30ba",
+          "official_digest": "2160488d137e4f9228cb407048093babea8958ef",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "config.json": {
+          "bytes": 601,
+          "sha256": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99",
+          "official_digest": "9f913dc05d66cfb23c16e3c93b3cc4899813dfa6",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "generation_config.json": {
+          "bytes": 116,
+          "sha256": "b4669f1b8f4185324bd9b12a69e85a1ad2289bc48111ef739cfaaea3bba6b0a9",
+          "official_digest": "b6bea2642bc3fe80f392111d52af91d1563a8de2",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 23950,
+          "sha256": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016",
+          "official_digest": "050e5515d49376fc01e4837d031902c63af98111",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "params.json": {
+          "bytes": 202,
+          "sha256": "8a64b8657de37af1f828eef1517dc186247938d66e7fea2c78c31d5b9071efe6",
+          "official_digest": "00dc7d10b86d793afaf3d6733a45ee4d8c557194",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "special_tokens_map.json": {
+          "bytes": 414,
+          "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+          "official_digest": "451134b2ddc2e78555d1e857518c54b4bdc2e87d",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "tokenizer.json": {
+          "bytes": 1961548,
+          "sha256": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49",
+          "official_digest": "8d7d23136b474a3df1182ed829db19984e295ee7",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "tokenizer.model": {
+          "bytes": 587404,
+          "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+          "official_digest": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+          "official_digest_kind": "sha256"
+        },
+        "tokenizer.model.v3": {
+          "bytes": 587404,
+          "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+          "official_digest": "d8233e5b061987d32b63dbfb38fe86d7d4fc8a18",
+          "official_digest_kind": "git_blob_sha1"
+        },
+        "tokenizer_config.json": {
+          "bytes": 140874,
+          "sha256": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2",
+          "official_digest": "940a9c375c745ccbf0bebc5bedcec924d71827aa",
+          "official_digest_kind": "git_blob_sha1"
+        }
+      },
+      "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+      "weight_stats": {
+        "model-00001-of-00003.safetensors": {
+          "present": true,
+          "bytes": 4949453792,
+          "expected_bytes": 4949453792,
+          "body_rehashed_this_turn": false
+        },
+        "model-00002-of-00003.safetensors": {
+          "present": true,
+          "bytes": 4999819336,
+          "expected_bytes": 4999819336,
+          "body_rehashed_this_turn": false
+        },
+        "model-00003-of-00003.safetensors": {
+          "present": true,
+          "bytes": 4546807800,
+          "expected_bytes": 4546807800,
+          "body_rehashed_this_turn": false
+        }
+      },
+      "weights_rehashed_this_turn": false,
+      "config_summary": {
+        "layers": 32,
+        "attention_heads": 32,
+        "KV_heads": 8,
+        "head_dimension": 128,
+        "sliding_window": null,
+        "declared_dtype": "bfloat16"
+      },
+      "current_task_frontend_or_compression_validated": false
+    },
+    "SQuAD_role_counts": {
+      "engineering": 4,
+      "development": 12,
+      "sealed_descriptive_evaluation": 48
+    },
+    "source_pins": {
+      "configs/independent-squad-tokenizer-proposal-v1.json": "032056b290b72d43fbdf7f178e871bda33f28d45164e8bfbc76d108ee62fa3ce",
+      "configs/mistral-7b-v03-c170-artifacts.json": "9df15f9d17e9258284cf474a6927f438a520863d424726ea5e735429b68bee58",
+      "results/20261030-independent-task-preflight-v1/selected_provisional.jsonl": "20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+      "results/20261030-independent-task-preflight-v1/manifest.json": "67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+      "results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json": "43ae26daf25fff041d1d7bb7397c443d74d34542681911484938c2ab8dd35957",
+      "results/20261030-hf-DEV-acceptance-v2/manifest.json": "412fbe241d72b668c6b2a1dd3ca1b207c2054afbe7bf3f737c2c42c8fe81bedd",
+      "results/20261030-hf-DEV-acceptance-v2/report.json": "054d54673e74b4b7c96906f3b80a5ccaf31b998a87906b4bd642c232187916f4",
+      "results/20261030-hf-DEV-acceptance-v2/independent_verification.json": "0d7db8f9cee91c1ea816d66d0d125a661283e1bedb42f8d3da3faf10427a8dc1"
+    },
+    "GPU_queries": 0,
+    "model_or_tokenizer_loads": 0,
+    "new_runs": 0
+  },
+  "external_sources": [
+    {
+      "id": "pitfalls",
+      "url": "https://aclanthology.org/2026.acl-long.1926/",
+      "read_depth": "Official abstract",
+      "supports": "Prior work already studies instruction degradation,system leakage and modified eviction;not new replication or novelty certification."
+    },
+    {
+      "id": "kvdiagnosis",
+      "url": "https://arxiv.org/abs/2608.09412v1",
+      "read_depth": "Official abstract v1",
+      "supports": "Prior paired Full/compressed records and applicability states;do not claim first diagnostic framework."
+    },
+    {
+      "id": "riskcontrolled",
+      "url": "https://arxiv.org/abs/2609.27981v1",
+      "read_depth": "Official abstract v1",
+      "supports": "Prior relative-Full degradation risk certification;current48groups/smallDEV do not establish a population risk guarantee."
+    },
+    {
+      "id": "mistral_config",
+      "url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/raw/c170c708c41dac9275d15a8fff4eca08d52bab71/config.json",
+      "read_depth": "Full pinned config",
+      "supports": "32layers,8KVheads,sliding_window null;runtime compaction and current task still need verification."
+    },
+    {
+      "id": "BoolQ_author",
+      "url": "https://github.com/google-research-datasets/boolean-questions/blob/90af34107399cc7a446b373dc4ee35b8001da7c2/README.md",
+      "git_blob": "b0e32f57faec237c573000cea99fef4241c1c350",
+      "read_via": "GitHub fetch_file",
+      "read_depth": "Full fixed README",
+      "supports": "Author schema includes optional title and links GCS release,CC BY-SA3.0;historical two403 failures unchanged."
+    },
+    {
+      "id": "BoolQ_HF_card",
+      "url": "https://huggingface.co/datasets/google/boolq/blob/main/README.md",
+      "observed_commit": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+      "read_depth": "Card and commit metadata",
+      "supports": "google namespace HF distribution has question/answer/passage only,3270validation rows declared;publisher namespace does not prove byte equivalence to author's original JSONL."
+    },
+    {
+      "id": "BoolQ_HF_conversion",
+      "url": "https://huggingface.co/datasets/google/boolq/commit/8ab2d3e9ff5449d3957950129cea176fe214d884",
+      "read_depth": "Static diff including deleted loader and LFS pointers",
+      "supports": "Loader projects question/answer/passage;title not emitted. Do not silently replace title-based split with passage-based split."
+    }
+  ],
+  "BoolQ_alternate_distribution": {
+    "repository": "google/boolq",
+    "revision": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+    "conversion_revision": "8ab2d3e9ff5449d3957950129cea176fe214d884",
+    "parquet_validation": {
+      "path": "data/validation-00000-of-00001.parquet",
+      "bytes_declared": 1257630,
+      "sha256_declared": "52355d11524b4b874a9b9dcc278feb10f672d52c4f4eff9872e695ede59820f8"
+    },
+    "parquet_train": {
+      "path": "data/train-00000-of-00001.parquet",
+      "bytes_declared": 3685146,
+      "sha256_declared": "4f028e992c0bd4df30b9f056f4946b64f5c23028034ff0ed5ea467d8538cc623"
+    },
+    "metadata_provenance": "Published conversion diff;not computed on a downloaded parquet body",
+    "legacy_original_dev_checksum": {
+      "bytes_declared": 2238726,
+      "sha256_declared": "ebc29ea3808c5c611672384b3de56e83349fe38fc1fe876fd29b674d81d0a80a",
+      "status": "Deleted legacy dataset_infos metadata,not original bytes independently verified"
+    },
+    "title_available_in_HF_schema": false,
+    "parquet_body_downloaded": false,
+    "row_content_or_labels_verified": false,
+    "server_access_verified": false,
+    "cross_task_article_dedup_possible_with_current_HF_fields": false,
+    "adopted_as_new_source": false,
+    "web_limitations": [
+      "HF API and fixed raw endpoints were unavailable to web tool;this is not a new server403 or dataset acquisition run."
+    ],
+    "decision": "Keep BoolQ source paused. New source amendment would need explicit distribution identity,parser integrity,title/grouping policy and overlap limits before body/GPU access;do not replace old source silently."
+  }
+}

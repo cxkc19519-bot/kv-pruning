@@ -1,0 +1,230 @@
+{
+  "kind": "stdlib_existing_result_report_validation",
+  "schema_version": "0.1-draft",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "purpose": "Validate a read-only normalization and reporting layer on two existing TREC cohorts without generation or rewriting old artifacts",
+  "bounds": {
+    "max_seconds": 60,
+    "max_input_bytes": 33554432,
+    "max_input_files": 32,
+    "max_jsonl_rows": 300,
+    "max_synthetic_fixtures": 12,
+    "new_model_answers": 0,
+    "new_engineering_answers": 0
+  },
+  "execution_location": "server_project_root",
+  "output_policy": "New results directory only; no writes inside any source run; archive code/config/input hashes and failure before exit",
+  "forbidden": [
+    "Import torch/transformers or prior runners/scorers",
+    "Load models/tokenizers or .pt tensor/pickle files",
+    "Network download/GPU query/new inference",
+    "Re-score raw text or regenerate decode; use archived scores with provenance",
+    "Treat software fixtures as independent scientific evidence"
+  ],
+  "validation_profiles": [
+    "legacy_exact_replay",
+    "strict_complete_pair_preview"
+  ],
+  "cohorts": [
+    {
+      "cohort_id": "legacy_trec_development32",
+      "scientific_role": "development_and_software_regression",
+      "n_cases": 32,
+      "source_run": "results/20261028-trec-pruning-v1",
+      "inputs": [
+        {
+          "path": "results/20261028-trec-pruning-v1/manifest.json",
+          "sha256": "d5d8d2037931c5fe10d429b131ea6aec917f8b65c8910ad4ec8af815d2029d56"
+        },
+        {
+          "path": "results/20261028-trec-pruning-v1/generations.jsonl",
+          "sha256": "0d94b41b6818e9165c58b28f8c099f3e46d58d0bca41b678407dc400854118a9"
+        },
+        {
+          "path": "results/20261028-trec-pruning-v1/baseline_with_demos.json",
+          "sha256": "17dc659b3640999d8e8f0643c1541231ddf80e5c4ea56d96e5d8aa379521561b"
+        },
+        {
+          "path": "results/20261028-trec-pruning-v1/summary.json",
+          "sha256": "4c7d99b8e4f5c569a1a1e82e32bfbce287df32040660c7720f462d5ca5147fe0"
+        },
+        {
+          "path": "results/20261028-trec-context-full-v1/manifest.json",
+          "sha256": "cace08fd57efe3fa572b20ae319333b70e8685f60bb18630ca97a940c0e789d2"
+        },
+        {
+          "path": "results/20261028-trec-context-full-v1/generations.jsonl",
+          "sha256": "72a429e7333a90b87baf135bc7aef291e79eb9d69f40b00bb6fe438fec68dd0c"
+        }
+      ],
+      "baseline_selection": {
+        "path": "results/20261028-trec-context-full-v1/generations.jsonl",
+        "filter": {
+          "condition": "with_demos"
+        },
+        "expected_rows": 32,
+        "baseline_copy_must_match_fields": [
+          "source_key",
+          "input_ids_sha256",
+          "gold",
+          "ids",
+          "metrics"
+        ],
+        "copy_path": "results/20261028-trec-pruning-v1/baseline_with_demos.json"
+      },
+      "expected": {
+        "full": {
+          "task_correct": 19,
+          "constraint_pass": 32
+        },
+        "methods": {
+          "adapted_snapkv_shared_anchors": {
+            "task_correct": 17,
+            "constraint_pass": 31,
+            "transitions": [
+              13,
+              6,
+              4,
+              9
+            ]
+          },
+          "uniform_random_shared_anchors": {
+            "task_correct": 17,
+            "constraint_pass": 30,
+            "transitions": [
+              17,
+              2,
+              0,
+              13
+            ]
+          },
+          "adapted_snapkv_shared_anchors_header_pinned": {
+            "task_correct": 16,
+            "constraint_pass": 32,
+            "transitions": [
+              14,
+              5,
+              2,
+              11
+            ]
+          },
+          "uniform_random_shared_anchors_header_pinned": {
+            "task_correct": 19,
+            "constraint_pass": 32,
+            "transitions": [
+              18,
+              1,
+              1,
+              12
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cohort_id": "legacy_trec_holdout10",
+      "scientific_role": "used_question_holdout_with_shared_demonstrations_and_software_regression",
+      "n_cases": 10,
+      "source_run": "results/20261028-trec-holdout-v1",
+      "inputs": [
+        {
+          "path": "results/20261028-trec-holdout-v1/manifest.json",
+          "sha256": "5567181f9a62b1338e9a4122dd7a220c640ed0e94efe864044478b4a7c7a9192"
+        },
+        {
+          "path": "results/20261028-trec-holdout-v1/generations.jsonl",
+          "sha256": "7f3d1163d9780d189b73ddbba9d24cbba8d3963071e8b5159b8b8840a3a020d0"
+        },
+        {
+          "path": "results/20261028-trec-holdout-v1/summary.json",
+          "sha256": "8cd616d7578b0bc493ff2e6b80261b0660dccd6025de12e3f3432935f40b951d"
+        }
+      ],
+      "baseline_selection": {
+        "path": "results/20261028-trec-holdout-v1/generations.jsonl",
+        "filter": {
+          "method": "full"
+        },
+        "expected_rows": 10
+      },
+      "expected": {
+        "full": {
+          "task_correct": 7,
+          "constraint_pass": 10
+        },
+        "methods": {
+          "adapted_snapkv_shared_anchors": {
+            "task_correct": 7,
+            "constraint_pass": 10,
+            "transitions": [
+              6,
+              1,
+              1,
+              2
+            ]
+          },
+          "uniform_random_shared_anchors": {
+            "task_correct": 6,
+            "constraint_pass": 9,
+            "transitions": [
+              5,
+              2,
+              1,
+              2
+            ]
+          },
+          "adapted_snapkv_shared_anchors_header_pinned": {
+            "task_correct": 7,
+            "constraint_pass": 10,
+            "transitions": [
+              7,
+              0,
+              0,
+              3
+            ]
+          },
+          "uniform_random_shared_anchors_header_pinned": {
+            "task_correct": 7,
+            "constraint_pass": 10,
+            "transitions": [
+              6,
+              1,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "transition_order": [
+    "C2C",
+    "C2W",
+    "W2C",
+    "W2W"
+  ],
+  "planned_fixtures": [
+    "All baseline task wrong yields conditional loss null with numerator0 denominator0",
+    "Method fails on a baseline-correct case: loss metric unavailable for that pair; report explicit unassessed full-correct count",
+    "Truncated but status-ok output remains archived, truncation explicit; strict-pair profile excludes it without rewriting legacy score",
+    "Missing scheduled cell is not_run with reason, never silently omitted",
+    "Duplicate cohort/case/method identity is a hard failure",
+    "Mismatched input hash or gold between Full and method is a hard failure",
+    "Same total correct with one loss and one gain reports both transitions",
+    "Pinned and unpinned prefix-byte mismatch is a hard comparability failure",
+    "Unavailable peak memory or latency remains null with reason and never becomes zero",
+    "Protected positions exceeding fixed budget report infeasible, never increase budget",
+    "Missing constraint annotation retains task outcome with constraint N/A and explicit reason",
+    "Same source_key in distinct cohorts remains qualified by cohort and is not pooled for independence"
+  ],
+  "gates": [
+    "Verify listed file hashes before normalization; stop on mismatch without changing expected values",
+    "Keep development32 and holdout10 separate and label both as previously used software regression evidence",
+    "Recompute counts from rows; compare to frozen expected values and archived summaries, do not copy summaries as computed results",
+    "Check identity joins and expected 32x4/10x5 schedules; derive Full/task/format denominators from eligible rows",
+    "Do not claim raw output re-decoding, score correctness, peak-memory savings, model generalization or scientific novelty",
+    "Archive legacy and strict profile definitions separately; no silent changes to historic denominators",
+    "Preserve old manifests and run index; record this future CPU validation as a new run only if actually executed"
+  ]
+}

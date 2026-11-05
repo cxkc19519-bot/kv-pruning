@@ -1,0 +1,21 @@
+{
+  "kind": "offline_source_and_profile_geometry_audit",
+  "execution_enabled": false,
+  "author_code_execution_enabled": false,
+  "model_load_enabled": false,
+  "gpu_query_enabled": false,
+  "max_seconds": 60,
+  "max_profile_shapes": 32,
+  "reference_commit": "5df63a7203cdb9328d824a27b682e77c7b9928be",
+  "prior_run": "results/20261030-controller-natural-history-v2",
+  "prior_manifest_sha256": "f802fb66a3e8f54f666af88bc534249dd4ac493ba80829778835b421ad73f7df",
+  "runtime_parameters": {"max_num_seqs":2,"max_num_batched_tokens":512,"max_model_len":512,"draft_steps":4,"bonus_tokens":1,"requested_profile_context":8192,"capture_sizes":[5,10]},
+  "checks": [
+    "Match installed source blobs to pinned upstream sources without importing author modules",
+    "Reconstruct requested and clipped dummy shapes, request-count support and context bounds",
+    "Separate graph-padded cost construction, sampled medians, extrapolated entries and raw timing evidence",
+    "Derive balanced default graph candidates from fixed source; do not load the engine",
+    "Compare public target entropy, draft mean/min confidence and per-position max-q evidence without transferring thresholds across model pairs",
+    "Preserve previous model results and do not manufacture new model observations"
+  ]
+}

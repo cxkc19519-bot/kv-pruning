@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "proposal_id": "structured-resource-cpu-feasibility-v1",
+  "date": "2026-10-31",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "status": "protocol_frozen_observer_implementation_next",
+  "purpose": "Measure request completion separately from underlying work termination; no novelty or service-performance claim from legacy backends.",
+  "scope": {
+    "server_root": "/home/user/jhk/project/Directional Exploration/kv-pruning",
+    "gpu_allowed": false,
+    "model_loading_allowed": false,
+    "model_tokenizer_loading_allowed": false,
+    "network_during_trial_allowed": false,
+    "new_dependencies_allowed_in_first_stage": false,
+    "existing_environment_mutation_allowed": false,
+    "public_service_allowed": false
+  },
+  "input": {
+    "server_selection": "literature/20261031-structured-resource-preflight-v1/public_schema_selection.json",
+    "selection_sha256": "41a774b5ae2bc5f43cc0b7ec754ea786491307c562b616b9f36374cb7856d085",
+    "source_repo": "json-schema-org/JSON-Schema-Test-Suite",
+    "source_commit": "8cab295687d150de3900a160c6ad002b53ddb30e",
+    "files_in_order": ["type", "enum", "required", "properties", "items", "oneOf", "maxLength", "pattern"],
+    "selection_rule": "first original-order group in each file containing both valid and invalid tests",
+    "schemas": 8,
+    "official_labeled_instances": 45,
+    "synthetic_token_vocabulary": {
+      "byte_token_ids": [0, 255],
+      "token_bytes": "id i maps to the single raw byte i",
+      "eos_id": 256,
+      "eos_bytes_hex": "3c7c656f737c3e",
+      "vocabulary_size": 257,
+      "model_vocabulary_representative": false,
+      "canonical_json": {"ensure_ascii": true, "sort_keys": true, "separators": [",", ":"], "allow_nan": false}
+    },
+    "backend_semantics": {
+      "xgrammar_strict_mode": false,
+      "xgrammar_any_whitespace": true,
+      "schema_rewriting_allowed": false,
+      "unsupported_and_error_are_not_pass": true,
+      "test_each_byte_mask_and_explicit_eos": true,
+      "finite_fixture_agreement_is_not_language_equivalence": true
+    }
+  },
+  "stages": {
+    "observer_engineering": {
+      "author_backend_execution": false,
+      "requires_new_run_registration": true,
+      "max_cases": 12,
+      "case_ids": ["queued_cancel", "running_future_not_cancelled", "caller_deadline_work_continues", "cooperative_stop", "process_kill_reap", "worker_exception", "worker_exit_without_end_marker", "completion_wins_cancel_race", "duplicate_cancel", "normal_probe_reuses_same_slot", "cleanup_timeout_is_failure", "shared_work_has_other_waiter"],
+      "total_wall_seconds": 120,
+      "case_wall_seconds": 3,
+      "max_work_processes": 2,
+      "max_cpu_affinity_count": 2,
+      "max_explicit_fixture_allocation_bytes": 1048576,
+      "no_percentile_performance_claim": true,
+      "pass": "all 12 causal/state contracts, independently validated event identities and cleanup; no missing child or substituted pool"
+    },
+    "legacy_backend_api_correctness": {
+      "enabled": false,
+      "prerequisites": ["observer_engineering_pass", "source_and_native_binary_hashes_bound", "import_GIL_and_offline_guard_engineering_pass", "new_run_registration"],
+      "environment": ".venv-controller-history",
+      "xgrammar": "0.2.8",
+      "llguidance": "1.7.6",
+      "schemas_per_backend": 8,
+      "labeled_instances_per_backend": 45,
+      "max_backend_schema_constructions": 16,
+      "max_fresh_matchers": 90,
+      "max_mask_calls": 2430,
+      "max_total_wall_seconds": 180,
+      "per_call_watchdog_seconds": 5,
+      "fallback_retries": 0,
+      "scientific_feasibility_decision_allowed": false,
+      "resource_interference_test_allowed": false
+    },
+    "strong_baseline_paired_screen": {
+      "enabled": false,
+      "prerequisites": ["exact_baseline_entrypoints_and_versions_bound", "latest_llguidance_native_cancellation_runnable", "GRID_budget_baseline_runnable_or_justified_scope_limitation", "PR45172_and_PR52119_exact_implementation_or_explicit_representative_label", "compatible_XGrammar_dynamic_mode_for_separate_first_mask_scope", "resource_enforcement_mode_verified", "finite_semantic_fixture_results_reported", "separate_protocol_with_fixed_workloads_and_schedule"],
+      "currently_blocked_by": ["strong_baselines_not_installed_or_built", "no_writable_cgroup_delegation_in_current_session", "Rust_toolchain_not_found", "current_Python_binding_does_not_expose_documented_Rust_cancellation_in_inspected_interface"],
+      "do_not_treat_blocked_baseline_as_failure": true,
+      "do_not_select_workloads_by_observed_damage": true
+    }
+  },
+  "measurement": {
+    "clock": "time.monotonic_ns; parent timestamps and worker timestamps retained separately",
+    "events": ["submitted", "worker_ready", "work_started", "cancel_requested", "caller_returned", "work_finished_or_process_reaped", "same_slot_probe_started", "same_slot_probe_finished", "cleanup_complete"],
+    "identity": ["run_id", "case_id", "request_id", "shared_work_id", "pid", "pid_starttime", "native_thread_id", "worker_slot_id", "sequence_number"],
+    "process_poll_interval_ms": 10,
+    "right_censor_missing_work_end": true,
+    "memory_observation": "live-process RSS and optional PSS; retained cache and allocator retention distinguished; not a hard aggregate memory limit",
+    "primary_outputs": ["caller_cancel_latency", "underlying_work_stop_latency_or_censoring", "post_cancel_cpu_ticks", "same_slot_probe_delay", "cleanup_status", "finite_fixture_acceptance_and_rejection_status"],
+    "not_measured_here": ["HTTP_latency", "model_TTFT", "model_TPOT", "production_p99", "new_vulnerability", "full_language_equivalence"]
+  },
+  "archive": {
+    "location": "server_results_new_directory_only_after_registration",
+    "max_files_including_summary_and_manifest": 64,
+    "max_bytes_including_summary_and_manifest": 8388608,
+    "preserve_failures": true,
+    "automatic_retry": false,
+    "cleanup_only_owned_processes_with_pid_starttime_verification": true,
+    "raw_artifacts_local_copy_allowed": false
+  },
+  "decision": {
+    "current": "not_selected_as_thesis_mainline",
+    "advance_requires": "repeatable meaningful service limitation against strongest comparable baselines, beyond known timeout/process-pool fixes",
+    "stop_if": ["existing_strong_baseline_satisfies_same_requirement", "difference_only_old_version_or_disabled_feature", "measurement_or_semantic_coverage_mismatch", "only_reimplementation_of_known_timeout_or_process_isolation"]
+  }
+}

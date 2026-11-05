@@ -1,0 +1,11 @@
+{
+  "kind": "report_profile_semantics_correction",
+  "execution_enabled": false,
+  "base_proposal_sha256": "0e98ebcd56a5f69a7af60161f73a296f043325d59864d83f05da36af4999bc33",
+  "prior_run": "results/20261030-reliability-report-replay-v1",
+  "prior_manifest_sha256": "5aaf3753c020d4b3012698532a2f3b27fa4e9f097fe77e09e38a535adf8d2d84",
+  "prior_post_review_sha256": "aa852d4a3308053fb41ab6a3a96562ce0d5a68df2df7d3522f93bbeaed557bbe",
+  "change": "Preserve original historical Full-pass denominator on unavailable method results; keep strict eligible-pair denominator. Report eligible pair count independently. Strengthen existing fixture2 to exercise both profiles.",
+  "preserve": ["All9 pinned input files and two frozen cohort expectations", "12fixture identities and60second/32MiB/300JSONL/32file limits", "No model/tokenizer/scorer/tensor/GPU execution", "v1 original artifacts and manifest remain immutable"],
+  "interpretation": "v1 archived-cohort counts and12 original fixtures passed; post-review found an untested legacy error-path semantics gap. Not a changed model result or scientific finding."
+}

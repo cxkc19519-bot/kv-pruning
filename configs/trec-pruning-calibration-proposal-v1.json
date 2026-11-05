@@ -1,0 +1,51 @@
+{
+  "status": "requires_cpu_selector_header_and_hook_preflight",
+  "execution_enabled": false,
+  "purpose": "Limited classification and exact-label-format compression calibration, not security-specific evidence or a novelty claim",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "parent_proposal_sha256": "6e9c61d13d8a926ed0ce3d338d33642f95ff4aa48e2a014a8804896f65e2f91c",
+  "baseline_run": "results/20261028-trec-context-full-v1",
+  "baseline_generations_sha256": "72a429e7333a90b87baf135bc7aef291e79eb9d69f40b00bb6fe438fec68dd0c",
+  "baseline_condition": "with_demos",
+  "baseline_observed_exact": {"correct": 19, "total": 32},
+  "cases_path": "results/20261028-trec-context-gate-data-v1/cases.jsonl",
+  "cases_sha256": "e709d4bd298cd61a272f42835a180c7ac032b450b0aa1c40892814c7f6c8caf7",
+  "source_key_policy": "Use all original32 frozen source keys, with_demos versions unchanged, including all13 Full-wrong cases; no selection by context benefit or compression output",
+  "frontend": "Original frozen native system header+examples then user query; user query and answer not available to the selector; no extra model calls for scoring",
+  "compression_scope": "Query-blind eviction of completed system prefix only; user suffix appended at original logical positions; decode KV grows normally and is separately counted",
+  "baseline_policy": "Reuse the audited same-version32 with_demos Full outputs. First3 new hook/no-hook/100%-retention checks must reproduce their output IDs before any compressed main outputs; no silent reuse if source or decode changes",
+  "conditions": [
+    {"method": "adapted_snapkv_shared_anchors", "keep": 0.5, "pin_shared_header": false},
+    {"method": "uniform_random_shared_anchors", "keep": 0.5, "pin_shared_header": false},
+    {"method": "adapted_snapkv_shared_anchors_header_pinned", "keep": 0.5, "pin_shared_header": true},
+    {"method": "uniform_random_shared_anchors_header_pinned", "keep": 0.5, "pin_shared_header": true}
+  ],
+  "budget": {
+    "unit": "actual prefix K/V bytes",
+    "slots_each_layer_kv_head": "floor(original_prefix_tokens / 2)",
+    "common_sink_tokens": 4,
+    "common_recent_tokens": 64,
+    "header_protection": "All native token positions overlapping the exact shared system-header character span, including any boundary-crossing token; excludes demonstrations except boundary overlap. Compute per case before inference, record indices/count/byte cost, and charge within the same fixed total budget",
+    "infeasible_policy": "Stop the entire preparation before model inference; do not truncate the protected header, increase budgets, or drop cases"
+  },
+  "adapted_snapkv": {"observation_window": 64, "pool_kernel": 5, "gqa_reduction": "mean over query heads sharing a KV head", "label": "Existing independent Qwen2 adaptation, not original fair SnapKV or a new algorithm"},
+  "random": {"seed": 20261028, "policy": "Deterministic per source-key/layer/KV-head random scores on original positions; same score stream for pinned/unpinned variants, with common anchors and required header charged before filling remaining slots; no gold or model outcome access"},
+  "decode": {"do_sample": false, "repetition_penalty": 1.0, "max_new_tokens": 64, "dtype": "bfloat16", "attention": "sdpa", "eos_token_ids": [151643,151645], "pad_token_id": 151643},
+  "max_new_main_outputs": 128,
+  "max_extra_correctness_outputs": 24,
+  "correctness_outputs": "Additional bounded checks only, recorded separately; no full baseline resampling or parameter sweep",
+  "primary_scorer": "Same raw whole-response exact gold and exact-label format scorer as baseline; only terminal EOS transport token removed, no other special token/text filtering",
+  "reporting": ["all32 exact scores", "all32 label-format scores", "official first-line compatibility as secondary", "Full-to-compressed C2C/C2W/W2C/W2W with original32 and Full-correct19 denominators", "all errors/truncation/N/A", "per-layer/head retained original indices and actual K/V bytes", "protected header footprints and any boundary overlap", "NoDemo comparison kept separate from compression pairs"],
+  "engineering_gate": [
+    "CPU freeze all32 header spans, budgets and selector inputs before generation",
+    "CPU synthetic-cache selection identity at100%, anchors, header completeness, unique sorted in-range indices, exact equal bytes across all4 methods and reproducible random replay",
+    "Review/pin scoring source and adapter hashes; no copied nano-vllm files",
+    "On first3 frozen with_demos cases, score hook preserves every reference K/V tensor and Full output IDs versus no hook and archived baseline",
+    "Actual100%-retention gather identity and output equality, physical cache versus original logical RoPE positions checked",
+    "Before main generation assert every case/method/layer/KV-head budget and common/header inclusion; save full maps",
+    "Execution snapshot enabled only after engineering checks; failures retained with no silent fallback"
+  ],
+  "interpretation": "All outcomes are descriptive pilot results. Report no effect or improvements as well as damage; do not tune until deterioration appears. Classification changes are not safety failures, and label-format retention is not general policy/safety retention. Header pinning and random controls are diagnostic baselines, not proposed novel methods.",
+  "old_gates": "Stopped native IFEval proposal and failed AccessDenied gates remain unchanged"
+}

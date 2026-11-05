@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "mode": "software",
+  "execution_enabled": true,
+  "run": "results/20261101-import-boundary-software-v2",
+  "source_sha256": {
+    "scripts/guarded_import_runner_v2.py": "f2bf33c8ac344f226ab5bcba68236d204bff38d1d960d38b69edf920401011b8",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/accept_import_boundary_v2.py": "05f7b5e27dff3c2d628cc7ac163d4824f2758ce5f6b47cd25a5f994038e3d89e",
+    "scripts/verify_import_boundary_v2.py": "b86ad2dd27b38d86a045e90b8305f4a0515ebfea27d200d2b9df1c286fa1b8bc",
+    "scripts/import_boundary_v2.py": "a70cc4411021ce739109fd1abcb22094335f07d6004afb08ab6fd9e35c38b93b"
+  },
+  "input_sha256": {
+    "literature/20261101-loader-boundary-source-v1/pins.json": "90d0d0c3a268eb2e4c0ee9c5c34d4d1febc30593fe005ac4e100cd83c52744f3",
+    "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json": "c635343add69e6bf06de5941ae588a136b613bd3a9f5c359d075ed9132738cc4",
+    "literature/20261101-loader-boundary-source-v1/dill_runtime_pin.json": "ff75599bdb93afec4453df355adeab8e9b4836b678d0a6230dea0966c7a47ae9"
+  },
+  "boundary_pins": "literature/20261101-loader-boundary-source-v1/pins.json",
+  "runtime_pin": "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "OMP_NUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HOME": "RUN/hf",
+    "TORCHINDUCTOR_CACHE_DIR": "RUN/inductor",
+    "TVM_FFI_CACHE_DIR": "RUN/tvm",
+    "MKL_NUM_THREADS": "1",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TMPDIR": "RUN/tmp",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "bounds": {
+    "query_cleanup_seconds": 1,
+    "max_bytes": 8388608,
+    "worker_seconds": 12,
+    "max_files": 64,
+    "query_count": 4,
+    "total_seconds": 30,
+    "query_stderr_bytes": 65536,
+    "query_stdout_bytes": 262144,
+    "query_seconds": 1
+  },
+  "software_cases": 23,
+  "actual_loader_queries": 1,
+  "backend_imports": 0,
+  "raw_bypass_fixture": "/bin/true blocked before spawn",
+  "automatic_retry": false,
+  "native_execution_enabled": false,
+  "prior_index": "results/20261101-run-index-backend-diagnostic.json",
+  "prior_index_sha256": "b0c41c246d50ad046273d6e1d34a66559771d1e8e76d7065715b1ca7364f9bb1",
+  "extra_runtime_pin": "literature/20261101-loader-boundary-source-v1/dill_runtime_pin.json",
+  "amendment": "Add only pinned devnull O_WRONLY|O_CREAT|O_TRUNC for actual dill builtin and pyio writer probes; other command/device/time limits unchanged; preserve v1"
+}

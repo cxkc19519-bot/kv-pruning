@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-31",
+  "status": "passed_scoped_CPU_software_correctness",
+  "protocol": "docs/DECODER_OBJECTIVE_CPU_PROTOCOL_20261031.md",
+  "record": "docs/runs/20261031-decoder-objective-cpu.md",
+  "registration": "configs/decoder-objective-cpu-execution-v1.json",
+  "registration_sha256": "847651a5bae3ef4228ededc7782b59f6b16f8712d4bfe08c7a74e7c0e4f6c1fb",
+  "run": "results/20261031-decoder-objective-cpu-v1",
+  "archive": {
+    "files": 21,
+    "bytes": 239223,
+    "manifest_sha256": "f9a304f6e36e7cf5dd2dd41e634da71b44f84c3b5369f323cdcbec89fa80ad8a",
+    "all_hashes_independently_readback": true
+  },
+  "acceptance": {
+    "executed": true,
+    "passed": true,
+    "cases": 18,
+    "invalid_variants_rejected": 23,
+    "high_precision_candidate_vectors": 7,
+    "finite_grammar_edges_recomputed": 40,
+    "real_tokenizer_adapter_validated": false,
+    "physical_GPU_cache_validated": false,
+    "real_KV_misranking_observed": false
+  },
+  "runtime": {
+    "python": "3.11.13",
+    "launcher_pid": 1389085,
+    "worker_pid": 1389088,
+    "verifier_pid": 1389089,
+    "launcher_seconds": 0.9854191350750625,
+    "worker_seconds": 0.13362423982471228,
+    "verifier_seconds": 0.7023798422887921,
+    "all_own_PIDs_exited": true,
+    "worker_guard": {
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "verifier_guard": {
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    }
+  },
+  "actual_this_turn": {
+    "new_experimental_runs": 1,
+    "new_model_answers": 0,
+    "tokenizer_encodes": 0,
+    "model_loads": 0,
+    "GPU_queries": 0,
+    "dependencies_installed": 0,
+    "local_fixture_execution": false
+  },
+  "prior_connection_blockage": {
+    "SSH_attempts": 5,
+    "reached_authentication": false,
+    "new_runs": 0,
+    "resolved_on_user_notice": true
+  },
+  "cumulative": {
+    "runs": 121,
+    "main_outputs": 3038,
+    "index": "results/20261031-run-index-decoder-objective-cpu.json",
+    "index_sha256": "3c7cdede19646be575a20adfc3d1e73f14b3e043e9066b9c26ecec4b4e02a2a1",
+    "old_index_unchanged": true
+  },
+  "synchronization": {
+    "code_config_docs_synced": true,
+    "raw_outputs_server_only": true,
+    "initial_17_file_freeze_synced": true
+  },
+  "publication_novelty_established": false,
+  "degree_approval_established": false,
+  "P1_started": false,
+  "GPU_runner_implemented": false,
+  "next_GPU_execution_enabled": false,
+  "old_QA_gate_rewritten": false,
+  "original_draft_false_flags_unchanged": true,
+  "decoder_native_CPU_followup": {
+    "date": "2026-10-31",
+    "status": "passed_scoped_native_tokenizer_and_synthetic_input_CPU_preflight",
+    "protocol": "docs/DECODER_NATIVE_CPU_PROTOCOL_20261031.md",
+    "record": "docs/runs/20261031-decoder-native-preflight.md",
+    "registration": "configs/decoder-native-preflight-v1.json",
+    "registration_sha256": "d7d2edcd9aca343c919393bd05c2d1720a0b58a80dc6d523972cc19cb834cc01",
+    "run": "results/20261031-decoder-native-preflight-v1",
+    "archive": {
+      "files": 28,
+      "bytes": 342048,
+      "manifest_sha256": "798a680978ff5dd2689aabadc4563476b312668bcc3c9875323a0e7328dbaef4",
+      "all_worker_and_final_hashes_recomputed": true
+    },
+    "inputs": {
+      "source": "frozen_synthetic_controlled_retrieval_not_public_benchmark",
+      "engineering_groups": 2,
+      "development_groups": 12,
+      "development_design": "3 target positions x4 labels, one group per cell",
+      "case_snapshot_sha256": "b5de283f7a843bdae2f33e7279d183b4b3ef3fd1b681a8aad275d1fd9b95a5f6",
+      "native_inputs_sha256": "7a42861fc0954638f7bdc6bab49d70952d994eaea90551d894f2e4cb96731120",
+      "grammar_contract_sha256": "20ccc39e48edc16b1eaf0d07977a64fe318f69c49f37d71e549e742a64894e25",
+      "old48_or16_reused": false,
+      "semantic_independence_claim": false
+    },
+    "tokenizer": {
+      "repository": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "backend": "tokenizers0.22.1 direct fixed BPE, Jinja2 3.1.4 original template branch",
+      "normalizer": "NFC",
+      "encodes": 34,
+      "base_tokens": 151643,
+      "added_tokens": 22,
+      "non_tokenizer_model_rows": 399,
+      "raw_byte_table_digest": "07ffafaf61cd7852b3adc6b2bf4861c2489ba6499b41db4676de2c91711095c3",
+      "complete_grammar_edges": 49,
+      "local_branch_token_ids": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "local_branch_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "independent_verifier_BPE_encodes": 0,
+      "independent_verifier_method": "Full-vocabulary byte graph enumeration and native byte reconstruction; no tokenizer/template/project imports",
+      "HF_runtime_generator_compatibility_validated": false
+    },
+    "budget": {
+      "prefix_tokens": 373,
+      "query_wrapper_suffix_tokens": 24,
+      "half_prefix_slots": 186,
+      "sink_slots": 4,
+      "recent_slots": 64,
+      "anchor_union_slots": 68,
+      "free_slots": 118,
+      "predicted_bytes_per_slot": 57344,
+      "predicted_full_prefix_bytes": 21389312,
+      "predicted_half_prefix_bytes": 10665984,
+      "feasible_inputs": 14,
+      "physical_GPU_bytes_validated": false
+    },
+    "runtime": {
+      "launcher_pid": 1392624,
+      "worker_pid": 1392627,
+      "verifier_pid": 1392628,
+      "launcher_seconds": 4.396327749826014,
+      "worker_seconds": 0.9157336479984224,
+      "verifier_seconds": 3.262950007803738,
+      "all_own_PIDs_exited": true,
+      "worker_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "verifier_guard": {
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      }
+    },
+    "actual_this_turn": {
+      "new_CPU_runs": 1,
+      "new_model_answers": 0,
+      "tokenizer_encodes": 34,
+      "model_loads": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "network_requests_inside_run": 0,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 122,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-decoder-native.json",
+      "index_sha256": "34c0b9532254bd20530ff66a7427a399670301dc4fbf5e4cdc5165be7988f484",
+      "previous_index_unchanged": true
+    },
+    "real_KV_signal_observed": false,
+    "Full_task_support_measured": false,
+    "P1_model_stage_started": false,
+    "GPU_runner_implemented": false,
+    "publication_novelty_established": false,
+    "old_QA_gate_rewritten": false,
+    "original_GPU_draft_false_flags_unchanged": true,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Implement and freeze a separate same-prefix real-KV engineering protocol using the two new engineering groups;verify reference immutability, full/split recomputation, physical gather and identical query+wrapper suffix under actual model runtime. After engineering passes, measure Full support on frozen12 development groups; only then run the bounded8-candidate KL diagnostic with predetermined seeds/forward/token/time limits. Keep all failures and all groups; no automatic launch from the old draft."
+  },
+  "next": "Implement and freeze a separate same-prefix real-KV engineering protocol using the two new engineering groups;verify reference immutability, full/split recomputation, physical gather and identical query+wrapper suffix under actual model runtime. After engineering passes, measure Full support on frozen12 development groups; only then run the bounded8-candidate KL diagnostic with predetermined seeds/forward/token/time limits. Keep all failures and all groups; no automatic launch from the old draft."
+}

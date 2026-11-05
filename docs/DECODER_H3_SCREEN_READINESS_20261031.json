@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-31",
+  "status": "completed_negative_development_screen_current_H3_stopped",
+  "protocol": "docs/DECODER_H3_SCREEN_PROTOCOL_20261031.md",
+  "record": "docs/runs/20261031-decoder-h3-screen.md",
+  "decision_document": "docs/H3_SCREEN_DECISION_20261031.md",
+  "registration": "configs/decoder-h3-screen-v1.json",
+  "registration_sha256": "287f9260806a3f8ee6883fa66d050a0b98c70658ebde58fcb75a8978f12b0961",
+  "run": "20261031-decoder-h3-screen-v1",
+  "archive": {
+    "files": 166,
+    "bytes": 68159219,
+    "original_manifest_sha256": "256b9fd679a6c758d7981807fe29ac6efbf24f51ec3a58e13020f2ef46b1b8fb",
+    "derived_manifest_sha256": "fbfa685dbadca670c2c5c2e1273714bdea02689400586b5fef5f425811be2735",
+    "all_hashes_rechecked": true
+  },
+  "Full_support": {
+    "correct": 12,
+    "total": 12,
+    "threshold": 10,
+    "passed": true,
+    "scope": "finite_enum_branch_argmax_not_free_JSON_generation"
+  },
+  "result": {
+    "ranking_mismatch_groups": 11,
+    "any_real_KV_candidate_rank_inversion_observed": true,
+    "KL_values_independently_recomputed": 384,
+    "all_objective_selected_gold_and_Full_fidelity": {
+      "global": {
+        "Full_argmax_fidelity": 12,
+        "gold_correct": 12,
+        "near_tied_groups": 1,
+        "selected_names": {
+          "adapted_snapkv": 8,
+          "random_2026103102": 1,
+          "random_2026103104": 3
+        }
+      },
+      "top128": {
+        "Full_argmax_fidelity": 12,
+        "gold_correct": 12,
+        "near_tied_groups": 1,
+        "selected_names": {
+          "adapted_snapkv": 8,
+          "random_2026103103": 1,
+          "random_2026103104": 3
+        }
+      },
+      "top256": {
+        "Full_argmax_fidelity": 12,
+        "gold_correct": 12,
+        "near_tied_groups": 1,
+        "selected_names": {
+          "adapted_snapkv": 8,
+          "random_2026103102": 1,
+          "random_2026103104": 3
+        }
+      },
+      "legal": {
+        "Full_argmax_fidelity": 12,
+        "gold_correct": 12,
+        "near_tied_groups": 1,
+        "selected_names": {
+          "adapted_snapkv": 7,
+          "recency": 3,
+          "random_2026103102": 1,
+          "random_2026103105": 1
+        }
+      }
+    },
+    "per_fixed_candidate": {
+      "adapted_snapkv": {
+        "Full_argmax_fidelity": 10,
+        "gold_correct": 10
+      },
+      "recency": {
+        "Full_argmax_fidelity": 8,
+        "gold_correct": 8
+      },
+      "random_2026103101": {
+        "Full_argmax_fidelity": 6,
+        "gold_correct": 6
+      },
+      "random_2026103102": {
+        "Full_argmax_fidelity": 9,
+        "gold_correct": 9
+      },
+      "random_2026103103": {
+        "Full_argmax_fidelity": 9,
+        "gold_correct": 9
+      },
+      "random_2026103104": {
+        "Full_argmax_fidelity": 9,
+        "gold_correct": 9
+      },
+      "random_2026103105": {
+        "Full_argmax_fidelity": 6,
+        "gold_correct": 6
+      },
+      "random_2026103106": {
+        "Full_argmax_fidelity": 7,
+        "gold_correct": 7
+      }
+    },
+    "legal_vs_global": {
+      "legal_win": 0,
+      "legal_loss": 0,
+      "tie": 12,
+      "ambiguous_tie": 0
+    },
+    "legal_vs_top128": {
+      "legal_win": 0,
+      "legal_loss": 0,
+      "tie": 12,
+      "ambiguous_tie": 0
+    },
+    "legal_vs_top256": {
+      "legal_win": 0,
+      "legal_loss": 0,
+      "tie": 12,
+      "ambiguous_tie": 0
+    },
+    "development_go": false,
+    "practical_improvement_established": false,
+    "statistical_confirmation": false,
+    "novelty_established": false,
+    "stop_current_H3_candidate_no_expansion": true
+  },
+  "readiness_or_old_flags": {
+    "operational_common_batch_contract_passed": true,
+    "original_cross_path_numeric_gate_still_failed": true,
+    "old_QA_or_Mistral_gates_rewritten": false,
+    "original_GPU_draft_false_flags_unchanged": true
+  },
+  "launcher_semantic_clarification": "Initial inherited real_KV_signal_observed=false was never updated. semantic_closure.json explicitly records real ranking inversions observed=true;development benefit/go=false. Original manifest/launcher preserved.",
+  "runtime": {
+    "launcher_pid": 1450109,
+    "worker_pid": 1450114,
+    "verifier_pid": 1451208,
+    "worker_seconds": 91.56590577727184,
+    "verifier_seconds": 22.93466492788866,
+    "launcher_seconds": 115.53829295001924,
+    "all_own_PIDs_exited": true,
+    "worker_guard": {
+      "blocked_loopback_capability_probes": 1,
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "verifier_guard": {
+      "blocked_loopback_capability_probes": 0,
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "gpu_after_memory_mib": 18,
+    "gpu_after_utilization": 0
+  },
+  "actual_screen_stage": {
+    "new_GPU_runs": 1,
+    "forward_calls": 132,
+    "teacher_forced_input_tokens": 11544,
+    "archived_logit_vectors": 108,
+    "development_groups": 12,
+    "tokenizer_encodes": 24,
+    "new_complete_generated_answers": 0
+  },
+  "combined_engineering_and_screen": {
+    "new_GPU_runs": 2,
+    "forward_calls": 172,
+    "input_tokens": 13900,
+    "archived_logit_vectors": 144,
+    "tokenizer_encodes": 28,
+    "generated_tokens": 0,
+    "new_complete_answers": 0
+  },
+  "cumulative": {
+    "runs": 132,
+    "main_outputs": 3038,
+    "index": "results/20261031-run-index-decoder-h3-screen.json",
+    "index_sha256": "b0c4d8fda03a662a5a30ccde9af934846bf45d7f73e2c06df546a2db9339f475",
+    "all_prior_indices_preserved": true
+  },
+  "publication_novelty_established": false,
+  "active_gpu_queue": false,
+  "automatic_expansion_enabled": false,
+  "code_config_docs_synced": true,
+  "raw_results_server_only": true,
+  "next": "Close current H3 as a negative development decision;do not expand groups,seeds,models,budget or harder prompts to rescue it. Retain software,operational contract and scoped empirical evidence. Any new research candidate must state a different unmet need and strong-neighbor gap before separately authorized implementation;no current GPU queue."
+}

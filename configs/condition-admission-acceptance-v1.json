@@ -1,0 +1,25 @@
+{
+  "proposal_id":"condition-admission-acceptance-v1","execution_enabled":false,"runner_implemented":false,
+  "run":"results/20261030-condition-admission-v1",
+  "inputs":{
+    "results/20261030-independent-squad-tokenizer-v1/tokenized_cases.json":"43ae26daf25fff041d1d7bb7397c443d74d34542681911484938c2ab8dd35957",
+    "results/20261030-independent-squad-full-v1/engineering.jsonl":"6e626cc3a2da50d4e12a7b1086acbb0ac8260a45061e3a6827827d6dd1cedba4",
+    "results/20261030-independent-squad-compression-v1/engineering.jsonl":"84492b791aff8b90f332016fc1ff6609f8e688baebbc765ef13894080ce2535a",
+    "results/20261030-independent-squad-full-v1/generations.jsonl":"9f9de45ae14fe926ce760dd45a89be6d1daf9563cde91e8f86ed64d231847db4",
+    "results/20261030-independent-squad-compression-v1/generations.jsonl":"1828662819c35b142e6b86431b837ab9e4e9b9649a1e66cf739cc4f24e90e8d3",
+    "results/20261030-independent-squad-full-v1/execution_snapshot.json":"1a3f7169eb5ce802b7783b8197169dafa5a9df064b0ab19f0b81a089237e85ad",
+    "results/20261030-independent-squad-compression-v1/execution_snapshot.json":"02c3e2e3b8e87554ec4278180eb7556b67131c4f48a2572ddd5be089e1d22042",
+    "results/20261030-independent-development-analysis-v1/report.json":"d6852baf3f0a6f7720d65ffcd0c9cd0813bd53d8988f278e195112bbd63db2f8",
+    "scripts/reliability_system_core.py":"ea87bd0d1cff69014336cd59f61b4e77d2d0e43b6f679bf340d77c6f5c8ed546",
+    "scripts/reliability_system_adapters.py":"ecaeebf677778743cc6e8f9c8a3019a866cb00abb247c6369a8eabae109370b9"
+  },
+  "conditions":["full","adapted_snapkv","uniform_random","adapted_snapkv_system_pinned","uniform_random_system_pinned"],
+  "engineering_cases_required":2,
+  "runtime_evidence_scope":"Exact matched archived runtime and selector source hashes;path sequences checked only on declared engineering cases,not task support or all new inputs",
+  "prospective_launch_policy":"Require both mathematical budget feasibility and same-condition complete engineering evidence. Blocked model operation must not be invoked. No actual model callback in this acceptance run.",
+  "retrospective_policy":"Preserve40historical generated main outputs and20infeasible cells;4generated protected DEV outputs lack same-condition engineering evidence and remain diagnostic. Do not delete,rescore,relabel execution,rerun or rewrite old gate.",
+  "expected":{"main_cells":60,"mathematically_feasible":40,"mathematically_infeasible":20,"future_eligible":36,"future_blocked_budget":20,"future_blocked_engineering_unverified":4,"historical_generated":40,"historical_generated_condition_unverified":4,"historical_not_generated_infeasible":20,"verified_conditions":3,"unverified_protected_conditions":2,"engineering_sequence_verified_but_truncated_cases":1},
+  "acceptance_ids":["E01","E02","E03","E04","E05","E06","E07","E08","E09","E10","E11","E12","E13","E14","E15","E16","E17","E18","E19","E20"],
+  "bounds":{"wall_seconds":60,"input_bytes_max":1048576,"jsonl_rows_max":100,"main_cells":60,"archive_bytes_max":8388608,"archive_files_max":32,"model_outputs":0,"network_requests":0,"gpu_queries":0},
+  "failure":"First contract/fixture/source mismatch stops,preserve all diagnostics;correction requires newrun/version,never change archived expectations silently"
+}

@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-30",
+  "protocol": "docs/HF_BACKEND_ENGINEERING_PROTOCOL_20261030.md",
+  "record": "docs/runs/20261030-hf-backend-engineering.md",
+  "proposal": "configs/hf-backend-engineering-v1.json",
+  "proposal_sha256": "d871f1910fff488c52983cf54e96c96a1a8c0c268a4256a1ae62f2d0dd6eb521",
+  "source_sha256": {
+    "scripts/run_hf_backend_engineering.py": "33422a897cbe3586930d7e8c72aadfe72fd24d7dc97c529d5705e5dc015bb1e6",
+    "scripts/verify_hf_backend_engineering.py": "7b6a8008e2c9777a1f8b0c38b3caca451f9a8a44b5e62bf988898247dc2cdc98",
+    "scripts/reliability_hf_orchestrator.py": "5989170ee0224c885dc4678621adc3372860627e971d383e0c3b67cd136d171d",
+    "scripts/reliability_qwen_hf_backend.py": "7e6f453cdb4d85779c23c382de78df18744b6d1fc6ec0e16b942303a19eb69af"
+  },
+  "run": "results/20261030-hf-backend-engineering-v1",
+  "status": "complete",
+  "worker_pid": 939938,
+  "launcher_pid": 939935,
+  "elapsed_seconds": 32.61292159976438,
+  "engineering_answers": 14,
+  "generated_tokens": 605,
+  "main_answers": 0,
+  "original_manifest_entries": 38,
+  "files": 43,
+  "bytes": 712263,
+  "sha256": {
+    "manifest.json": "7fda30edb1ba4f86376ab15e8b5cbf55465842feb00624e2162b6c70ffb7c38c",
+    "summary.json": "bcf78a444fcd1f28ceb804f494f53e4e4837fe9fc0cf7a130332031fb9033a9f",
+    "actual_runtime.json": "d0f0719d104528492c819a1032e1f65dd415d5d0470794528be027bb5894e657",
+    "registered_runtime_scope.json": "aed1d6a6be73d1269748d995174f27c8c129879da32299db0c8ccb08e1538e1d",
+    "engineering_evidence.json": "7ca977f2f221f752d26dbcf2b1984046e07197a1a5d1ba4c7dba0418f8bc3a27",
+    "raw_engineering.jsonl": "a4372fb1e909f647dd6c5cbae1e8345090f395e20fd386d597c229b467dfd33d",
+    "accepted_engineering.jsonl": "8f21338b2191cb6a91ea56d5966e3465ab0abd15fda67de909f88671044ea94d",
+    "DEV_admission_only.json": "98afa8adc74f96c35aa2fddf045f48a457e14168586f2807114a417749d85afa",
+    "independent_verification.json": "cfc0e6ee3a06e4c2547a02ef01825b5405973ec1fc06627f7569d817fb84218c",
+    "closure.json": "8088fa3ca01f89da957b7dd25ae0807a8389ebbc60856ad353662dfb6e50d666",
+    "derived_manifest.json": "50d555c9a60fe16dd7b03f61ba636c68c77a992a1eec965e79ec919f41790999"
+  },
+  "external_artifacts": {
+    "20261030-hf-backend-engineering-v1.launch.json": "14c977fb4c1ea4ab0a96cb965b1935644c30703c1dca14b58aa9436c2ece9d76",
+    "20261030-hf-backend-engineering-v1.console.log": "c31daa9c0805bde5940e82f0655761a33475a18f6b283b6d8ec457ba474f8127",
+    "20261030-hf-backend-engineering-v1.launcher.py": "49dedb800170f6d9d6497195f4f67ade760f4e45cc3ee5c903fce255cf9a7838"
+  },
+  "index": "results/20261030-run-index-hf-backend-engineering.json",
+  "index_sha256": "a7a3838d93284b895ccb8aeffed06995a7c8ff89d47e0137d2fff05c6bfd1e5a",
+  "cumulative_runs": 110,
+  "cumulative_main_outputs": 2852,
+  "GPU_after": "GPU-4ce22e12-b5c0-e423-06c5-e858bb71daaa, 15, 0",
+  "registered_runtime_digest": "e2ee00abf023b825c655280da7b57a488857726dc7340fb3215909db697cd3d1",
+  "verified_conditions": [
+    "full",
+    "adapted_snapkv",
+    "uniform_random"
+  ],
+  "protected_conditions_engineering_verified": false,
+  "protected_engineering_budget_blocked": 4,
+  "new_raw_and_accepted_engineering_answers": 14,
+  "matched_but_truncated_case_count": 1,
+  "output_complete_for_all_engineering_cases": false,
+  "DEV": {
+    "admission_only": true,
+    "cells": 60,
+    "eligible_under_new_scope": 36,
+    "budget_blocked": 20,
+    "protected_engineering_unverified_blocked": 4,
+    "model_calls": 0,
+    "generation_enabled": false
+  },
+  "independent_verification": {
+    "pinned_input_files_unchanged": 25,
+    "all14_tokens_termination_trace_equal": true,
+    "position_trace_steps": 563,
+    "unique_layer_head_maps": 448,
+    "Snap_rankings": 224,
+    "new_old_maps_scores_equal": true,
+    "model_metadata_and_all4_weights_rehashed": true
+  },
+  "new_runtime_source_scope": "New GPU registered digest binds parent dry scope+GPU proposal SHA+runner SHA;no old observations injected. New evidence scope is not the previous CPU dry-run scope.",
+  "native_whole_KV_measurements": null,
+  "HF_GPU_correctness_scope": "Only2 frozen engineering inputs and3 feasible conditions at fixed Qwen2.5/greedy128/half-budget. No protected-path,second-model,task-quality,safety or performance validation.",
+  "runtime_warnings": [
+    "torch_dtype deprecated;preserved in console,not changed during fixed run"
+  ],
+  "environment_changed": false,
+  "network_requests": 0,
+  "new_main_or_sealed_inference": false,
+  "independent_scientific_confirmation": false,
+  "old_QA_gate": false,
+  "active_gpu_queue": false,
+  "own_worker_and_launcher_exited": true,
+  "next": "Freeze at-most36 feasible,engineering-verified DEV cells for new system end-to-end acceptance;retain20budget-blocked+4protected-unverified cells;0protected/0sealed generation. Evaluate task/format separately with actual raw output and coverage;this integration check adds no independent sample cohort. No repeat engineering run."
+}

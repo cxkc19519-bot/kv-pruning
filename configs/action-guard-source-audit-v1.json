@@ -1,0 +1,65 @@
+{
+  "kind": "read_only_action_guard_feasibility",
+  "execution_enabled": false,
+  "model_outputs_authorized_by_this_config": 0,
+  "research_question": "Can fixed-budget history KV eviction break context-dependent action-safety judgments in a task-trained full-attention guard, beyond simple instruction pinning and history retrieval baselines?",
+  "github_repo": "zheng977/StepGuard",
+  "github_revision": "93b580bc5fa1fb7ace16302bfb91563e4307ac1a",
+  "github_files": {
+    "LICENSE": "eeea66c7a78a1be6ebb7e9a6da7e52d9a8051bb6",
+    "README.md": "1bb783a0df7d1f31b4c61e1b35683734032d6c74",
+    "THIRD_PARTY_NOTICES.md": "c47069a6b104f7d152fd0450dc3316010a119b46",
+    "docs-open/evaluation.md": "6ea66f7bb3c56433870152710fd98efd170bc8c4",
+    "docs-open/prompts.md": "da4f9ed1c9877760e42b9f2f6e049742a57901c4",
+    "docs-open/reproduction.md": "c2c8065077bc0b88eefdc7a361f902845d1ff43e",
+    "src/evals/benchmarks/ts_bench.py": "e4e37ada22bfcf9cc75c0b34eac5ef2ca513c7ca",
+    "src/evals/benchmarks/assebench.py": "59f063595203b88abd8e7a6f3effea6c2f664f7d",
+    "src/evals/benchmarks/finegrained_bench.py": "f5fa68fb4ab8d296f0d4e6b6884141efeb287ce3",
+    "src/guardrail/prompts/stepguard.py": "de74abde4c23722677f2cab734e51e5871936029",
+    "src/guardrail/prompts/base.py": "7015cf3c199121d05d262a81f97228acc8c6a7a2",
+    "src/guardrail/guardrail.py": "162ea23dbf6d52249a04571457bd21137253a949",
+    "src/ag_types.py": "6e886a8a1954466253852cf5ddaa018839fc8e30",
+    "training/data/README.md": "0e997f8e8a4b2c6c7af5d9667b74544bf4887c3c",
+    "training/data/manifests/rl4k_manifest.json": "0640503cc62a21b67315e428e88500e4d0c78dcb"
+  },
+  "github_extra_repos": [{
+    "name": "StepSafe",
+    "repo": "carriegu0818/StepSafe",
+    "revision": "05ea723c3d9903c7f68152c6037198292faf890f",
+    "files": {
+      "README.md": "ebab1e879faceb10073594eab3d6e265775646b6",
+      "LICENSE": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "data/README.md": "a4f4c31a04cd87673b327e90ff8592fc0e744a00",
+      "docs/DATA.md": "83867c4cb7c60d6ddac07b9766b2da7b2603d620",
+      "data/manifest.json": "b3841bdf267205f11674d3b185755c96341a5d17",
+      "data/eval/labels/table1.jsonl": "ea834954216eb8fb13ce8ca8e11172db0ec56cbd",
+      "agent_system/environments/prompts/stepsafe.py": "85e6eecf59eb863a0df1a96563a6b7234d4c9ced"
+    }
+  }],
+  "hf_model": "ninty-seven/StepGuard",
+  "hf_model_revision": "c7e4a2c9c34c09efbba0e66a6b802e08b4384662",
+  "hf_model_files": {
+    "README.md": ["b29b2fd44d2e4311bc660630d74e56f1ff62a22e", 12873],
+    "LICENSE": ["6634c8cc3133b3848ec74b9f275acaaa1ea618ab", 11343],
+    "config.json": ["347eae6b61f89d96a61aa8b7138241f01f668682", 1619],
+    "generation_config.json": ["432531a002c181a19de338313d2375e9d7494d7e", 238],
+    "tokenizer_config.json": ["51c1be0d9192e7f6e6596de71d0f07d58fbc32ac", 9377],
+    "model.safetensors.index.json": ["10a36541c08a00051742954e8679b0e36702f9bd", 32818]
+  },
+  "hf_dataset": "none_selected_yet",
+  "hf_dataset_revision": "none_selected_yet",
+  "hf_dataset_files": {},
+  "network": {
+    "per_file_wall_seconds": 90,
+    "max_response_bytes": 16000000,
+    "authenticity": "Pinned Git blob hashes; HF revision and metadata corroborated from official API via Windows. Mirror only transports exact checked bytes."
+  },
+  "scope": "Read-only sources, released evaluation labels and configuration. No benchmark tools, training, inference, model weights, services or upstream imports.",
+  "gates": [
+    "Generic pruning safety damage is already known; task change alone is not a new method.",
+    "Need a native public action-safety task with natural history pressure and reliable gold labels.",
+    "Need exact native prompt and scorer; no repeated repair of the old failed permissions task.",
+    "Full task capability, cached equivalence and actual equal-byte pruning require separate frozen checks before any screening.",
+    "Use trajectory-level units and retain safe as well as unsafe records; no causal per-step gold inferred from final labels."
+  ]
+}

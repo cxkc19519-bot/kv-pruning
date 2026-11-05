@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-31",
+  "registration_id": "decoder-objective-cpu-execution-v1",
+  "execution_enabled": true,
+  "mode": "CPU_synthetic_correctness_only",
+  "user_authorization": "Existing experimental session; current user request to perform next CPU correctness step.",
+  "run": "results/20261031-decoder-objective-cpu-v1",
+  "source_sha256": {
+    "scripts/decoder_objective.py": "bc06c978f75e72248317736ea2d28f36e94e7e5f67b82e0bca047d35a1bd4bb8",
+    "scripts/accept_decoder_objective.py": "f2569aa7570b886c6c920f8165c218f4a8659c9cdbeb38ee6336ce9ba9ca2de7",
+    "scripts/verify_decoder_objective.py": "feed2f9372d4848649d98406db7b7d745bff7b6672705a824e11dd942892c96f",
+    "scripts/run_decoder_objective_cpu.py": "6b898b1902d65442e6e6ab66d52b772e8c4a093599b686d0484760c3c4dee485",
+    "docs/DECODER_OBJECTIVE_CPU_PROTOCOL_20261031.md": "42a672068083acaf6cb21d83996ff1969b5f268baa2be78f707d09dceb952b8f"
+  },
+  "input_sha256": {
+    "configs/decoder-objective-screen-draft-v1.json": "f2bb7e6f479e5c5627212142538d885326454745f3ba4b1f9959681033a0cae2"
+  },
+  "model_inference_enabled": false,
+  "tokenizer_enabled": false,
+  "GPU_enabled": false,
+  "network_enabled": false,
+  "next_GPU_execution_enabled": false,
+  "bounds": {
+    "child_seconds": 30,
+    "outer_seconds": 90,
+    "term_grace_seconds": 5,
+    "max_archive_files": 32,
+    "max_archive_bytes": 4194304
+  },
+  "cases": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05"
+  ],
+  "expected_rejecting_variants": 23,
+  "real_KV_signal_tested": false,
+  "native_tokenizer_adapter_tested": false,
+  "physical_cache_gather_tested": false,
+  "old_48_outputs_read": false,
+  "original_GPU_draft_flags_unchanged": true
+}

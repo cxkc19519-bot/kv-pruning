@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "mode": "software",
+  "execution_enabled": true,
+  "run": "results/20261101-phase-contract-software-v1",
+  "source_sha256": {
+    "scripts/import_boundary_v2.py": "a70cc4411021ce739109fd1abcb22094335f07d6004afb08ab6fd9e35c38b93b",
+    "scripts/accept_phase_controller.py": "4d09469ed7f8182e87cc9bd4a55bf9cf27496b179cd33876d1cb5c1bc17fe0b7",
+    "scripts/phase_controller.py": "376d8838bf2da99523ae8f1a8fafee8cf3f8b3b24c21714c668a9615955d1c15",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209",
+    "scripts/verify_phase_runner.py": "61d0fc3bbad1da4fab642ffcf3bbc5f06b5a67cbaeed60968a30b78f3422f28c",
+    "scripts/phase_runner.py": "6dca858e4cee9397d094e2c717ca7383a4729797e8e7366c66d570a96fb3defb"
+  },
+  "input_sha256": {
+    "results/20261101-import-boundary-software-v2/independent_verification.json": "ba78aa9fe4323224268f51c7566c1df44a7d69205b9c8bec8d599abc8f165c57",
+    "literature/20261101-loader-boundary-source-v1/dill_runtime_pin.json": "ff75599bdb93afec4453df355adeab8e9b4836b678d0a6230dea0966c7a47ae9",
+    "literature/20261101-loader-boundary-source-v1/pins.json": "90d0d0c3a268eb2e4c0ee9c5c34d4d1febc30593fe005ac4e100cd83c52744f3",
+    "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json": "c635343add69e6bf06de5941ae588a136b613bd3a9f5c359d075ed9132738cc4",
+    "configs/startup-request-contract-draft-v1.json": "f4e7e758c4bb74aa57ec4ac2d1e17c20a2eac1fe0e66d16e11665364b2def707"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "OMP_NUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HF_HOME": "RUN/hf",
+    "TORCHINDUCTOR_CACHE_DIR": "RUN/inductor",
+    "TVM_FFI_CACHE_DIR": "RUN/tvm",
+    "MKL_NUM_THREADS": "1",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TMPDIR": "RUN/tmp",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "runtime_pin": "literature/20261101-legacy-backend-runtime-pin-v1/runtime_pin.json",
+  "extra_runtime_pin": "literature/20261101-loader-boundary-source-v1/dill_runtime_pin.json",
+  "boundary_pins": "literature/20261101-loader-boundary-source-v1/pins.json",
+  "total_seconds": 30,
+  "startup_seconds": 30,
+  "request_seconds": 5,
+  "cases": 8,
+  "explicit_allocation_bytes": 1048576,
+  "archive_files": 64,
+  "archive_bytes": 8388608,
+  "author_backend_calls": 0,
+  "automatic_retry": false,
+  "native_execution_enabled": false,
+  "old_index": "results/20261101-run-index-import-boundary.json",
+  "old_index_sha256": "e189878ff02ea4ddd51c5f9dba7fb80d5fadbcf3076ee00526513494dceb6ebd"
+}

@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-31",
+  "status": "passed_scoped_CPU_stub_observer_and_recursive_archive_fault_acceptance",
+  "protocol": "docs/SDPA_OBSERVER_CPU_PROTOCOL_20261031.md",
+  "record": "docs/runs/20261031-sdpa-observer-cpu.md",
+  "registration": "configs/sdpa-observer-cpu-v1.json",
+  "registration_sha256": "3f0149f91926bffa63e91a819c7a6a2071f8f32398fc5698d9dfdc83341fef53",
+  "run": "results/20261031-sdpa-observer-cpu-v1",
+  "archive": {
+    "files": 41,
+    "bytes": 100853,
+    "manifest_sha256": "478fb7005060bac8d738ab1c0f11c1aeccd9c00dd1cb0a77233f924be1a5ad89",
+    "all_recursive_hashes_rechecked": true,
+    "archive_caps_checked_before_success": true
+  },
+  "acceptance": {
+    "observer_cases": 18,
+    "archive_fault_cases": 6,
+    "total": 24,
+    "independent_readback_passed": true,
+    "archive_fixture_files_verified": 19,
+    "object_identity_scope": "Worker runtime assertions;independent serialized contracts not cross-process pointer proof",
+    "real_Torch_SDPA_tested": false,
+    "real_CUDA_profiler_validated": false,
+    "profiler_test_data": "synthetic explicit parent graphs only"
+  },
+  "runtime": {
+    "launcher_pid": 1412958,
+    "worker_pid": 1412961,
+    "verifier_pid": 1412963,
+    "launcher_seconds": 0.28479174384847283,
+    "worker_seconds": 0.06121246377006173,
+    "verifier_seconds": 0.017568388022482395,
+    "all_own_PIDs_exited": true,
+    "worker_guard": {
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    },
+    "verifier_guard": {
+      "file_attempts": 0,
+      "forbidden_imports": 0,
+      "network_attempts": 0,
+      "subprocess_attempts": 0
+    }
+  },
+  "modules": {
+    "scripts/sdpa_observer.py": "adeaf190471c8c22423359df35f4c7c77270366dd7c34fe46ccaf5a3d2a2ce00",
+    "scripts/checked_archive.py": "f839a28d87f355c0599986014dfe1cd214b8f0dba8980147aaa3bb7cf5819209"
+  },
+  "observation_draft": "docs/SDPA_OBSERVATION_DRAFT_20261031.md",
+  "disabled_observation_config": "configs/sdpa-observation-draft-v1.json",
+  "GPU_observation_runner_implemented": false,
+  "observation_GPU_started": false,
+  "new_numeric_thresholds_selected": false,
+  "parent_numeric_engineering_passed": false,
+  "prior_archive_cap_failure_rewritten": false,
+  "actual_this_turn": {
+    "new_CPU_runs": 1,
+    "new_model_calls": 0,
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0,
+    "GPU_queries": 0,
+    "network_requests": 0,
+    "dependencies_installed": 0
+  },
+  "cumulative": {
+    "runs": 126,
+    "main_outputs": 3038,
+    "index": "results/20261031-run-index-sdpa-observer.json",
+    "index_sha256": "3da7a45b79502f1c73d944f7db057689f0ccaa81b281880ac33ac395e7547e68",
+    "prior_index_preserved": true
+  },
+  "H3_tested": false,
+  "Full12_support_tested": false,
+  "publication_novelty_established": false,
+  "active_gpu_queue": false,
+  "code_config_docs_synced": true,
+  "raw_results_server_only": true,
+  "live_SDPA_observation_followup": {
+    "date": "2026-10-31",
+    "status": "live_observation_verified_original_numeric_gate_not_accepted",
+    "protocol": "docs/SDPA_OBSERVATION_PROTOCOL_20261031.md",
+    "revisions": "docs/SDPA_OBSERVATION_REVISIONS_20261031.md",
+    "record": "docs/runs/20261031-sdpa-observation.md",
+    "completed_registration": "configs/sdpa-observation-v4.json",
+    "registration_sha256": "427a4c3b3080ce1e41a094788986236da59634adb4e6032d64bfdc5c0b0b9d36",
+    "run": "20261031-sdpa-observation-v4",
+    "archive": {
+      "files": 81,
+      "bytes": 256317526,
+      "manifest_sha256": "13d41950e6b8a7ad5b975901ea1251982d39e621713fbd6b6b99960660ccf7ab",
+      "all_hashes_rechecked": true,
+      "archive_caps_checked_before_success": true
+    },
+    "prior_observation_failures": [
+      {
+        "run": "20261031-sdpa-observation-v1",
+        "status": "failed",
+        "worker_error": "AssertionError:",
+        "files": 35,
+        "bytes": 43778695,
+        "manifest_sha256": "f152f1fd5a6e64ba239ba22f0c187af6d60c105224ec95bb8274486caf6bf215",
+        "forward_calls": 3,
+        "tokenizer_encodes": 4,
+        "archived_logit_vectors": 1,
+        "pids_exited": [
+          1417853,
+          1417858
+        ]
+      },
+      {
+        "run": "20261031-sdpa-observation-v2",
+        "status": "failed",
+        "worker_error": "AssertionError:profile_marker_count_mismatch",
+        "files": 38,
+        "bytes": 45708271,
+        "manifest_sha256": "e751213dd3188a9dace68d03c119f429cebd38cc8f6307642751242ddbcbf84e",
+        "forward_calls": 3,
+        "tokenizer_encodes": 4,
+        "archived_logit_vectors": 1,
+        "pids_exited": [
+          1419068,
+          1419073
+        ]
+      },
+      {
+        "run": "20261031-sdpa-observation-v3",
+        "status": "failed",
+        "worker_error": "RuntimeError:Trace is already saved.",
+        "files": 41,
+        "bytes": 45712076,
+        "manifest_sha256": "b84af9b5cef997c8512ca37a1b5ca292608db20ea113ebd07388a90f83d35105",
+        "forward_calls": 3,
+        "tokenizer_encodes": 4,
+        "archived_logit_vectors": 1,
+        "pids_exited": [
+          1421092,
+          1421097
+        ]
+      }
+    ],
+    "verified": {
+      "profiles": 10,
+      "actual_SDPA_calls": 2856,
+      "efficient_explicit_mask_calls": 168,
+      "flash_no_mask_GQA_calls": 2688,
+      "batch_KV_heads": 28,
+      "tokenwise_KV_heads": 4,
+      "all_is_causal_false": true,
+      "same_path_bitwise_controls": 4,
+      "reference_unchanged": true,
+      "physical_cache_tensors_rehashed": 336,
+      "CPU_GPU_marker_disambiguation_cases": 5,
+      "actual_kernel_lineage_recomputed": true,
+      "mask_tensor_values_captured": false,
+      "all_numeric_drift_causally_attributed": false
+    },
+    "runtime": {
+      "launcher_pid": 1422337,
+      "worker_pid": 1422342,
+      "verifier_pid": 1423750,
+      "worker_seconds": 134.32995368819684,
+      "verifier_seconds": 29.05463595315814,
+      "launcher_seconds": 167.3057005791925,
+      "worker_guard": {
+        "blocked_loopback_capability_probes": 1,
+        "file_attempts": 0,
+        "forbidden_imports": 0,
+        "network_attempts": 0,
+        "subprocess_attempts": 0
+      },
+      "GPU_after_memory_mib": 18,
+      "GPU_after_utilization": 0,
+      "all_own_PIDs_exited": true
+    },
+    "actual_entire_turn": {
+      "new_CPU_runs": 1,
+      "new_GPU_attempts": 4,
+      "failed_GPU_attempts": 3,
+      "complete_GPU_observation_runs": 1,
+      "new_complete_model_answers": 0,
+      "generated_tokens": 0,
+      "archived_GPU_logit_vectors": 17,
+      "actual_GPU_forward_calls": 117,
+      "teacher_forced_input_tokens": 2345,
+      "tokenizer_encodes": 16,
+      "development_model_calls": 0,
+      "dependencies_installed": 0
+    },
+    "cumulative": {
+      "runs": 130,
+      "main_outputs": 3038,
+      "index": "results/20261031-run-index-sdpa-observation.json",
+      "index_sha256": "52861c0fe62e480c38e1772ccb7477dbecbdfa5257b6d4522a4525f633694e69",
+      "prior_indices_preserved": true
+    },
+    "old_numeric_engineering_accepted": false,
+    "old_numeric_thresholds_changed": false,
+    "Full12_support_tested": false,
+    "H3_candidate_rankings_computed": false,
+    "Snap_prefix_selector_in_new_entry_validated": false,
+    "publication_novelty_established": false,
+    "active_gpu_queue": false,
+    "code_config_docs_synced": true,
+    "raw_results_server_only": true,
+    "next": "Freeze a common operational execution contract for Full/all equal-budget candidates using the same batch suffix path;separate this scoped target from whole-vs-split numerical equivalence. Define justified correctness and score-repeatability checks before any12DEV invocation;do not relax old0.25/0.001 gate or claim kernel switching is the sole cause. Snap prefix selector and Full12 support still require explicit registered validation."
+  },
+  "next": "Freeze a common operational execution contract for Full/all equal-budget candidates using the same batch suffix path;separate this scoped target from whole-vs-split numerical equivalence. Define justified correctness and score-repeatability checks before any12DEV invocation;do not relax old0.25/0.001 gate or claim kernel switching is the sole cause. Snap prefix selector and Full12 support still require explicit registered validation."
+}

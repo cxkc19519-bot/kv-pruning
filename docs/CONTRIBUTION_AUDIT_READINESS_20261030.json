@@ -1,0 +1,455 @@
+{
+  "date": "2026-10-31",
+  "review_started_local_date": "2026-10-30",
+  "document_close_local_date": "2026-10-31",
+  "audit": "docs/CONTRIBUTION_AUDIT_20261030.md",
+  "decision": "docs/CONTRIBUTION_SCOPE_DECISION_20261030.md",
+  "record": "docs/reviews/20261030-contribution-audit.md",
+  "artifact_class": "readonly_literature_source_review_not_experiment",
+  "archive_path": "literature/20261030-closest-work-audit-v1",
+  "archive_files": 51,
+  "archive_bytes": 2924027,
+  "source_manifest_sha256": "56f0e78f32c84cf64cf9c4e5b810811414bd154309b8a8b3cc75e6724d1dc69c",
+  "AST_inventory_sha256": "2e16c8ba0c24d843f891379cfbbc960335cb4b1348fc08e4243003108f34a012",
+  "closure_sha256": "b420d14e85225e933515366bc1f8ca86a2a27dc51ab1bd172e9258500346195a",
+  "archive_manifest_sha256": "74239ef0f39ff4273c93ddfc5fef265bf54a29c9dc3431c333b2fec35b1981f9",
+  "source_scope": {
+    "GPU_queries": 0,
+    "HEADs_resolved": 4,
+    "Risk_Controlled_repo_status": "Not located from checked paper/author links and bounded title search;implementation coverage unknown,not a claim of no public code.",
+    "active_gpu_queue": false,
+    "additional_metadata_requests": 9,
+    "artifact_class": "readonly_literature_source_review_not_experiment",
+    "author_code_executed": false,
+    "author_models_or_datasets_downloaded": false,
+    "author_python_files_AST_parsed": 24,
+    "closed_utc": "2026-10-30T23:59:05.782415+08:00",
+    "cumulative_experiment_runs": 120,
+    "cumulative_main_outputs": 3038,
+    "dependency_changes": false,
+    "index_unchanged": "results/20261030-run-index-squad48-taxonomy.json",
+    "model_answers": 0,
+    "model_loads": 0,
+    "new_experimental_runs": 0,
+    "official_repositories": 5,
+    "old_PIDs_exited": true,
+    "paper_or_official_pages": 6,
+    "parent_GPU194_files_unchanged": true,
+    "pilot_fixed_author_link_commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+    "primary_source_bytes": 2240119,
+    "primary_sources": 39,
+    "repository_files": 33,
+    "server_request_errors": 0,
+    "source_fetch_requests": 39,
+    "status": "complete",
+    "tokenizer_encodes": 0,
+    "web_frontend_failures": "Several GitHub HTML/raw page requests returned timeout/cache miss;fixed official GitHub API blobs verified instead. Absence of web rendering is not absence of code.",
+    "weight_bytes_read": 0
+  },
+  "repository_heads": [
+    {
+      "date": "2026-06-30T15:39:54Z",
+      "head": "73079e1b3bf27cd182f680d7da5edd97b660bd82",
+      "repo": "alexluchen/pitfalls-of-kv-cache-compression",
+      "tree": "18179f32bf3b63ffc74228f7ea1ab72706ab1622",
+      "url": "https://api.github.com/repos/alexluchen/pitfalls-of-kv-cache-compression/commits/HEAD"
+    },
+    {
+      "date": "2026-07-20T23:36:15Z",
+      "head": "153699e227856b891b71beac8bd2a6922f181f79",
+      "repo": "ChosenQC/KVDiagnosis",
+      "tree": "9688e819b135a60cf0cfaa855ff3ef26046416d6",
+      "url": "https://api.github.com/repos/ChosenQC/KVDiagnosis/commits/HEAD"
+    },
+    {
+      "date": "2026-10-26T09:26:59Z",
+      "head": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "repo": "NVIDIA/kvpress",
+      "tree": "2e602dae04b8c44ffb55f15bc65611bdaef95ca7",
+      "url": "https://api.github.com/repos/NVIDIA/kvpress/commits/HEAD"
+    },
+    {
+      "date": "2026-05-09T20:43:40Z",
+      "head": "925fadf54a351b389e26d15535c1129aaefe61e2",
+      "repo": "agrawal-nikita/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance",
+      "tree": "dad08e1b24dcdebd8afb21ff68cb9cf8f53ef40f",
+      "url": "https://api.github.com/repos/agrawal-nikita/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance/commits/HEAD"
+    }
+  ],
+  "pinned_source_files": [
+    {
+      "blob": "d9b1dd09acabcd6a20e4632a5fa0fdd19869f681",
+      "bytes": 13381,
+      "commit": "73079e1b3bf27cd182f680d7da5edd97b660bd82",
+      "path": "README.md",
+      "repo": "alexluchen/pitfalls-of-kv-cache-compression",
+      "sha256": "1d29fb09d044ef3c8d2d458bd83e799307ac1002ed1be13816393b21df624bb2",
+      "url": "https://github.com/alexluchen/pitfalls-of-kv-cache-compression/blob/73079e1b3bf27cd182f680d7da5edd97b660bd82/README.md"
+    },
+    {
+      "blob": "8304eb45d7490d4f85809af5cf2d25ca259c3a0c",
+      "bytes": 8208,
+      "commit": "73079e1b3bf27cd182f680d7da5edd97b660bd82",
+      "path": "kv_cache_compression/benchmarks/ifeval/evaluate.py",
+      "repo": "alexluchen/pitfalls-of-kv-cache-compression",
+      "sha256": "b6d2215ed5f4d57438beeec8aa6e543e5dc1e458a53f26486dd46ee7895f8140",
+      "url": "https://github.com/alexluchen/pitfalls-of-kv-cache-compression/blob/73079e1b3bf27cd182f680d7da5edd97b660bd82/kv_cache_compression/benchmarks/ifeval/evaluate.py"
+    },
+    {
+      "blob": "0cf4788c1f98d94c89da1adb597500b9de74114d",
+      "bytes": 55844,
+      "commit": "73079e1b3bf27cd182f680d7da5edd97b660bd82",
+      "path": "kv_cache_compression/experiments/compressed_context_ifeval.py",
+      "repo": "alexluchen/pitfalls-of-kv-cache-compression",
+      "sha256": "67bd0ef453c43d7d7fee1e12093ce458ae6468ea2d13d266927e74cf6df4e793",
+      "url": "https://github.com/alexluchen/pitfalls-of-kv-cache-compression/blob/73079e1b3bf27cd182f680d7da5edd97b660bd82/kv_cache_compression/experiments/compressed_context_ifeval.py"
+    },
+    {
+      "blob": "83049f30b30f0306680a5e8827f7718799b969c0",
+      "bytes": 9435,
+      "commit": "73079e1b3bf27cd182f680d7da5edd97b660bd82",
+      "path": "kv_cache_compression/experiments/utils.py",
+      "repo": "alexluchen/pitfalls-of-kv-cache-compression",
+      "sha256": "a44bc4651e188e99cd432452d31ce6a3538a579048bff2bcf036d6d25fa9e6b0",
+      "url": "https://github.com/alexluchen/pitfalls-of-kv-cache-compression/blob/73079e1b3bf27cd182f680d7da5edd97b660bd82/kv_cache_compression/experiments/utils.py"
+    },
+    {
+      "blob": "3133b9649f4ce5d93b75d03ba7d3137f706073e0",
+      "bytes": 8764,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "README.md",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "c4018f8cb41137e619b2db0ae7c29c8176980f463ba76c03abafd836bbebd69f",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/README.md"
+    },
+    {
+      "blob": "434bb7e3c2e4934c77b3a6cf229c112bbcae22f0",
+      "bytes": 3868,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "docs/data_format.md",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "6b6d2a69a506978a935b5d3eec0556d26be5332577b157a1bb49eb3f38d14e2d",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/docs/data_format.md"
+    },
+    {
+      "blob": "c7d2ce54422b82aa08d8f146f5e15782b2085eb7",
+      "bytes": 4291,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "docs/reproduction.md",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "237d81586d7dcbdc5beac0e2adf7c9e6aff547e073f17086d9b3bcf6fa691a9c",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/docs/reproduction.md"
+    },
+    {
+      "blob": "b70118525fd978d653534a2fcb2bfe4a767d40cf",
+      "bytes": 2295,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "src/kvcachebench/schema.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "ed294618d326ecdb7b5300edeeac737daa5184afbb164dd611d74b9da7b77f9f",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/src/kvcachebench/schema.py"
+    },
+    {
+      "blob": "638148d3f01eaa93ad9c26cba35223cd75b67817",
+      "bytes": 2042,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "src/kvcachebench/io.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "ba3be19926f0f7d53ac7b70bd6cafd06c78be7e73842f5075810358a37d52a06",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/src/kvcachebench/io.py"
+    },
+    {
+      "blob": "9860c9e68923adf2abb4095716643671d8a24afc",
+      "bytes": 3114,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "src/kvcachebench/scoring.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "7422974f7f9c8a14f6536998980bc68830185e97cfd654f059d960d93763ddf9",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/src/kvcachebench/scoring.py"
+    },
+    {
+      "blob": "8205f87c3fd266f38b3df4abe3fa7be73897d7d5",
+      "bytes": 17555,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "scripts/check_release.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "7f18aeb49b7402b64462851416d4fe856442e995fafaa028469cda2df6587bf2",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/scripts/check_release.py"
+    },
+    {
+      "blob": "e746706f3337c231e436111109d79c806e7dd796",
+      "bytes": 11407,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "scripts/build_full_population_ledger.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "6b9ba9092a1f68b33783e3a69d114d0ab263ff8fa962dfa5af3d11bceb983898",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/scripts/build_full_population_ledger.py"
+    },
+    {
+      "blob": "a2c287264d7d168aa1920f9ca879e5550b8ccab3",
+      "bytes": 2916,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "tests/test_dataset_integrity.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "b66ec0bd2d4ebc43f897470d8587ac694c052a5cb6611663f23909e89e6c09ab",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/tests/test_dataset_integrity.py"
+    },
+    {
+      "blob": "667a7224c7195781e8a4f0fd4e77e08058fff7d3",
+      "bytes": 21137,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "README.md",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "983717c835e3de51e4dc614b93977ead69405a9d5fa4441e3517fad000143b6b",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/README.md"
+    },
+    {
+      "blob": "c80de55c578c62f6406d33ae41384cc1e7efcd0e",
+      "bytes": 3977,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "evaluation/README.md",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "a5865dd4ec41d470e156f40aa6dc097ff729b00e59cf78d8bd35b7e93fd0ec32",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/evaluation/README.md"
+    },
+    {
+      "blob": "02d50c7cf9b8d97e9c431a890e0e0f05b11b4350",
+      "bytes": 24035,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "evaluation/evaluate.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "67b02d16d1425d1ec9cc662534a1ee3a624ba9e74467733192b665048c541540",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/evaluation/evaluate.py"
+    },
+    {
+      "blob": "a0c166ea89e2189c6cd86172896a9a898f9a0578",
+      "bytes": 14183,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "kvpress/pipeline.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "9aea5a1f9cfdc9aa6f7688ce488c202a625d9ac4a52d46528c2002e1ef1d7480",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/kvpress/pipeline.py"
+    },
+    {
+      "blob": "5c73ee0fa70268536c5d1575daa1371862f1430b",
+      "bytes": 8205,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "kvpress/presses/base_press.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "b37e5d08bce40ef90cd3dde1e9853ed7fa3fdc9996d42942a2dc6da0fd16fe1a",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/kvpress/presses/base_press.py"
+    },
+    {
+      "blob": "ec2c325119a84578fa1c09159740a6837e5581fa",
+      "bytes": 3456,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "kvpress/presses/scorer_press.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "39191c9fb161238a2c44b32df8852e7406c3026423cd198470a0be026b8dfc50",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/kvpress/presses/scorer_press.py"
+    },
+    {
+      "blob": "61cd85055430d2f5c4df2cecd14c927256f5e888",
+      "bytes": 3943,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "kvpress/presses/snapkv_press.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "5bfd86c3097a55c7154144b71a1962e1881c2da6488a9ddaab949da4144f8705",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/kvpress/presses/snapkv_press.py"
+    },
+    {
+      "blob": "4fd39aeae7d2689b0f9791728b7938f451b3f25e",
+      "bytes": 11396,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "tests/test_pipeline.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "ba2fc341996d09110dc9dfb0413011ddb415fb97501cad018809c862c989232f",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/tests/test_pipeline.py"
+    },
+    {
+      "blob": "68ffe8701b72fca3db11e6d5e8e179620c592468",
+      "bytes": 23984,
+      "commit": "925fadf54a351b389e26d15535c1129aaefe61e2",
+      "path": "kvpress/benchmarking_snapkv_kvpress.py",
+      "repo": "agrawal-nikita/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance",
+      "sha256": "aea09095e90baa1ed90307694e98524c2e18f210e9907e9f59da859e3e1c87a4",
+      "url": "https://github.com/agrawal-nikita/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance/blob/925fadf54a351b389e26d15535c1129aaefe61e2/kvpress/benchmarking_snapkv_kvpress.py"
+    },
+    {
+      "blob": "97f4fc8e1016cdbca00e2c76767d7db8a38bc320",
+      "bytes": 13889,
+      "commit": "925fadf54a351b389e26d15535c1129aaefe61e2",
+      "path": "kvpress/benchmarking_cam_kvpress.py",
+      "repo": "agrawal-nikita/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance",
+      "sha256": "76eb56d7b4e6ad3e3da85c70f56e1cfa4610eef6f68e4abf63cd55d375e61144",
+      "url": "https://github.com/agrawal-nikita/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance/blob/925fadf54a351b389e26d15535c1129aaefe61e2/kvpress/benchmarking_cam_kvpress.py"
+    },
+    {
+      "bytes": 587004,
+      "sha256": "5666b607c8c6dd614aa2366119fed9133deb04afa12c9918ec1e18adfbcdc87e",
+      "url": "https://aclanthology.org/2026.acl-long.1926.pdf"
+    },
+    {
+      "bytes": 605296,
+      "sha256": "9d621b9809db60c29d6728e7ea97764976085ae707757f7cc4fd426edc7ea47b",
+      "url": "https://arxiv.org/html/2608.09412v1"
+    },
+    {
+      "bytes": 280771,
+      "sha256": "0440dca09b4533e91e4d639a6c2c83ed15ebe2aa20387cce6d96b8b01997fc1c",
+      "url": "https://arxiv.org/html/2609.27981v1"
+    },
+    {
+      "bytes": 295967,
+      "sha256": "1b5168c983700c3e72ff45cd82926c92153959b965aa0f8ad286c1d574b0e142",
+      "url": "https://arxiv.org/html/2607.05399v1"
+    },
+    {
+      "bytes": 26497,
+      "sha256": "0515af1eaaa798998f41974e2c946ca772cc3e25f0d33c862fdf5b5dbe824f14",
+      "url": "https://lyrebird.alirezaafshan.com/papers/learning-what-to-keep/"
+    },
+    {
+      "bytes": 97577,
+      "sha256": "dee596b1c627f8553af356147ed91c3ff24ac7a97d595957ea4a03104d1e49bb",
+      "url": "https://nvidia.github.io/TensorRT-LLM/1.4.0rc1/developer-guide/kv-cache-compression-development.html"
+    },
+    {
+      "blob": "e48acc08531899336f917646f6f2ffdfcdb00b24",
+      "bytes": 3491,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/analyze.py",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "064a5c6d55588de9c4c6f23ae9a7b524e0c3ebcf8c4eb870078cb2dca90b2a87",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/analyze.py"
+    },
+    {
+      "blob": "7f5a785f7fac1e8a9307e72b3dd0114bad951092",
+      "bytes": 1340,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/diagnostic-protocol.md",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "3d47aa1ec8778f231137559078835fe8306edcf0b659a777bf72cba8f0d081ae",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/diagnostic-protocol.md"
+    },
+    {
+      "blob": "badde73464a1db215d0b77647d3e3d0cbe3ab20e",
+      "bytes": 2720,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/diagnostic.py",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "406dfceacdbc12a1c398b8c709908920eb813c6071c148b2b156aef4f0e8fd6b",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/diagnostic.py"
+    },
+    {
+      "blob": "82b7971a0da1ed5b1ab9ca748cdc0122dbaf7670",
+      "bytes": 17981,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/kvpilot.py",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "402468dc6f50c8c10d83b6975d32f269a5ef2ff75655344de3cb986cfb1e71b2",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/kvpilot.py"
+    },
+    {
+      "blob": "2a264a660c9172177f099575d611ed7a133747e8",
+      "bytes": 4667,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/protocol.md",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "5c6732e7d3e706bebcc69142d200157e13319b8a70f0e3a56c2118717dd116f7",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/protocol.md"
+    },
+    {
+      "blob": "a19629a7295ae402f361b5f104a4fa522c3c40a7",
+      "bytes": 15784,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/report.md",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "957dad2b97aabfb063d73f53a63c1e04d58b0dd63436f95b9579a7c6a6a5ff7b",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/report.md"
+    },
+    {
+      "blob": "372cba5532abdfe80957d2ea96f6cc742b3dda02",
+      "bytes": 4161,
+      "commit": "da616c39ba57eeb4d076b36ef320d603b3e9a258",
+      "path": "experiments/E010-kv-policy-compression/test_kvpilot.py",
+      "repo": "YesterdaysLemon/llm-research",
+      "sha256": "f8299fb0cda1695be32772c35591c87988ba07e81a2acc4d9d6e9e8e9addd0d1",
+      "url": "https://github.com/YesterdaysLemon/llm-research/blob/da616c39ba57eeb4d076b36ef320d603b3e9a258/experiments/E010-kv-policy-compression/test_kvpilot.py"
+    },
+    {
+      "blob": "460d39fd0a2396bdd994eaba644f4bd4c3b3b9ae",
+      "bytes": 6454,
+      "commit": "2d66e747719a7bf1b9276f2cae6d135b96b92fd7",
+      "path": "kvpress/utils.py",
+      "repo": "NVIDIA/kvpress",
+      "sha256": "6ca2ade35cb237eae312366e1be9c2d1559ffb329eea33c4649ecf50d04971a5",
+      "url": "https://github.com/NVIDIA/kvpress/blob/2d66e747719a7bf1b9276f2cae6d135b96b92fd7/kvpress/utils.py"
+    },
+    {
+      "blob": "95c6dab095af4a05f9b60e16c4af2657eb0c0190",
+      "bytes": 10481,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "scripts/audit_pyramidkv_adapter.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "66f849170ea0d1cb2e0315e71b1403dcd2932620996485ced2915f02fbf3564c",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/scripts/audit_pyramidkv_adapter.py"
+    },
+    {
+      "blob": "bd270495dfe9f1762c8e5f97f222d33070645eb6",
+      "bytes": 8603,
+      "commit": "153699e227856b891b71beac8bd2a6922f181f79",
+      "path": "src/kvcachebench/presses.py",
+      "repo": "ChosenQC/KVDiagnosis",
+      "sha256": "6e12ab37bf264167a9c2f8af4168c6cd2bebdfe921fef04c08bd2b9508e4d67b",
+      "url": "https://github.com/ChosenQC/KVDiagnosis/blob/153699e227856b891b71beac8bd2a6922f181f79/src/kvcachebench/presses.py"
+    }
+  ],
+  "conclusions": {
+    "scoped_system_prototype_retained": true,
+    "original48_evidence_retained": true,
+    "unique_algorithm_or_benchmark_contribution_established": false,
+    "first_discovery_claims_supported": false,
+    "current_generic_feature_claims_overlap_prior_work": true,
+    "engineering_differences_do_not_establish_research_novelty": true,
+    "degree_acceptance_determined": false,
+    "field_exhaustively_searched": false
+  },
+  "new_experiments": 0,
+  "new_model_answers": 0,
+  "cumulative_runs": 120,
+  "cumulative_main_outputs": 3038,
+  "index": "results/20261030-run-index-squad48-taxonomy.json",
+  "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+  "model_or_scorer_changes": false,
+  "old_QA_gate": false,
+  "Mistral_Full_support": false,
+  "active_gpu_queue": false,
+  "decoder_objective_candidate_followup": {
+    "date": "2026-10-31",
+    "question_document": "docs/RESEARCH_QUESTION_REDEFINITION_20261031.md",
+    "screen_draft": "docs/DECODER_OBJECTIVE_SCREEN_DRAFT_20261031.md",
+    "readiness": "docs/DECODER_OBJECTIVE_READINESS_20261031.json",
+    "disabled_config": "configs/decoder-objective-screen-draft-v1.json",
+    "H1": "reject_broad_format_repair",
+    "H2": "reject_broad_parser_aware_PASK_overlap",
+    "H3": "screening_hypothesis_only",
+    "synthetic_math_counterexample_verified": true,
+    "real_KV_misranking_observed": false,
+    "publication_novelty_established": false,
+    "degree_approval_established": false,
+    "P1_started": false,
+    "CPU_correctness_entry_implemented": false,
+    "runner_implemented": false,
+    "execution_enabled": false,
+    "new_model_forward_or_answer": 0,
+    "new_experimental_runs": 0,
+    "archive_path": "literature/20261031-decoder-aware-candidate-v1",
+    "archive_files": 10,
+    "archive_bytes": 2266407,
+    "archive_manifest_sha256": "ea36b38a02db149812649eace16c321e92786a7da17fb4eaa00f086e717f2963",
+    "active_gpu_queue": false,
+    "next": "Implement and independently audit finite-grammar/stable-KL/equal-budget-mask CPU correctness first;then freeze a separate bounded12-new-development-group query-known same-prefix logit diagnostic. No original48 retuning or automatic GPU queue."
+  },
+  "next": "Implement and independently audit finite-grammar/stable-KL/equal-budget-mask CPU correctness first;then freeze a separate bounded12-new-development-group query-known same-prefix logit diagnostic. No original48 retuning or automatic GPU queue."
+}

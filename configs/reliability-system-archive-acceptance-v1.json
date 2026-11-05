@@ -1,0 +1,25 @@
+{
+  "proposal_id":"reliability-system-archive-acceptance-v1","execution_enabled":false,"runner_implemented":false,
+  "run":"results/20261030-reliability-system-archive-v1",
+  "purpose":"First modular system acceptance across two archived task adapters, not independent confirmation or restored failed research gate",
+  "inputs":{
+    "results/20261030-reliability-report-replay-v2/normalized_records.jsonl":"e3b8d013d7f6b0e24230c301dd046b6f8ae147f508ca44c61b92733d1650805a",
+    "results/20261030-reliability-report-replay-v2/report.json":"380c5af39b5e263a0fae680a0861594ddffec63936a6bde83e60da2c7aab318a",
+    "results/20261030-answer-format-full-v1/generations.jsonl":"d8f5d584739b754684a712634609640213984efc9b9a8c7759ab360289994eb0",
+    "results/20261030-answer-format-compression-v1/generations.jsonl":"da560eacb743f806a5f29d2620adc9964d396abc54168edeb4f023a38c976182",
+    "results/20261030-answer-format-analysis-v1/report.json":"e1d2422497d1110b6f3969528997c9d416ba3adbf741b658dec8273f211404f5",
+    "results/20261030-answer-format-task-preflight-v1/selected_cases.jsonl":"ccf4866f3381f797d9dda458f65c7dd0a8a204ddcd83d946766173fc1a7f0c42",
+    "results/20261030-answer-format-full-v1/execution_snapshot.json":"e881004fd3f29d950ff2dbb63358bde6cc59079989b4c60a6c5fdb0ccd2dbfe5",
+    "results/20261030-answer-format-compression-v1/execution_snapshot.json":"78f6e44848ca7bfafe69c570d3bf42373710ac30e2ecae3f6897abaebd96beef"
+  },
+  "bounds":{"wall_seconds":60,"input_bytes_max":2097152,"input_jsonl_rows_max":350,"output_records":290,"cohorts":3,"software_acceptance_cases":16,"archive_bytes_max":16777216,"archive_files_max":32,"model_outputs":0,"gpu_queries":0,"network_requests":0},
+  "cohorts":[
+    {"id":"legacy_trec_development32","n":32,"role":"used_development_and_software_acceptance","full_task":19,"full_constraint":32},
+    {"id":"legacy_trec_holdout10","n":10,"role":"used_shared_example_question_holdout_and_software_acceptance","full_task":7,"full_constraint":10},
+    {"id":"used_squad_json_development16","n":16,"role":"used_development_and_software_acceptance","full_task":12,"full_constraint":16}
+  ],
+  "acceptance_ids":["S01","S02","S03","S04","S05","S06","S07","S08","S09","S10","S11","S12","S13","S14","S15","S16"],
+  "checks":["All archived strict counts/transitions and eligible/unassessed denominators reproduced separately per cohort", "F1 means and paired deltas remain continuous metrics", "One truncated random QA result stays unavailable, does not become success/failure", "Unknown latency/peak/extra costs remain null", "KV layout descriptor computes28-layer GQA57344 bytes/slot but does not claim tensor validation", "No old score/model pipeline imported or rerun", "Every input SHA unchanged after run"],
+  "failure":"Archive first failure and stop; any correction uses a separate version/run without changing input/gate expectations",
+  "scientific_scope":"Historical three cohorts cannot be pooled as independent evidence; no confidence interval, new algorithm or performance-saving claim"
+}

@@ -1,0 +1,10 @@
+{
+  "proposal_id":"independent-source-public-head-v2","execution_enabled":false,"runner_implemented":false,
+  "run":"results/20261030-independent-source-public-head-v2",
+  "url":"https://storage.googleapis.com/boolq/dev.jsonl",
+  "parent_failed_run":"results/20261030-independent-source-discovery-v1",
+  "reason":"GCS JSON metadata API returned403. Check public media object's HEAD at the same author-linked bucket/name;no authentication changes,third-party mirror or retry of failed endpoint.",
+  "bounds":{"wall_seconds":30,"requests":1,"timeout_seconds":15,"data_body_bytes":0,"archive_bytes_max":1048576,"model_outputs":0,"gpu_queries":0},
+  "required_headers":["x-goog-generation","x-goog-hash","content-length","etag"],
+  "failure":"Stop BoolQ source preparation if public HEAD fails,do not fetch data or try mirrors"
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-28",
+  "reviewer": "Codex source-and-taxonomy review; no experimental model queried",
+  "source_test_sha256": "033f22c028c2bbba9ca682f68ffe204dc1aa6e1cf35dd6207f2d4ca67f0d0e8e",
+  "source_taxonomy_sha256": "91f9ae5a4d289a011b9bca622a1b7ea2af3a5accab0a67e873ba41c058de3261",
+  "sources": [
+    "https://cogcomp.seas.upenn.edu/Data/QA/QC/definition.html",
+    "https://cogcomp.seas.upenn.edu/Data/QA/QC/TREC_10.label"
+  ],
+  "policy": "Retain all ten unused eligible IDs and original gold unchanged. Review flags are reported, never used to exclude or replace cases or rescue scores.",
+  "limitation": "Original label agreement establishes provenance, not unique semantic correctness. Natural category boundaries may overlap; no target-model outputs have been examined for these IDs.",
+  "entries": [
+    {"source_key": "8e5060883a3a65416b865d26d3ba447eb93738218403f554", "original_code": "ENTY:substance", "gold": "Element and substance", "source_line_0based": 16, "retain": true, "flags": [], "note": "The requested answer names a material rather than requesting a definition."},
+    {"source_key": "9a89e12f4c64eda441932465fd598c303398ef4db379d244", "original_code": "HUM:ind", "gold": "Individual", "source_line_0based": 433, "retain": true, "flags": [], "note": "A named person is requested; historical factual uncertainty does not change the coarse requested type."},
+    {"source_key": "b03fe43e3f84615e5d4cbb554960ac46cbec8360c126575b", "original_code": "DESC:def", "gold": "Definition of something", "source_line_0based": 364, "retain": true, "flags": [], "note": "Treat as a request for definition, not a substance-name question; follows original taxonomy convention."},
+    {"source_key": "af885f2dd88c3d1ef0278e145a56e0142e8dffa98da1725e", "original_code": "DESC:def", "gold": "Definition of something", "source_line_0based": 389, "retain": true, "flags": [], "note": "Definition request about a disorder, not a request to name a disease; original convention retained."},
+    {"source_key": "9607aa495ee45b517cab4b7663b50e2b5d2e6c3b103a7e83", "original_code": "LOC:state", "gold": "State", "source_line_0based": 464, "retain": true, "flags": [], "note": "The requested location granularity is explicitly a state."},
+    {"source_key": "258eac8ce0c51298894895f7e29dafecfbf9f3064de5fa3c", "original_code": "DESC:def", "gold": "Definition of something", "source_line_0based": 315, "retain": true, "flags": [], "note": "Definition request rather than a product-name question; original convention retained."},
+    {"source_key": "53314ceb95fb9a488c88d21402e09c826d927f9c7402d0cf", "original_code": "LOC:other", "gold": "Other location", "source_line_0based": 484, "retain": true, "flags": ["source_place_name_spelling"], "note": "The place spelling in the original question is suspicious. Preserve it unchanged; the requested river is covered by other-location. Do not silently repair the question."},
+    {"source_key": "f9666d6736c07d6af8c7599e04e37f230b63e032bc2b3cc8", "original_code": "LOC:other", "gold": "Other location", "source_line_0based": 311, "retain": true, "flags": ["generic_where_location_granularity"], "note": "An unspecified where-query can invite city/country interpretations. Original other-location gold is retained and the ambiguity is reported, not regraded."},
+    {"source_key": "c484b36f511ec3f88c462e36a451394a0f7674ca1146e617", "original_code": "LOC:city", "gold": "City", "source_line_0based": 195, "retain": true, "flags": [], "note": "The requested answer is explicitly a city, not the numeric code already supplied."},
+    {"source_key": "246234b8bd50080971f652b2b0e5735f3762aa514eb2e032", "original_code": "LOC:country", "gold": "Country", "source_line_0based": 479, "retain": true, "flags": [], "note": "The requested answer is explicitly a country."}
+  ]
+}

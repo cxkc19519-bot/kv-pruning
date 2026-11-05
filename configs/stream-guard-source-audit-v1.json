@@ -1,0 +1,47 @@
+{
+  "kind": "read_only_source_and_data_feasibility",
+  "execution_enabled": false,
+  "model_outputs_authorized_by_this_config": 0,
+  "research_question": "Can bounded-history KV eviction delay or miss a streaming safety guard's first unsafe-segment detection while preserving benign specificity?",
+  "github_repo": "QwenLM/Qwen3Guard",
+  "github_revision": "6a52eca94b3d2aedb8aebd36baa353828d4166f1",
+  "github_files": {
+    "README.md": "b791b371f361d42321058417ca3089e87e388d62",
+    "eval/README.md": "2eb16156520028447bc06db1575de312d3c03dcb",
+    "eval/eval_gen.py": "4aee02bbcf87e68ec5a51de71f307748cb5eff24",
+    "eval/eval_stream.py": "ec2a13b0f1d87b640b57265a94f23cc17ad75419"
+  },
+  "hf_model": "Qwen/Qwen3Guard-Stream-0.6B",
+  "hf_model_revision": "74e1479150e9029d6778993f00491108323bb6f8",
+  "hf_model_files": {
+    "LICENSE": ["6634c8cc3133b3848ec74b9f275acaaa1ea618ab", 11343],
+    "README.md": ["5ee75a66015c2f09c150d2a70645ddb3ec5aaeb3", 14638],
+    "config.json": ["1a5386efd22dc357a92cc97839da9f881e7f6d49", 1509],
+    "configuration_qwen3.py": ["3244bc40717bc8e151049d42b3ff0648fa81eb3e", 11817],
+    "modeling_qwen3_guard.py": ["0e8be2ec5d24bc46009dfa09b086d5662a2233ca", 29009],
+    "tokenizer_config.json": ["417d038a63fa3de29cfde265caedae14d1a58d92", 9732]
+  },
+  "hf_dataset": "Qwen/Qwen3GuardTest",
+  "hf_dataset_revision": "8a8391a583d65dc5f2be59e815404fe54289fa7c",
+  "hf_dataset_files": {
+    "README.md": ["a7cc23c87775779a9c9ab6318d5beecdc0de7629", 4706],
+    "response_loc.jsonl": ["644fb87bea825c5988a7d61295c1db1894c358b6", 1039351],
+    "thinking.jsonl": ["917d481eafc42e61e2bd517865ff0491b6e4d042", 8459961],
+    "thinking_loc.jsonl": ["dfd2e9dcadfe15a2e705632b5c625d825a75d4a9", 6648423]
+  },
+  "scope": "Source AST, configuration, released labels and length/onset feasibility only. No upstream execution, model weights or inference.",
+  "network": {
+    "transport": "GitHub blob API; hf-mirror public pinned resolve because server direct HF is unreachable",
+    "authenticity_check": "HF model and dataset revisions/blob IDs corroborated from official HF API on local Windows; every downloaded non-LFS file checked by Git blob SHA1 and SHA256",
+    "per_file_wall_seconds": 90,
+    "max_response_bytes": 16000000
+  },
+  "gates": [
+    "All source/data hashes and annotation boundaries must be valid before any task registration.",
+    "Verify the exact model is all Full Attention and its custom forward supports correct cached classification.",
+    "Do not treat all-unsafe localization splits as a false-positive benchmark.",
+    "Do not invent early-token gold labels from a later unsafe sentence or Full-model predictions.",
+    "Need enough naturally late onsets and an independent benign cohort; do not add filler to force memory pressure.",
+    "Overlap with TRACE, Defensive M2S, streaming guard research, and generic KV safety must remain explicit."
+  ]
+}

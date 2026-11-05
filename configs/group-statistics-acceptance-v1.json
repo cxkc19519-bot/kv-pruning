@@ -1,0 +1,144 @@
+{
+  "proposal_id": "group-statistics-acceptance-v1",
+  "date": "2026-10-30",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "run": "results/20261030-group-statistics-acceptance-v1",
+  "mode": "CPU_software_fixtures_only_no_model_results",
+  "module": "scripts/reliability_group_statistics.py",
+  "runner": "scripts/accept_group_statistics.py",
+  "independent_verifier": "scripts/verify_group_statistics.py",
+  "inputs": {
+    "configs/minimum-evidence-scope-v1.json": "f97ae15d4ea9dbcc9d1110fec4a334f101ae58b46eeb268d8da5e6c8d4b5305d",
+    "results/20261030-squad48-native-preflight-v1/coverage.json": "f875cef73f9b1d41b92334e4f72cabfd2855fbc617910f93b9b91cc0b44f43b4",
+    "results/20261030-squad48-native-preflight-v1/planned_cells_with_budgets.jsonl": "287703323b534250e9e30876b45fced994547a7e583a029fd2c19208a0b29c47",
+    "results/20261030-squad48-native-preflight-v1/independent_verification.json": "4a9e7ff75ab195cec9f34b3f698977a85e2b4cc689d5c976c03158fb4faf69c9"
+  },
+  "unit": "unique article/contextgroup,onequestionpergroup",
+  "primary_estimand": "jointdelivery(method)-jointdelivery(Full),denominatorall scheduledgroups;budgetinfeasiblejoint0buttasksemanticN/A. No silentlymissingcells orphase-incomplete inference.",
+  "conditions": [
+    "full",
+    "adapted_snapkv",
+    "uniform_random"
+  ],
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20261030,
+    "shared_paired_group_draws_across_all_conditions": true,
+    "interval": "95%pointwise percentile",
+    "quantile": "linear interpolation at h=(B-1)*p (type7)",
+    "not_population_risk_certificate": true,
+    "not_simultaneous_familywise_interval": true
+  },
+  "execution_contract": "Allplannedcellsuniqueandterminallyaccounted;not_run_pending_orprotocolstoppedcohortcannotproduceprimarycomparisonCI. Technicalincompletephasesreturncounts/statusonly. Nonexecutedbudgetcellsremaininall-groupjointdenominatorwithoutinventingtaskscore.",
+  "acceptance_cases": [
+    {
+      "id": "G01",
+      "case": "Completepaired2group pointestimates",
+      "expected": "Fulljoint[1,0],Snap[0,1],random[0,0] ->SnapDelta0,randomDelta-1/2"
+    },
+    {
+      "id": "G02",
+      "case": "Exact2groupenumeration of4resampleindexpairs",
+      "expected": "Snapbootstrapmeans[-1,0,0,1],type7p025=-0.925,p975=0.925"
+    },
+    {
+      "id": "G03",
+      "case": "Allconditions identical pergroup",
+      "expected": "BothdeltasandCI[0,0],regardlessmixedFulloutcomes"
+    },
+    {
+      "id": "G04",
+      "case": "MethodalwaysrepairsFullfailures",
+      "expected": "Delta1,CI[1,1] forconstant difference1"
+    },
+    {
+      "id": "G05",
+      "case": "MethodalwaysbreaksFullsuccess",
+      "expected": "Delta-1,CI[-1,-1] forconstant difference-1"
+    },
+    {
+      "id": "G06",
+      "case": "Budgetinfeasiblecellsinplannedgroups",
+      "expected": "Joint0/case,tasknull;mainn includesallgroups,strictsemanticpaircoverageexcludesunknown"
+    },
+    {
+      "id": "G07",
+      "case": "Truncatedrawcorrectoutput",
+      "expected": "Taskrawscorepreservedbutstrictpairedunavailable,joint0"
+    },
+    {
+      "id": "G08",
+      "case": "FormatvalidbuttaskcandidateN/A",
+      "expected": "Tasknull/coverageexplicit,joint0,nosemanticfalseimputation"
+    },
+    {
+      "id": "G09",
+      "case": "Duplicatecell",
+      "expected": "Hardreject,nolast-writewins"
+    },
+    {
+      "id": "G10",
+      "case": "Missingplannedcell",
+      "expected": "HardrejectforprimaryCI,neverdropgrouporimputesuccess"
+    },
+    {
+      "id": "G11",
+      "case": "Foreigninput/gold/comparisonidentity",
+      "expected": "Hardrejectmismatchedpair"
+    },
+    {
+      "id": "G12",
+      "case": "Duplicateorcross-rolecontextgroup",
+      "expected": "Hardrejectindependentsampleinflation"
+    },
+    {
+      "id": "G13",
+      "case": "Booleanpretendingnumber/NaN/Inf",
+      "expected": "Hardrejectinvalidmetriccontract"
+    },
+    {
+      "id": "G14",
+      "case": "Fixedseed/drawreproducibility andcondition permutation",
+      "expected": "Samecanonicalgrouporder/sharedindices->identicalnumericalresults,nobest-seedselection"
+    },
+    {
+      "id": "G15",
+      "case": "Fullsupportfailed/protocolstoppedcondition",
+      "expected": "Descriptivestatus/countsonly,noprimarydeltaCIclaim"
+    },
+    {
+      "id": "G16",
+      "case": "ZeroFullcorrectdenominator",
+      "expected": "Conditionaldamageundefined(null),not0;jointdifferencecanremainwell-defined ifcomplete"
+    },
+    {
+      "id": "G17",
+      "case": "Type7quantile boundaries/interpolation",
+      "expected": "q([0,1],0)=0,q([0,1],1)=1,q([0,1],0.25)=0.25"
+    },
+    {
+      "id": "G18",
+      "case": "Current48plan coverage without realoutcomes",
+      "expected": "48groups,144plans,Full48feasible/Snap45/random45+3infeasibleeach;allnot_run noeffectestimatesorCIcomputed"
+    }
+  ],
+  "bounds": {
+    "wall_seconds": 60,
+    "outer_watchdog_seconds": 90,
+    "max_archive_files": 32,
+    "max_archive_bytes": 16777216,
+    "model_outputs": 0,
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0,
+    "GPU_queries": 0,
+    "network_requests": 0
+  },
+  "failure": "Anyfixture/source/independentaudit mismatchstopsandpreservesalloutputs;nevercomputeactual48effectfromplannedcells orfetchnewmodelresults. Software doubles nevercountasscientificsamples.",
+  "future_GPU_candidate_max_actual_main_outputs": 138,
+  "planned_cells_remain": 144,
+  "engineering_revalidation_resource_ceiling": 14,
+  "actual_GPU_enabled": false,
+  "statistical_module_implemented": false,
+  "statistics_executed": false
+}

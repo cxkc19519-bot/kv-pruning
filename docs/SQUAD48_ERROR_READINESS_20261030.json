@@ -1,0 +1,429 @@
+{
+  "date": "2026-10-30",
+  "record": "docs/runs/20261030-squad48-error-taxonomy.md",
+  "analysis": "docs/SQUAD48_ERROR_ANALYSIS_20261030.md",
+  "thesis_evidence_map": "docs/THESIS_EVIDENCE_MAP_20261030.md",
+  "protocol": "docs/SQUAD48_ERROR_TAXONOMY_PROTOCOL_20261030.md",
+  "proposal": "configs/squad48-error-taxonomy-v1.json",
+  "proposal_sha256": "3d9948bc1d3cf646571ef633b6a952336ec07dad95b2c7d7b742c17279c5ef52",
+  "source_sha256": {
+    "scripts/analyze_squad48_failures.py": "14ade2969e033ee6a37d0265ecc3f43dc44f420bb060426813c2de12cad35b65",
+    "scripts/verify_squad48_failures.py": "f31077c5b5e4018882b7b0b5ecc692b9cc5c32a24c7ea4f16c3225bb9893ae27",
+    "scripts/reliability_group_statistics.py": "1a87e8ee243a1159ca055ae317ac5acd9940722d4312bd06d597fe62f5f59169",
+    "docs/SQUAD48_ERROR_TAXONOMY_PROTOCOL_20261030.md": "b4cb751445abb58750857027ff8f33026034d60f0be5a291f4bfe4d634ff2b83",
+    "scripts/verify_hf_DEV_acceptance.py": "0bf578b3e342d3c2554c5134c6774559a876d06327e319fe15fad5e96cf69143"
+  },
+  "bytes": 242447,
+  "cumulative_main_outputs": 3038,
+  "cumulative_runs": 120,
+  "elapsed_seconds": 0.06514062499627471,
+  "external_artifacts": {
+    "20261030-squad48-error-taxonomy-v1.console.log": "c7c472ca169491ec190060cd7aa03b8b960d512c482b3ba8414b775576e81738",
+    "20261030-squad48-error-taxonomy-v1.launch.json": "7c24670bd792106de64472c62e1ec32f6dbfa9b94ada4cd2c9b1c00140d393d0",
+    "20261030-squad48-error-taxonomy-v1.launcher.py": "08c63845cb7f89da4816196daf38dddb8676dfa57265252dd709b4332c64d3d5"
+  },
+  "files": 20,
+  "finished_utc": "2026-10-30T23:29:38.295457+08:00",
+  "guard": {
+    "forbidden_file_attempts": 0,
+    "forbidden_imports": 0,
+    "network_attempts": 0,
+    "subprocess_attempts": 0
+  },
+  "index": "results/20261030-run-index-squad48-taxonomy.json",
+  "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+  "input_bytes": 617308,
+  "launcher_elapsed_seconds": 0.28193458542227745,
+  "launcher_pid": 1063571,
+  "original_manifest_entries": 15,
+  "run": "results/20261030-squad48-error-taxonomy-v1",
+  "sha256": {
+    "CPU_guard_observations.json": "0dd4cbdc38a931f71fac8aa29647aa0f12eb998bc5336b85dfb2ae9c51064b4b",
+    "annotated_cells.jsonl": "eb3a9b47a01759cbf0cfa5a6bef096f8bc40003c4ca09bd18f9adbbed1a3f5e0",
+    "closure.json": "a10e9c55d6408d1d9f7a245e26a4d42ddc1dfb45eb03d10ce67459827a9b2f93",
+    "derived_manifest.json": "3684c4773e5b3e80ba24ed7a532149a37a814fb6c42e4beb7fe0c77fced95b8f",
+    "example_index.json": "1650fe83ec7f96a9b18ab6001e2746764c53d5249d1657cd29631a8a9ad7dd47",
+    "execution_snapshot.json": "958451b31374096b4adf91c78a128fbfa8176f3ae8ced8835b758e7518a1f898",
+    "independent_verification.json": "8263668a1401b90ddc60c733c22c13f1732f8e31d5497c2a07c3f2a90796d41d",
+    "input_manifest.json": "73a842a4d2561a9437fd604ef164b722259fdb5dfca1d4f0f81053c440c36e6b",
+    "manifest.json": "412e342a8fe1ca3d1b95903eace15d6f7d99132436e4abf59e038bda40fa84a3",
+    "report.md": "31204349b674518ac2a967878a059a6abfb9efa6046bd1bc7857a2e3cd8c7d96",
+    "server_only_examples.json": "3ab52c1c24f9282a19a8601d8f500c21b8dfad5669322e78fb31c43ebee68506",
+    "software_acceptance.json": "70a40e2ebc840206b3cce32f4cf0ca6b44bfa6b803b0b39ec16a5655a6d22bd8",
+    "summary.json": "7cccc65b1b39c60e81dc92d1614d2fd5662d7e8a76299f64c7b622c82cc5bca8",
+    "taxonomy_report.json": "e4156bba7813d746aef2334a5ff26ee99a6641ae637ad260170940c75748f616"
+  },
+  "started_utc": "2026-10-30T23:29:38.013522+08:00",
+  "status": "complete",
+  "verification_elapsed_seconds": 0.03839653264731169,
+  "verifier_pid": 1063575,
+  "worker_pid": 1063574,
+  "summary": {
+    "GPU_queries": 0,
+    "classified_cells": 144,
+    "elapsed_seconds": 0.06514062499627471,
+    "engineering_outputs": 0,
+    "examples": 26,
+    "existing_answers": 138,
+    "main_outputs": 0,
+    "model_loads": 0,
+    "network_requests": 0,
+    "pid": 1063574,
+    "software_cases": 9,
+    "status": "complete",
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0
+  },
+  "independent_verification": {
+    "GPU_queries": 0,
+    "cells": 144,
+    "elapsed_seconds": 0.03839653264731169,
+    "examples": 26,
+    "existing_answers_rechecked": 138,
+    "method": "Independent 2x2/state-table reclassification,138-text scoring,144 complete grid,all48 flows/31Full-joint followups and deterministic examples;no analyzer/model imports",
+    "network_requests": 0,
+    "new_model_answers": 0,
+    "original_groups": 48,
+    "original_manifest_sha256": "412e342a8fe1ca3d1b95903eace15d6f7d99132436e4abf59e038bda40fa84a3",
+    "parent_manifest_sha256": "00eeb8eaa6e01317a160e88236d0c98aa27318f3019e086e1e69eced728644ee",
+    "passed": true,
+    "pid": 1063575,
+    "source_inputs": 10,
+    "synthetic_cases": 9,
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0
+  },
+  "conditions": {
+    "adapted_snapkv": {
+      "categories": {
+        "budget_infeasible": 3,
+        "execution_error": 0,
+        "format_only": 0,
+        "joint_success": 0,
+        "neither": 39,
+        "not_run": 0,
+        "task_only": 3,
+        "task_unavailable": 0,
+        "truncated": 3
+      },
+      "completed": 42,
+      "completed_format_failures": {
+        "unstructured_plain_text": 42
+      },
+      "completed_task_overlap": {
+        "EM_match": 3,
+        "non_EM_positive_token_overlap": 35,
+        "non_EM_zero_token_overlap": 4
+      },
+      "generated": 45,
+      "planned": 48,
+      "raw_score_reasons": {
+        "whole_plain_text": 45
+      }
+    },
+    "full": {
+      "categories": {
+        "budget_infeasible": 0,
+        "execution_error": 0,
+        "format_only": 13,
+        "joint_success": 31,
+        "neither": 1,
+        "not_run": 0,
+        "task_only": 3,
+        "task_unavailable": 0,
+        "truncated": 0
+      },
+      "completed": 48,
+      "completed_format_failures": {
+        "unstructured_plain_text": 4
+      },
+      "completed_task_overlap": {
+        "EM_match": 34,
+        "non_EM_positive_token_overlap": 9,
+        "non_EM_zero_token_overlap": 5
+      },
+      "generated": 48,
+      "planned": 48,
+      "raw_score_reasons": {
+        "object_answer": 44,
+        "whole_plain_text": 4
+      }
+    },
+    "uniform_random": {
+      "categories": {
+        "budget_infeasible": 3,
+        "execution_error": 0,
+        "format_only": 5,
+        "joint_success": 0,
+        "neither": 27,
+        "not_run": 0,
+        "task_only": 9,
+        "task_unavailable": 3,
+        "truncated": 1
+      },
+      "completed": 44,
+      "completed_format_failures": {
+        "JSON_string_wrong_root": 3,
+        "malformed_structured_output": 2,
+        "object_extra_keys_or_empty_answer": 1,
+        "object_without_string_answer": 1,
+        "unstructured_plain_text": 32
+      },
+      "completed_task_overlap": {
+        "EM_match": 9,
+        "non_EM_positive_token_overlap": 20,
+        "non_EM_zero_token_overlap": 12,
+        "unavailable": 3
+      },
+      "generated": 45,
+      "planned": 48,
+      "raw_score_reasons": {
+        "json_string": 3,
+        "no_string_answer": 1,
+        "object_answer": 6,
+        "structured_parse_failure": 2,
+        "whole_plain_text": 33
+      }
+    }
+  },
+  "paired": {
+    "adapted_snapkv": {
+      "Full_joint_followup": {
+        "budget_infeasible": 2,
+        "execution_error": 0,
+        "format_only": 0,
+        "joint_success": 0,
+        "neither": 25,
+        "not_run": 0,
+        "task_only": 3,
+        "task_unavailable": 0,
+        "truncated": 1
+      },
+      "Full_joint_groups": 31,
+      "descriptive_subgroup_not_new_confirmatory_test": true,
+      "flow_matrix": [
+        {
+          "count": 1,
+          "full_category": "format_only",
+          "method_category": "budget_infeasible"
+        },
+        {
+          "count": 10,
+          "full_category": "format_only",
+          "method_category": "neither"
+        },
+        {
+          "count": 2,
+          "full_category": "format_only",
+          "method_category": "truncated"
+        },
+        {
+          "count": 2,
+          "full_category": "joint_success",
+          "method_category": "budget_infeasible"
+        },
+        {
+          "count": 25,
+          "full_category": "joint_success",
+          "method_category": "neither"
+        },
+        {
+          "count": 3,
+          "full_category": "joint_success",
+          "method_category": "task_only"
+        },
+        {
+          "count": 1,
+          "full_category": "joint_success",
+          "method_category": "truncated"
+        },
+        {
+          "count": 1,
+          "full_category": "neither",
+          "method_category": "neither"
+        },
+        {
+          "count": 3,
+          "full_category": "task_only",
+          "method_category": "neither"
+        }
+      ],
+      "groups": 48
+    },
+    "uniform_random": {
+      "Full_joint_followup": {
+        "budget_infeasible": 2,
+        "execution_error": 0,
+        "format_only": 2,
+        "joint_success": 0,
+        "neither": 17,
+        "not_run": 0,
+        "task_only": 7,
+        "task_unavailable": 2,
+        "truncated": 1
+      },
+      "Full_joint_groups": 31,
+      "descriptive_subgroup_not_new_confirmatory_test": true,
+      "flow_matrix": [
+        {
+          "count": 1,
+          "full_category": "format_only",
+          "method_category": "budget_infeasible"
+        },
+        {
+          "count": 3,
+          "full_category": "format_only",
+          "method_category": "format_only"
+        },
+        {
+          "count": 8,
+          "full_category": "format_only",
+          "method_category": "neither"
+        },
+        {
+          "count": 1,
+          "full_category": "format_only",
+          "method_category": "task_unavailable"
+        },
+        {
+          "count": 2,
+          "full_category": "joint_success",
+          "method_category": "budget_infeasible"
+        },
+        {
+          "count": 2,
+          "full_category": "joint_success",
+          "method_category": "format_only"
+        },
+        {
+          "count": 17,
+          "full_category": "joint_success",
+          "method_category": "neither"
+        },
+        {
+          "count": 7,
+          "full_category": "joint_success",
+          "method_category": "task_only"
+        },
+        {
+          "count": 2,
+          "full_category": "joint_success",
+          "method_category": "task_unavailable"
+        },
+        {
+          "count": 1,
+          "full_category": "joint_success",
+          "method_category": "truncated"
+        },
+        {
+          "count": 1,
+          "full_category": "neither",
+          "method_category": "neither"
+        },
+        {
+          "count": 1,
+          "full_category": "task_only",
+          "method_category": "neither"
+        },
+        {
+          "count": 2,
+          "full_category": "task_only",
+          "method_category": "task_only"
+        }
+      ],
+      "groups": 48
+    }
+  },
+  "classification_is_posthoc_exploratory": true,
+  "primary_scoring_or_effects_or_CI_changed": false,
+  "source_GPU_run_unchanged": true,
+  "existing_answers_reanalyzed": 138,
+  "existing_groups": 48,
+  "classified_planned_cells": 144,
+  "new_scientific_samples": 0,
+  "new_model_answers": 0,
+  "software_cases": 9,
+  "server_only_examples": 26,
+  "example_selection": "Lexicographic first2 within condition/category,illustrative only",
+  "actual_this_turn": {
+    "new_CPU_runs": 1,
+    "new_model_answers": 0,
+    "new_engineering_answers": 0,
+    "model_loads": 0,
+    "tokenizer_encodes": 0,
+    "weight_bytes_read": 0,
+    "GPU_queries": 0,
+    "network_requests": 0,
+    "new_dependencies": false
+  },
+  "old_QA_gate": false,
+  "Mistral_Full_support": false,
+  "publication_novelty_established": false,
+  "degree_approval_established": false,
+  "all_own_PIDs_exited": true,
+  "active_gpu_queue": false,
+  "closest_work_contribution_review": {
+    "date": "2026-10-31",
+    "audit": "docs/CONTRIBUTION_AUDIT_20261030.md",
+    "decision": "docs/CONTRIBUTION_SCOPE_DECISION_20261030.md",
+    "record": "docs/reviews/20261030-contribution-audit.md",
+    "readiness": "docs/CONTRIBUTION_AUDIT_READINESS_20261030.json",
+    "artifact_class": "readonly_literature_source_review_not_experiment",
+    "archive_path": "literature/20261030-closest-work-audit-v1",
+    "archive_manifest_sha256": "74239ef0f39ff4273c93ddfc5fef265bf54a29c9dc3431c333b2fec35b1981f9",
+    "source_files": 39,
+    "repository_files": 33,
+    "paper_or_official_pages": 6,
+    "author_Python_AST_files": 24,
+    "author_code_executed": false,
+    "unique_research_contribution_established": false,
+    "scoped_system_and48_evidence_retained": true,
+    "current_generic_claims_overlap_prior_work": true,
+    "degree_acceptance_determined": false,
+    "actual_this_turn": {
+      "new_experiments": 0,
+      "new_model_answers": 0,
+      "new_engineering_answers": 0,
+      "model_loads": 0,
+      "tokenizer_encodes": 0,
+      "weight_bytes_read": 0,
+      "GPU_queries": 0,
+      "public_source_HTTP_requests_server": 48,
+      "web_search_and_read": true,
+      "new_dependencies": false
+    },
+    "cumulative_runs": 120,
+    "cumulative_main_outputs": 3038,
+    "index": "results/20261030-run-index-squad48-taxonomy.json",
+    "index_sha256": "f3e6a0395340f924113a31605dc7d4ae5f5956443d5f6c30418924816f90e51c",
+    "active_gpu_queue": false,
+    "next": "Redefine a concrete falsifiable research problem against the reviewed prior art;do not expand known-degradation experiments or claim generic logging/pairing/format separation as unique. Preserve prototype and48-group evidence as the research base."
+  },
+  "next": "Redefine a concrete falsifiable research problem against the reviewed prior art;do not expand known-degradation experiments or claim generic logging/pairing/format separation as unique. Preserve prototype and48-group evidence as the research base.",
+  "decoder_objective_candidate_followup": {
+    "date": "2026-10-31",
+    "question_document": "docs/RESEARCH_QUESTION_REDEFINITION_20261031.md",
+    "screen_draft": "docs/DECODER_OBJECTIVE_SCREEN_DRAFT_20261031.md",
+    "readiness": "docs/DECODER_OBJECTIVE_READINESS_20261031.json",
+    "disabled_config": "configs/decoder-objective-screen-draft-v1.json",
+    "H1": "reject_broad_format_repair",
+    "H2": "reject_broad_parser_aware_PASK_overlap",
+    "H3": "screening_hypothesis_only",
+    "synthetic_math_counterexample_verified": true,
+    "real_KV_misranking_observed": false,
+    "publication_novelty_established": false,
+    "degree_approval_established": false,
+    "P1_started": false,
+    "CPU_correctness_entry_implemented": false,
+    "runner_implemented": false,
+    "execution_enabled": false,
+    "new_model_forward_or_answer": 0,
+    "new_experimental_runs": 0,
+    "archive_path": "literature/20261031-decoder-aware-candidate-v1",
+    "archive_files": 10,
+    "archive_bytes": 2266407,
+    "archive_manifest_sha256": "ea36b38a02db149812649eace16c321e92786a7da17fb4eaa00f086e717f2963",
+    "active_gpu_queue": false,
+    "next": "Implement and independently audit finite-grammar/stable-KL/equal-budget-mask CPU correctness first;then freeze a separate bounded12-new-development-group query-known same-prefix logit diagnostic. No original48 retuning or automatic GPU queue."
+  }
+}

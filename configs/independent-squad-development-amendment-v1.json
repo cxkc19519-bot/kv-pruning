@@ -1,0 +1,19 @@
+{
+  "id":"independent-squad-development-amendment-v1","registered_before_new_source_model_outputs":true,
+  "reason":"Official BoolQ metadata and public object HEAD each returned403 in separately preserved runs; no mirror or authentication change. Advance the other already-planned source as development only; BoolQ cross-task final split remains pending.",
+  "parent_draft":"configs/reliability-independent-study-draft-v1.json",
+  "prepared_run":"results/20261030-independent-task-preflight-v1",
+  "prepared_manifest_sha256":"67f53261e8cf318f5bd9b6b7a2ee8caae29b21efa45165203487614dd663a945",
+  "cases_sha256":"20f45408aa11db0848f65b0ca2fb4c096af0d4bc05840ab917dac8f208b846d1",
+  "scope":"12 newly sampled SQuADtrain article groups, first2 of4 engineering groups, no sealed48 inference; not cross-task or independent scientific confirmation",
+  "historical_dev48_articles_excluded":true,"old_sealed16_reused":false,
+  "cross_task_rule":"Reserve all64 provisional SQuAD selected article groups; any future BoolQ selection must exclude connected title/context overlaps with them before final split. No SQuAD outputs may tune BoolQ samples or labels.",
+  "model":"Qwen/Qwen2.5-7B-Instruct","revision":"a09a35458c702b33eeacc393d103063234e8bc28",
+  "conditions":["full","adapted_snapkv","uniform_random","adapted_snapkv_system_pinned","uniform_random_system_pinned"],
+  "retention":"1/2","max_new_tokens":128,"max_main_answers":60,"max_engineering_answers":22,
+  "Full_gate":{"n":12,"em_min":6,"format_min":9,"joint_min":6,"candidates_min":11,"truncated_max":1,"errors_max":0},
+  "infeasibility":"If complete protected union exceeds half budget, record infeasible_budget with no generation; keep all planned cases and do not increase budget/pad/change questions. An infeasible protected engineering cell is reported, never marked path-verified.",
+  "engineering":"All generated applicable native/custom paths exact before DEV; skip only mathematically infeasible cells with explicit state; any generated-path mismatch stops relevant run",
+  "continuation":"No gate requiring favorable compression effect; preserve truncation and infeasible cells as outcomes. No sealed evaluation or formal3264 matrix automatically.",
+  "original_preparation_inference_allowed_false_remains":"Original prep run only certified provisional data; this separately frozen amendment permits developmental engineering/DEV without asserting cross-task split complete. No old artifact rewritten."
+}

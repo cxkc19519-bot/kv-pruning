@@ -849,3 +849,5 @@ runtime101+dill2、旧source/input事后均不变，source literature/20261101-l
 
 
 2026-11-05：用户授权推送 https://github.com/cxkc19519-bot/kv-pruning 。GitHub 连接器核对仓库为空、public、具备 push 权限；本地原无 Git 仓库。新增 PROGRESS.md，更新 README/STATUS/HANDOFF 与忽略规则，汇总 H3 停止、N1 搁置及当前未选新题。批量上传使用本机 Git；发布结果以远端 main 提交记录核验。仅代码/配置/文档，未纳入模型、数据、环境、原始输出、日志或私钥；未启动新实验/后台/安装，147runs3038主不变。
+
+2026-11-05 发布核验：首个提交 17b6ab8649362e9cb6b95c46afe5a0390773355d 已成功推送 main，git ls-remote 与本地 HEAD 一致；GitHub 连接器按固定提交回读 docs/PROGRESS.md 成功。507 文件，暂存路径无模型/数据/原始结果/密钥，常见私钥及 token 模式检查无匹配，旧禁用配置 SHA 保持。首次 Git 操作遇到 Windows 工作区所有者与当前账户不同而被拒，添加仅此目录的 safe.directory 后正常；未更改目录所有权。本次补记发布结果。
